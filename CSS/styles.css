@@ -5,15 +5,23 @@
 }
 
 /* behavior for types */
+
+body {
+  padding: 20px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   background-color: lightgray;
   border-radius: 10px;
   padding: 5px;
+  justify-content: space-between;
 }
 
 h1 {
   font-size: 64px;
+  float: top;
 }
 
 h2 {
@@ -69,6 +77,7 @@ a:active {
 header .nav-list {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* behavior for IDs */
