@@ -1,0 +1,74 @@
+/* the stuff at the top you gotta have */
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* behavior for types */
+header {
+  display: flex;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  padding: 5px;
+}
+
+h3 {
+  padding: 5px;
+}
+
+h4 {
+  padding: 5px;
+}
+
+p {
+  padding: 5px;
+}
+
+section {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+/* link behavior */
+a {
+  outline: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: red;
+}
+
+a:focus {
+  text-decoration: none;
+  background: orange;
+}
+
+a:hover {
+  text-decoration: none;
+  background: orange;
+}
+
+a:active {
+  color: hotpink;
+}
+/* link behavior */
+
+/* behavior for classes */
+header .nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+/* behavior for IDs */
