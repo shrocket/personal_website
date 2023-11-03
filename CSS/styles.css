@@ -47,6 +47,10 @@ section {
   padding: 0.2rem 0.5rem;
 }
 
+/* ul {
+  list-style: none;
+} */
+
 /* link behavior */
 a {
   outline: none;
@@ -80,6 +84,18 @@ header .nav-list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.cv-education {
+  list-style: none;
+}
+
+.cv-experience {
+  list-style: none;
+}
+
+.cv-indent {
+  list-style: circle;
 }
 
 /* behavior for IDs */
