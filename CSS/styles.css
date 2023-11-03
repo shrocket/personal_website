@@ -86,6 +86,12 @@ header .nav-list {
   flex-wrap: wrap;
 }
 
+.hero {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .cv-education {
   list-style: none;
 }

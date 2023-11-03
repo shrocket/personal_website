@@ -11,25 +11,28 @@
   <body>
     <!-- header -->
     <header>
-      <img
-        src="/assets/r2n_angled.png"
-        alt="a simple line drawing of a rocket with an exhaust plume and a single window"
-        height="100px"
-        width="100px"
-      />
-      <h1>Shawn Huelle</h1>
-      <section>
-        <nav>
-          <ul class="nav-list">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="cv">CV</a></li>
-            <li><a href="pubs">Publications</a></li>
-            <li><a href="projs">Projects</a></li>
-            <li><a href="contact">Contact Me</a></li>
-          </ul>
-        </nav>
-      </section>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="cv">CV</a></li>
+          <li><a href="pubs">Publications</a></li>
+          <li><a href="projs">Projects</a></li>
+          <li><a href="contact">Contact Me</a></li>
+        </ul>
+      </nav>
     </header>
+
+    <section class="hero">
+      <h1>
+        <span
+          ><img
+            src="/assets/r2n_angled.png"
+            alt="a simple line drawing of a rocket with an exhaust plume and a single window"
+            height="75px"
+            width="75px" /></span
+        >Shawn Huelle
+      </h1>
+    </section>
 
     <!-- about me -->
     <section>
@@ -47,14 +50,14 @@
     <!-- resume -->
     <section>
       <h2 id="cv">CV</h2>
-      <h3>
+      <p>
         These are just highlights. You can download my one-page résumé
         <a href="/assets/Huelle_resume.pdf">here</a>.
-      </h3>
+      </p>
 
       <!-- education -->
       <article>
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul class="cv-education">
           <li>
             <strong
@@ -79,9 +82,22 @@
       </article>
 
       <!-- work experience -->
-        <h2>Work Experience</h2>
+      <article>
+        <h3>Work Experience</h3>
         <ul class="cv-experience">
-          <li><strong>Trainee Web Development</strong> — 24 July - 16 October 2023</li>
+          <li>
+            <strong>Trainee Web Development</strong> — 24 July - 16 October 2023
+          </li>
+          <li>
+            Neue Fische - School and Pool for Digital Talent Intensive Full-Time
+            Coding Bootcamp: Remote
+          </li>
+          <ul class="cv-indent">
+            <li>
+              540 hours of programming practice with team-based development
+              four-week-project as journey- man’s piece.
+            </li>
+          </ul>
         </ul>
         <ul class="cv-experience">
           <li><strong>Translator/Editor</strong> — 2011-present</li>
@@ -92,49 +108,55 @@
               services to a diverse set of clients.
             </li>
           </ul>
+        </ul>
+        <ul class="cv-experience">
+          <li><strong>Senior Technical Writer</strong> — 2022</li>
+          <li>thingsTHINKING: Karlsruhe, Germany</li>
+          <ul class="cv-indent">
+            <li>
+              Created technical documentation and wrote release notes in English
+              for <strong>semantha</strong> using the Component Content
+              Management System Paligo.
+            </li>
+            <li>
+              Made linguistic and content revisions to existing content,
+              including marketing documents.
+            </li>
+            <li>
+              Proposed and implemented improvements to the usability of the
+              documentation and the <strong>semantha</strong> user interface.
+            </li>
           </ul>
-          <ul class="cv-experience">
-          <li>
-            <strong>Senior Technical Writer</strong> <br />
-            thingsTHINKING <br />Karlsruhe, Germany <br />
-            <ul class="cv-indent">
-              <li>
-                Created technical documentation and wrote release notes in
-                English for <strong>semantha</strong> using the Component
-                Content Management System Paligo.
-              </li>
-              <li>
-                Made linguistic and content revisions to existing content,
-                including marketing documents.
-              </li>
-              <li>
-                Proposed and implemented improvements to the usability of the
-                documentation and the <strong>semantha</strong> user interface.
-              </li>
-            </ul>
-            <ul class="cv-experience">
+        </ul>
+        <ul class="cv-experience">
           <li>
             <strong
               >Head of the Library and EducationUSA Studies Adviser</strong
-            > — 2015-2022</li>
-            <li>Carl-Schurz-Haus/Deutsch-Amerikanisches Institue Freiburg eV: Freiburg, Germany</li>
-            <ul class="cv-indent">
-              <li>
-                Oversaw library budgeting, purchasing, cataloging, marketing,
-                and led a team of employees and volunteers.
-              </li>
-              <li>
-                Advised one-on-one and in large groups for EducationUSA.
-                Performed outreach, wrote and designed marketing materials, and
-                led a small team of student employees.
-              </li>
-            </ul>
+            >
+            — 2015-2022
+          </li>
+          <li>
+            Carl-Schurz-Haus/Deutsch-Amerikanisches Institue Freiburg eV:
+            Freiburg, Germany
+          </li>
+          <ul class="cv-indent">
+            <li>
+              Oversaw library budgeting, purchasing, cataloging, marketing, and
+              led a team of employees and volunteers.
+            </li>
+            <li>
+              Advised one-on-one and in large groups for EducationUSA. Performed
+              outreach, wrote and designed marketing materials, and led a small
+              team of student employees.
+            </li>
+          </ul>
         </ul>
+      </article>
     </section>
 
     <!-- publications -->
     <section>
-      <h2 id="pubs">Publications</h2>
+      <h3 id="pubs">Publications</h3>
       <p>
         My writing has appeared in a number of publications. I have also
         published two chapbooks with
