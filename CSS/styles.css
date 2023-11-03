@@ -72,6 +72,8 @@ a:focus {
 a:hover {
   text-decoration: none;
   background: orange;
+  padding: 0.05rem;
+  border-radius: 0.3rem;
 }
 
 a:active {
@@ -102,6 +104,14 @@ header .nav-list {
 
 .cv-indent {
   list-style: circle;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 3rem;
 }
 
 /* behavior for IDs */
