@@ -1,7 +1,7 @@
 /* the stuff at the top you gotta have */
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Gill Sans, sans-serif, system-ui;
 }
 
 /* behavior for types */
@@ -41,7 +41,7 @@ p {
 }
 
 section {
-  background-color: lightgray;
+  background-color: #e2e2e2;
   border-radius: 10px;
   margin: 1rem;
   padding: 0.2rem 0.5rem;
@@ -91,7 +91,6 @@ a:active {
 .nav-list {
   display: flex;
   justify-content: center;
-  list-style: none;
   gap: 3rem;
   flex-wrap: wrap;
 }
@@ -103,7 +102,7 @@ a:active {
 }
 
 .cv-education {
-  background-color: #e5de95;
+  background-color: #ffff00;
 }
 
 .cv-education-list {
@@ -111,7 +110,7 @@ a:active {
 }
 
 .cv-experience {
-  background-color: #e5de95;
+  background-color: #ffff00;
 }
 
 .cv-experience-list {
@@ -119,7 +118,7 @@ a:active {
 }
 
 .cv-teaching {
-  background-color: #e5de95;
+  background-color: #ffff00;
 }
 
 .cv-teaching-list {
@@ -136,6 +135,13 @@ a:active {
   list-style: none;
   padding: 0;
   gap: 3rem;
+}
+
+.sub-page {
+  font-size: 2rem;
+  float: top;
+  padding: 1rem 0 0 0;
+  margin: 0;
 }
 
 /* behavior for IDs */
