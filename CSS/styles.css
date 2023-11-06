@@ -51,11 +51,8 @@ article {
   border-radius: 10px;
   padding: 0.1rem 1rem 0.1rem 0.5rem;
   margin: 1rem;
+  background-color: #ffff00;
 }
-
-/* ul {
-  list-style: none;
-} */
 
 /* link behavior */
 a {
@@ -85,7 +82,6 @@ a:hover {
 a:active {
   color: #ff68ff;
 }
-/* link behavior */
 
 /* behavior for classes */
 .nav-list {
@@ -101,27 +97,7 @@ a:active {
   flex-wrap: wrap;
 }
 
-.cv-education {
-  background-color: #ffff00;
-}
-
-.cv-education-list {
-  list-style: none;
-}
-
-.cv-experience {
-  background-color: #ffff00;
-}
-
-.cv-experience-list {
-  list-style: none;
-}
-
-.cv-teaching {
-  background-color: #ffff00;
-}
-
-.cv-teaching-list {
+.ul-cv {
   list-style: none;
 }
 
