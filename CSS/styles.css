@@ -67,23 +67,23 @@ a:link {
 }
 
 a:visited {
-  color: red;
+  color: #ff68ff;
 }
 
 a:focus {
   text-decoration: none;
-  background: orange;
+  background: #ff7f00;
 }
 
 a:hover {
   text-decoration: none;
-  background: orange;
+  background: #ff7f00;
   padding: 0.05rem;
   border-radius: 0.3rem;
 }
 
 a:active {
-  color: hotpink;
+  color: #ff68ff;
 }
 /* link behavior */
 
