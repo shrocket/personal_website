@@ -4,187 +4,290 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shawn Huelle</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="icon" href="./assets/favicon-16x16.png"
   </head>
+
+  <!-- body -->
   <body>
+    <!-- header -->
     <header>
-      <img
-        src="/assets/r2n_angled.jpg"
-        alt="a simple line drawing of a rocket with an exhaust plume and a single window"
-        height="100px"
-        width="100px"
-      />
-      <h1>Shawn Huelle</h1>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#pubs">Publications</a></li>
-          <li><a href="#projs">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
+      <nav class="nav-list">
+        <a href="#about">About Me</a>
+        <a href="#cv">CV</a>
+        <a href="#pubs">Publications</a>
+        <a href="#projs">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
-    <main>
-      <section></section>
-      <section>
-        <h2 id="about">About Me</h2>
+
+    <section class="hero">
+      <h1>
+        <span
+          ><img
+            src="/assets/r2n_angled.png"
+            alt="a simple line drawing of a rocket with an exhaust plume and a single window"
+            height="50px"
+            width="50px"
+        /></span>
+        Shawn Huelle
+      </h1>
+    </section>
+
+    <!-- about me -->
+    <section>
+      <h2 id="about">About Me</h2>
+      <article>
         <p>
-          I am a writer, a reader, an educator, a translator, an editor, a
-          designer, a performer, a photographer, an organizer, a troubleshooter,
-          and a thinker. I can bring all of these qualities to a job.
+          I was born and raised in Nebraska, was exposed to art and theater at
+          an early age, and spent my junior year of high school as a foreign
+          exchange student in Germany. That linguistic experience solidified an
+          already strong love for language, and set me on my current path.
         </p>
-      </section>
-      <section>
-        <h2 id="cv">CV</h2>
         <p>
-          These are just highlights. You can download my one-page résumé
-          <a href="/assets/Huelle_resume.pdf">here</a>, or you can download my
-          complete CV <a href="/assets/Huelle_CV.pdf">here</a>.
+          I have dedicated my entire educational and professional life to
+          writing. Whether writing code, technical documentation, marketing
+          copy, or a novel, I am always looking for the best way to communicate
+          an idea. Because communication is multi-directional, I am also very
+          much invested in writing as a process, and an important part of that
+          process is review and collaboration.
         </p>
-        <h2>Education</h2>
-        <ul class="cv-education">
-          <li>2023</li>
+        <p>
+          This website is a place for me to practice my newly-learned
+          web-development skills, showcase a digital version of my CV, and
+          create an archive of projects both individual and collaborative.
+        </p>
+      </article>
+    </section>
+
+    <!-- resume -->
+    <section>
+      <h2 id="cv">CV</h2>
+
+      <!-- education -->
+      <article>
+        <h3>Education (highlights)</h3>
+        <ul class="ul-cv">
           <li>
-            <strong>Certification in Web Development</strong> <br />
-            Neuefische GmbH <br />
-            Hamburg, Germany
+            <b>Doctor of Philosophy in English with a focus in Writing</b>
+            — 2012
           </li>
-          <li>2012</li>
-          <li>
-            <strong
-              >Doctor of Philosophy in English with a focus in Creative
-              Writing</strong
-            >
-            <br />
-            The University of Denver <br />
-            Denver, Colorado, USA <br />
-            Dissertation Title: <em>Cubicle Deathmatch</em>
-          </li>
-          <li>2002</li>
-          <li>
-            <strong>Master of Fine Arts in Writing</strong> <br />
-            The School of the Art Institute of Chicago <br />
-            Chicago, Illinois, USA <br />
-            Thesis Title: <em>A Determination of Parts</em>
-          </li>
-          <li>1997</li>
-          <li>
-            <strong>Fulbright Scholarship</strong> <br />
-            The University of Bremen <br />
-            Bremen, Germany
-          </li>
-          <li>1996</li>
-          <li>
-            <strong>Bachelor of Arts in Enlgish and German</strong> <br />
-            Doane College <br />
-            Crete, Nebraska, USA
-          </li>
+          <li>The University of Denver: Denver, Colorado, USA</li>
+          <ul class="cv-indent">
+            <li>Dissertation Title: <em>Cubicle Deathmatch</em></li>
+          </ul>
         </ul>
-        <h2>Work Experience</h2>
-        <ul>
-          <li>2011-2023</li>
+        <ul class="ul-cv">
+          <li><b>Master of Fine Arts in Writing</b> — 2002</li>
           <li>
-            <strong>Translator/Editor</strong> <br />
-            Freelance <br />
-            Provide translation, proofreading, copy-editing, and writing
-            services to a diverse set of clients.
+            The School of the Art Institute of Chicago: Chicago, Illinois, USA
+          </li>
+          <ul class="cv-indent">
+            <li>Thesis Title: <em>A Determination of Parts</em></li>
+          </ul>
+        </ul>
+        <a class="more" href="education.html">more →</a>
+      </article>
+
+      <!-- work experience -->
+      <article>
+        <h3>Work Experience (highlights)</h3>
+        <!-- entry -->
+        <ul class="ul-cv">
+          <li>
+            <strong>Technical Writer</strong> - 15 January 2024 - 08 July 2024
           </li>
           <li>
-            <strong>Senior Technical Writer</strong> <br />
-            thingsTHINKING <br />Karlsruhe, Germany <br />Worked closely with
-            developers, product managers and marketing experts to conceptualize
-            and update technical documents, add to and maintain a terminology
-            database, research and prepare technical data, and create graphics
-            and screenshots in a fast-paced, agile setting.
-          </li>
-          <li>
-            <strong
-              >Head of the Library and EducationUSA Studies Adviser</strong
+            <a
+              href="https://zontal.io/"
+              target="_blank"
+              title="link to ZONTAL's website"
+              >ZONTAL, GmbH</a
             >
-            <br />
-            Carl-Schurz-Haus/Deutsch-Amerikanisches Institue Freiburg eV <br />
-            Freiburg, Germany <br />
-            <ul class="csh-ul">
+          </li>
+          <ul class="cv-indent">
+            <li>
+              Created customer-facing and API documentation for the ZONTAL
+              platform using both Confluence and KnowledgeOwl.
+            </li>
+            <li>
+              Maintained and improved house style and branding guidelines for
+              both online articles and PDFs using HTML and CSS.
+            </li>
+            <li>
+              Gained valuable experience in creating qualification documentation
+              in a validated environment.
+            </li>
+          </ul>
+        </ul>
+        <!-- entry -->
+        <ul class="ul-cv">
+          <li><b>Trainee Web Development</b> — 24 July - 16 October 2023</li>
+          <li>
+            <a
+              href="https://www.neuefische.de/bootcamp/web-development"
+              target="new"
+              >Neue Fische - School and Pool for Digital Talent: Remote</a
+            >
+          </li>
+          <ul class="cv-indent">
+            <li>
+              540 hours of programming practice with four-week, team-based
+              development project as journeyman's piece.
+            </li>
+          </ul>
+        </ul>
+        <a class="more" href="work-experience.html">more →</a>
+      </article>
+
+      <!-- teaching experience -->
+      <article>
+        <h3>Teaching Experience (highlights)</h3>
+        <ul class="ul-cv">
+          <li><b>Adjunct Instructor</b> — 2016-2021</li>
+          <li>Albert Ludwig Universität: Freiburg, Germany</li>
+          <ul class="cv-indent">
+            <li>
+              Taught one section of Creative Writing in the English Department
+              and was in charge of the course from concept to grading.
+            </li>
+          </ul>
+        </ul>
+
+        <!-- entry -->
+        <ul class="ul-cv">
+          <li><b>Instructor</b> — 2011-2014</li>
+          <li>Eberhard Karls Universität: Tübingen, Germany</li>
+          <ul class="cv-indent">
+            <li>
+              Taught a variety of courses in the Sprachpraxis section of the
+              English Department:
+            </li>
+            <ul>
+              <li>Language & Use (introduction to academic writing)</li>
+              <li>Written Communication 1 (academic writing)</li>
+              <li>Written Communication 2 (creative writing)</li>
               <li>
-                Oversaw library budgeting, purchasing, cataloging, marketing,
-                and led a team of employees and volunteers.
+                Oral Communication 2 (presentation and public speaking skills)
               </li>
-              <li>
-                Advised one-on-one and in large groups for EducationUSA.
-                Performed outreach, wrote and de- signed marketing materials,
-                and led a small team of student employees.
-              </li>
+              <li>Translation 1</li>
             </ul>
-          </li>
+          </ul>
         </ul>
-      </section>
-      <section><h2 id="pubs">Publications</h2></section>
+        <a class="more" href="teaching.html">more →</a>
+      </article>
+    </section>
+
+    <!-- publications -->
+    <section>
+      <h2 id="pubs">Publications</h2>
       <p>
         My writing has appeared in a number of publications. I have also
         published two chapbooks with
-        <a href="https://shirtpocketpress.weebly.com/">Shirt Pocket Press</a>.
-        Below is a list of works that can be found online.
+        <a href="https://shirtpocketpress.weebly.com/" target="new"
+          >Shirt Pocket Press</a
+        >. Below is a list of works that can be found online:
       </p>
-      <ul class="pub-list">
-        <li>
-          <a
-            href="https://www.3ammagazine.com/3am/peripateticism-in-the-work-of-robert-walser/"
-            >“Peripateticism in Robert Walser”</a
-          >, <em>3:am Magazine</em>, 2014
-        </li>
-        <li>
-          <a href="https://americanshortfiction.org/im-a-notebook-three/"
-            >"An Issue of Blood"</a
-          >, <em>American Short Fiction</em> Camera Flash Contest, 2013
-        </li>
-        <li>
-          <a
-            href="http://necessaryfiction.com/writerinres/OnRobertWalsersPeripateticism/"
-            >“On Robert Walser’s Peripateticism”</a
-          >, <em>Necessary Fiction</em>, 2011
-        </li>
-        <li>
-          <a
-            href="https://secureservercdn.net/198.71.233.189/4kf.37a.myftpupload.com/wp-content/uploads/2019/12/Fact-Simile-Magazine-6pdf.pdf"
-            >“The Children’s Crud: Chapter 1"</a
-          >, <em>Fact-Simile Editions</em>, 2010
-        </li>
-        <li>
-          <a href="https://www.the2ndhand.com/archive/memo1.html"
-            >"Three Memoranda,"</a
-          >
-          <em>the 2nd hand</em>, 2005
-        </li>
-        <li>
-          <a
-            href="http://www.fb10.uni-bremen.de/newleaf/newleaf_press/newleaf_press.php"
-            ><em>From the Bottommost Town Musician</em></a
-          >, New Leaf Press, 1998
-        </li>
-      </ul>
-      <section>
-        <h2 id="projs">Projects</h2>
-        <p>Coming Soon</p>
-      </section>
-      <section>
-        <h2 id="contact">Contact</h2>
-        <ul class="contact-list">
+      <article>
+        <ul class="pub-list">
           <li>
-            <a href="mailto:info@shawnhuelle.com">email</a>
+            <a
+              href="https://www.3ammagazine.com/3am/peripateticism-in-the-work-of-robert-walser/"
+              target="new"
+              >“Peripateticism in Robert Walser”</a
+            >, <em>3:am Magazine</em>, 2014
           </li>
           <li>
-            <a href="https://github.com/shrocket">github</a>
+            <a
+              href="https://americanshortfiction.org/im-a-notebook-three/"
+              target="new"
+              >"An Issue of Blood"</a
+            >, <em>American Short Fiction</em> Camera Flash Contest, 2013
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/shawn-huelle-616560237/"
-              >linkedin</a
+            <a
+              href="http://necessaryfiction.com/writerinres/OnRobertWalsersPeripateticism/"
+              target="new"
+              >“On Robert Walser's Peripateticism”</a
+            >, <em>Necessary Fiction</em>, 2011
+          </li>
+          <li>
+            <a
+              href="https://secureservercdn.net/198.71.233.189/4kf.37a.myftpupload.com/wp-content/uploads/2019/12/Fact-Simile-Magazine-6pdf.pdf"
+              target="new"
+              >“The Children's Crud: Chapter 1"</a
+            >, <em>Fact-Simile Editions</em>, 2010
+          </li>
+          <li>
+            <a href="https://www.the2ndhand.com/archive/memo1.html" target="new"
+              >"Three Memoranda,"</a
             >
+            <em>the 2nd hand</em>, 2005
+          </li>
+          <li>
+            <a
+              href="http://www.fb10.uni-bremen.de/newleaf/newleaf_press/newleaf_press.php"
+              target="new"
+              ><em>From the Bottommost Town Musician</em></a
+            >, New Leaf Press, 1998
           </li>
         </ul>
-      </section>
-    </main>
+      </article>
+    </section>
+
+    <!-- projects -->
+    <section>
+      <h2 id="projs">Projects</h2>
+      <p>Coming Soon</p>
+    </section>
+
+    <!-- contact -->
+    <section>
+      <h2 id="contact">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:info@shawnhuelle.com"
+            ><img
+              src="/assets/email.svg"
+              alt="the at symbol"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.github.com/shrocket" target="_blank"
+            ><img
+              src="/assets/github.svg"
+              alt="the github logo"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/shawn-huelle-616560237/"
+            target="_blank"
+          >
+            <img
+              src="/assets/linkedin.svg"
+              alt="the linkedin logo"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- footer -->
     <footer>
-      <p>&copy 2023 Shawn Huelle</p>
+      <div>
+        &copy 2023 Shawn Huelle —
+        <span>
+          Icons made from
+          <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed
+          by CC BY 4.0</span
+        >
+      </div>
     </footer>
   </body>
 </html>

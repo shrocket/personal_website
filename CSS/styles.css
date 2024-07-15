@@ -1,0 +1,141 @@
+/* the stuff at the top you gotta have */
+* {
+  box-sizing: border-box;
+  font-family: Gill Sans, sans-serif, system-ui;
+}
+
+:root {
+  --color-section: #e2e2e2;
+  --color-article: #ffff00;
+  --color-visitactivelink: #ff68ff;
+  --color-hoverfocus: #ff7f00;
+}
+
+/* behavior for types */
+
+body {
+  padding: 20px;
+  margin: 0 auto;
+  line-height: 2rem;
+}
+
+header {
+  background-color: var(--color-section);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 4rem;
+  float: top;
+  padding: 1rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding: 5px;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 5px;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+section {
+  background-color: var(--color-section);
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+  border-radius: 10px;
+  padding: 0.1rem 1rem 0.1rem 0.5rem;
+  margin: 1rem;
+  background-color: var(--color-article);
+}
+
+footer {
+  font-size: 0.75rem;
+}
+
+ul {
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* link behavior */
+a {
+  outline: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: var(--color-visitactivelink);
+}
+
+a:focus {
+  text-decoration: none;
+  background: var(--color-hoverfocus);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-hoverfocus);
+}
+
+a:active {
+  color: var(--color-visitactivelink);
+}
+
+/* behavior for classes */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero {
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ul-cv {
+  list-style: none;
+}
+
+.cv-indent {
+  list-style: circle;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 3rem;
+}
+
+.sub-page-h1 {
+  font-size: 2rem;
+  float: top;
+  padding: 1rem 0 0 0;
+  margin: 0;
+}
