@@ -7,7 +7,8 @@
 :root {
   --color-section: #e2e2e2;
   --color-article: #ffff00;
-  --color-visitactivelink: #ff68ff;
+  --color-link: #ff68ff;
+  --color-visitactivelink: #ff7f00;
   --color-hoverfocus: #ff7f00;
 }
 
@@ -83,7 +84,7 @@ a {
 }
 
 a:link {
-  color: black;
+  color: var(--color-link);
 }
 
 a:visited {
@@ -92,7 +93,7 @@ a:visited {
 
 a:focus {
   text-decoration: none;
-  background: var(--color-hoverfocus);
+  color: var(--color-hoverfocus);
 }
 
 a:hover {
