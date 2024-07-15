@@ -4,6 +4,13 @@
   font-family: Gill Sans, sans-serif, system-ui;
 }
 
+:root {
+  --color-section: #e2e2e2;
+  --color-article: #ffff00;
+  --color-visitactivelink: #ff68ff;
+  --color-hoverfocus: #ff7f00;
+}
+
 /* behavior for types */
 
 body {
@@ -13,7 +20,7 @@ body {
 }
 
 header {
-  background-color: lightgray;
+  background-color: var(--color-section);
   border-radius: 10px;
   padding: 5px;
 }
@@ -41,7 +48,7 @@ p {
 }
 
 section {
-  background-color: #e2e2e2;
+  background-color: var(--color-section);
   border-radius: 10px;
   margin: 2rem;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
@@ -51,7 +58,7 @@ article {
   border-radius: 10px;
   padding: 0.1rem 1rem 0.1rem 0.5rem;
   margin: 1rem;
-  background-color: #ffff00;
+  background-color: var(--color-article);
 }
 
 footer {
@@ -80,21 +87,21 @@ a:link {
 }
 
 a:visited {
-  color: #ff68ff;
+  color: var(--color-visitactivelink);
 }
 
 a:focus {
   text-decoration: none;
-  background: #ff7f00;
+  background: var(--color-hoverfocus);
 }
 
 a:hover {
   text-decoration: none;
-  color: #ff7f00;
+  color: var(--color-hoverfocus);
 }
 
 a:active {
-  color: #ff68ff;
+  color: var(--color-visitactivelink);
 }
 
 /* behavior for classes */
