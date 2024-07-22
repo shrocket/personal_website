@@ -16,31 +16,31 @@
 
 @media (min-width: 576px) {
   :root {
-    --font-size: 1.5rem;
+    --font-size: 14px;
   }
 }
 
 @media (min-width: 768px) {
   :root {
-    --font-size: 2rem;
+    --font-size: 16px;
   }
 }
 
 @media (min-width: 992px) {
   :root {
-    --font-size: 2.5rem;
+    --font-size: 18px;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-    --font-size: 3rem;
+    --font-size: 20px;
   }
 }
 
 @media (min-width: 1400px) {
   :root {
-    --font-size: 3.5rem;
+    --font-size: 22px;
   }
 }
 
@@ -67,6 +67,7 @@ h1 {
   float: top;
   padding: 1rem;
   margin: 0;
+  line-height: 3rem;
 }
 
 h2 {
@@ -141,7 +142,7 @@ a:active {
 .nav-list {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 5vw;
   flex-wrap: wrap;
 }
 
