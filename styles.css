@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   font-family: Gill Sans, sans-serif, system-ui;
+  hyphens: manual;
 }
 
 :root {
@@ -44,16 +45,13 @@
   }
 }
 
-body {
-  font-size: var(--font-size);
-}
-
 /* behavior for types */
 
 body {
   padding: 20px;
   margin: 0 auto;
   line-height: 1.5rem;
+  font-size: var(--font-size);
 }
 
 header {
@@ -167,10 +165,10 @@ a:active {
   gap: 3rem;
 }
 
-.sub-page-h1 {
+/* .sub-page-h1 {
   font-size: 3rem;
   line-height: 3rem;
   float: top;
   padding: 1rem 0 0 0;
   margin: 0;
-}
+} */
