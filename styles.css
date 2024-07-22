@@ -5,16 +5,6 @@
   hyphens: manual;
 }
 
-:root {
-  --color-section: #e2e2e2;
-  --color-article: #ffff00;
-  --color-link: #ff68ff;
-  --color-visitactivelink: #ff7f00;
-  --color-hoverfocus: #ff7f00;
-
-  --font-size: 12px;
-}
-
 @media (min-width: 576px) {
   :root {
     --font-size: 14px;
@@ -43,6 +33,16 @@
   :root {
     --font-size: 22px;
   }
+}
+
+:root {
+  --color-section: #e2e2e2;
+  --color-article: #ffff00;
+  --color-link: #ff68ff;
+  --color-visitactivelink: #ff7f00;
+  --color-hoverfocus: #ff7f00;
+
+  --font-size: 12px;
 }
 
 /* behavior for types */
