@@ -2,14 +2,49 @@
 * {
   box-sizing: border-box;
   font-family: Gill Sans, sans-serif, system-ui;
+  hyphens: manual;
 }
 
+/* the stuff at the top you may have */
 :root {
   --color-section: #e2e2e2;
   --color-article: #ffff00;
   --color-link: #ff68ff;
   --color-visitactivelink: #ff7f00;
   --color-hoverfocus: #ff7f00;
+
+  --font-size: 12px;
+}
+
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --font-size: 22px;
+  }
 }
 
 /* behavior for types */
@@ -17,7 +52,8 @@
 body {
   padding: 20px;
   margin: 0 auto;
-  line-height: 2rem;
+  line-height: 1.5rem;
+  font-size: var(--font-size);
 }
 
 header {
@@ -27,31 +63,32 @@ header {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3em;
   float: top;
   padding: 1rem;
   margin: 0;
+  line-height: 3rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2em;
   padding: 5px;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5em;
   padding: 5px;
 }
 
 p {
-  font-size: 1.5rem;
-  padding: 5px;
+  font-size: 1em;
+  padding: 0.1rem;
 }
 
 section {
   background-color: var(--color-section);
   border-radius: 10px;
-  margin: 2rem;
+  margin: 0.5rem 0.2rem 0.5rem 0.2rem;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
 }
 
@@ -67,15 +104,11 @@ footer {
 }
 
 ul {
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1em;
 }
 
 /* link behavior */
@@ -109,7 +142,7 @@ a:active {
 .nav-list {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 5vw;
   flex-wrap: wrap;
 }
 
@@ -132,12 +165,4 @@ a:active {
   list-style: none;
   padding: 0;
   gap: 3rem;
-}
-
-.sub-page-h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-  float: top;
-  padding: 1rem 0 0 0;
-  margin: 0;
 }
