@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-family: Gill Sans, sans-serif, system-ui;
+  hyphens: manual;
+}
+
+:root {
+  --color-section: #e2e2e2;
+  --color-article: #ffff00;
+  --color-link: #ff68ff;
+  --color-visitactivelink: #ff7f00;
+  --color-hoverfocus: #ff7f00;
+
+  --font-size: 12px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --font-size: 22px;
+  }
+}

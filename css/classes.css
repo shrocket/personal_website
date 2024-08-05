@@ -1,0 +1,26 @@
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  flex-wrap: wrap;
+}
+
+.ul-cv {
+  list-style: none;
+}
+
+.cv-indent {
+  list-style: circle;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  gap: 3rem;
+}
+
+.pink-pipe {
+  color: var(--color-link);
+}
