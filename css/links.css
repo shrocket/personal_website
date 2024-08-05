@@ -1,0 +1,25 @@
+a {
+  outline: none;
+}
+
+a:link {
+  color: var(--color-link);
+}
+
+a:visited {
+  color: var(--color-visitactivelink);
+}
+
+a:focus {
+  text-decoration: none;
+  color: var(--color-hoverfocus);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-hoverfocus);
+}
+
+a:active {
+  color: var(--color-visitactivelink);
+}
