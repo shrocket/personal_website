@@ -24,3 +24,31 @@
 .pink-pipe {
   color: var(--color-link);
 }
+
+.work-experience--more {
+  display: none;
+}
+
+.moreButton {
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 0;
+  border-color: var(--color-section);
+  color: var(--color-link);
+  background-color: var(--color-article);
+  border-radius: 10px;
+  padding: none;
+  gap: 3rem;
+  box-shadow: 0;
+  margin: 10px;
+}
+
+.moreButton:hover {
+  color: white;
+  background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+  display: none;
+}
