@@ -13,6 +13,7 @@ buttonWorkExperience.addEventListener("click", () => {
 const moreTeaching = document.querySelector('[data-js="moreTeaching"]');
 
 const buttonTeaching = document.querySelector('[data-js="buttonTeaching"]');
+
 buttonTeaching.addEventListener("click", () => {
   console.log("teaching");
   moreTeaching.classList.toggle("teaching--more");
