@@ -1,20 +1,28 @@
-const moreWorkExperience = document.querySelector(
-  '[data-js="moreWorkExperience"]'
-);
-
-const buttonWorkExperience = document.querySelector(
+const buttonExperience = document.querySelector(
   '[data-js="buttonWorkExperience"]'
 );
-buttonWorkExperience.addEventListener("click", () => {
-  console.log("yeah");
-  moreWorkExperience.classList.toggle("work-experience--more");
+const expandExperience = document.querySelector(
+  '[data-js="moreWorkExperience"]'
+);
+buttonExperience.addEventListener("click", () => {
+  expandExperience.classList.toggle("work-experience--more");
+  if (!expandExperience.classList.contains("work-experience--more")) {
+    buttonExperience.textContent = "less";
+  } else {
+    buttonExperience.textContent = "more";
+  }
 });
-
-const moreTeaching = document.querySelector('[data-js="moreTeaching"]');
 
 const buttonTeaching = document.querySelector('[data-js="buttonTeaching"]');
 
+const expandTeaching = document.querySelector('[data-js="expandTeaching"]');
+
 buttonTeaching.addEventListener("click", () => {
   console.log("teaching");
-  moreTeaching.classList.toggle("teaching--more");
+  expandTeaching.classList.toggle("teaching--more");
+  if (!expandTeaching.classList.contains("teaching--more")) {
+    buttonTeaching.textContent = "less";
+  } else {
+    buttonTeaching.textContent = "more";
+  }
 });
