@@ -2,4 +2,5 @@ _site/
 node_modules/
 .cache
 .DS_Store
-removedBits.md 
+removedBits.md
+fifthpost.md
