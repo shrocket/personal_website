@@ -3,4 +3,4 @@ node_modules/
 .cache
 .DS_Store
 removedBits.md
-/content/blog/fifthpost.md
+fifthpost.md
