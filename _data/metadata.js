@@ -1,5 +1,5 @@
 export default {
-	title: "Eleventy Base Blog v9",
+	title: "malign benedictory",
 	url: "https://example.com/",
 	language: "en",
 	description: "I'll be damned if I know what this is.",
