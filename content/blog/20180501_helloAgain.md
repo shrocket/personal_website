@@ -3,6 +3,7 @@ title: hello again
 description: This is a post reintroducing myself to a non-existant, blog-reading public.
 date: 2025-08-31
 tags: intro
+draft: true
 ---
 
 ## What is this?
