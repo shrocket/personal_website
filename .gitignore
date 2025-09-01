@@ -2,5 +2,6 @@ _site/
 node_modules/
 .cache
 .DS_Store
+.obsidian/
 removedBits.md
 fifthpost.md
