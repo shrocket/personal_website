@@ -5,6 +5,7 @@ date: 2018-08-24
 tags:
   - second tag
   - posts with two tags
+draft: true
 ---
 
 1. Here is something from my work notebook:
