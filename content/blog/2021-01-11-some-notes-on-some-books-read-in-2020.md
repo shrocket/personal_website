@@ -1,7 +1,7 @@
 ---
-title: "ome notes on some books read in 2020
+title: some notes on some books read in 2020
 date: 2021-01-11
-tags: 
+tags:
   - essay
   - list
 ---

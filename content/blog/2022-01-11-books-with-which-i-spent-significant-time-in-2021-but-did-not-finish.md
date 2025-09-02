@@ -1,5 +1,5 @@
 ---
-title: untitled (books with which I spent significant time in 2021, but did not \"finish\")
+title: untitled (books with which I spent significant time in 2021, but did not "finish")
 date: 2022-01-11
 tags:
   - list
@@ -17,6 +17,5 @@ tags:
 
 ---
 
-**A note on the word "finished":**
-
+**A note on the word "finished":**  
 I think, in the case of these "books read" lists, it means "a book in which I read every single page." I imagine there are exceptions.

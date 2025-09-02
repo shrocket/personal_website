@@ -23,24 +23,17 @@ Vinol U. Crumb
 
 And if someone asks what the U. stands for, I could say unctuous, uranus, underage, undo, uxorial, utmost, urticate, ungulate, ulcerous, upchuck, usufruct, underpants, urge, uretur, ugsome, uppity, ubiquitous, uropod, umbles, urchin, undulate, unitard, or unguent . . .
 
-Stephen Slipcase
-
-Patrick Sleeve
-
+Stephen Slipcase  
+Patrick Sleeve  
 David Husk
 
 Why did the punks rename themselves? To stick a finger or two in the eye of convention? To say things without embarrassing their parents? To distance themselves from a previous reality? To make a new one?
 
-Voinl U. Crumb
-
-Richard Sleeve
-
-Knot Slipcase
-
-Howard Husk
-
-Lead Coating
-
+Voinl U. Crumb  
+Richard Sleeve  
+Knot Slipcase  
+Howard Husk  
+Lead Coating  
 Vel Um
 
 . . .
