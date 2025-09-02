@@ -6,6 +6,6 @@ tags:
   - photography
 ---
 
-![](..assets/img_4804.jpg)
+![](../assets/img_4804.jpg)
 
 Every car on the far side is a shade of gray (and nearly every car on the near side).

@@ -8,7 +8,7 @@ tags:
 
 Recently, I had the following conversation with a friend:
 
-![](..assets/conversation.jpg)
+![](../assets/conversation.jpg)
 
 Now, I know I'm never going to win the Nobel Prize for my poetry (or at all), and I know my friend was being funny, but something about what they said stuck in my craw just a tiny little bit. I mean, the implication is that a poem entitled "venti frappuccino xerox" couldn't be a good poem, right? They're probably right, but that shouldn't stop us from trying. Here's my attempt. Feel free to send me yours.
 

@@ -17,6 +17,6 @@ Each lecture is perforce different. Each lecture is interconnected with every pr
 
 On Saturday, 21 May, 2022, I will deliver the lecture three times, twice as a 60-card lecture, and once as a 180-card lecture. During the 180-card lecture, I will be accompanied by Lee Ferguson, who will perform Cage’s piece 27”10.554 for a percussionist. The evening should have something for everyone. There will also be, for example, two performances of _Ricefall_ by Michael Pisaro.
 
-![](..assets/plakat_digital_workingsilence_2-page001.jpg)
+![](../assets/plakat_digital_workingsilence_2-page001.jpg)
 
 Come check it out!
