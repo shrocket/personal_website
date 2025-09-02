@@ -1,7 +1,7 @@
 ---
-title: "untitled (corn 2)"
+title: untitled (corn 2)
 date: 2021-04-28
-tags: 
+tags:
   - essay
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "untitled (I feel like I've done this before)"
+title: untitled (I feel like I've done this before)
 date: 2021-06-16
-tags: 
+tags:
   - narrative
 ---
 

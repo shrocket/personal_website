@@ -1,6 +1,8 @@
 ---
-title: "untitled (that's the way the cookie crumbles)"
+title: untitled (that's the way the cookie crumbles)
 date: 2021-11-21
+tags:
+  - list
 ---
 
 that's the way the bee bumbles  

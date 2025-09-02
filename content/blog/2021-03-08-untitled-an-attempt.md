@@ -1,7 +1,7 @@
 ---
-title: "untitled (an attempt)"
+title: untitled (an attempt)
 date: 2021-03-08
-tags: 
+tags:
   - essay
 ---
 

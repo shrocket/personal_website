@@ -1,7 +1,7 @@
 ---
-title: "resorting to the internet"
+title: resorting to the internet
 date: 2021-03-31
-tags: 
+tags:
   - essay
   - list
   - poetry

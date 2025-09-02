@@ -1,7 +1,7 @@
 ---
-title: "untitled (a list of phrases without context)"
+title: untitled (a list of phrases without context)
 date: 2021-06-04
-tags: 
+tags:
   - list
 ---
 

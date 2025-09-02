@@ -1,7 +1,7 @@
 ---
-title: "untitled (ends vs means)"
+title: untitled (ends vs means)
 date: 2021-03-11
-tags: 
+tags:
   - essay
 ---
 

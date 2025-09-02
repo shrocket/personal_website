@@ -1,7 +1,7 @@
 ---
-title: "untitled (books with which I spent significant time in 2021, but did not \"finish\")"
+title: untitled (books with which I spent significant time in 2021, but did not \"finish\")
 date: 2022-01-11
-tags: 
+tags:
   - list
 ---
 
@@ -15,7 +15,7 @@ tags:
 - _A Year with Swollen Appendices: Brian Eno's Diary_ by Brian Eno
 - _Anne of Green Gables_ by L. M. Montgomery
 
-* * *
+---
 
 **A note on the word "finished":**
 

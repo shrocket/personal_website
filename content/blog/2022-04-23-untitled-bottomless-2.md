@@ -1,7 +1,7 @@
 ---
-title: "untitled (bottomless 2)"
+title: untitled (bottomless 2)
 date: 2022-04-23
-tags: 
+tags:
   - poetry
 ---
 

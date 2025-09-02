@@ -1,7 +1,7 @@
 ---
-title: "untitled (standing at the window)"
+title: untitled (standing at the window)
 date: 2021-02-17
-tags: 
+tags:
   - narrative
 ---
 

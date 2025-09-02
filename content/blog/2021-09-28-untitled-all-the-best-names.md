@@ -1,6 +1,8 @@
 ---
-title: "untitled (all the best names)"
+title: untitled (all the best names)
 date: 2021-09-28
+tags:
+  - essay
 ---
 
 They took all the best names in the 70s & 80s. The obvious like Johnny Rotten and Sid Vicious. The less obvious but obviously better like Darby Crash, Pat Smear, Poly Styrene or "Blue" Gene Tyranny (the list goes on). And so what could I possibly call myself? And why do I feel the need to call myself anything other than what I am already called?

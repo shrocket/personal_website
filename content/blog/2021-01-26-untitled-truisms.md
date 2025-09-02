@@ -1,7 +1,7 @@
 ---
-title: "untitled (truisms)"
+title: untitled (truisms)
 date: 2021-01-26
-tags: 
+tags:
   - essay
 ---
 

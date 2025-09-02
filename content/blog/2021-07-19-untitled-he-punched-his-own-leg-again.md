@@ -1,7 +1,7 @@
 ---
-title: "untitled (he punched his own leg again)"
+title: untitled (he punched his own leg again)
 date: 2021-07-19
-tags: 
+tags:
   - narrative
 ---
 

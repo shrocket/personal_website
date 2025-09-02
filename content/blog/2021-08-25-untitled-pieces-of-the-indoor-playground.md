@@ -1,7 +1,7 @@
 ---
-title: "untitled (pieces of the indoor playground)"
+title: untitled (pieces of the indoor playground)
 date: 2021-08-25
-tags: 
+tags:
   - narrative
 ---
 

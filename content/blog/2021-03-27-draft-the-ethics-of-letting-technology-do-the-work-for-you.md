@@ -1,7 +1,7 @@
 ---
-title: "the ethics of letting technology do the work for you"
+title: the ethics of letting technology do the work for you
 date: 2021-03-27
-tags: 
+tags:
   - essay
 ---
 
@@ -12,7 +12,7 @@ I have a friend who made my daughter the most wonderful baby blanket (which, bec
 I've been poking at the above paragraphs for at least two months now, not knowing quite where to take them. Two days ago, I started reading Maël Renouard's newly translated into English book _Fragments of an Infinite Memory_, and came across the following:
 
 > I remember a period when, without anyone saying aloud or even thinking it in a very direct way (I'm speaking here of those little furtive mental superstitions that lie beneath the threshold of direct consciousness), there was something almost shameful in resorting to the internet, at least in certain academic or scholarly circles, as if it was like taking a performance-enhancing drug for the mind, or looking up the answers at the back of your math book without having made the effort to solve the problem on your own.
-> 
+>
 > p67
 
 And now I know what I want to say: Renouard's book was first published, in France, in 2016, he was, at that point, already writing in the past tense about this "resorting to the internet" shame, and I'm still running into this attitude, in Germany, in 2021.

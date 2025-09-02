@@ -1,7 +1,7 @@
 ---
-title: "untitled (nicknames)"
+title: untitled (nicknames)
 date: 2021-09-05
-tags: 
+tags:
   - essay
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "untitled (maze)"
+title: untitled (maze)
 date: 2021-02-09
-tags: 
+tags:
   - narrative
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "untitled (life and death and toes)"
+title: untitled (life and death and toes)
 date: 2021-06-26
-tags: 
+tags:
   - essay
   - narrative
 ---

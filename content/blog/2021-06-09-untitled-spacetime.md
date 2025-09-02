@@ -1,7 +1,7 @@
 ---
-title: "untitled (spacetime)"
+title: untitled (spacetime)
 date: 2021-06-09
-tags: 
+tags:
   - essay
 ---
 

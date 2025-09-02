@@ -1,13 +1,13 @@
 ---
-title: "untitled (indeterminate Cage lecture)"
+title: indeterminate Cage lecture
 date: 2022-05-05
-tags: 
+tags:
   - essay
 ---
 
-I have created a project called “Indeterminate Cage Lecture.” It is a lecture-generating machine. 
+I have created a project called “Indeterminate Cage Lecture.” It is a lecture-generating machine.
 
-Like most lectures or papers on a specific subject, the project uses one primary source as a departure point and several secondary sources as support. In this case, the primary source is John Cage's 1961 book _Silence_. The secondary sources are Kay Larson's 2012 biography of John Cage _Where the Heart Beats: John Cage, Zen Buddhism, and the Inner Life of Artists_, Luc Sante's 2007 translation of _Nouvelles en trois lignes_ by Félix Fénéon, the final book from David Markson's note card tetralogy _The Last Novel_, the libretto from Robert Ashley's television opera _Perfect Lives_, and Kenneth Goldsmith's 2016 long essay _Wasting Time on the Internet_. The secondary texts were chosen for their formal and content-related affinities to Cage's writings in _Silence_.
+Like most lectures or papers on a specific subject, the project uses one primary source as a departure point and several secondary sources as support. In this case, the primary source is John Cage's 1961 book *Silence*. The secondary sources are Kay Larson's 2012 biography of John Cage *Where the Heart Beats: John Cage, Zen Buddhism, and the Inner Life of Artists*, Luc Sante's 2007 translation of *Nouvelles en trois lignes* by Félix Fénéon, the final book from David Markson's note card tetralogy *The Last Novel*, the libretto from Robert Ashley's television opera *Perfect Lives*, and Kenneth Goldsmith's 2016 long essay *Wasting Time on the Internet*. The secondary texts were chosen for their formal and content-related affinities to Cage's writings in *Silence*.
 
 To make the lecture-generating machine, I took each bit of text I marked during my reading(s) of each source and turned it into its own index card. Additionally, I included all of the stage directions from Cage's own, somewhat similar lecture “45' for a Speaker.” I also created a few of my own stage directions. I then numbered the cards. There are 360. The cards are color-coded for visual effect.
 

@@ -1,7 +1,7 @@
 ---
-title: "untitled (seed)"
+title: untitled (seed)
 date: 2021-04-07
-tags: 
+tags:
   - narrative
 ---
 

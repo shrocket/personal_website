@@ -1,7 +1,7 @@
 ---
-title: "untitled (not given to kissing)"
+title: untitled (not given to kissing)
 date: 2021-07-30
-tags: 
+tags:
   - narrative
 ---
 

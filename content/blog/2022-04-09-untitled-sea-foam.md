@@ -1,7 +1,7 @@
 ---
-title: "untitled (sea foam)"
+title: untitled (sea foam)
 date: 2022-04-09
-tags: 
+tags:
   - narrative
 ---
 

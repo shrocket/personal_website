@@ -1,7 +1,7 @@
 ---
-title: "untitled (digital philosophy)"
+title: untitled (digital philosophy)
 date: 2021-11-05
-tags: 
+tags:
   - essay
 ---
 

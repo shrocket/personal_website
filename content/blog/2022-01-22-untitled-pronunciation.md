@@ -1,7 +1,7 @@
 ---
-title: "untitled (pronunciation)"
+title: untitled (pronunciation)
 date: 2022-01-22
-tags: 
+tags:
   - narrative
 ---
 

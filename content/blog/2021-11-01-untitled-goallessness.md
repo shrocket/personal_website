@@ -1,7 +1,7 @@
 ---
-title: "untitled (goallessness)"
+title: untitled (goallessness)
 date: 2021-11-01
-tags: 
+tags:
   - essay
 ---
 

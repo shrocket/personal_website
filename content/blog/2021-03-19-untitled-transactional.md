@@ -1,7 +1,7 @@
 ---
-title: "untitled (transactional)"
+title: untitled (transactional)
 date: 2021-03-19
-tags: 
+tags:
   - narrative
 ---
 

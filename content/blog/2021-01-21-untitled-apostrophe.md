@@ -1,7 +1,7 @@
 ---
-title: "untitled (apostrophe)"
+title: untitled (apostrophe)
 date: 2021-01-21
-tags: 
+tags:
   - essay
 ---
 

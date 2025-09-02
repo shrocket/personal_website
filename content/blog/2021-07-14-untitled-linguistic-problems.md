@@ -1,7 +1,7 @@
 ---
-title: "untitled (linguistic problems)"
+title: untitled (linguistic problems)
 date: 2021-07-14
-tags: 
+tags:
   - essay
 ---
 

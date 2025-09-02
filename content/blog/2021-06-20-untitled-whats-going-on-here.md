@@ -1,7 +1,7 @@
 ---
-title: "untitled (what’s going on here?)"
+title: what’s going on here?
 date: 2021-06-20
-tags: 
+tags:
   - essay
   - photography
 ---
