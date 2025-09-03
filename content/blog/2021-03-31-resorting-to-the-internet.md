@@ -5,6 +5,7 @@ tags:
   - essay
   - list
   - poetry
+  - any minor world
 ---
 
 restrengthen tinier toot  

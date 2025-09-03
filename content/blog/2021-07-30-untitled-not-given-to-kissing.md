@@ -3,6 +3,7 @@ title: untitled (not given to kissing)
 date: 2021-07-30
 tags:
   - narrative
+  - any minor world
 ---
 
 Boyle’s mother wouldn’t let Bill into the house because she thought he was sinister. Something about his lips and their thinness. Something about the dark sparkle of his eyes. Something about the way those eyes would rake over her son, pausing briefly just south of his middle, and she knew what that meant, had watched countless men look similarly at her in her youth, but also even now, because men don’t care, some men don’t care, it’s not about sex at all, is it? It’s a gaze that pierces.

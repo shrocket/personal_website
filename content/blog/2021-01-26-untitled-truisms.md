@@ -3,6 +3,7 @@ title: untitled (truisms)
 date: 2021-01-26
 tags:
   - essay
+  - any minor world
 ---
 
 He was born in the middle of nowhere, lived there, more or less happily, until he was eleven, moved with his family to a slightly less nowhere Nowhere, and was bullied badly enough in junior high and high school that he then left for the first, but certainly not last time. He found leaving to be easy, and so, over the course of his life, left at least 10 more places, until he finally found a place he thought he might not want to leave.

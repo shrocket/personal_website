@@ -4,6 +4,7 @@ date: 2022-01-08
 tags:
   - essay
   - list
+  - any minor world
 ---
 
 > The impossible attracts me because everything possible has been done and the world didn't change.

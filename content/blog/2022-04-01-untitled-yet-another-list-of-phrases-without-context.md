@@ -3,6 +3,7 @@ title: untitled (yet another list of phrases without context)
 date: 2022-04-01
 tags:
   - list
+  - any minor world
 ---
 
 - I'm looking forward to creating a lifestyle.

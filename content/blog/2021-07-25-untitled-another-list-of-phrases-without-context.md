@@ -3,6 +3,7 @@ title: untitled (another list of phrases without context)
 date: 2021-07-25
 tags:
   - list
+  - any minor world
 ---
 
 (taken from an online conversation with an old friend who frequently seems to have context troubles)

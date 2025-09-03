@@ -3,6 +3,7 @@ title: hello again
 date: 2020-12-31
 tags:
   - essay
+  - any minor world
 ---
 
 For ten-plus years, I wrote a blog called _rocket to nowhere_.[^1] Lately, I've been missing that blog. Or maybe not missing that blog, but missing having a public place to put words and ideas and photographs online that isn't "social media" or overrun with/by algorithms.[^2] So this is that. A place. It is not an homage to Steely Dan.[^3] It will not have a theme.[^4] It will not attempt to monetize itself or anything else. It will not be concerned with SEO or number of visitors.[^5] It will not venture much further than this into the realm of manifesto.[^6]

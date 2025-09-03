@@ -3,6 +3,7 @@ title: untitled (dock)
 date: 2021-01-15
 tags:
   - narrative
+  - any minor world
 ---
 
 She suddenly remembered the day at the lake when she was five, the buzzing of biting insects, the lapping of the water, the shimmer of the heat, and how the smell of everything--pine, grilled meats, cheap beer, sweat, citronella, toasted marshmallows--was mixed with sunscreen. But there was something else behind all of that. Something she couldn't quite place her memory on, but she could smell it now.

@@ -3,6 +3,7 @@ title: untitled (an attempt)
 date: 2021-03-08
 tags:
   - essay
+  - any minor world
 ---
 
 I’m sitting (squatting really) in my kitchen, waiting for the pasta to cook. I just had to turn the episode of “Over the Edge” from two weeks ago off because it was bothering the baby. I’m typing this on my phone, which has recently started having battery issues. The pasta is with olives and giant beans. And tomatoes. The recipe is from a French, one pot cookbook. I used the camera function of Google translate to read the recipe. Google and I probably messed something up. The first hour+ of the “Over the Edge” episode was a recording of Negativland rehearsing. How does a rehearsal sound so good? So much of it was just them talking about Internet speed and microphones. This post is a test. I want to see how spontaneously composed posts work or don’t. Learn from failure. Please. The pasta should be stirred.

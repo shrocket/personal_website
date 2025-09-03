@@ -4,6 +4,7 @@ date: 2021-06-20
 tags:
   - essay
   - photography
+  - any minor world
 ---
 
 ![](../assets/img_4804.jpg)

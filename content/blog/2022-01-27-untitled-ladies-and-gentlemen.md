@@ -3,6 +3,7 @@ title: untitled (ladies and gentlemen)
 date: 2022-01-27
 tags:
   - list
+  - any minor world
 ---
 
 Ladies and Gentlemen: Fuck you!  

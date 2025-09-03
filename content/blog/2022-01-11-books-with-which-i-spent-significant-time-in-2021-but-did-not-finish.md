@@ -3,6 +3,7 @@ title: untitled (books with which I spent significant time in 2021, but did not 
 date: 2022-01-11
 tags:
   - list
+  - any minor world
 ---
 
 - _Studies of Silhouettes_ by Pierre Senges and translated by Jacob Siefring

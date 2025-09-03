@@ -3,6 +3,7 @@ title: untitled (he punched his own leg again)
 date: 2021-07-19
 tags:
   - narrative
+  - any minor world
 ---
 
 He punched his own leg again in the same place he had punched it before. A bruise was already forming, but he didn't feel it. He clenched his jaw and spoke, grunted really, through gritted teeth. His eyes popped, strained in their sockets and flashed fire.

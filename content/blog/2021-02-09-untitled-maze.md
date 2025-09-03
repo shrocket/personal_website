@@ -3,6 +3,7 @@ title: untitled (maze)
 date: 2021-02-09
 tags:
   - narrative
+  - any minor world
 ---
 
 I was sitting at a bus stop with Jorge Louis Borges, talking about Icarus' wings and why Daedalus built them at all let alone allowed his son to use them. He must have known, must have been well-acquainted with the folly of youth and its belief in its own immortality. But there must also have been love, a great rampaging love for his son and an even greater (though actually impossible) love for his son's freedom. How long had they been imprisoned in the labyrinth?

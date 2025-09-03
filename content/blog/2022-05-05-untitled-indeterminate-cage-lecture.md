@@ -3,6 +3,7 @@ title: indeterminate Cage lecture
 date: 2022-05-05
 tags:
   - essay
+  - any minor world
 ---
 
 I have created a project called “Indeterminate Cage Lecture.” It is a lecture-generating machine.

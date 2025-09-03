@@ -3,6 +3,7 @@ title: the ethics of letting technology do the work for you
 date: 2021-03-27
 tags:
   - essay
+  - any minor world
 ---
 
 I like anagrams. Every time I point out that my home WiFi network is an anagram of my partners' and my names, the person I'm telling invariably asks if I made the anagram myself. When I say I used the [Internet Anagram Server](https://wordsmith.org/anagram/), they always seem disappointed.

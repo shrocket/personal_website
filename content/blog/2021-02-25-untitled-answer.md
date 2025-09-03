@@ -4,6 +4,7 @@ date: 2021-02-25
 tags:
   - essay
   - poetry
+  - any minor world
 ---
 
 Recently, I had the following conversation with a friend:

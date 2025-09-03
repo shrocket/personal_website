@@ -4,6 +4,7 @@ date: 2021-01-11
 tags:
   - essay
   - list
+  - any minor world
 ---
 
 ([see the list of books read here](2021-01-08-books-read-in-2020.md))

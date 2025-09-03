@@ -4,6 +4,7 @@ date: 2021-09-18
 tags:
   - essay
   - narrative
+  - any minor world
 ---
 
 I suppose I should – It’s just that – Well, there were three – I mean, I told her – But then I was all like – No, no, listen – We were given an antidote. We were told an anecdote. My mother chose to laugh at the editor of the local paper instead of helping him not to make the same mistake twice. We were given an anecdote. We were told an antidote was on its way. The snake had escaped. No one could remember what day it was. Have you seen the image of the clouds? Did you turn it the recommended 90°? What happened then? No, I don’t think Jesus ever had an erection. What do you mean, “What about when he was going through puberty and had to go to the board to solve a math problem?”? Surely, the son of God never went through puberty! What do you mean, “But whence the beard then?”? What is even “whence”? Is it a real word? I never heard it. What do you mean, do I think I’m the what of words? Arbiter?!?! that’s not a word. Why do you keep using words that aren’t words?

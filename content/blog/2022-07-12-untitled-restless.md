@@ -3,6 +3,7 @@ title: untitled (restless)
 date: 2022-07-12
 tags:
   - essay
+  - any minor world
 ---
 
 Where does the time go? Why do we ask ourselves that question?
