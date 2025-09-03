@@ -7,6 +7,6 @@ tags:
   - any minor world
 ---
 
-![](../assets/img_4804.jpg)
+![a street where all the cars on the far side and most of the cars on the near side are a shade of gray](../assets/img_4804.jpg)
 
 Every car on the far side is a shade of gray (and nearly every car on the near side).
