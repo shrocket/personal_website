@@ -1,0 +1,33 @@
+---
+title: Retrospective: 13 June 2011: Dictionary Definitions
+date: 2015-04-06
+categories: 
+  - blahg
+  - 10-year-retrospective
+---
+
+\[To view this post in its original context, click [here](2011-06-13-dictionary-definitions.md).\]
+
+I am currently teaching a class on fictional reference materials. Every time I say or write that, someone (rightfully) asks, "What does that mean?" The answer I have been giving usually consists of examples: _The Devil's Dictionary_ by Ambrose Bierce, _The Hitchhiker's Guide to the Galaxy_ by Douglas Adams, & _Moby-Dick_. Another answer I could give might be "fictional content in a non-fiction wrapper," but then what do we do with the example of _Moby-Dick_ since it is just the opposite? That's one of the questions the course is asking.
+
+I recently gave my students the following assignment:
+
+> Pick an English word that either 1.has always interested you 2.you don't know
+>
+> Write a **new** dictionary definition of this word. 1.Be sure to include all parts of a dictionary definition (as we have discussed them). 2.Try to include as many ways of defining as you can. 3.Think about the things we've discussed so far. 4.Obviously, you may (and probably should) make things up.
+
+All of my students did really interesting things with this assignment, and I am really excited for their upcoming fake (?) encyclopedia entries. Three students gave me permission to share their work here:
+
+**1\. Angela Allmendinger: Juggernaut** (ˈjəgərˌnôt) _n_ **1.** A professional comic entertainer who performs wearing a spacesuit and whose sole form of entertainment is to juggle and make balloon animals shaped like black holes. During the Cold War it was common for parents to hire these entertainers for children’s birhday parties. **2.** A type of highly trained astronaut whose sole responsibility when residing in a spaceship and/or when in orbit, is to juggle for at least 16 hours a day. Due to a lack of gravity when in space, these professionals must not only undergo extensive physical and technical training, but must display otherworldly hand eye coordination and reflexes. These professionals can be identified from the conventional astronaut by their brightly coloured spacesuit. They are especially coveted by the organizers of space programs who wish to make compactly sized spaceships, due to their ability to fit a large number of themselves into a small space. \[from English verb _to juggle_ + noun _astronaut_\] Related noun: (_derogatory_) **Space clownboys. 3.** _n_ The title of a 1983 classical-rap-electro musical production, written, produced, and performed by the South Indian Playwright, Abhinandan Karunanidhi Mitesh Karnataka. Inspired by Andrew Lloyd Weber's production _Jesus Christ Superstar_, the story follows the personal exploits of the Hindu god Krishna after he is transformed from stone into a living god by Brahma. The bobble head stone souvenires for this production are still worshipped in some parts of Puri and Orissa. \[from Hindi _Jagannath_, from Sanskrit _Jagannatha_ lord of the world, from _jagat_ world + _natha_ lord\]
+
+**2\. Moritz Bareiß: turtle** _noun, adj., verb pronunciation_: _AE_ /ˈælbəˌtrɒs/, _BE_ /ˈsiːˌɡʌl/
+
+■ _noun_ **1** a small bird with gray, red or green feathers which lives in South American rainforests and primarily feeds on the leftovers of tourists (sometimes also called → touristbird). **2** _informal_ A person who tries to receive approval and, more often, money, by making positive remarks about ornithology and/or ornithologists: _He was such a turtle, you know, behaving like a bird-lover, just to get enough money to buy himself a telescope._ **3** a children's game where three or more children try to confuse ornithologists by dressing up like birds.
+
+■ _adj._ **1** the opposite of (→ boring), very interesting, exciting: _I really enjoyed my Literary Studies II - course. It was very turtle._ **2** _used only by ornithologists_: knowing a lot about birds, especially turtles: _She is so turtle, she knows absolutely everything about turtles._
+
+■ _verb_ **1** to make positive remarks/ to act very polite in order to receive approval (in some cases also: money): _They finally called him the greatest ornithologist of all time after he had turtled around for over two hours._ **2** to live on the expense of others, e.g. by eating their leftovers.
+
+_etymology_: Origin: mid 17th century: from Spanish _tortugaviar_, the name Spanish conquerors gave the bird after the first specimen was caught and documented by the discoverer _Alfonso-Rodrigo Lacaza_. First appearance in the English language in the first half of the 18th century in various scientific texts.
+
+**3\. Carsten-Tobias Weigold: superperforator** /’su:pə’pə:fəreɪtə/ _n_. In 1912 a big problem arose in the production of cheese. As a result of the industrialization, new efficient ways and techniques of cheese production, and the growing demand for cheese on the food market, modern cheese was produced and sold so fast that this lactate product was not stored long enough anymore to develop its typical holes. As a solution to this problem Edmund Emmentaler invented the superperforator- an electric device that shot holes into the cheese. This special device could easily be included into the production process of cheese. Today the superperforator is still used and is shooting holes into cheeses that normally do not have any holes- an idea which marketing strategists came up with to increase the collective aesthetic conception of customers for cheese. Moreover, the selling of cheeses perforated by the superperforator made the cheese production more profitable because in fact the customer gets less cheese than before but is buying it for the same price. Due to the great success of the superperforator device in the matter of cheese production, it caught the attention of military strategists. In 1915 Edmund Emmentaler was assigned to modify the superperforator for military purposes. In a short period of time he modified the concept of the superperforator and developed a device very similar to actual superperforator which today is known as the machine gun. Even in the field of medicine the superperforator found use. The Italian doctor Silvano Silly developed a modified version of the superperforator to make Caesarian deliveries faster and more efficient.

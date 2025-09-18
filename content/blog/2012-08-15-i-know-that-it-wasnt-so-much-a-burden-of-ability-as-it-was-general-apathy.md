@@ -1,0 +1,8 @@
+---
+title: "I know that it wasn't so much a burden of ability as it was general apathy."
+date: 2012-08-15
+categories:
+  - blahg
+---
+
+I watched her as she trundled down the street, away from me and my binary thought processes, my right vs. wrong, my yes or—. Know this, though: I am aware of the limitations of my thinking. That I seem robotic, that I recognize, in this situation, no gray space, is but a reaction to her manifold, her multifarious, multiplex, multifaceted—I mean, her layers and their too-manyness. It isn't easy to explain. Wasn’t I, moments before, hadn't I been . . . ? So there I still was, right? Much as I had been, moments ago—so really what I mean is, Here I still am, right? A crow flew overhead, cawing loudly. Burden yourselves not with knowledge, not in this case, but rather with feeling, with instinct, with the ineffable, with the fact that every explanation is stymied by something unexplainable, a crow's caw, a waking into the now and feeling as though one had been away for a long while, a sorcery, perhaps? Of course. Ability to know and articulate comes and goes. As the seasons, so the days; as the days, so the hours; as the hours, so the minutes; as above, so below. It isn't always like this, but what I mean to say is that it hasn't always been, but what I really mean to say is that before I saw her, before she walked by, before I thought I knew her and then attempted to protect myself within binary thinking, I had been trying, but what had I been trying? Was I—wait, which I? General confusion all around, and—. Apathy does not seem to be the spell cast here.

@@ -1,0 +1,11 @@
+---
+title: Three Ton Coworker: And Though I've Never Been Dead, I Have Been Underwater
+date: 2011-09-29
+categories: 
+  - blahg
+  - three-ton-coworker
+---
+
+> "but they dropped me in the coffin / it was shored up on two saw horses like a boat / the shavings of wood inside were like a nest of dead wasps / it felt so good real tight like new clothes that fit / like a muscle-man T-shirt" —Frank Stanford, _The Battlefield Where the Moon Says I Love You_, lines 4046-50
+
+Yesterday, I went to the pharmacy, and I purchased one of those bulbs for washing out ears or possibly noses, but it was too small, probably intended for the cavities in a baby's head, and I say it was too small only because today the very same ear I rinsed out yesterday is again full of something or at least feels that way, the major difference being that today I also suffer from a near-constant and also somewhat river-like post-nasal-drip, which in fact woke me up and now there's a tickling, a possible shifting of contents in the ear I didn't yesterday rinse, and blocked ears feel like death somehow, though I wouldn't actually know, no one really actually knows, and those people who tell you about tunnels and lights and beckoning loved ones are describing hallucinations brought about by an acute lack of oxygen to the brain, and I suppose that the blocked-ear death I'm describing is simply a kind of aural hallucination, and though I've never been dead, I have been underwater, and maybe it is that when my ears and sinuses are blocked and I cannot breathe and my eyes are watering that I should be underwater talking to whales or dolphins since the clicks my nose makes when I attempt to inhale are—but of course then I'd drown, and I'm not entirely certain that a larger bulb would actually help or even solve the problem which actually has to do with pollen or something, a kind of drowning in the open air as pollen does cause one's head and lungs to fill with fluid, and the problem with my ears, I've been told, is that the opening into the side of my head is narrower than maybe it should be and so my head doesn't drain quite in the way it ought to, which has nothing to do with pollen except perhaps it's pollen which causes the over-production of that which is not being properly drained.

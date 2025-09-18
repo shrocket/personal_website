@@ -1,0 +1,52 @@
+---
+title: Twitter Weekly Updates for 2010-03-13
+date: 2010-03-13
+categories:
+  - blahg
+  - tweets
+---
+
+- A lament for the bookshelf: [http://www.theglobeandmail.com/news/arts/a-lament-for-the-bookshelf/article1488426/](http://www.theglobeandmail.com/news/arts/a-lament-for-the-bookshelf/article1488426/) #[fb](http://search.twitter.com/search?q=%23fb) [#](http://twitter.com/shrocket/statuses/10084965267)
+- "The rotation gets thick. The constraints get thin." (ultimately DJ Spooky) #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188686273)
+- "Facebook and MySpace are crude personal essay machines." Twitter has them both beat by having streamlines the process. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188724507)
+- "In hip-hop, the mimetic function has been eclipsed to a large extent by manipulation of the original (the 'real thing')." #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188785384)
+- What's the difference between representing the real and re-presenting the real? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188799520)
+- "Replication isn't reproduction." And he still hasn't given any credit to Baudrillard. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188860281)
+- "actual arguments between genuine young people being authentically solipsistic" #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10188927704)
+- "The urge to connect bits that don't seem to belong together has fascinated me all my life." (Sebald again) #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10190845747)
+- "Meaning, ultimately, is a matter of adjacent data." #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10190911441)
+- "I'm drawn to literature instead as a form of thinking." This as opposed to "narrative." But narrative is its own form of thinking. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10190986319)
+- Chapter "m: in praise of brevity," is not witty. And neither, really, am I. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10192221320)
+- "In imaginative literature we're always constrained from considering alternative scenarios; there are none." And the end of Hopscotch? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10194768516)
+- "Great art is clear thinking about mixed feelings." (Auden) And Guernica? And Mrs. Dalloway? And all of Rothko's work? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10194865274)
+- Aphorisms might be the shortest essays, but they rarely contain arguments within themselves, thus perhaps disqualifying them. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10194905844)
+- I continue my "live" tweeting of David Shields' new book Reality Hunger. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10292780696)
+- "I want a literature built entirely out of contemplation and revelation." he said as though there were any other kind. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10292813207)
+- "What's the difference between repetition and reprise?" Do you mean the normal "reprise" or the Sinatra "Reprise"? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10292858152)
+- "Fiction mimics interest in God's intelligent omnipotence" I wish he would admit he's talking about one kind of fiction, not all kinds. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10293029551)
+- "To what degree can solipsism gain access to the world?" Strike "gain," and replace with "grant." Ask the question again. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10293074676)
+- "The writers I love tend to have Schrödinger's Paradox tattooed on their forehead" I agree, but either way, the cat is dead. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10293118641)
+- "a part of living, of breathing, of surviving, is to exploit our human relationships in order to live." The heart of fiction? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10293246434)
+- Will I be able to resist including section 514 in my dissertation prospectus? Wholesale and possibly without firm attribution? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10294450165)
+- My dissertation director follows my tweets. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10294462751)
+- "I'm bored by out-and-out fabrication." There is no such thing. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10294497381)
+- "fiction . . . has never seemed less central to the culture's sense of itself" But all of our "reality" is fictionalized. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10294570716)
+- Shields is damning "fiction" with broad strokes and expecting the reader to see them as scalpel twitches. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10294578393)
+- "We are adrift, alone in the cosmos, wreaking monstrous violence on one another out of frustration and pain." (Woody Allen) #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10295225805)
+- "Let us hope the time will come when language is most efficiently used where it is being must efficiently misused." (Beckett) #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10295263383)
+- Shields seems to be at his best when using someone else's voice. Me too. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10295287392)
+- "having the courage to share the reasons for the catastrophe of your character with the world" (Gass) #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10295378059)
+- "I love your willingness to be wrong, dumb, blind, embarrassing." I wish Shields engaged in this willingness a little more. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10296179878)
+- Hmmm, is presenting contradictions a willingness to be wrong, dumb, blind, embarrassing? Have I spoken too soon? #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297295829)
+- "at the heart of 'literary culture' is the big, blockbuster novel by middle-of-the-road writers" #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297316562)
+- "Novel qua novel is a form of nostalgia." No. The genre is defined by its elasticity. Explain nostalgia for the "open-ended present." #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297393094)
+- "The kinds of novels I like are ones which bear no trace of being novels." They are, however, still novels, and still fiction. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297415363)
+- "There are no facts, only art." (Emerson) Again: Fiction. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297438663)
+- "What actually happened is only raw material; what the writer makes of what happened is all that matters." Again: Fiction. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297464465)
+- Shields allies the lyric essay with poetry, and while he's not wrong, he's forgetting that the lyric is also still prose fiction. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297545896)
+- Reality Hunger ultimately interesting, but never explores why we keep fictionalizing our reality. We need fiction. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297599554)
+- Thank you, David Shields. And thus ends my experiment in "live" tweeting a book. #[rh](http://search.twitter.com/search?q=%23rh) [#](http://twitter.com/shrocket/statuses/10297619050)
+- This country appears to be abandoning art. This country appears to be abandoning education. #[fb](http://search.twitter.com/search?q=%23fb) [#](http://twitter.com/shrocket/statuses/10326315187)
+- Conan the Destroyer is playing on cable right now. I'm pretty sure I saw it in the theater. Also: I love Grace Jones. She's super scary! #[fb](http://search.twitter.com/search?q=%23fb) [#](http://twitter.com/shrocket/statuses/10358987359)
+
+Powered by [Twitter Tools](http://alexking.org/projects/wordpress)
