@@ -1,7 +1,7 @@
 ---
-title: New Zodiac: The Calm and Thoughtful Scientist Who Always Saves the Day by Remaining Calm and Thoughtful
+title: New Zodiac - The Calm and Thoughtful Scientist Who Always Saves the Day by Remaining Calm and Thoughtful
 date: 2005-11-08
-categories: 
+categories:
   - blahg
   - zodiac
 ---

@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: Sunshine
+title: Three Ton Coworker - Sunshine
 date: 2011-09-17
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

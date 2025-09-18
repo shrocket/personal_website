@@ -1,8 +1,8 @@
 ---
-title: Retrospective: 02 September 2008: *Not* What I'll Be Reading
+title: Retrospective - 02 September 2008 - Not What I'll Be Reading
 date: 2015-03-31
 categories:
-  - blahg 
+  - blahg
   - 10-year-retrospective
 ---
 

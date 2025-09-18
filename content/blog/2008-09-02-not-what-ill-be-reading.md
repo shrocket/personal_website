@@ -1,7 +1,7 @@
 ---
-title: *not* what I'll be reading
+title: not what I'll be reading
 date: 2008-09-02
-categories: 
+categories:
   - blahg
   - reading
 ---

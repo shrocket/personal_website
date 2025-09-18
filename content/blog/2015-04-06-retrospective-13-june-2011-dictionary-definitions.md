@@ -1,7 +1,7 @@
 ---
-title: Retrospective: 13 June 2011: Dictionary Definitions
+title: Retrospective - 13 June 2011 - Dictionary Definitions
 date: 2015-04-06
-categories: 
+categories:
   - blahg
   - 10-year-retrospective
 ---

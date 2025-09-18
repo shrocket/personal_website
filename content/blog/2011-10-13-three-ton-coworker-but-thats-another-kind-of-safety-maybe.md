@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: But That's Another Kind of Safety Maybe
+title: Three Ton Coworker - But That's Another Kind of Safety Maybe
 date: 2011-10-13
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

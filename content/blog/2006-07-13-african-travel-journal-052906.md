@@ -1,8 +1,8 @@
 ---
-title: Tanzanian Travel Journal: 05.29.06
+title: Tanzanian Travel Journal - 05.29.06
 date: 2006-07-13
 categories:
-  - blahg 
+  - blahg
   - Tanzania
 ---
 

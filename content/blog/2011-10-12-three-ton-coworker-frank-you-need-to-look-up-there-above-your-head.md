@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: Frank, you need to look up, there, above your head.
+title: Three Ton Coworker - Frank, you need to look up, there, above your head.
 date: 2011-10-12
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

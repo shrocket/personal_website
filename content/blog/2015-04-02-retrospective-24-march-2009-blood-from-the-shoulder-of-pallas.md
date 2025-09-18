@@ -1,7 +1,7 @@
 ---
-title: Retrospective: 24 March 2009: \"Blood From the Shoulder of Pallas\"
+title: Retrospective - 24 March 2009 - "Blood From the Shoulder of Pallas"
 date: 2015-04-02
-categories: 
+categories:
   - blahg
   - 10-year-retrospective
 ---

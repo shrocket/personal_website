@@ -1,7 +1,7 @@
 ---
-title: New Zodiac: The Anthropomorphic Inanimate Object
+title: New Zodiac - The Anthropomorphic Inanimate Object
 date: 2005-11-16
-categories: 
+categories:
   - blahg
   - zodiac
 ---

@@ -1,7 +1,7 @@
 ---
-title: Retrospective: 25 November 2012: Reading The Loop by Jacques Roubaud, pt. 7
+title: Retrospective - 25 November 2012 - Reading The Loop by Jacques Roubaud, pt. 7
 date: 2015-04-08
-categories: 
+categories:
   - blahg
   - 10-year-retrospective
 ---

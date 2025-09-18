@@ -1,7 +1,7 @@
 ---
-title: New Zodiac: The Tenacious, Stubborn, Scrappy and Unbelievably Gorgeous Reporter
+title: New Zodiac - The Tenacious, Stubborn, Scrappy and Unbelievably Gorgeous Reporter
 date: 2005-11-10
-categories: 
+categories:
   - blahg
   - zodiac
 ---

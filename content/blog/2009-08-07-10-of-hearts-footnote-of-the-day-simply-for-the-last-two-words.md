@@ -1,7 +1,7 @@
 ---
-title: 10 of hearts: footnote of the day (simply for the last two words)
+title: 10 of hearts - footnote of the day (simply for the last two words)
 date: 2009-08-07
-categories: 
+categories:
   - blahg
   - reading
 ---

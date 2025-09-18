@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: True Everywhere
+title: Three Ton Coworker - True Everywhere
 date: 2011-11-15
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

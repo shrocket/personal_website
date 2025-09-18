@@ -1,7 +1,7 @@
 ---
-title: New Zodiac: The Broccoli
+title: New Zodiac - The Broccoli
 date: 2005-10-21
-categories: 
+categories:
   - blahg
   - zodiac
 ---

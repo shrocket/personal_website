@@ -1,7 +1,7 @@
 ---
-title: Retrospective: 19 February 2014: A Miniature Film Festival
+title: Retrospective - 19 February 2014 - A Miniature Film Festival
 date: 2015-04-12
-categories: 
+categories:
   - blahg
   - 10-year-retrospective
 ---

@@ -1,7 +1,7 @@
 ---
-title: Wunderkammern: Opening is Closure
+title: Wunderkammern - Opening is Closure
 date: 2010-04-29
-categories: 
+categories:
   - blahg
   - compstud
 ---

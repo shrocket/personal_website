@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: N
+title: Three Ton Coworker - N
 date: 2011-09-14
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

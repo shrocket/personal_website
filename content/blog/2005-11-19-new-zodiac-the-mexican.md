@@ -1,8 +1,8 @@
 ---
-title: New Zodiac: The Mexican
+title: New Zodiac - The Mexican
 date: 2005-11-19
 categories:
-  - blahg 
+  - blahg
   - zodiac
 ---
 

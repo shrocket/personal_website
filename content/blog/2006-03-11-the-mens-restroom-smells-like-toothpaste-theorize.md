@@ -1,5 +1,5 @@
 ---
-title: The men's restroom smells like toothpaste--theorize:
+title: The men's restroom smells like toothpaste--theorize
 date: 2006-03-11
 tags:
   - blahg

@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: A Coagulate
+title: Three Ton Coworker - A Coagulate
 date: 2011-08-13
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: Hot Teen Coworker
+title: Three Ton Coworker - Hot Teen Coworker
 date: 2011-11-21
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

@@ -1,7 +1,7 @@
 ---
-title: New Zodiac: The Stone God
+title: New Zodiac - The Stone God
 date: 2005-10-18
-categories: 
+categories:
   - blahg
   - zodiac
 ---

@@ -1,7 +1,7 @@
 ---
-title: @andrewwickliffe post my tweet...
+title: andrewwickliffe post my tweet...
 date: 2009-01-27
-categories: 
+categories:
   - blahg
   - tweets
 ---

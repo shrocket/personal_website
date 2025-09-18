@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: Maelstrom of Fruit Flies
+title: Three Ton Coworker - Maelstrom of Fruit Flies
 date: 2011-08-31
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

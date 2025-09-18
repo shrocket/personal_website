@@ -1,7 +1,7 @@
 ---
-title: Advanced Notice: Reading
+title: Advanced Notice - Reading
 date: 2010-01-29
-categories: 
+categories:
   - blahg
   - reading
 ---

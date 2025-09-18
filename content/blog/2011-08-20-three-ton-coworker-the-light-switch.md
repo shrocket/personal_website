@@ -1,7 +1,7 @@
 ---
-title: Three Ton Coworker: The Light Switch
+title: Three Ton Coworker - The Light Switch
 date: 2011-08-20
-categories: 
+categories:
   - blahg
   - three-ton-coworker
 ---

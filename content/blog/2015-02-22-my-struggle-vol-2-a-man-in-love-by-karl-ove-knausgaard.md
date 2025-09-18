@@ -1,8 +1,8 @@
 ---
-title: My Struggle vol. 2: A Man in Love by Karl Ove Knausgaard
+title: My Struggle vol. 2 - A Man in Love by Karl Ove Knausgaard
 date: 2015-02-22
 categories:
-  - blahg 
+  - blahg
   - 2015-books
   - reading
 ---

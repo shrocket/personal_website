@@ -1,8 +1,8 @@
 ---
-title: Retrospective: 27 February 2006: The Sum of the Remainders
+title: Retrospective - 27 February 2006 - The Sum of the Remainders
 date: 2015-03-27
 categories:
-  - blahg 
+  - blahg
   - 10-year-retrospective
 ---
 
