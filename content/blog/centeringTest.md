@@ -2,7 +2,7 @@
 title: Memo from 20250910
 date: 2025-09-10
 tags:
-  - memo
+  - the-memo
 ---
 
 <div align="center"><b>MEMO</b></div>

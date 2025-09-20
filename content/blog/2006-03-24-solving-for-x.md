@@ -3,7 +3,6 @@ title: solving for x
 date: 2006-03-24
 tags:
   - blahg
-  -
 ---
 
 Last week at work, I wrote 100 blurbs. That, of course, is nothing--Our good man LeCroque had to write upwards of 300 of them. Regardless, I wrote 100, one-sentence descriptions for 100 different products in the following format:

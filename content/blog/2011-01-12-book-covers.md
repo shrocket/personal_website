@@ -3,7 +3,6 @@ title: book covers
 date: 2011-01-12
 tags:
   - blahg
-  - "graphic-design"
 ---
 
 I have been designing the covers for horseless press' chapbooks.
@@ -12,7 +11,7 @@ Here are the ones I've done that you can buy, [and here's the link to buy them](
 
 (Click on an image to see the full cover, front and back.)
 
-[missing image] A Knee for a Life by Jnifer Denrow
+[missing image] A Knee for a Life by Jennifer Denrow
 
 [missing image] I Could Jump Through the Keyhole in Your Door by Mike Sikkema
 

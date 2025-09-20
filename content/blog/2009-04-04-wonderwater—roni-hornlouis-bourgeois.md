@@ -4,7 +4,7 @@ date: 2009-04-04
 tags:
   - blahg
   - reading
-  - emmpeethreemusic
+  - empeethreemusic
 ---
 
 > as in the rough stream of a glacier the ice holds a splinter of bone, a blue petal, some oak trees, and rolls them on.  
