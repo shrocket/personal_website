@@ -1,7 +1,7 @@
 ---
 title: the end of the beard
 date: 2007-05-10
-categories:
+tags:
   - blahg
   - "facial-hair"
 ---

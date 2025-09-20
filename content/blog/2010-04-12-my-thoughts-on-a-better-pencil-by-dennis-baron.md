@@ -1,7 +1,7 @@
 ---
 title: My thoughts on A Better Pencil by Dennis Baron
 date: 2010-04-12
-categories:
+tags:
   - blahg
   - compstud
 ---

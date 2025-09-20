@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2012-09-29
 date: 2012-09-29
-categories:
+tags:
   - blahg
   - tweets
 ---

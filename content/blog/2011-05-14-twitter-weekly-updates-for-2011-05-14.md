@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-05-14
 date: 2011-05-14
-categories:
+tags:
   - blahg
   - tweets
 ---

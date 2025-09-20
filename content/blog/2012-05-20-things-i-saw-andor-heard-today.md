@@ -1,7 +1,7 @@
 ---
 title: Things I Saw and/or Heard Today
 date: 2012-05-20
-categories:
+tags:
   - blahg
   - photography
   - video

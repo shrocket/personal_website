@@ -1,7 +1,7 @@
 ---
 title: more travel
 date: 2007-07-24
-categories:
+tags:
   - blahg
   - photography
   - video

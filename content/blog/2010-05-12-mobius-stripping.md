@@ -1,7 +1,7 @@
 ---
 title: möbius (s)tripping
 date: 2010-05-12
-categories:
+tags:
   - blahg
   - video
 ---

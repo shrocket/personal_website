@@ -1,7 +1,7 @@
 ---
 title: non-discursive summation?
 date: 2010-05-22
-categories:
+tags:
   - blahg
   - compstud
 ---

@@ -1,7 +1,7 @@
 ---
 title: prose and why
 date: 2009-08-31
-categories:
+tags:
   - blahg
   - reading
 ---

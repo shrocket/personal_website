@@ -1,7 +1,7 @@
 ---
 title: Wonderwater—Roni Horn/Anne Carson
 date: 2009-04-13
-categories:
+tags:
   - blahg
   - reading
 ---

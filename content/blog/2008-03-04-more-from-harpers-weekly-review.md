@@ -1,7 +1,7 @@
 ---
 title: more from Harper's Weekly Review
 date: 2008-03-04
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

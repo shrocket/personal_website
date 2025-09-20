@@ -1,7 +1,7 @@
 ---
 title: emerging matters of mixture
 date: 2006-12-06
-categories:
+tags:
   - blahg
   - empeethreemusic
 ---

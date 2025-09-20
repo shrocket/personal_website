@@ -1,7 +1,7 @@
 ---
 title: Reading The Loop by Jacques Roubaud, part 6
 date: 2012-11-10
-categories:
+tags:
   - blahg
   - photography
   - reading

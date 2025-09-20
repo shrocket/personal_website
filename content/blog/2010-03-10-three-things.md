@@ -1,7 +1,7 @@
 ---
 title: three things
 date: 2010-03-10
-categories:
+tags:
   - blahg
   - empeethreemusic
   - reading

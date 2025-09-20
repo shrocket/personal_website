@@ -1,7 +1,7 @@
 ---
 title: Conjecture as to the origin of the AHP MS
 date: 2006-03-08
-categories:
+tags:
   - blahg
   - the-memo
 ---

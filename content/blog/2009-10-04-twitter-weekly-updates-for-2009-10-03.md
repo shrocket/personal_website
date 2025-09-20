@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-10-03
 date: 2009-10-04
-categories:
+tags:
   - blahg
   - tweets
 ---

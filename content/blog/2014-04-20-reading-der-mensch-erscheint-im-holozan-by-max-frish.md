@@ -1,7 +1,7 @@
 ---
 title: Reading Der Mensch Erscheint im Holozän by Max Frish
 date: 2014-04-20
-categories:
+tags:
   - blahg
   - man-in-the-holocene
   - reading

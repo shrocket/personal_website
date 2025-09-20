@@ -1,7 +1,7 @@
 ---
 title: Why we should start paying closer attention to what's on the end of our forks
 date: 2009-09-23
-categories:
+tags:
   - blahg
   - empeethreemusic
 ---

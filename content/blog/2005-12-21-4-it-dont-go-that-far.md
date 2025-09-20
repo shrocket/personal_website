@@ -1,7 +1,7 @@
 ---
 title: 4. it don't go that far
 date: 2005-12-21
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

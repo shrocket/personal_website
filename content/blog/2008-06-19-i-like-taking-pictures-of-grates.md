@@ -1,7 +1,7 @@
 ---
 title: I like taking pictures of grates
 date: 2008-06-19
-categories:
+tags:
   - blahg
   - photography
   - grates

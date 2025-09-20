@@ -1,7 +1,7 @@
 ---
 title: New Pony Available Now!.
 date: 2010-03-25
-categories:
+tags:
   - blahg
   - reading
 ---

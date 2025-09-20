@@ -1,7 +1,7 @@
 ---
 title: Trees (issues 1-8) by Warren Ellis & Jason Howard
 date: 2015-01-21
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

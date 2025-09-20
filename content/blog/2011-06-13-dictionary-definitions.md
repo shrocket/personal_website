@@ -1,7 +1,7 @@
 ---
 title: dictionary definitions
 date: 2011-06-13
-categories:
+tags:
   - blahg
   - tu
 ---

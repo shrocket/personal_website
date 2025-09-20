@@ -1,7 +1,7 @@
 ---
 title: help & vigilance vs. temerity & toejam
 date: 2005-07-22
-categories:
+tags:
   - blahg
   - vs
 ---

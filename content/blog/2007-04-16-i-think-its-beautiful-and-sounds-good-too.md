@@ -1,7 +1,7 @@
 ---
 title: I think it's beautiful (and sounds good too)
 date: 2007-04-16
-categories:
+tags:
   - blahg
   - empeethreemusic
   - reading

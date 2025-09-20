@@ -1,7 +1,7 @@
 ---
 title: book covers
 date: 2011-01-12
-categories:
+tags:
   - blahg
   - "graphic-design"
 ---

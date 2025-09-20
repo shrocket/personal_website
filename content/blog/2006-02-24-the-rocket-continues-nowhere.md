@@ -1,7 +1,7 @@
 ---
 title: the rocket continues nowhere
 date: 2006-02-24
-categories:
+tags:
   - blahg
   - the-memo
 ---

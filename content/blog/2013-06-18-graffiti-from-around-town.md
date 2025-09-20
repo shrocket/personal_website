@@ -1,7 +1,7 @@
 ---
 title: graffiti from around town
 date: 2013-06-18
-categories:
+tags:
   - blahg
   - photography
 ---

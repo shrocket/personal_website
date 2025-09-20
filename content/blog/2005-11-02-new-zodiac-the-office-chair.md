@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The Office Chair
 date: 2005-11-02
-categories:
+tags:
   - blahg
   - zodiac
 ---

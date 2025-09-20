@@ -1,7 +1,7 @@
 ---
 title: One Drawing for Every Page of Moby-Dick
 date: 2009-12-17
-categories:
+tags:
   - blahg
   - reading
 ---

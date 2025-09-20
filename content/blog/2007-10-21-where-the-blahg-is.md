@@ -1,7 +1,7 @@
 ---
 title: where the blahg is
 date: 2007-10-21
-categories:
+tags:
   - blahg
   - reading
 ---

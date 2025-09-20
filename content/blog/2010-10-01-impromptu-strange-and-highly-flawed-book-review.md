@@ -1,7 +1,7 @@
 ---
 title: impromptu, strange, and highly flawed book review
 date: 2010-10-01
-categories:
+tags:
   - blahg
   - reading
 ---

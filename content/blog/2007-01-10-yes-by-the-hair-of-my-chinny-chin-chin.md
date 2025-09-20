@@ -1,7 +1,7 @@
 ---
 title: yes by the hair of my chinny-chin-chin
 date: 2007-01-10
-categories:
+tags:
   - blahg
   - "facial-hair"
 ---

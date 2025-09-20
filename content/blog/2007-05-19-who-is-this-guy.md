@@ -1,7 +1,7 @@
 ---
 title: who is this guy?
 date: 2007-05-19
-categories:
+tags:
   - blahg
   - "facial-hair"
 ---

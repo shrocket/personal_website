@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-12-19
 date: 2009-12-19
-categories:
+tags:
   - blahg
   - tweets
 ---

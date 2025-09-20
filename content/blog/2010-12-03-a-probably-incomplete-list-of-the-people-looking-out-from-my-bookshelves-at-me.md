@@ -1,7 +1,7 @@
 ---
 title: a probably incomplete list of the people looking out from my bookshelves at me
 date: 2010-12-03
-categories:
+tags:
   - blahg
   - reading
 ---

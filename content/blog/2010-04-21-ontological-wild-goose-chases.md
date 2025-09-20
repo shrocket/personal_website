@@ -1,7 +1,7 @@
 ---
 title: "ontological wild goose chases"
 date: 2010-04-21
-categories:
+tags:
   - blahg
   - compstud
 ---

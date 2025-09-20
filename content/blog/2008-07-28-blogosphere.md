@@ -1,7 +1,7 @@
 ---
 title: blogosphere
 date: 2008-07-28
-categories:
+tags:
   - blahg
   - notes
   - reading

@@ -1,7 +1,7 @@
 ---
 title: 1 Day, 8 Films, Some Notes
 date: 2012-07-31
-categories:
+tags:
   - blahg
   - notes
 ---

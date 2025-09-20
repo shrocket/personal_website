@@ -1,7 +1,7 @@
 ---
 title: landslide
 date: 2009-12-26
-categories:
+tags:
   - blahg
   - video
 ---

@@ -1,7 +1,7 @@
 ---
 title: king of spades
 date: 2009-07-20
-categories:
+tags:
   - blahg
   - reading
 ---

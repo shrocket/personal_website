@@ -1,7 +1,7 @@
 ---
 title: Three Ton Coworker - and some motor somewhere whines
 date: 2011-09-01
-categories:
+tags:
   - blahg
   - three-ton-coworker
 ---

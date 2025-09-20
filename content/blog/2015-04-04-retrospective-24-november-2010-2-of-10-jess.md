@@ -1,7 +1,7 @@
 ---
 title: Retrospective - 25 November 2010 - 2 of 10 (Jess)
 date: 2015-04-04
-categories:
+tags:
   - blahg
   - 10-year-retrospective
 ---

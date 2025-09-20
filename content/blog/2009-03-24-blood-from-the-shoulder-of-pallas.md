@@ -1,7 +1,7 @@
 ---
 title: "Blood From the Shoulder of Pallas"
 date: 2009-03-24
-categories:
+tags:
   - blahg
   - reading
 ---

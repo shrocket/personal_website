@@ -1,7 +1,7 @@
 ---
 title: Three Ton Coworker - Smarter or Stronger
 date: 2011-08-17
-categories:
+tags:
   - blahg
   - three-ton-coworker
 ---

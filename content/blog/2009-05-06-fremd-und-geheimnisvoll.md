@@ -1,7 +1,7 @@
 ---
 title: fremd und geheimnisvoll
 date: 2009-05-06
-categories:
+tags:
   - blahg
   - video
 ---

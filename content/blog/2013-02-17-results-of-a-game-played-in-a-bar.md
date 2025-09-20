@@ -1,7 +1,7 @@
 ---
 title: results of a game played in a bar
 date: 2013-02-17
-categories:
+tags:
   - blahg
   - notes
 ---

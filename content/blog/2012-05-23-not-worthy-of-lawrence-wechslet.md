@@ -1,7 +1,7 @@
 ---
 title: Not Worthy of Lawrence Wechsler
 date: 2012-05-23
-categories:
+tags:
   - blahg
   - photography
   - vs

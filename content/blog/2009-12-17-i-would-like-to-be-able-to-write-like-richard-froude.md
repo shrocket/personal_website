@@ -1,7 +1,7 @@
 ---
 title: I would like to be able to write like Richard Froude
 date: 2009-12-17
-categories:
+tags:
   - blahg
   - reading
 ---

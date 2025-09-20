@@ -1,7 +1,7 @@
 ---
 title: nine of diamonds
 date: 2009-07-02
-categories:
+tags:
   - blahg
   - reading
 ---

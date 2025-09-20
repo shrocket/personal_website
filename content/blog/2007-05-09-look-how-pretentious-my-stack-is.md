@@ -1,7 +1,7 @@
 ---
 title: look how pretentious my stack is!
 date: 2007-05-09
-categories:
+tags:
   - blahg
   - list
   - reading

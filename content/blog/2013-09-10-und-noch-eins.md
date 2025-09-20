@@ -1,7 +1,7 @@
 ---
 title: und noch eins
 date: 2013-09-10
-categories:
+tags:
   - blahg
   - paving-stones
   - photography

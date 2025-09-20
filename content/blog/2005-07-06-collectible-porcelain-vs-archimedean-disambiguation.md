@@ -1,7 +1,7 @@
 ---
 title: collectible porcelain vs. archimedean disambiguation
 date: 2005-07-06
-categories:
+tags:
   - vs
   - blahg
   - narrative

@@ -1,7 +1,7 @@
 ---
 title: please play along (and link back if you do)
 date: 2008-09-18
-categories:
+tags:
   - blahg
   - photography
 ---

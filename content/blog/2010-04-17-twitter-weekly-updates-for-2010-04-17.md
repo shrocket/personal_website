@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-04-17
 date: 2010-04-17
-categories:
+tags:
   - blahg
   - tweets
 ---

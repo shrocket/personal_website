@@ -1,7 +1,7 @@
 ---
 title: 6. in other words
 date: 2005-12-31
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: more grates
 date: 2008-10-16
-categories:
+tags:
   - blahg
   - photography
   - grates

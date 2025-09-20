@@ -1,7 +1,7 @@
 ---
 title: sense and no
 date: 2007-12-12
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

@@ -1,7 +1,7 @@
 ---
 title: Reading Der Mensch Erscheint im Holozän, Section 9a
 date: 2014-05-18
-categories:
+tags:
   - blahg
   - man-in-the-holocene
   - reading

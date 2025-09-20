@@ -1,7 +1,7 @@
 ---
 title: "I am officially ill-equipped to deal with this world."
 date: 2012-05-05
-categories:
+tags:
   - blahg
   - photography
 ---

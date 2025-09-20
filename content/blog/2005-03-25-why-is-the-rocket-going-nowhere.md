@@ -1,7 +1,7 @@
 ---
 title: why is the rocket going nowhere?
 date: 2005-03-25
-categories:
+tags:
   - blahg
   - the-memo
   - narrative

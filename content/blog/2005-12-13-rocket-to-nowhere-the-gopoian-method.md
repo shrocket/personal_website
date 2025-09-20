@@ -1,7 +1,7 @@
 ---
 title: rocket to nowhere - the Gopoian method
 date: 2005-12-13
-categories:
+tags:
   - blahg
   - gopoian-method
 ---

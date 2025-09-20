@@ -1,7 +1,7 @@
 ---
 title: oh delightful procrastination
 date: 2008-03-07
-categories:
+tags:
   - blahg
   - video
   - vs

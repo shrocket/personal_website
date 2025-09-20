@@ -1,7 +1,7 @@
 ---
 title: finding needles in haystacks
 date: 2006-02-01
-categories:
+tags:
   - blahg
   - the-memo
 ---

@@ -1,7 +1,7 @@
 ---
 title: verbs in Andrew Bush's "66 Drives"
 date: 2008-06-25
-categories:
+tags:
   - blahg
   - photography
 ---

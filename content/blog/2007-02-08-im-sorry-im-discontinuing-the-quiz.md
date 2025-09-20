@@ -1,7 +1,7 @@
 ---
 title: I'm sorry. I'm discontinuing the quiz.
 date: 2007-02-08
-categories:
+tags:
   - blahg
   - "quiz"
 ---

@@ -1,7 +1,7 @@
 ---
 title: This is a Rocket Protest
 date: 2005-09-09
-categories:
+tags:
   - blahg
   - list
   - empeethreemusic

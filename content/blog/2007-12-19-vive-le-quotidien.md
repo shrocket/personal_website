@@ -1,7 +1,7 @@
 ---
 title: Vive Le Quotidien!
 date: 2007-12-19
-categories:
+tags:
   - blahg
   - reading
 ---

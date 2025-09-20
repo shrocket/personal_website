@@ -1,7 +1,7 @@
 ---
 title: and offend your mother in strong language
 date: 2007-04-18
-categories:
+tags:
   - blahg
   - video
 ---

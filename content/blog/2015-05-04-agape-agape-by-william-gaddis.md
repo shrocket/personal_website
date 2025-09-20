@@ -1,7 +1,7 @@
 ---
 title: Agapé Agape by William Gaddis
 date: 2015-05-04
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

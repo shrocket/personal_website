@@ -1,7 +1,7 @@
 ---
 title: some kind of attempt
 date: 2012-08-13
-categories:
+tags:
   - blahg
   - tu
 ---

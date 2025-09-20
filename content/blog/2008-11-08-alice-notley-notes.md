@@ -1,7 +1,7 @@
 ---
 title: Alice Notley Notes
 date: 2008-11-08
-categories:
+tags:
   - blahg
   - notes
 ---

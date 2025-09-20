@@ -1,7 +1,7 @@
 ---
 title: social networking from home in our pajamas without human contact
 date: 2009-01-27
-categories:
+tags:
   - blahg
   - tweets
 ---

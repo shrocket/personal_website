@@ -1,7 +1,7 @@
 ---
 title: Super Grover Underoos vs. trebuchet
 date: 2005-07-01
-categories:
+tags:
   - blahg
   - vs
   - narrative

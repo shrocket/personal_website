@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-08-22
 date: 2009-08-23
-categories:
+tags:
   - blahg
   - tweets
 ---

@@ -1,7 +1,7 @@
 ---
 title: 7 of diamonds
 date: 2009-06-18
-categories:
+tags:
   - blahg
   - reading
 ---

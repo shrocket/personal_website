@@ -1,7 +1,7 @@
 ---
 title: successfully relocated
 date: 2007-08-31
-categories:
+tags:
   - blahg
   - photography
 ---

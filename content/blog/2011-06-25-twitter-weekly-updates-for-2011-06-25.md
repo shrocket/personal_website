@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-06-25
 date: 2011-06-25
-categories:
+tags:
   - blahg
   - tweets
 ---

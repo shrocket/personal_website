@@ -1,7 +1,7 @@
 ---
 title: An Experiment, pt. 2
 date: 2011-08-07
-categories:
+tags:
   - blahg
   - three-ton-coworker
 ---

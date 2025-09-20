@@ -1,7 +1,7 @@
 ---
 title: Wonderwater—Roni Horn/Hélène Cixous
 date: 2009-04-21
-categories:
+tags:
   - blahg
   - reading
 ---

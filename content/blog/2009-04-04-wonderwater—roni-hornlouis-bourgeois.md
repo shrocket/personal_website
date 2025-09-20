@@ -1,7 +1,7 @@
 ---
 title: Wonderwater—Roni Horn/Louise Bourgeois
 date: 2009-04-04
-categories:
+tags:
   - blahg
   - reading
   - emmpeethreemusic

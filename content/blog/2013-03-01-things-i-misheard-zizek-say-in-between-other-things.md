@@ -1,7 +1,7 @@
 ---
 title: things I (mis)heard Žižek say in between other things
 date: 2013-03-01
-categories:
+tags:
   - blahg
   - notes
 ---

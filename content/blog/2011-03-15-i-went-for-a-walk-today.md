@@ -1,7 +1,7 @@
 ---
 title: I went for a walk today
 date: 2011-03-15
-categories:
+tags:
   - blahg
   - photography
 ---

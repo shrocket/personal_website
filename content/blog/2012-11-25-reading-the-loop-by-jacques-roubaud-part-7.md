@@ -1,7 +1,7 @@
 ---
 title: Reading The Loop by Jacques Roubaud, part 7
 date: 2012-11-25
-categories:
+tags:
   - blahg
   - reading
   - the-loop

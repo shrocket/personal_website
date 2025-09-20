@@ -1,7 +1,7 @@
 ---
 title: toothsome vs. casserole
 date: 2005-07-26
-categories:
+tags:
   - blahg
   - vs
   - narrative

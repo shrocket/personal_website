@@ -1,7 +1,7 @@
 ---
 title: 5. that ever did ride
 date: 2005-12-28
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: Pakistan ordered its civil servants to go sockless.
 date: 2013-05-29
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

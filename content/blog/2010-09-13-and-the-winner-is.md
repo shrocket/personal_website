@@ -1,7 +1,7 @@
 ---
 title: and the winner is . . .
 date: 2010-09-13
-categories:
+tags:
   - blahg
   - these-machines-kill-fascists
 ---

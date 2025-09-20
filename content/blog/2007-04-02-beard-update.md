@@ -1,7 +1,7 @@
 ---
 title: beard update
 date: 2007-04-02
-categories:
+tags:
   - blahg
   - "facial-hair"
 ---

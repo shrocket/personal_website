@@ -1,7 +1,7 @@
 ---
 title: Cities of the Red Night by William S. Burroughs
 date: 2015-01-12
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

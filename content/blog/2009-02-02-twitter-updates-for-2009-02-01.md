@@ -1,7 +1,7 @@
 ---
 title: Twitter Updates for 2009-02-01
 date: 2009-02-02
-categories:
+tags:
   - blahg
   - tweets
 ---

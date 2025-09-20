@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-05-16
 date: 2009-05-17
-categories:
+tags:
   - blahg
   - tweets
 ---

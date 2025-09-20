@@ -1,7 +1,7 @@
 ---
 title: Things I read in 2014 that weren't books
 date: 2015-01-02
-categories:
+tags:
   - blahg
   - reading
 ---

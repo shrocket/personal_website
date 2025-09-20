@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-04-05
 date: 2009-04-05
-categories:
+tags:
   - blahg
   - tweets
 ---

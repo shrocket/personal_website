@@ -1,7 +1,7 @@
 ---
 title: books (you should buy) by people I know
 date: 2008-12-18
-categories:
+tags:
   - blahg
   - reading
 ---

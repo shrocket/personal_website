@@ -1,7 +1,7 @@
 ---
 title: 3. to us just right along
 date: 2005-12-20
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: Thoughts on 5 of the books I read in 2014
 date: 2015-01-03
-categories:
+tags:
   - blahg
   - notes
   - reading

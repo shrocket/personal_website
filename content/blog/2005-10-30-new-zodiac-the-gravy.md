@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The Gravy
 date: 2005-10-30
-categories:
+tags:
   - blahg
   - zodiac
 ---

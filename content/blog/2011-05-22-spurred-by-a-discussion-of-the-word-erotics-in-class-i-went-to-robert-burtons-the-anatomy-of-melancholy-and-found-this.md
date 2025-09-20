@@ -1,7 +1,7 @@
 ---
 title: spurred by a discussion of the word "erotics" in class, I went to Robert Burton's The Anatomy of Melancholy, and found this
 date: 2011-05-22
-categories:
+tags:
   - blahg
   - tu
 ---

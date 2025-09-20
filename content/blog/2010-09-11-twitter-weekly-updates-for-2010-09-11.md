@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-09-11
 date: 2010-09-11
-categories:
+tags:
   - blahg
   - tweets
 ---

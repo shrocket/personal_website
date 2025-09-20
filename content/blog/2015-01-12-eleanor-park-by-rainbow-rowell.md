@@ -1,7 +1,7 @@
 ---
 title: Eleanor & Park by Rainbow Rowell
 date: 2015-01-12
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

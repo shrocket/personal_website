@@ -1,7 +1,7 @@
 ---
 title: Retrospective - 19 June 2007 - The Shortest Distance Between Two Points
 date: 2015-03-29
-categories:
+tags:
   - blahg
   - 10-year-retrospective
 ---

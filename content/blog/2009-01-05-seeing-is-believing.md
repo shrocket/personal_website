@@ -1,7 +1,7 @@
 ---
 title: seeing is believing
 date: 2009-01-05
-categories:
+tags:
   - blahg
   - photography
 ---

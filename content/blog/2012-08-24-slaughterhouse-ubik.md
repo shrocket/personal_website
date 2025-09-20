@@ -1,7 +1,7 @@
 ---
 title: Slaughterhouse Ubik
 date: 2012-08-24
-categories:
+tags:
   - blahg
   - reading
 ---

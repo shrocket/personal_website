@@ -1,7 +1,7 @@
 ---
 title: Books I read in 2014
 date: 2014-12-31
-categories:
+tags:
   - blahg
   - list
   - reading

@@ -1,7 +1,7 @@
 ---
 title: Fifty Shades of Grey (a review)
 date: 2012-09-24
-categories:
+tags:
   - blahg
   - reading
 ---

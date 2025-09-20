@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-07-23
 date: 2011-07-23
-categories:
+tags:
   - blahg
   - tweets
 ---

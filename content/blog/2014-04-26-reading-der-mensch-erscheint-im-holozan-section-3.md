@@ -1,7 +1,7 @@
 ---
 title: Reading Der Mensch Erscheint im Holozän, Section 3
 date: 2014-04-26
-categories:
+tags:
   - blahg
   - man-in-the-holocene
   - reading

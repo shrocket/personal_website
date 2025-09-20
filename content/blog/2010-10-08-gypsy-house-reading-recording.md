@@ -1,7 +1,7 @@
 ---
 title: gypsy house reading recording
 date: 2010-10-08
-categories:
+tags:
   - blahg
   - empeethreemusic
   - reading

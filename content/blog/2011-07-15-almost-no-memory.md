@@ -1,7 +1,7 @@
 ---
 title: "almost no memory"
 date: 2011-07-15
-categories:
+tags:
   - blahg
   - notes
 ---

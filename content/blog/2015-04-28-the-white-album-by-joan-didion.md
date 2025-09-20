@@ -1,7 +1,7 @@
 ---
 title: The White Album by Joan Didion
 date: 2015-04-28
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

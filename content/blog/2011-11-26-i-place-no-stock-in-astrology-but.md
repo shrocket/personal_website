@@ -1,7 +1,7 @@
 ---
 title: I place no stock in astrology, but
 date: 2011-11-26
-categories:
+tags:
   - blahg
   - zodiac
 ---

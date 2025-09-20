@@ -1,7 +1,7 @@
 ---
 title: The Descent of Alette - Alice Notley
 date: 2009-06-01
-categories:
+tags:
   - blahg
   - reading
 ---

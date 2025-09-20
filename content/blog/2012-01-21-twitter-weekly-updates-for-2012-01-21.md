@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2012-01-21
 date: 2012-01-21
-categories:
+tags:
   - blahg
   - tweets
 ---

@@ -1,7 +1,7 @@
 ---
 title: If these were my notes, what did I learn?
 date: 2012-05-25
-categories:
+tags:
   - blahg
   - notes
 ---

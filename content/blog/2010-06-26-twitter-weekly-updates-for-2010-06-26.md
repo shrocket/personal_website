@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-06-26
 date: 2010-06-26
-categories:
+tags:
   - blahg
   - tweets
 ---

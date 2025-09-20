@@ -1,7 +1,7 @@
 ---
 title: Lake McConaughy vs. finger-banging Cindy Crawford
 date: 2005-07-11
-categories:
+tags:
   - blahg
   - vs
   - narrative

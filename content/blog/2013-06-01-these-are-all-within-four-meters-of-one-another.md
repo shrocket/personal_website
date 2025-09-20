@@ -1,7 +1,7 @@
 ---
 title: these are all within four meters of one another
 date: 2013-06-01
-categories:
+tags:
   - blahg
   - tu
   - paving-stones

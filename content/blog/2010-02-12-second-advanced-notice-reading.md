@@ -1,7 +1,7 @@
 ---
 title: Second Advanced Notice - Reading!
 date: 2010-02-12
-categories:
+tags:
   - blahg
   - reading
 ---

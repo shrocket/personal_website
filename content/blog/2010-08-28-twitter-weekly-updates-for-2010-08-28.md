@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-08-28
 date: 2010-08-28
-categories:
+tags:
   - blahg
   - tweets
 ---

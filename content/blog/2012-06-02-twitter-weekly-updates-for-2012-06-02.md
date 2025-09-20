@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2012-06-02
 date: 2012-06-02
-categories:
+tags:
   - blahg
   - tweets
 ---

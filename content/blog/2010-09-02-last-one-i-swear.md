@@ -1,7 +1,7 @@
 ---
 title: last one I swear?
 date: 2010-09-02
-categories:
+tags:
   - blahg
   - these-machines-kill-fascists
 ---

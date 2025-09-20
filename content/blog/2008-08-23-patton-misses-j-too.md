@@ -1,7 +1,7 @@
 ---
 title: Patton misses J too
 date: 2008-08-23
-categories:
+tags:
   - blahg
   - photography
 ---

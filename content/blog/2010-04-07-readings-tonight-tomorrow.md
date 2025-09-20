@@ -1,7 +1,7 @@
 ---
 title: Readings - Tonight & Tomorrow!!!
 date: 2010-04-07
-categories:
+tags:
   - blahg
   - reading
 ---

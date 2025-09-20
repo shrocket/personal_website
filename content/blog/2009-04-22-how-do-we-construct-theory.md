@@ -1,7 +1,7 @@
 ---
 title: how do we construct theory?
 date: 2009-04-22
-categories:
+tags:
   - blahg
   - reading
 ---

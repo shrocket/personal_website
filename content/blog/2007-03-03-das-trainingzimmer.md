@@ -1,7 +1,7 @@
 ---
 title: das Trainingzimmer
 date: 2007-03-03
-categories:
+tags:
   - blahg
   - video
 ---

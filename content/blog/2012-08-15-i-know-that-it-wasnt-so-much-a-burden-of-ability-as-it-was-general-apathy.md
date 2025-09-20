@@ -1,7 +1,7 @@
 ---
 title: "I know that it wasn't so much a burden of ability as it was general apathy."
 date: 2012-08-15
-categories:
+tags:
   - blahg
 ---
 

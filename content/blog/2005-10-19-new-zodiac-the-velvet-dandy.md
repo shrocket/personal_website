@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The Velvet Dandy
 date: 2005-10-19
-categories:
+tags:
   - blahg
   - zodiac
 ---

@@ -1,7 +1,7 @@
 ---
 title: is there now any point
 date: 2007-07-26
-categories:
+tags:
   - blahg
   - reading
 ---

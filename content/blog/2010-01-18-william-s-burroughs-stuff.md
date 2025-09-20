@@ -1,7 +1,7 @@
 ---
 title: William S. Burroughs' Stuff
 date: 2010-01-18
-categories:
+tags:
   - blahg
   - photography
 ---

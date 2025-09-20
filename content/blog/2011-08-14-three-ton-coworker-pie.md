@@ -1,7 +1,7 @@
 ---
 title: Three Ton Coworker - Pie
 date: 2011-08-14
-categories:
+tags:
   - blahg
   - three-ton-coworker
 ---

@@ -1,7 +1,7 @@
 ---
 title: quotations from what I've been reading completely removed from context
 date: 2013-06-15
-categories:
+tags:
   - blahg
   - notes
   - reading

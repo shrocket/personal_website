@@ -1,7 +1,7 @@
 ---
 title: we're not hungry for reality, we're hungry for realer fiction (?)
 date: 2010-05-12
-categories:
+tags:
   - blahg
   - compstud
 ---

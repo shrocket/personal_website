@@ -1,7 +1,7 @@
 ---
 title: the great cemeteries of light speed
 date: 2008-12-15
-categories:
+tags:
   - blahg
   - narrative
 ---

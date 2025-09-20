@@ -1,7 +1,7 @@
 ---
 title: ace of diamonds
 date: 2009-06-17
-categories:
+tags:
   - blahg
   - reading
 ---

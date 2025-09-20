@@ -1,7 +1,7 @@
 ---
 title: Zizek on toilets
 date: 2012-04-07
-categories:
+tags:
   - blahg
   - notes
   - video

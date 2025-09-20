@@ -1,7 +1,7 @@
 ---
 title: German Cereal is a Disappointment
 date: 2012-05-21
-categories:
+tags:
   - blahg
   - photography
 ---

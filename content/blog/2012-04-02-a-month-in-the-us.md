@@ -1,7 +1,7 @@
 ---
 title: a month in the US
 date: 2012-04-02
-categories:
+tags:
   - blahg
   - photography
 ---

@@ -1,7 +1,7 @@
 ---
 title: Black Hole by Charles Burns
 date: 2015-01-30
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

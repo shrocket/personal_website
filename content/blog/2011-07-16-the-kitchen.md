@@ -1,7 +1,7 @@
 ---
 title: the kitchen
 date: 2011-07-16
-categories:
+tags:
   - blahg
   - photography
   - tu

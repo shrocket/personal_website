@@ -1,7 +1,7 @@
 ---
 title: knock klopf
 date: 2013-08-09
-categories:
+tags:
   - blahg
   - list
   - empeethreemusic

@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-12-10
 date: 2011-12-10
-categories:
+tags:
   - blahg
   - tweets
 ---

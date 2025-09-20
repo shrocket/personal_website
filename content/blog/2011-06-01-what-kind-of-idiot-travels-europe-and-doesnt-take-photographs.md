@@ -1,7 +1,7 @@
 ---
 title: What kind of idiot travels Europe and doesn't take photographs?
 date: 2011-06-01
-categories:
+tags:
   - blahg
   - photography
   - wandering

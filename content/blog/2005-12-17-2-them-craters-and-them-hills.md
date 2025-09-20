@@ -1,7 +1,7 @@
 ---
 title: 2. them craters and them hills
 date: 2005-12-17
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: Parallel Lines
 date: 2010-03-18
-categories:
+tags:
   - blahg
   - video
 ---

@@ -1,7 +1,7 @@
 ---
 title: Remembered Maps and a Reading
 date: 2009-12-10
-categories:
+tags:
   - blahg
   - reading
 ---

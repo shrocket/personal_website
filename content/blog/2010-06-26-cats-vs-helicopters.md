@@ -1,7 +1,7 @@
 ---
 title: cats vs. helicopters
 date: 2010-06-26
-categories:
+tags:
   - blahg
   - empeethreemusic
 ---

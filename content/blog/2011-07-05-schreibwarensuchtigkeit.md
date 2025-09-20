@@ -1,7 +1,7 @@
 ---
 title: Schreibwarensucht?
 date: 2011-07-05
-categories:
+tags:
   - blahg
   - photography
   - tu

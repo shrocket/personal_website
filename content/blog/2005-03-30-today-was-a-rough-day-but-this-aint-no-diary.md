@@ -1,7 +1,7 @@
 ---
 title: today was a rough day, but this ain't no diary
 date: 2005-03-30
-categories:
+tags:
   - blahg
   - grates
   - photography

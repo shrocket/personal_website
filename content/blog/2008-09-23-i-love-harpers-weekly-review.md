@@ -1,7 +1,7 @@
 ---
 title: I love Harper's Weekly Review
 date: 2008-09-23
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

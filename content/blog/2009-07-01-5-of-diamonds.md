@@ -1,7 +1,7 @@
 ---
 title: 5 of diamonds
 date: 2009-07-01
-categories:
+tags:
   - blahg
   - reading
 ---

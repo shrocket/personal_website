@@ -1,7 +1,7 @@
 ---
 title: the shortest distance between two points
 date: 2007-06-19
-categories:
+tags:
   - blahg
   - essay
   - reading

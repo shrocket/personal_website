@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The German
 date: 2005-10-27
-categories:
+tags:
   - blahg
   - zodiac
 ---

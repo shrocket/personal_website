@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-02-26
 date: 2011-02-26
-categories:
+tags:
   - blahg
   - tweets
 ---

@@ -1,7 +1,7 @@
 ---
 title: . . . aaaand we're back!
 date: 2005-11-23
-categories:
+tags:
   - blahg
   - essay
 ---

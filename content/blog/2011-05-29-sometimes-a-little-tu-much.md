@@ -1,7 +1,7 @@
 ---
 title: sometimes a little Tü much . . .
 date: 2011-05-29
-categories:
+tags:
   - blahg
   - photography
   - tu

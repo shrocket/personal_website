@@ -1,7 +1,7 @@
 ---
 title: a playing card from days ago . . .
 date: 2009-08-26
-categories:
+tags:
   - blahg
   - reading
 ---

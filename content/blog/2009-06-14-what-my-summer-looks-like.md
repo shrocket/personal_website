@@ -1,7 +1,7 @@
 ---
 title: what my summer looks like
 date: 2009-06-14
-categories:
+tags:
   - blahg
   - list
   - reading

@@ -1,7 +1,7 @@
 ---
 title: Three Ton Coworker - Analgesic
 date: 2011-08-23
-categories:
+tags:
   - blahg
   - three-ton-coworker
 ---

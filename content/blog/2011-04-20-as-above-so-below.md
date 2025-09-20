@@ -1,7 +1,7 @@
 ---
 title: as above, so below
 date: 2011-04-20
-categories:
+tags:
   - blahg
   - tu
 ---

@@ -1,7 +1,7 @@
 ---
 title: Tanzanian Travel Journal - 06.07.06
 date: 2006-07-28
-categories:
+tags:
   - blahg
   - Tanzania
 ---

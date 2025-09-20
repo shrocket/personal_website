@@ -1,7 +1,7 @@
 ---
 title: Bassett Lodge
 date: 2007-11-28
-categories:
+tags:
   - blahg
   - photography
 ---

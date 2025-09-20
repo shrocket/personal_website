@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2011-03-12
 date: 2011-03-12
-categories:
+tags:
   - blahg
   - tweets
 ---

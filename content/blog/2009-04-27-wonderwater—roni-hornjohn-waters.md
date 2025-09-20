@@ -1,7 +1,7 @@
 ---
 title: Wonderwater—Roni Horn/John Waters
 date: 2009-04-27
-categories:
+tags:
   - blahg
   - empeethreemusic
   - reading

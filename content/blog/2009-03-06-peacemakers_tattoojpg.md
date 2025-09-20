@@ -1,7 +1,7 @@
 ---
 title: peacemakers_tattoo.jpg
 date: 2009-03-06
-categories:
+tags:
   - blahg
   - photography
 ---

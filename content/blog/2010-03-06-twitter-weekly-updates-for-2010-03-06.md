@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-03-06
 date: 2010-03-06
-categories:
+tags:
   - blahg
   - tweets
 ---

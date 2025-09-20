@@ -1,7 +1,7 @@
 ---
 title: the sewer grate @ asbury & franklin (cont.)
 date: 2008-11-21
-categories:
+tags:
   - blahg
   - photography
   - grates

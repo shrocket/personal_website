@@ -1,7 +1,7 @@
 ---
 title: reading Balzac
 date: 2009-03-29
-categories:
+tags:
   - blahg
   - reading
 ---

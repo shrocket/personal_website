@@ -1,7 +1,7 @@
 ---
 title: a book review
 date: 2007-05-04
-categories:
+tags:
   - blahg
   - reading
   - video

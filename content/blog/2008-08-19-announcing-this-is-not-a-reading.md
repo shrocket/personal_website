@@ -1,7 +1,7 @@
 ---
 title: Announcing - This is Not a Reading!
 date: 2008-08-19
-categories:
+tags:
   - blahg
   - reading
 ---

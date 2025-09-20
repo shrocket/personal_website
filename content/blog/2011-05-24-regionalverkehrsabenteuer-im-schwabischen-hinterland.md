@@ -1,7 +1,7 @@
 ---
 title: Regionalverkehrsabenteuer im schwäbischen Hinterland
 date: 2011-05-24
-categories:
+tags:
   - blahg
   - grates
   - photography

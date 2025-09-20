@@ -1,7 +1,7 @@
 ---
 title: listening to albums
 date: 2008-03-09
-categories:
+tags:
   - blahg
   - list
   - empeethreemusic

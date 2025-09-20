@@ -1,7 +1,7 @@
 ---
 title: collage culture
 date: 2007-08-06
-categories:
+tags:
   - blahg
   - video
 ---

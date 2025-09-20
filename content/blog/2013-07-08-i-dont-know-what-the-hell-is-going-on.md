@@ -1,7 +1,7 @@
 ---
 title: i don't know what the hell is going on
 date: 2013-07-08
-categories:
+tags:
   - blahg
   - photography
 ---

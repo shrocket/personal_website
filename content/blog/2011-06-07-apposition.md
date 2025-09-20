@@ -1,7 +1,7 @@
 ---
 title: apposition
 date: 2011-06-07
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

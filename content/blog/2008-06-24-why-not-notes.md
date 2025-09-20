@@ -1,7 +1,7 @@
 ---
 title: why not notes?
 date: 2008-06-24
-categories:
+tags:
   - blahg
   - notes
 ---

@@ -1,7 +1,7 @@
 ---
 title: Candy Bar vs. Miles Davis
 date: 2009-12-28
-categories:
+tags:
   - blahg
   - vs
 ---

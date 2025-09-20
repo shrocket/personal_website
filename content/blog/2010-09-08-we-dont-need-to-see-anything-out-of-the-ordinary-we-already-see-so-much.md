@@ -1,7 +1,7 @@
 ---
 title: "We don't need to see anything out of the ordinary. We already see so much."
 date: 2010-09-08
-categories:
+tags:
   - blahg
   - wandering
 ---

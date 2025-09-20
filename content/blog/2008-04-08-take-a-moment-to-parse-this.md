@@ -1,7 +1,7 @@
 ---
 title: take a moment to parse this
 date: 2008-04-08
-categories:
+tags:
   - blahg
   - harpers-weekly
 ---

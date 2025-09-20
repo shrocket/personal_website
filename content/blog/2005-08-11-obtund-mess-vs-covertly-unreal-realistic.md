@@ -1,7 +1,7 @@
 ---
 title: Obtund Mess vs. covertly unreal realistic
 date: 2005-08-11
-categories:
+tags:
   - blahg
   - the-memo
   - vs

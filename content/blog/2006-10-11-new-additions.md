@@ -1,7 +1,7 @@
 ---
 title: new additions
 date: 2006-10-11
-categories:
+tags:
   - blahg
   - "quiz"
 ---

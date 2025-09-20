@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2012-05-12
 date: 2012-05-12
-categories:
+tags:
   - blahg
   - tweets
 ---

@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-06-20
 date: 2009-06-21
-categories:
+tags:
   - blahg
   - tweets
 ---

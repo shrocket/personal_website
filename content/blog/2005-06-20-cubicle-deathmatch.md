@@ -1,7 +1,7 @@
 ---
 title: cubicle deathmatch
 date: 2005-06-20
-categories:
+tags:
   - vs
   - blahg
   - list

@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The Air-Freshener
 date: 2005-10-23
-categories:
+tags:
   - blahg
   - zodiac
 ---

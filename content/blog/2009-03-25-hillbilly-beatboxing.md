@@ -1,7 +1,7 @@
 ---
 title: hillbilly beatboxing
 date: 2009-03-25
-categories:
+tags:
   - blahg
   - empeethreemusic
   - video

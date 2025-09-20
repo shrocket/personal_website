@@ -1,7 +1,7 @@
 ---
 title: Inherent Vice by Thomas Pynchon
 date: 2015-04-16
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

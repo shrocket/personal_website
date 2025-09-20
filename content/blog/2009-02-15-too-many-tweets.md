@@ -1,7 +1,7 @@
 ---
 title: too many tweets!
 date: 2009-02-15
-categories:
+tags:
   - blahg
   - tweets
 ---

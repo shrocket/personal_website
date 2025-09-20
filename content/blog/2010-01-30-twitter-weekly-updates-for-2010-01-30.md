@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-01-30
 date: 2010-01-30
-categories:
+tags:
   - blahg
   - tweets
 ---

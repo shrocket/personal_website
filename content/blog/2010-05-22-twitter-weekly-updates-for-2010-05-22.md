@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-05-22
 date: 2010-05-22
-categories:
+tags:
   - blahg
   - tweets
 ---

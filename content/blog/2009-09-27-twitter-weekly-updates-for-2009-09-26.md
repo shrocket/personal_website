@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2009-09-26
 date: 2009-09-27
-categories:
+tags:
   - blahg
   - tweets
 ---

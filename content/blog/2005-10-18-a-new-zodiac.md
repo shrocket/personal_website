@@ -1,7 +1,7 @@
 ---
 title: A New Zodiac
 date: 2005-10-18
-categories:
+tags:
   - zodiac
 ---
 

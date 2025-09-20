@@ -1,7 +1,7 @@
 ---
 title: proximity to the forest is the only thing I miss about living up the hill
 date: 2012-09-08
-categories:
+tags:
   - blahg
   - photography
   - wandering

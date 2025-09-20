@@ -1,7 +1,7 @@
 ---
 title: jack of clubs
 date: 2009-06-16
-categories:
+tags:
   - blahg
   - reading
 ---

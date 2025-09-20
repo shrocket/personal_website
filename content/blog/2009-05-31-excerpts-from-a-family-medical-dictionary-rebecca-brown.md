@@ -1,7 +1,7 @@
 ---
 title: Excerpts from a Family Medical Dictionary - Rebecca Brown
 date: 2009-05-31
-categories:
+tags:
   - blahg
   - reading
 ---

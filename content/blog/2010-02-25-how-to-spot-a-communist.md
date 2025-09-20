@@ -1,7 +1,7 @@
 ---
 title: How to Spot a Communist
 date: 2010-02-25
-categories:
+tags:
   - blahg
   - video
 ---

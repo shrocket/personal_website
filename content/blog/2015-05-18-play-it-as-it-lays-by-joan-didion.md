@@ -1,7 +1,7 @@
 ---
 title: Play it as it Lays by Joan Didion
 date: 2015-05-18
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

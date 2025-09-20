@@ -1,7 +1,7 @@
 ---
 title: Kill My Mother by Jules Feiffer
 date: 2015-04-18
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

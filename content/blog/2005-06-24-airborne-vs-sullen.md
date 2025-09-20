@@ -1,7 +1,7 @@
 ---
 title: airborne vs. sullen
 date: 2005-06-24
-categories:
+tags:
   - blahg
   - vs
   - narrative

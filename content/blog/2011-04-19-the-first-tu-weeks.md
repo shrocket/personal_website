@@ -1,7 +1,7 @@
 ---
 title: the first Tü weeks
 date: 2011-04-19
-categories:
+tags:
   - blahg
   - photography
   - tu

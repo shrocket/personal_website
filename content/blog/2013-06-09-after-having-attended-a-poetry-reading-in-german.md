@@ -1,7 +1,7 @@
 ---
 title: after having attended a poetry reading in German
 date: 2013-06-09
-categories:
+tags:
   - blahg
   - poetry
   - tu

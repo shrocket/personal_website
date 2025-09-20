@@ -1,7 +1,7 @@
 ---
 title: hinzugefügte Notizen
 date: 2011-06-23
-categories:
+tags:
   - blahg
   - notes
 ---

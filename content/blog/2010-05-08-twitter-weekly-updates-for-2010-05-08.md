@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-05-08
 date: 2010-05-08
-categories:
+tags:
   - blahg
   - tweets
 ---

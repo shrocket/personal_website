@@ -1,7 +1,7 @@
 ---
 title: queen of diamonds
 date: 2009-07-07
-categories:
+tags:
   - blahg
   - reading
 ---

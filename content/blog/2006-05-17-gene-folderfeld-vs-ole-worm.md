@@ -1,7 +1,7 @@
 ---
 title: Gene Folderfeld vs. Ole Worm
 date: 2006-05-17
-categories:
+tags:
   - blahg
   - narrative
   - vs

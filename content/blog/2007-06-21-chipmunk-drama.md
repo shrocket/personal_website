@@ -1,7 +1,7 @@
 ---
 title: chipmunk drama!
 date: 2007-06-21
-categories:
+tags:
   - blahg
   - video
 ---

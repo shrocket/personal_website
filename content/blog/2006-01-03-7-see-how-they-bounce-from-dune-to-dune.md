@@ -1,7 +1,7 @@
 ---
 title: 7. see how they bounce from dune to dune
 date: 2006-01-03
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2010-02-27
 date: 2010-02-27
-categories:
+tags:
   - blahg
   - tweets
 ---

@@ -1,7 +1,7 @@
 ---
 title: New Zodiac - The Gibbering Horror What Must Never Be Named
 date: 2005-11-04
-categories:
+tags:
   - blahg
   - zodiac
 ---

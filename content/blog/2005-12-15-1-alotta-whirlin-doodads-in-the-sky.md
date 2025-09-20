@@ -1,7 +1,7 @@
 ---
 title: 1. alotta whirlin' doodads in the sky
 date: 2005-12-15
-categories:
+tags:
   - blahg
   - empeethreemusic
   - gopoian-method

@@ -1,7 +1,7 @@
 ---
 title: Leaving the Atocha Station by Ben Lerner
 date: 2015-04-14
-categories:
+tags:
   - blahg
   - 2015-books
   - reading

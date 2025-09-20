@@ -1,7 +1,7 @@
 ---
 title: Twitter Weekly Updates for 2012-06-23
 date: 2012-06-23
-categories:
+tags:
   - blahg
   - tweets
 ---
