@@ -52,3 +52,18 @@
 .teaching--more {
   display: none;
 }
+
+.projH3 {
+  font-size: 1.5em;
+  padding: 5px;
+  margin-bottom: 1px;
+}
+
+.projH4 {
+  font-size: 1em;
+  margin-top: 1px;
+}
+
+.projP {
+  margin-top: 1px;
+}
