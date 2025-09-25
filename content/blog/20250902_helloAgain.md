@@ -9,11 +9,9 @@ draft: true
 
 ## What is this?
 
-### I have written this before, haven't I?
+### I have written this before, [haven't I](../blog/2020-12-31-hello-again.md)?
 
-#### [[here](../blog/2020-12-31-hello-again.md)]
-
-In March of 2005 (more than 20 years ago as of this writing), I started writing a blog. I wrote in that blog sometimes regularly and sometimes only intermittently for a litte over ten years. That blog was called _rocket to nowhere_ and was hosted first at blogger and then at rocket2nowhere.com/blahg. Quite a lot happened there. The thing that eventually became my doctoral dissertation [started there](../tags/vs). I wrote about [books](../tags/the-loop) and [film](../blog/2014-02-19-a-miniature-film-festival/) there. I posted a whole bunch of [photos](../tags/photography) as well as the occasional [mp3](../tags/empeethree) there. I made and broke blogging rules for myself there. I published a lot of thoughts there.
+In March of 2005 (more than 20 years ago as of this writing), I started writing a blog. I wrote there sometimes regularly and sometimes only intermittently for a litte over ten years. That blog was called _rocket to nowhere_ and was hosted first at blogger and then at rocket2nowhere.com/blahg. Quite a lot happened there. The thing that eventually became my doctoral dissertation [started there](../tags/vs). I wrote about [books](../tags/the-loop) and [film](../blog/2014-02-19-a-miniature-film-festival.md) there. I posted a whole bunch of [photos](../tags/photography) as well as the occasional [mp3](../tags/empeethree) there. I made and broke blogging rules for myself there. I published a lot of thoughts there.
 
 I eventually abandoned that blog. It had been infected by some kind of fake pharma hack/virus thing, I felt as though the intermittently was becoming ever more intermittent, and blogs were dead or dying.
 
@@ -21,34 +19,26 @@ If you subscribe to the [Dead Internet Theory](https://en.wikipedia.org/wiki/Dea
 
 Just about six years later, I missed it. I missed having a public place to put words and ideas and photographs online that wasn't "social media" or overrun with/by algorithms (see "Dead Internet Theory" above). So I started another blog.
 
-I called that one _Any Minor World That Breaks Apart Falls Together Again_. It still exists. More on that in a moment. I wanted that blog to be a completely stripped down version of _rocket to nowhere_. There would be no "blogroll." There would be little to no styling. There would be writing (usually short form), and there would be photographs (without context or explanation).
+I called that one _Any Minor World That Breaks Apart Falls Together Again_. It still exists, but more on that in a moment. I wanted that blog to be a completely stripped down version of _rocket to nowhere_. There would be no "blogroll." There would be little to no styling. There would be writing (usually short form), and there would be photographs (without context or explanation).
 
 That worked well for about two years, but then I started a project that ended up taking that blog over (much like the aforementioned pharma bug? not really?). A description of that project (as well as the project itself which is slowly ongoing) can be found [here](https://anyminorworldthatbreaksapartfallstogetheragain.wordpress.com/2022/09/27/1000p/), but the gist of the project is this: I am reading Deleuze & Guattari's _A Thousand Plateaus_ one random page at a time and transcribing whatever I mark in that text.
 
-And now, except for a large handful of low-effort posts, the blog _Any Minor World That Breaks Apart Falls Together Again_ has been dedicated to the _Thousand Plateaus_ project since the project's inception.
+And now, except for a large handful of low-effort posts, the blog _Any Minor World That Breaks Apart Falls Together Again_ has been nothing but the _Thousand Plateaus_ project since the project's inception.
 
 I have _not_ decided to abandon that blog. Or rather, I have decided to abandon the "blog" part of that blog and let that space simply be the _Thousand Plateaus_ project. The project turned the space into its title even more than it already was its title.
 
-To that end, I have removed all non-_Thousand Plateaus_ posts from that space and put them here in this new blog. They are all collected under the tag "[Any Minor World](../tag/any-minor-world)."
+To that end, I have removed all non-_Thousand Plateaus_ posts from that space and put them here in this new blog. They are all collected under the tag "[Any Minor World](../tags/any-minor-world)."
 
-I also dug up the archive of _rocket to nowhere_, converted that archive into ~650 markdown files, which I have also put here
+I also dug up the _rocket to nowhere_ archives, converted them into ~650 markdown files, and then put them here in this new blog, too. They are (almost) all collected under the tag [blahg](../tags/blahg).
 
-## What am I doing here?
+## So what is this going to be?
 
-I keep creating blogs because I guess I think I have something to say. This is, in a way, still the previous blog I created; I've just moved it from wordpress.com to this site where I have complete control over the look and feel of things (as well, more importantly, as the content), but if we count both hosts and names, well:
+In the [previous version of this post](../blog/2020-12-31-hello-again.md), I stated clearly (?) what I thought the blog was _not_ going to be:
 
-1. _rocket to nowhere_ on blogger
-2. _rocket to nowhere_ at rocket2nowhere.com (wordpress self-hosted)
-3. [rocket2nowhere.tumblr.com](https://rocket2nowhere.tumblr.com)
-4. [_any minor world that breaks apart falls together again_](https://anyminorworldthatbreaksapartfallstogetheragain.wordpress.com/) at wordpress.com
-5. _indeterminacy blog_ at this site, written in markdown and published with [eleventy](http://www.11ty.dev)
+> It will not have a theme [in that it will not be single-theme]. It will not attempt to monetize itself or anything else. It will not be concerned with SEO or number of visitors.
 
-## Why do I keep making blogs?
+I would like to add one thing: It will not be coherent.
 
-If you're curious as to why I keep doing this, have a look at the about page; I think I try to answer "why?" there.
+And while all of those things are and will hopefully remain true, they still don't really answer the question _What is_ this blog _going to be?_
 
-## What is this going to be?
-
-I'll start with what this is not going to be. This is not going to be monetized. This is not going to be single-theme. This is not going to be coherent.
-
-This is going to be whatever I want it to be. It's going to be random. It's going to be stupid. It's going to be cheap. It's going to be shitty. Stick around anyway.
+In terms of how it looks, this blog is already somewhere between _rocket to nowhere_'s aught's aesthetic and _Any Minor World_'s forced minimalism. In terms of content, this will hopefully simply be a continuation of the sort of public diary my blog has always been. Or to make a gesture toward my personal blogging philosophy/aesthetic: This is going to be random. It's going to be stupid. It's going to be cheap. It's going to be shitty. Stick around anyway.
