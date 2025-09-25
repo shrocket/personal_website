@@ -23,7 +23,7 @@ I called that one _Any Minor World That Breaks Apart Falls Together Again_. It s
 
 That worked well for about two years, but then I started a project that ended up taking that blog over (much like the aforementioned pharma bug? not really?). A description of that project (as well as the project itself which is slowly ongoing) can be found [here](https://anyminorworldthatbreaksapartfallstogetheragain.wordpress.com/2022/09/27/1000p/), but the gist of the project is this: I am reading Deleuze & Guattari's _A Thousand Plateaus_ one random page at a time and transcribing whatever I mark in that text.
 
-And now, except for a large handful of low-effort posts, the blog _Any Minor World That Breaks Apart Falls Together Again_ has been nothing but the _Thousand Plateaus_ project since the project's inception.
+And then, from the moment of the project's inception and except for a large handful of low-effort posts, the blog _Any Minor World That Breaks Apart Falls Together Again_ was nothing but the _Thousand Plateaus_ project.
 
 I have _not_ decided to abandon that blog. Or rather, I have decided to abandon the "blog" part of that blog and let that space simply be the _Thousand Plateaus_ project. The project turned the space into its title even more than it already was its title.
 
@@ -41,4 +41,10 @@ I would like to add one thing: It will not be coherent.
 
 And while all of those things are and will hopefully remain true, they still don't really answer the question _What is_ this blog _going to be?_
 
-In terms of how it looks, this blog is already somewhere between _rocket to nowhere_'s aught's aesthetic and _Any Minor World_'s forced minimalism. In terms of content, this will hopefully simply be a continuation of the sort of public diary my blog has always been. Or to make a gesture toward my personal blogging philosophy/aesthetic: This is going to be random. It's going to be stupid. It's going to be cheap. It's going to be shitty. Stick around anyway.
+In terms of how it looks, this blog is already somewhere between _rocket to nowhere_'s aughty aesthetic and _Any Minor World_'s forced minimalism. In terms of content, this will hopefully be a continuation of what my blog has always been. Or, to make a gesture toward my personal (blogging) philosophy/aesthetic: This is going to be random. It's going to be stupid. It's going to be cheap. It's going to be shitty.
+
+Stick around anyway.
+
+### (Is it really titled _malign benedictory_?)
+
+(At the moment, yes.)
