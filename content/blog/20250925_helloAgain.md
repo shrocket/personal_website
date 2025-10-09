@@ -19,7 +19,7 @@ Just about six years later, I missed it. I missed having a public place to put w
 
 I called that one _Any Minor World That Breaks Apart Falls Together Again_. It still exists, but more on that in a moment. I wanted that blog to be a completely stripped down version of _rocket to nowhere_. There would be no "blogroll." There would be little to no styling. There would be writing (usually short form), and there would be photographs (without context or explanation).
 
-That worked well for about two years, until I started a project that ended up taking that blog over. A description of that project (as well as the project itself which is slowly ongoing) can be found [here](https://anyminorworldthatbreaksapartfallstogetheragain.wordpress.com/2022/09/27/1000p/), but the gist of the project is this: I am reading Deleuze & Guattari's _A Thousand Plateaus_ one random page at a time and transcribing whatever I mark in that text.
+That worked well for about two years, until I started a project that ended up taking the blog over. A description of that project (as well as the project itself which is slowly ongoing) can be found [here](https://anyminorworldthatbreaksapartfallstogetheragain.wordpress.com/2022/09/27/1000p/), but the gist of the project is this: I am reading _A Thousand Plateaus_ by Deleuze & Guattari one random page at a time and transcribing whatever I mark in the text.
 
 I have _not_ decided to abandon that blog. Or rather, I have decided to abandon the "blog" part of that blog and let that space simply be the _Thousand Plateaus_ project. The project turned the space into its title even more than it already was its title.
 
