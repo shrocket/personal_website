@@ -1,5 +1,5 @@
 ---
-title: Books read in 2023 (2 years late)
+title: Books read in 2023 (2+ years late)
 description: This post lists all the books I finished in 2023.
 date:
 tags:
