@@ -1,10 +1,10 @@
 /* Defaults */
 :root {
 	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
-		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
-		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
-		Courier, monospace;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
 /* Theme colors */
@@ -379,4 +379,76 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	font-size: 1em;
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
 }
