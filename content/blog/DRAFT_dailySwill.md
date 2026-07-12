@@ -1,7 +1,7 @@
 ---
 title: I mean everything is a little "fickig," right?
 description: This is a post on my blog about three things that happened to me.
-date: 2025-10-04
+date: 2026-08-03
 tags:
   - essay
   - list
@@ -17,4 +17,4 @@ draft: true
 3. Driving through Bad-Bergzabern, I saw the following inside of 30 seconds:  
    a. a man in a mobility scooter having trouble navigating a curb  
    b. 30 boys in red shirts jogging through town  
-   c. a small group of people, 2/3 of whom were blind, cross the street
+   c. a small group of people, 2/3 of whom were blind, crossing the street

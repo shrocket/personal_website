@@ -1,7 +1,7 @@
 ---
 title: Books read in 2025
 description: This post lists all the books I finished in 2025.
-date: 2026-02-18
+date: 2026-08-06
 tags:
   - list
   - reading
