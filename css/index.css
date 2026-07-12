@@ -409,9 +409,16 @@ header {
 .contact-list {
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 	list-style: none;
 	padding: 0;
 	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
 }
 
 .pink-pipe {
