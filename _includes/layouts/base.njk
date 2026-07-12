@@ -84,6 +84,27 @@
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+		<script>
+		(function () {
+			const buttonExperience = document.querySelector('[data-js="buttonWorkExperience"]');
+			const expandExperience = document.querySelector('[data-js="moreWorkExperience"]');
+			if (buttonExperience && expandExperience) {
+				buttonExperience.addEventListener("click", () => {
+					expandExperience.classList.toggle("work-experience--more");
+					buttonExperience.textContent = expandExperience.classList.contains("work-experience--more") ? "more" : "less";
+				});
+			}
+
+			const buttonTeaching = document.querySelector('[data-js="buttonTeaching"]');
+			const expandTeaching = document.querySelector('[data-js="expandTeaching"]');
+			if (buttonTeaching && expandTeaching) {
+				buttonTeaching.addEventListener("click", () => {
+					expandTeaching.classList.toggle("teaching--more");
+					buttonTeaching.textContent = expandTeaching.classList.contains("teaching--more") ? "more" : "less";
+				});
+			}
+		})();
+		</script>
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>
 </html>
