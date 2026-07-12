@@ -289,9 +289,17 @@ header {
 	flex-grow: 1;
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
 }
 
 /* Nav */
