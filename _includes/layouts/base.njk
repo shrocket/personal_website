@@ -58,19 +58,24 @@
 
 		<main id="main">
 			<heading-anchors>
+			{%- if rawMain %}
+			{{ content | safe }}
+			{%- else %}
 			<section>
 			<h1>{{ pageTitle}}</h1>
 			<article>
 				{{ content | safe }}
 			</article>
 			</section>
+			{%- endif %}
 			</heading-anchors>
 		</main>
 
 		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
-			</p>
+			<div>
+				%copy; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
