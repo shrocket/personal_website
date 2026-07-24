@@ -7,9 +7,9 @@ tags:
 draft:
 ---
 
-# What is this?
+## What is this?
 
-## I have written this before, [haven't I](../blog/2020-12-31-hello-again.md)?
+### I have written this before, [haven't I](../blog/2020-12-31-hello-again.md)?
 
 In March of 2005 (more than 20 years ago), I started writing a blog. I wrote there sometimes regularly and sometimes only intermittently for a little over ten years. That blog was called _rocket to nowhere_ and was hosted first at blogger and then at rocket2nowhere.com/blahg. Quite a lot happened there. The thing that eventually became my doctoral dissertation [started there](../tags/vs). I wrote about [books](../tags/the-loop) and [film](../blog/2014-02-19-a-miniature-film-festival.md) there. I posted a whole bunch of [photos](../tags/photography) as well as the occasional [mp3](../tags/empeethree) there. I made and broke blogging rules for myself there. I published a lot of thoughts there.
 
@@ -27,7 +27,7 @@ To that end, I have removed all non-_Thousand Plateaus_ posts from that space an
 
 I also dug up the _rocket to nowhere_ archives, converted them into ~650 markdown files, and then put them here in this new blog, too. They are (almost) all collected under the tag [blahg](../tags/blahg).
 
-# So what is this going to be?
+## So what is this going to be?
 
 In the [previous version of this post](../blog/2020-12-31-hello-again.md), I stated clearly (?) what I thought the blog was _not_ going to be:
 
