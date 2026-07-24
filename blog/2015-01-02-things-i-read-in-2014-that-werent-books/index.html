@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Things I read in 2014 that weren&#39;t books</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="things-i-read-in-2014-that-werent-books">Things I read in 2014 that weren&#39;t books</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2015-01-02">02 January 2015</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/reading/" class="post-tag">reading</a></li>
+</ul>
+
+<p>This project (to keep track of everything I read in 2014 that wasn't a book) was begun on 13JAN14 (after much logistical wrangling which never really got sorted out to my satisfaction), and though not exactly abandoned mid-April, it was certainly not as obsessively updated as hoped. I present here an unedited, and rather difficult to read copy of the list I kept.</p>
+<p>How will I quantify facebook? What about tumblr?</p>
+<p>Very likely every post @ postsecret.com achewood.com London Shop Fronts Bad Machinery Hobotopia</p>
+<p>The market for Bibles never ends http://hyperorg.com/blogger/2014/01/08/what-blogging-was/comment-page-1/ Ecstasy — Lajos Gulacsy http://www.huffingtonpost.com/shanell-mouland/dear-daddy-in-seat-16c_b_4585865.html?ncid=edlinkusaolp00000009 http://www.wg-gesucht.de/wg-zimmer-in-Bonn-Zentrum.4265525.html http://boingboing.net/2014/01/13/the-west-virginia-chemical-spi.html#more-279751 http://www.avclub.com/article/celebrate-the-may-december-romance-with-stephen-ma-200800 http://feedproxy.google.com/~r/OpenCulture/~3/u_45GNEZlFc/jerry-seinfeld-and-louis-ck-in-small-cars-and-big-yachts-getting-coffee.html http://feedproxy.google.com/~r/OpenCulture/~3/AUfsEVnvLHI/discover-cy-endfields-microwriter-the-worlds-first-portable-word-processor-circa-1980.html http://boingboing.net/2014/01/14/tom-the-dancing-bug-president.html http://boingboing.net/2014/01/13/theory-of-dick-pic-excellence.html#more-279705 http://thehairpin.com/2014/01/what-ive-learned-from-my-side-job-critiquing-dick-pics http://www.poetryfoundation.org/poem/245738#poem http://www.poetryfoundation.org/poem/177314 http://www.poetryfoundation.org/poem/245738#poem http://www.dailydot.com/opinion/steven-moffat-sexism-sherlock-doctor-who/?utm_campaign=SharedPost&amp;utm_medium=Email&amp;utm_source=TumblriOS http://www.themillions.com/2014/01/dumbest-thing-ever-scribbling-in-the-margins-of-dan-browns-inferno.html &quot;There's a purity of intent and a lack of self-consciousness that I wish I could achieve when I was experiencing pleasure&quot; (David Foster Wallace) Lawyers helped daughter with tooth-fairy affidavit for lost tooth http://boingboing.net/2013/10/23/bani-garu-problems-from-the-s.html (+ pp2-3) http://boingboing.net/2014/01/15/photographer-snaps-lightning-a.html#more-280273 http://feedproxy.google.com/~r/OpenCulture/~3/rZ9Pft9cats/quentin-tarantino-impersonates-his-idol-elvis-presley.html http://jessstoner.com/2014/01/15/news-from-the-states-of-the-union-alabama/ http://boingboing.net/2014/01/16/the-valley-of-the-elves-ph.html#more-280759 https://elliepritts.exposure.so/the-valley-of-the-elves http://boingboing.net/2014/01/16/david-lynch-interviewed-by-mik.html http://www.pedalmn.com/Article/minnesota-winter-biking-photos http://www.everyday-genius.com/2014/01/tc-tolbert.html http://biblioklept.org/2014/01/17/hercules-robert-walser/ http://biblioklept.org/2014/01/18/mt-sinai-kafka/ Witching Hour http://www.starherald.com/news/local_news/couple-finds-work-in-tanzania-rewarding/image_7c184357-8101-5c72-b35d-90347155ca94.html?mode=nogs &quot;The Young Housewife&quot; — William Carlos Williams One paragraph of http://books.google.de/books?id=yFGKn-rXAFQC&amp;pg=PA81&amp;lpg=PA81&amp;dq=hayden+white+%22no+lasting+psychic+mastery%22&amp;source=bl&amp;ots=SZKea2NuYZ&amp;sig=67_geLzhiOdNX6rgwlocWtzkFpc&amp;hl=en&amp;sa=X&amp;ei=BEncUtqDCoPKtQbAyoGYBw&amp;ved=0CCgQ6AEwAA http://theamericanreader.com/micro-review-on-dodie-bellamys-cunt-norton/ http://www.bbc.com/culture/story/20140120-the-movie-david-lynch-never-made David Bowie's Final Gig as Ziggy Stardust Documented in 1973 Concert Film The Problem with Facebook: &quot;It's Keeping Things From You&quot; Watch The Bicycle Trip: An Animation of The World's First LSD Trip in 1943 The evangelical masculinity of ... Allen Ginsberg? The Bloatee: http://www.achewood.com/index.php/index.php?date=09072005 http://u4931p2996.ilyke.net/definitely-the-most-kicka-and-coolest-president-in-the-world/44982 http://www.salon.com/2014/01/15/the_most_scathing_questions_from_michelle_rhees_doomed_twitter_qa/ http://www.ragan.com/Main/Articles/Top_10_ways_to_ensure_your_best_people_will_quit_47779.aspx Google's Music Timeline: A Visualization of 60 Years of Changing Musical Tastes Germany's 10 tackiest souvenirs for tourists News from the States of the Union: Alaska! Pheromone Bouquetoil on linen24&quot; x 20&quot;2012http://gregoryjacobsen.com http://thisiscalledthewalk.wordpress.com/booklets/ http://slowrobot.com/i/49073 http://www.cracked.com/article_20791_6-actors-who-thought-they-had-made-totally-different-movie.html?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=012314 http://feedproxy.google.com/~r/OpenCulture/~3/vySP5VqsdAI/read-allen-ginsbergs-poignant-final-poem-things-ill-not-do-nostalgias.html http://m.huffpost.com/us/entry/4653426?ncid=txtlnkushpmg00000037 http://hollywoodlife.com/2014/01/24/justin-bieber-after-dui-arrest-instagram-pic-michael-jackson/ Chapter 4: &quot;The Modernist Event&quot; in Figural Realism by Hayden White A New Free eBook Every Month from the University of Chicago Press &quot;Odysseus&quot; — Robert Walser (which felt/read as though it had been written within some sort of Oulipean constraint) http://www.faithstreet.com/onfaith/2013/11/07/5-churchy-phrases-that-are-scaring-off-millennials/25149 http://www.sfgate.com/entertainment/rollingstone/article/Afghan-Whigs-Plan-Beast-of-a-New-Record-First-5178880.php http://www.thedailybeast.com/articles/2014/01/27/the-woody-allen-allegations-not-so-fast.html Mathias Svalina http://www.themorningnews.org/article/league-loves-all-women http://www.nytimes.com/2014/01/30/garden/sometimes-asparagus-is-more-than-asparagus.html http://boingboing.net/2014/01/31/the-wire-creator-david-simon-o.html http://boingboing.net/2014/01/31/why-old-people-complain-about.html#more-284242 http://boingboing.net/2014/01/22/codex-seraphinianus-hands-on.html http://boingboing.net/2014/01/30/watch-this-13yo-girls-video.html http://boingboing.net/2014/01/30/frosty-eats-raccoon-the-story.html#more-284015 http://www.salon.com/2014/01/21/how_supertramp_got_involved_in_one_of_the_weirdest_911_truther_conspiracies_ever/ http://la.curbed.com/archives/2014/01/breathtaking_joshua_tree_supervillain_lair_for_sale_for_first_time_1.php http://www.buzzfeed.com/alisonvingiano/this-tumblr-user-shows-her-horrific-anonymous-messages-in-a?bffb&amp;s=mobile http://feedproxy.google.com/~r/OpenCulture/~3/4t1TO_xGqD4/read-ezra-pounds-list-of-23-donts-for-writing-poetry-1913.html &quot;Don't think any intelligent person is going to be deceived when you try to shirk all the difficulties of the unspeakably difficult art of good prose by chopping your composition into line lengths.&quot; http://biblioklept.org/2014/01/30/white-horse-charles-olson/ http://www.npr.org/2014/02/01/268995033/sam-cooke-and-the-song-that-almost-scared-him?utm_content=socialflow&amp;utm_campaign=nprfacebook&amp;utm_source=npr&amp;utm_medium=facebook News from the States of the Union–Arkansas! Is delayed until Friday. News from the States of the Union: ARKANSAS! http://m.huffpost.com/us/entry/4681440 (paper and pen note taking ostensibly better than laptop) http://www.pbs.org/newshour/rundown/fourteen-books-read-time-takes-watch-super-bowl-2/#the-rundown http://shelf-life.ew.com/2014/02/02/jk-rowling-hermione-harry-not-ron/ http://www.npr.org/blogs/thesalt/2014/02/02/268381983/marijuana-laced-treats-leave-colorado-jonesing-for-food-safety-rules?sc=17&amp;f=1001 http://www.npr.org/blogs/thesalt/2014/02/02/270204651/sap-discovery-could-turn-syrup-making-upside-down?sc=17&amp;f=1001 Peripatetic Pussycats Gertrude Stein on Football RIP Philip Seymour Hoffman (Biblioklept—I didn't watch the videos, couldn't) Charlie Brown, existentialist placekicker http://www.esquire.com/blogs/culture/hoffman-junod?src=soc_fcbks http://www.rollingstone.com/music/news/marx-was-right-five-surprising-ways-karl-marx-predicted-2014-20140130 http://ergophizmiz.blogspot.com/2014/02/ergo-phizmiz-shoots-peas-on-wfmu.html http://feedproxy.google.com/~r/FutilityCloset/~3/zvTcwcTQM30/ http://biblioklept.org/2014/02/03/the-volcano-is-dark-malcolm-lowry/ http://biblioklept.org/2014/02/04/extract-from-kafkas-letters-to-milena/ http://feedproxy.google.com/~r/OpenCulture/~3/uvIOe4i3ihg/teddy-roosevelts-10-rules-for-reading-seek-enjoyment-spurn-fads-read-what-you-like.html http://blog.ted.com/2013/04/26/25-life-hacks-you-didnt-know-you-needed-but-do-probably/ http://www.npr.org/blogs/monkeysee/2014/02/07/273020865/a-typewriter-in-the-grass-and-the-beat-generation-on-the-edge http://io9.com/heres-the-first-recorded-instance-of-the-f-word-in-eng-1519247071 http://www.theguardian.com/books/2014/feb/07/gary-shteyngart-little-failure-extract https://www.behance.net/gallery/STAR-WARS-80s-High-School/9671051 http://dreamsofspace.blogspot.de/2014/02/as-we-were-flying-on-rocket-story-1961.html http://dreamsofspace.blogspot.de/2014/02/as-we-were-flying-on-rocket-story-part.html https://en.m.wikipedia.org/wiki/Baader-Meinhof_phenomenon The Haunting Final Portrait of Philip Seymour Hoffman, Part of Victoria Will's Civil War-Era Photo Collection David Foster Wallace's Sharp Letter to His Editor: &quot;Don't F with the Mechanics of My Piece&quot; An Artistic Portrait of Stephen Fry Made From His Own Bacteria Learn To Pick Locks, With The MIT Guide To Lock Picking (1991) http://www.esquire.com/blogs/culture/sundance-tintype-portraits-2014#last-slide On Leaving the Sea by Ben Marcus &quot;William S. Burroughs was a high modernist and a writer of complete trash&quot; 100 Point William Burroughs Riff http://vague-terrain.com/2014/baltimores-high-zero/ Blog outing online racists causes a stir http://www.openculture.com/2014/02/song-written-on-mans-butt-in-bosch-painting.html (followed immediately by &quot;I Hate Music&quot; by the Replacements coming through on the shuffle) Valentine's Day Wishes from Thomas Bernhard http://www.npr.org/2014/02/16/274773496/first-listen-beck-morning-phase?utm_campaign=storyshare&amp;utm_source=share&amp;utm_medium=facebook http://www.shortlist.com/cool-stuff/this-weeks-issue/an-ode-to-hairy-female-armpits http://blog.bestamericanpoetry.com/the_best_american_poetry/guest_bloggers/ http://boingboing.net/2014/02/18/robocop-in-review.html?utm_campaign=moreatbbmetadata&amp;utm_medium=referral&amp;utm_source=boingboing.net http://xkcd.com/1331/ (frequency) http://logger.believermag.com/post/77199182433/not-van-ronk-von-schmidt http://www.iflscience.com/plants-and-animals/how-moss-shower-mat See Ottoman-Style Posters of Star Wars, The Godfather, Scarface and Other Classic Movies 4 Things To Know About What's Happening In Ukraine: http://www.npr.org/blogs/parallels/2014/02/19/279673384/four-things-to-know-about-whats-happening-in-ukraine?sc=17&amp;f=1001 http://boingboing.net/2014/02/19/facebook-buys-mobile-messaging.html The RoboCop Rule: When Remakes Have More Killing, But Less Goretheatlantic.comLike a lot of films today, the recent update of the 1987 original trades subversive carnage for sanitized violence that asks… http://www.theparisreview.org/blog/2014/02/19/writing-the-lake-shore-limited/ http://www.msnbc.com/msnbc/legal-blow-keystone One YouTube user just made Full House a lot more macabreavclub.comShooba doo bop bow wow! http://horselesspress.com/horse-less-review/horse-less-review-16/from-strange-fish-something-fierce-by-brandi-homan/ http://jessstoner.com/2014/02/19/news-from-the-states-of-the-union-california/ http://boingboing.net/2014/02/25/its-complicated-the-social.html#more-247277 http://www.themillions.com/2014/02/how-to-write-short-stories-like-law-and-order.html The Curious Story of How Bootlegged Hollywood Movies Helped Defeat Communism in Romania Matthew Kirkpatrick's Believer article about the floating McDonald's http://www.poetryfoundation.org/poem/179909 (Bernadette Mayer, &quot;Be strong Bernadette&quot;) http://www.prospectmagazine.co.uk/magazine/if-i-ruled-the-world-daniel-dennett/#.Uw8bzHms1ub http://www.theweeklings.com/sbeaudoin/2014/02/26/the-50-most-drug-addled-albums-of-mania-dissipation-and-beauty/#comment-133708 &quot;03595&quot; by Kate Greenstreet in DQ 48:2 &quot;Post Hole Digger&quot; by Jason F. McDaniel in DQ 48:2 &quot;Inside a Map of Arnold Schwarzenegger's Arm&quot; by Carrie Oeding in DQ 48:2 http://biblioklept.org/2014/03/01/martyrdom-of-saint-erasmus-william-h-gass/ http://biblioklept.org/2014/03/02/i-like-the-delete-key-best-william-h-gass/ &quot;Home Movies: Alexander Payne, High Plains auteur&quot; by Margaret Talbot in The New Yorker 28 OCT 13. Watch Steven Soderbergh's Creative Mashup of Hitchcock and Gus Van Sant's Psycho Films David Foster Wallace and the search for grace in solipsism &quot;Sometimes I think that principal difference between those who are in general cheerfully-inclined and those who are not is that the former know better than to even countenance their own bullshit for one instant.&quot; &quot;Morning Phase&quot; von Beck: Willkommen in einer anderen Welt Ukraine-Krise: Putin, Hitler und die Clinton http://de.wikipedia.org/wiki/Gôg http://biblioklept.org/2014/03/07/an-excerpt-from-karl-ove-knausgaards-my-struggle-ii-a-man-in-love/ http://boingboing.net/2014/02/09/heres-what-youve-been-mi.html http://boingboing.net/2014/02/09/a-masterful-long-take-brings-t.html http://boingboing.net/2014/02/16/truedetective.html http://boingboing.net/2014/02/23/true-detective-drops-more-hint.html http://m.newyorker.com/online/blogs/books/2014/02/le-promeneur-solitaire-w-g-sebald-on-robert-walser.html http://biblioklept.org/2014/03/09/scolds-schlemiels-schnorrers-schnooks-schmucks-schlumps-william-h-gass/ http://feedproxy.google.com/~r/OpenCulture/~3/9-69Z9kvOX0/maurice-sendak-illustrates-the-hobbit.html http://feedproxy.google.com/~r/FutilityCloset/~3/5qXh2PdPE6Y/ http://feedproxy.google.com/~r/FutilityCloset/~3/-KdVeVIZMl4/ http://biblioklept.org/2014/03/10/library-rules-william-h-gass/ http://americanshortfiction.org/2014/03/10/contest-announcement/ http://sz.de/1.1908928 http://boingboing.net/2014/03/02/after-youve-gone-sets-e.html http://jessstoner.com/2014/03/11/an-explanation-for-the-delay/ http://biblioklept.org/2014/03/11/sad-postcard-in-a-sad-book-gasspancake/ http://feedproxy.google.com/~r/OpenCulture/~3/jFun6RX9Djg/watch-cult-films-for-free-night-of-the-living-dead-plan-9-from-outer-space-more.html http://sz.de/1.1909315 http://www.sueddeutsche.de/kultur/wes-anderson-die-sind-viel-reicher-als-ich-1.1909643-2 http://www.openculture.com/2014/03/let-stephen-sondheim-teach-you-how-to-sing-send-in-the-clowns.html http://www.theguardian.com/commentisfree/2014/mar/11/pronunciation-errors-english-language http://boingboing.net/2014/03/10/true-detective-ends-its-first.html http://global.christianpost.com/news/satan-worship-in-the-church-hbos-true-detective-sheds-light-on-shocking-practice-115922/ http://danielsilliman.blogspot.com/2014/03/how-atheist-movement-lost-americas-most.html http://boingboing.net/2014/03/13/djs-plunder-raymond-scotts-a.html#more-291972 http://biblioklept.org/2014/03/13/how-to-recognize-a-work-of-art-roberto-bolano-on-translation/ http://boingboing.net/2014/03/14/tony-benn-secret-mounter-of-i.html http://biblioklept.org/2014/03/12/marty-hart-watches-the-star-wars-holiday-special/ &quot;Form the habit of taking some of your solitude with you into society&quot; (Schopenhauer) &quot;Nouns&quot; — Tom Clark http://www.openculture.com/2014/03/animated-video-features-werner-herzog-discussing-his-childhood-adventures-20th-century-rage.html http://mobile.nytimes.com/blogs/douthat/2014/03/10/the-failure-of-true-detective/ http://www.theguardian.com/books/2006/nov/18/1 (George Saunders, &quot;Realist Fiction&quot;) Architects Dress as Famous Buildings They Designed in Vintage 1931 Photo Watch David Brenner (RIP) Make the First of His 158 Appearances on The Tonight Show in 1971 http://www.bbc.com/news/health-26527266 (Secretion secrets: things you didn't know about ear wax) Sound Language (a note on Ernst Havlik's (1981) Lexikon der Onomatopoien in Futility Closet) http://boingboing.net/2014/03/10/arthurs-chu-jeopardy.html http://boingboing.net/2014/03/18/mind-bending-animated-gif-illu.html http://www.wired.com/gadgetlab/2014/03/kill-itunes-drm/ http://www.openculture.com/2014/03/hunter-s-thompsons-edgy-1990s-commercial-for-apples-macintosh-computer.html Let Us Explore The Pocket Calculators of Many Lands love (the mereological report) Fred Phelps, Sr., 1929 - 2014 Titanic: The Nazis Create a Mega-Budget Propaganda Film About the Ill-Fated Ship … and Then Banned It (1943) Episode #3 of Cosmos with Neil deGrasse Tyson: &quot;When Knowledge Conquered Fear&quot; (US Viewers) http://www.sueddeutsche.de/panorama/vermissten-zahl-nach-schlammlawine-in-den-usa-steigt-extrem-an-1.1921147 http://danielsilliman.blogspot.de/2014/03/gods-not-dead-music.html http://boingboing.net/2014/03/24/cheap-thrills-a-movie-thats.html#more-294072 http://www.kcet.org/living/food/midnight-snack/midnight-snack-camilos-with-maria-bamford.html http://blogs.westword.com/showandtell/2014/03/peter_strange_yumi_collage_100.php &quot;Died&quot; — Ben Marcus Flann O'Brien's Complete Novels (Book Acquired, 3.24.2014) Erdrutsch in den USA: &quot;Wir wussten, dass es passieren würde&quot; http://en.wikipedia.org/wiki/Auto-antonym http://boingboing.net/2014/03/25/lying-with-cameras-how-a-smal.html http://boingboing.net/2014/03/25/oh-no-ross-and-carrie-podcast.html http://50watts.com/Light-Issued-Against-Ruin http://biblioklept.org/2014/03/26/the-brain-may-be-regarded-as-a-kind-of-parasite-schopenhauer/ Kind aus Schlamm gerettet Mapping the Christian Churches and Churches of Christ http://www.openculture.com/2014/03/julia-child-shows-how-to-edit-videotape-with-a-meat-cleaver.html http://www.theparisreview.org/interviews/2367/the-art-of-fiction-no-113-max-frisch https://greenlanternpress.wordpress.com/2008/09/27/man-in-the-holocene-by-max-frisch/ Secularization and the siege of the Branch Davidians In that deep love, include me too. Ram Dass / Fierce Grace http://truecrimecases.blogspot.de/2012/08/manuel-cortez.html Young American Großeinsatz der Feuerwehr in Iowa George R.R. Martin Releases a Free Chapter From The Winds of Winter: Read It Online Another Moby-Dick (Book Acquired, 3.29.2014) http://www.georgerrmartin.com/excerpt-from-the-winds-of-winter/ List with No Name #45 http://boingboing.net/2014/04/06/game-of-thrones-picks-up-as-th.html Riff on William Shakespeare http://blog.yupnet.org/2014/04/26/qa-with-eryn-green-the-2013-winner-of-yale-series-of-younger-poets/ http://logger.believermag.com/post/84134073964/the-little-nicholson-baker-in-my-mind?utm_campaign=SharedPost&amp;utm_medium=Email&amp;utm_source=TumblriOS [Here, sometime in April, I seriously started slacking on this project.] Carl Sagan Writes a Letter to 17-Year-Old Neil deGrasse Tyson (1975) J.R.R. Tolkien Snubs a German Publisher Asking for Proof of His &quot;Aryan Descent&quot; (1938) http://www.salon.com/2014/04/28/lydia_davis_i_kind_of_like_the_fact_that_my_work_isn't_for_everybody/ http://www.entrecomics.com/wp-content/uploads/2010/11/tny_spiegelman_2000_02.gif http://jessstoner.com/2014/05/02/news-from-the-states-of-the-union-delaware/ http://io9.com/the-weirdest-things-you-never-knew-about-the-making-of-1571016187 Selections from One-Star Amazon Reviews of Thomas Pynchon's Gravity's Rainbow http://www.everyday-genius.com/2014/05/julia-cohen.html http://www.nytimes.com/2014/05/21/books/tibetan-peach-pie-a-tom-robbins-memoir.html?_r=0 http://www.openculture.com/2014/05/watch-world-war-i-unfold-in-a-3-minute-time-lapse-film.html http://www.newyorker.com/online/blogs/books/2013/11/joe-sacco-the-great-war-interview.html http://www.openculture.com/2014/05/thomas-dolby-explains-how-a-synthesizer-works.html http://blog.bestamericanpoetry.com/the_best_american_poetry/2012/02/fuck-them-by-michael-robbins.html?fb_action_ids=10152816932382802&amp;fb_action_types=og.likes Such Sweet Thunder: Duke Ellington &amp; Billy Strayhorn's Musical Tribute to Shakespeare (1957) &quot;The Ache The Ache&quot; Julia Cohen Arda Collins Bittersweet Reminiscences of The Life Aquatic Curation and Creation in Only Lovers Left Alive, Jim Jarmusch's Vampire Film (This Is Not) David Foster Wallace's Annotated Copy of Ulysses Americanah by Chimamanda Ngozi Adichie Die Bundeswehr http://www.critical-theory.com/professor-of-the-year-if-you-dont-give-me-any-of-your-shitty-papers-you-get-an-a/ http://www.thedailybeast.com/articles/2014/05/27/your-princess-is-in-another-castle-misogyny-entitlement-and-nerds.html http://www.brainpickings.org/index.php/2014/03/28/daniel-dennett-rapoport-rules-criticism/ http://www.washingtonpost.com/blogs/govbeat/wp/2014/06/04/the-second-largest-religion-in-each-state/?Post+generic=%3Ftid%3Dsm_twitter_washingtonpost http://www.dimthehouselights.com/post/87994215373/jodorowskys-dune http://www.blogcitylights.com/2014/06/09/5-questions-with-eric-baus/ http://www.boaatpress.com/connorgrogan http://www.boaatpress.com/jessica-comola http://www.everyday-genius.com/2014/06/ben-gross.html http://27bslash6.com/interviews.html http://boingboing.net/2014/06/10/vermeers-paintings-might-be.html http://fivethirtyeight.com/datalab/elitist-superfluous-or-popular-we-polled-americans-on-the-oxford-comma/ http://thefeministwire.com/2014/06/4-poems-andrea-rexilius/ http://ghostproposal.com/issue4/danbeachyquick.php http://www.burntorangereport.com/diary/15376/sexism-at-texas-boys-state http://www.vox.com/2014/7/7/5876415/star-wars-seemed-more-like-alien-in-its-initial-trailer?utm_medium=social&amp;utm_source=twitter&amp;utm_campaign=mattyglesias&amp;utm_content=monday http://the-toast.net/2014/07/15/slavoj-zizek-gets-hair-cut/ http://www.3ammagazine.com/3am/a-critique-of-roberta-smiths-critique-of-james-francos-new-film-stills/ http://biblioklept.org/2014/08/06/the-inhumanity-museum/ http://biblioklept.org/2014/08/07/the-crystal-crypt-philip-k-dick/ http://biblioklept.org/2014/08/06/the-headless-corpse-love-kills-penguin-pig-got-rheumatism-nagged-bible-reader-slays-wife-william-gaddis/ http://biblioklept.org/2014/08/04/the-top-franz-kafka/ http://www.prospectmagazine.co.uk/philosophy/against-happiness-why-we-need-a-philosophy-of-failure</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2014-12-31-books-i-finished-in-2014/">Books I read in 2014</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2015-01-03-thoughts-on-5-of-the-books-i-read-in-2014/">Thoughts on 5 of the books I read in 2014</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2015-01-02-things-i-read-in-2014-that-werent-books/` was built on 2026-07-24T13:02:46.120Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

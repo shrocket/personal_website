@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fifty Shades of Grey (a review)</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="fifty-shades-of-grey-a-review">Fifty Shades of Grey (a review)</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2012-09-24">24 September 2012</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/reading/" class="post-tag">reading</a></li>
+</ul>
+
+<p>Three weeks ago, I went to a wedding reception and had a great time. One of the more interesting portions of my evening was sharing a table with a German man who had read and liked all three <em>Fifty Shades of Grey</em> books by E L James (<em>Fifty Shades of Grey</em>, <em>Fifty Shades Darker</em>, and <em>Fifty Shades Free</em>). Usually, at this point in the story, someone asks: How did the books even come up at all? Well, the German man, Armin, had asked another of my table mates, <a href="http://danielsilliman.blogspot.com" title="danielsilliman.blogspot.com">Daniel</a>, what he was writing his dissertation on, and so Daniel was talking about faith fiction (e.g. the <em>Left Behind</em> series) and how the tropes of American religion have mixed with the tropes of genre fiction, to which Armin said something like, &quot;Hey, that sounds like the <em>Fifty Shades</em> books, have you read them?&quot; Seriously. (Armin later explained that the <em>Fifty Shades</em> books, though obviously porn, are also a story of personal faith and redemption, but in the meantime, he had asked us if we had read them.) I responded like this, &quot;Pfft! I have read enough about those books online to know that I don't need to waste my time. From what I understand, they are poorly written and misogynist. Why bother?&quot; Neither Armin nor I was impressed with my snobbery. The conversation moved on, but kept coming back to <em>Fifty Shades</em>. I softened my position some, but refused to let go of &quot;poorly written,&quot; a point which Armin conceded. Eventually, he asked me, &quot;If someone were to buy you the first book as a gift, would you feel obligated to read and possibly review it?&quot; I said, &quot;Yes, probably.&quot;</p>
+<p>The wedding reception was on a Friday. On Monday, <em>Fifty Shades of Grey</em> was waiting in my departmental mailbox (Amazon is ridiculously fast in Europe).</p>
+<p>The second chapter of Matthew Goulish's book <em>39 Microlectures</em>, &quot;Criticism,&quot; is for me, and despite my sometimes snobbery, a defining document when it comes to writing criticism. In the chapter, Goulish says that &quot;[c]riticism only consistently changes the critic&quot; (and rarely, if ever, the work of art being criticized). He then goes on to say that, given this,</p>
+<blockquote>
+<p>We may agree on the premise that each work of art is at least in part perfect, while each critic is at least in part imperfect. We may then look to each work of art not for its faults and shortcomings, but for its moments of exhilaration, in an effort to bring our own imperfections into sympathetic vibration with these moments, and thus effect a creative change in ourselves.</p>
+</blockquote>
+<p>I attempted to read <em>Fifty Shades of Grey</em> in this light. It was difficult (for reasons I'll go into below), but the attempt also wasn't completely unsuccessful. In other words, I am not, in this review, going to spend much time talking about the things other reviewers have spent much time talking about: the fact that the book started online as <em>Twilight</em> fan fiction, or the fact that the book is poorly written (though I will touch on both of them).</p>
+<p>What I had previously read online about <em>Fifty Shades</em> was Katrina Lumsden's concise and hilarious <a href="http://www.goodreads.com/review/show/340987215">Goodreads review</a>. Her use of animated GIFs is absolutely brilliant. Her basic message, which I more or less parroted to Armin (and also at least once on Facebook), is summed up nicely in this paragraph:</p>
+<blockquote>
+<p>It's this kind of ignorant trash that sets feminism back decades. Women who defend this book are, however unwittingly, participating in some of the most blatant misogyny I've ever witnessed, giving the impression that some women enjoy being debased, abused, and controlled (outside of a consensual dom/sub relationship). This is not a book about BDSM, this is a book about one sick, abusive man and his obsession with a young, naive invertebrate. It's a book about a girl who has absolutely no sense of self, who sacrifices any pretense of individuality in order to hold onto a man who doesn't even show her the faintest glimmer of respect. It's about two attention-starved individuals with the emotional maturity of toilet paper convincing themselves that their relationship is 'like, the best thing ever, OMG'. It's trite, insulting, and dangerous. I fear for any impressionable young women who read this and think that this is how an ideal relationship should operate. If nothing else, it should be issued as a guidebook to mothers around the world to show their daughters the kind of man to avoid at all costs. This book does good men (and indeed, all of humanity) a disservice.</p>
+</blockquote>
+<p>That's pretty strong stuff, and my initial impulse, before reading <em>Fifty Shades of Grey</em>, and for various reasons, was to agree with it implicitly. And then I read the book . . .</p>
+<p>The first thing that really struck me were three subtle statements about the book's sense of self-worth (or the author's and publisher's sense of the book's worth): the first in the author bio just inside the front cover, the second on the copyright page, and the third within the acknowledgments. The author's bio says, &quot;Since early childhood, she dreamed of writing stories that readers would fall in love with but put those dreams on hold to focus on her family and her career.&quot; In other words, &quot;those dreams,&quot; and therefore, <em>this book which you are holding</em>, were not important enough to follow when the author first had them. On the copyright page, there is a disclaimer from the publisher: &quot;The author published an earlier serialized version of this story online with different characters as &quot;Master of the Universe&quot; under the pseudonym Snowqueen's Icedragon.&quot; In terms of sense of worth, this is a bit more tricky. Obviously, the publisher wants to avoid any trouble with Stephanie Meyers, author of the <em>Twilight</em> series of books. That's fair. Yes, this book started its life as a riff on <em>Twilight</em>, but it has also obviously changed a lot since then. What I read in that disclaimer was first a reference to He-Man (and all that that entails: garish plastic action-figures, the ridiculous cartoon, the strange homoeroticism of the whole thing), and secondly, via the pseudonym, a reference to the Elves and Dragons branch of fantasy genre fiction (to which He-Man belongs). Don't get me wrong, I love fantasy fiction. I have read <em>The Lord of the Rings</em> multiple times, and recently devoured all five books in George R R Martin's <em>Song of Ice and Fire</em> series, but that doesn't change the fact that fantasy fiction is often seen as <em>not serious literature</em> (which is often a way of saying &quot;for children&quot;), and the disclaimer seems to be announcing that in a subtle way. Finally, in the acknowledgments, James writes, &quot;To my boss, Lisa, thank you for putting up with me over the last year or so while I indulged in <em>this madness</em>&quot; [emphasis mine]. Again, the message is that this book isn't serious.</p>
+<p>And so the question arises: If the author of the book doesn't take her own creation seriously, why, as the reader of said book, should I?</p>
+<p>Of course, the author bio, the disclaimer, and, to a certain extent, the acknowledgments are an appeal to the book's intended audience (a group to which I do not belong), and an attempt to let that audience know that the author is <em>just like them</em>. The more sympathy the audience feels for the author, the more likely that audience is to forgive things like bad writing.</p>
+<p>And believe me, this book is extraordinarily poorly written. Like I said, because other people have already commented on this, I won't spend a lot of time on it, but there are certain things I can't let pass:</p>
+<ul>
+<li>On the vocabulary level: the narrator, Ana's strict avoidance of the words <em>vagina</em> and <em>butt/ass</em>, opting instead for <em>down there</em>, <em>my sex</em>, <em>bottom</em>, or <em>behind</em>.</li>
+<li>On the sentence level: bad metaphors like &quot;I must be the color of <em>The Communist Manifesto</em>,&quot; bad logic like &quot;My teeth chatter as we bump at an alarming speed along the ground, until we finally come to a stop&quot; (they never slow?), or bad dialogue like &quot;'Pinch the top and then roll it down. You don't want any air in the end of that sucker,' he pants.&quot;</li>
+<li>And on the thematic/symbolic level: the inclusion of Ana's subconscious and &quot;inner goddess&quot; as on-the-shoulder angel/devil characters—the subconscious frequently looking at Ana over &quot;half-moon glasses,&quot; and the &quot;inner goddess&quot; performing any number of . . . well, just read: &quot;<em>Go girl!</em> My inner goddess has her pom-poms [sic] in hand—she's in cheerleading mode.&quot;</li>
+</ul>
+<p>At some point, I started underlining things and writing &quot;<a href="http://knowyourmeme.com/memes/derp" title="HERPADERP">derp</a>&quot; in the margin. In total, I wrote it 28 times, but thought it lots more.</p>
+<p>The problem with the label &quot;poorly written&quot; is manifold, but really it comes back to the question of the book's intended audience, which is itself a question of what the book is trying to be. In her article for the New Statesman, &quot;<a href="http://www.newstatesman.com/blogs/culture/2012/07/defence-fifty-shades-grey">In Defence of Fifty Shades of Grey</a>,&quot; Laurie Penny quickly cuts to the chase:</p>
+<blockquote>
+<p>&quot;But it's badly written!&quot;, I hear you cry. Um, hello? It's PORN. [. . .] When you get down to it, the problem most people seem to have with Fifty Shades of Grey is that it's for girls. Even worse - it's &quot;mommy porn&quot;, porn for mommies, for older women to read and get excited about, and that dangerous nonsense really needs to be stopped right now. Everyone knows that the only women who are allowed to actually have sexuality are slender, high-breasted twenty-one year old virgins – rather like, it has to be said, the heroine of &quot;Fifty Shades of Grey&quot;.</p>
+</blockquote>
+<p>As previously stated, I am not part of the book's intended audience (and, for that matter, neither is the man who bought if for me), so I can't really say if <em>Fifty Shades of Grey</em> fulfills its intended purpose. I can say, however, that there were moments in the novel that I found arousing, but, and like Penny says, porn doesn't have to be well-wrought to get the job done.</p>
+<p>As a quick side-note: I always thought the term &quot;mommy porn&quot; had less to do with actual sex, and more to do with descriptions like this one from page 133: &quot;The bath is a white stone, deep, egg-shaped affair, very designer. Christian leans over and fills it from the faucet on the tiled wall. He pours some expensive-looking bath oil into the water.&quot;</p>
+<p>When Laurie Penny writes &quot;slender, high-breasted,&quot; she's making an assumption that I think most readers probably make. The fact of the matter is, though, that one of the things this novel gets right, one of the instances in the novel of what I would call <em>good writing</em>, is that the first person narrator, Miss Anastasia Steele, is never (beyond &quot;pale, brown-haired girl with blue eyes too big for her face&quot;) specifically described. This lack of description allows the reader to imagine Ana's body however she wishes, allows her, in fact, to insert her own body into the proceedings. In terms of intention fulfillment (i.e. PORN), this is brilliant. The main male protagonist is described similarly vaguely, except that instead of his body being the blank canvas, it's his face (his eyes are regularly described as &quot;gray,&quot; but since gray can take on virtually any other color, my hypothesis holds), thus allowing the reader to put any face on the &quot;Adonis&quot; of Christian Grey.</p>
+<p>The book is also a good and safe introduction to the world of <a href="http://en.wikipedia.org/wiki/BDSM" title="Always start with Wikipedia?">BDSM</a> (Bondage Discipline Sadism Masochism), demystifying, and even, to a certain extent, making it less dark (though the end of the novel complicates this some). The inclusion of a standard contract between a submissive and dominant is particularly interesting, and a nice counterbalance to the rather hokey inclusion of emails (though more on that in a moment). At the very least, the book provides several ways for people (slender, high-breasted 21-year-olds and mommies alike) to spice things up in the bedroom, which again points to the idea that this book is doing a good job of fulfilling its intentions. My one complaint here is that the supposedly highly experienced dominant, Christian Grey, leaves his <em>tied-up</em> submissive alone in a room, and, based on the limited research I've done on the subject, this is a dangerous no-no. Maybe I need to do more research; it would be foolish of me to imply that I know more about BDSM than the author.</p>
+<p>James also captures moments of new-relationship playfulness. Conversations and emails between Ana and Christian (when they aren't creepy and threatening) often spark and so act as pretty good foreplay. This playful moment from pages 76-77</p>
+<blockquote>
+<p>I want to brush my teeth. I eye Christian's toothbrush. It would be like having him in my mouth. Hmm . . . Glancing guiltily over my shoulder at the door, I feel the bristles on the toothbrush. They are damp. He must have used it already. Grabbing it quickly, I squirt toothpaste on it and brush my teeth in double time. I feel so naughty. It's such a thrill.</p>
+</blockquote>
+<p>becomes even more interesting when Ana later tells Christian about it.</p>
+<p>I also appreciated James' attempts at literariness. The references to both the myth of Icarus and Hardy's <em>Tess of the d'Urbervilles</em> show that she is at least aware of literary history and is trying to use it to her advantage. The problem, of course, is that the references are, more often than not, clunky and clichéd, which brings up an interesting point: On page 207, I read the sentence &quot;Her precious words give me a warm glow inside.&quot; In the margin, I wrote &quot;derp&quot; and then &quot;cliché!&quot; One of things that often frustrated me about this book was that it is made of one cliché after another: the &quot;klutzy,&quot; 21-year-old virgin, the rich, powerful, and &quot;super hot&quot; man with a big penis, phrases like &quot;precious words&quot; and &quot;warm glow.&quot; But as I was marking that particular sentence for what it was, it occurred to me that clichés are comforting and safe. In terms of intention fulfillment, then, this is exactly what this book needs to be, especially if, as an author, you want to introduce your audience to the seemingly less safe world of BDSM.</p>
+<p>As I said before, there were moments while reading this book when I felt aroused. There were also moments when I felt confident, powerful, and masculine. Strong physical or emotional reactions are usually a sign of good writing. After finishing the book, I thought back to Katrina Lumsden's review; it seemed somehow shrill and reactionary. But then I reread it. It is, of course, neither shrill nor reactionary, it is right: Christian Grey is manipulative and controlling; Anastasia Steele is naive and spineless; all of these things are supported by very comforting clichés, and so it's difficult, in the midst of the suspension of disbelief, to recognize them.</p>
+<p>Really though, <em>both</em> Laurie Penny and Katrina Lumsden are right: <em>Fifty Shades of Grey</em> does a good job of knowing what it wants to be (porn) and knowing who its audience is (women, mostly middle-aged), but in this knowing, it presents an anti-feminist and emotionally abusive relationship paradigm. Those moments where I felt aroused were moments of good porn, but those moments where I felt masculine (or those moments where I identified with the narrator and thought things like, &quot;Oh, he's not so bad; he's concerned for her safety.&quot;) were moments where I participated in that paradigm, both as abuser and as abused.</p>
+<p>Ultimately, and I would wager this is also likely true for the book's intended audience, <em>Fifty Shades of Grey</em> made me feel lonely, which is the other thing porn does.</p>
+<p>[ed. 20250916: This is one of the very few instances where I regret not having also backed up the comments.]</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2012-09-21-first-bell-then-saliva/">first bell, then saliva</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2012-09-29-twitter-weekly-updates-for-2012-09-29/">Twitter Weekly Updates for 2012-09-29</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2012-09-24-fifty-shades-of-grey-a-review/` was built on 2026-07-24T13:02:46.119Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>we&#39;re not hungry for reality, we&#39;re hungry for realer fiction (?)</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="we-re-not-hungry-for-reality-we-re-hungry-for-realer-fiction">we&#39;re not hungry for reality, we&#39;re hungry for realer fiction (?)</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2010-05-12">12 May 2010</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/compstud/" class="post-tag">compstud</a></li>
+</ul>
+
+<p>I read David Shields' book <em><a href="http://www.amazon.com/Reality-Hunger-Manifesto-David-Shields/dp/0307273539/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1273682761&amp;sr=8-1" title="link to Amazon">Reality Hunger</a></em> several weeks ago. I reread it again yesterday, and part of that rereading was to gather all the notes (notes?) I took on/in it, particularly the notes which made up the (perhaps strange) project I undertook, which was to live tweet my reactions to the book while reading it. All of those tweets are available on this blog. To find them, you'd have to wade through not only the whole of the <a href="http://www.rocket2nowhere.com/blahg/category/tweets/" title="all the tweets I've ever tweeted">tweets category</a>, but also all of the extraneous tweets within that category. So as to save you that work, dear Reader, I now present that project unexpurgated and in order:</p>
+<ol>
+<li>People &quot;live tweet&quot; TV shows and webcasts. I am going to &quot;live&quot; tweet David Shields' new book Reality Hunger as I read it.</li>
+<li>Is the cover obnoxious or appropriate? It's Chip Kidd, so we know it's at least well-designed.</li>
+<li>a &quot;manifesto,&quot; an abecedarium, a numbered list, a 4th element in this tweet.</li>
+<li>&quot;32. The word 'novel' . . . meant the form of writing . . . that made up its own rules as it went along.&quot; Bakhtin not namechecked. Yet.</li>
+<li>&quot;Panharmonicon&quot; + German con artist + R. W. Emerson = me going back to the Emerson to do some research for my dissertation.</li>
+<li>&quot;The novel of characters, though, belongs entirely to the past.&quot; I know what he means, but then who are these people in my book?</li>
+<li>&quot;The present period is one of administrative numbers.&quot; He's talking about characters, but it's just as true in other contexts.</li>
+<li>&quot;The life span of a fact is shrinking.&quot; Is this an indirect appropriation of Warhol's 15 minutes quotation? Or a direct one? Either way.</li>
+<li>If all or some of the previous is &quot;actually&quot; Robbe-Grillet, is my question moot? There's no date listed. Does it matter?</li>
+<li>&quot;58. My medium is prose, not the novel.&quot; (Sebald) Yes. Exactly.</li>
+<li>I'm afraid I'm not well-read enough (???) to effectively argue with this book. I will try anyway. Please tell me if I'm wrong.</li>
+<li>&quot;'it's just fiction,' a vacuous but prevalent dismissal akin to criticizing someone with his own name&quot;(Marcus). I write &quot;little stories&quot;</li>
+<li>&quot;Art is a conversation, not a patent office. The citation of sources belongs to the realms of journalism and scholarship, not art.&quot;</li>
+<li>This undertaking has already affected the way I take notes/think about taking notes.</li>
+<li>&quot;If you think the heart is deceitful above all things, you should meet the author.&quot; Dear Reader, I love you. ;)</li>
+<li>&quot;He should have said, '. . . . I created a person meaner, funnier, more filled with life than I could ever be.'&quot; (about James Frey)</li>
+<li>vs.</li>
+<li>&quot;The so-called life one finds in novels . . . is not truer . . . and its people . . . are less intricate, less free, less full.&quot;-Barthes</li>
+<li>&quot;His point appears to be that nothing is beneath interest.&quot; The &quot;he&quot; (or she) could be any of the great novelists.</li>
+<li>&quot;Attention equals life or is its only evidence&quot; (O'Hara). Maybe trite, but writing is a deepening of attention.</li>
+<li>&quot;Life isn't about saying the right thing; life is about failing.&quot; Failure is a fiction we tell ourselves.</li>
+<li>&quot;166. Anything processed by memory is fiction.&quot; Is the obverse also true?</li>
+<li>&quot;How can a work be considered fiction when there's no plot?&quot; Please define &quot;plot.&quot;</li>
+<li>Is it me, or did the book begin with a great deal of strength which is now fading some 70 pages in?</li>
+<li>Waylaid by illness, I now return to my project of &quot;live&quot; tweeting my notes on David Shields' new book _Reality Hunger_.</li>
+<li>David Shields namechecks Robert Shields, the mad diarist: http://en.wikipedia.org/wiki/Robert_Shields_(diarist)</li>
+<li>&quot;but rather with an eye that roves,&quot; &quot;the pleasure of a documentary intelligence&quot;–and the eye, having walked, having writ, moved on.</li>
+<li>Sophie Calle Sophie Calle Sophie Calle Sophie Calle Sophie Calle (Shields namechecks but should perhaps be more ??? about it?)</li>
+<li>A lament for the bookshelf: http://www.theglobeandmail.com/news/arts/a-lament-for-the-bookshelf/article1488426/</li>
+<li>&quot;The rotation gets thick. The constraints get thin.&quot; (ultimately DJ Spooky)</li>
+<li>&quot;Facebook and MySpace are crude personal essay machines.&quot; Twitter has them both beat by having streamlined the process.</li>
+<li>&quot;In hip-hop, the mimetic function has been eclipsed to a large extent by manipulation of the original (the 'real thing').&quot;</li>
+<li>What's the difference between representing the real and re-presenting the real?</li>
+<li>&quot;Replication isn't reproduction.&quot; And he still hasn't given any credit to Baudrillard.</li>
+<li>&quot;actual arguments between genuine young people being authentically solipsistic&quot;</li>
+<li>&quot;The urge to connect bits that don't seem to belong together has fascinated me all my life.&quot; (Sebald again)</li>
+<li>&quot;Meaning, ultimately, is a matter of adjacent data.&quot;</li>
+<li>&quot;I'm drawn to literature instead as a form of thinking.&quot; This as opposed to &quot;narrative.&quot; But narrative is its own form of thinking.</li>
+<li>Chapter &quot;m: in praise of brevity,&quot; is not witty. And neither, really, am I.</li>
+<li>&quot;In imaginative literature we're always constrained from considering alternative scenarios; there are none.&quot; And the end of Hopscotch?</li>
+<li>&quot;Great art is clear thinking about mixed feelings.&quot; (Auden) And Guernica? And Mrs. Dalloway? And all of Rothko's work?</li>
+<li>Aphorisms might be the shortest essays, but they rarely contain arguments within themselves, thus perhaps disqualifying them.</li>
+<li>I continue my &quot;live&quot; tweeting of David Shields' new book Reality Hunger.</li>
+<li>&quot;I want a literature built entirely out of contemplation and revelation.&quot; he said as though there were any other kind.</li>
+<li>&quot;What's the difference between repetition and reprise?&quot; Do you mean the normal &quot;reprise&quot; or the Sinatra &quot;Reprise&quot;?</li>
+<li>&quot;Fiction mimics interest in God's intelligent omnipotence&quot; I wish he would admit he's talking about one kind of fiction, not all kinds.</li>
+<li>&quot;To what degree can solipsism gain access to the world?&quot; Strike &quot;gain,&quot; and replace with &quot;grant.&quot; Ask the question again.</li>
+<li>&quot;The writers I love tend to have Schrödinger's Paradox tattooed on their forehead&quot; I agree, but either way, the cat is dead.</li>
+<li>&quot;a part of living, of breathing, of surviving, is to exploit our human relationships in order to live.&quot; The heart of fiction?</li>
+<li>Will I be able to resist including section 514 in my dissertation prospectus? Wholesale and possibly without firm attribution?</li>
+<li>My dissertation director follows my tweets.</li>
+<li>&quot;I'm bored by out-and-out fabrication.&quot; There is no such thing.</li>
+<li>&quot;fiction . . . has never seemed less central to the culture's sense of itself&quot; But all of our &quot;reality&quot; is fictionalized.</li>
+<li>Shields is damning &quot;fiction&quot; with broad strokes and expecting the reader to see them as scalpel twitches.</li>
+<li>&quot;We are adrift, alone in the cosmos, wreaking monstrous violence on one another out of frustration and pain.&quot; (Woody Allen)</li>
+<li>&quot;Let us hope the time will come when language is most efficiently used where it is being most efficiently misused.&quot; (Beckett)</li>
+<li>Shields seems to be at his best when using someone else's voice. Me too.</li>
+<li>&quot;having the courage to share the reasons for the catastrophe of your character with the world&quot; (Gass)</li>
+<li>&quot;I love your willingness to be wrong, dumb, blind, embarrassing.&quot; I wish Shields engaged in this willingness a little more.</li>
+<li>Hmmm, is presenting contradictions a willingness to be wrong, dumb, blind, embarrassing? Have I spoken too soon?</li>
+<li>&quot;at the heart of 'literary culture' is the big, blockbuster novel by middle-of-the-road writers&quot;</li>
+<li>&quot;Novel qua novel is a form of nostalgia.&quot; No. The genre is defined by its elasticity. Explain nostalgia for the &quot;open-ended present.&quot;</li>
+<li>&quot;The kinds of novels I like are ones which bear no trace of being novels.&quot; They are, however, still novels, and still fiction.</li>
+<li>&quot;There are no facts, only art.&quot; (Emerson) Again: Fiction.</li>
+<li>&quot;What actually happened is only raw material; what the writer makes of what happened is all that matters.&quot; Again: Fiction.</li>
+<li>Shields allies the lyric essay with poetry, and while he's not wrong, he's forgetting that the lyric is also still prose fiction.</li>
+<li>Reality Hunger ultimately interesting, but never explores why we keep fictionalizing our reality. We need fiction.</li>
+<li>Thank you, David Shields. And thus ends my experiment in &quot;live&quot; tweeting a book.</li>
+</ol>
+<p>I also gathered (and to a certain extent) reread all of the secondary materials I looked at when Shields' book came out. Here's a kind of annotated bibliography:</p>
+<ol>
+<li><a href="http://www.nytimes.com/2010/03/21/books/21mash.html?pagewanted=1&amp;ref=arts">&quot;Reading and the Web—Texts Without Context&quot; by Michiko Kakutani. Published on March 17, 2010, in the NYT.</a> Not just a review of <em>Reality Hunger</em>, which Kakutani calls &quot;deliberately provocative . . . and deeply nihilistic,&quot; but also a review of several other books about how reading and writing are changing. Kakutani basically makes a Chicken Little argument. She also worries about &quot;the easily distracted, adolescent quality of much of cyberculture.&quot; Can we please get over these ridiculous fears of change? The mp3 didn't kill the vinyl LP. TV didn't kill radio. Computers will not kill the book. And for crying out loud, people don't read the same way now as they did in the 19th century, or the 18th, or the 17th. And don't accuse mashup or cyber-culture of suffering from a &quot;nostalgic malaise&quot; at the same time as you pine for &quot;Reading in the traditional open-ended sense.&quot;</li>
+<li><a href="http://nymag.com/arts/books/reviews/64477/">&quot;Boundary Issues&quot; by Sam Anderson. Published on March 7, 2010, in New York Magazine's Books section.</a> Asks the question: How can you make a cogent argument if you don't define your terms, specifically &quot;fiction&quot; and &quot;reality&quot;? Sums up: &quot;Reality Hunger is a disaster: a hash of vague statements, obvious history, hyperbole, and repetition. . . . The book's supposed profundities—that the line between fiction and reality is unclear, that genres can be more powerful when mixed, that narrative often imposes a simplistic order on the chaos of actual life—are, to anyone who's ever thought seriously about any of these issues, a bunch of remedial Grade-A head-slappers. And yet Shields intones them with the air of a holy man whispering the final secret of the universe from his mountaintop.&quot; A bit harsh, but not exactly wrong.</li>
+<li><a href="http://therumpus.net/2010/03/reality-boredom-why-david-shields-is-completely-right-and-totally-wrong/?full=yes">&quot;Reality Boredom: Why David Shields is Completely Right and Totally Wrong&quot; by Lincoln Michel. Published on March 8, 2010, on therumpus.net.</a> This article, written in a numbered section style—like Shields' book—does a thorough job of taking several things in <em>Reality Hunger</em> apart and examining them carefully. It is worth the (perhaps somewhat long (for the internet)) read. The central thesis, however, is really not all that different from my own: &quot;Shields writes passionately about the vitality of short works, the inanity of our copyright laws, the relevance of remix culture, the changes technology is bringing, and, as always, the need to find new modes of expression [particularly &quot;non-fiction&quot; modes such as the lyric essay and the memoir]. Reading these arguments left me with a renewed faith in the relevance of fiction and the authors, filmmakers and other artists who are making fascinating work from the power of their imaginations.&quot;</li>
+</ol>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2010-05-12-mobius-stripping/">möbius (s)tripping</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2010-05-15-twitter-weekly-updates-for-2010-05-15/">Twitter Weekly Updates for 2010-05-15</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2010-05-12-were-not-hungry-for-reality-were-hungry-for-realer-fiction/` was built on 2026-07-24T13:02:46.113Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

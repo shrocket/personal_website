@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Reading The Loop by Jacques Roubad, part 1</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="reading-the-loop-by-jacques-roubad-part-1">Reading The Loop by Jacques Roubad, part 1</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2012-10-31">31 October 2012</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/reading/" class="post-tag">reading</a>, </li>
+	<li><a href="/tags/the-loop/" class="post-tag">the-loop</a></li>
+</ul>
+
+<p>Okay, I'm going to try this, even though I am well aware of that fact that I have not, historically, had a lot of success (at least since the Memo project) with things like this: I have just started reading <em>The Loop</em> by Jacques Roubaud, and there is something about the book (something about the project (&quot;The Project&quot;)) which makes me want to chronicle my reading of it. That is what I am going to try (and likely fail) to do here.</p>
+<p>I am teaching seven classes this semester. I am already exhausted, and it's only week two. What will happen when I have to start grading? Seven classes equals approximately 180 students. I won't have to grade 180 papers, but still. But still.</p>
+<p>I attempted to start reading <em>The Loop</em> last night (30 Oct 2012), but had trouble concentrating. It was late, and I was tired—Sadly, the battery in my computer is down to 9%. I left the charger in the office. It is now 11:11 a.m. I'm not going to the office until 2:00 p.m. On the way there, I plan on buying a kilo of yerba maté, a new winter hat, and lunch. Even technology is convinced that this new project will fail.—so I went to sleep.</p>
+<p>Lately, because of things like being surprised in the shower that I hadn't shaved and mistaking the milk for the juice, I have been thinking about Lydia Davis' story &quot;Examples of Confusion.&quot; Today, after I got up and ate breakfast and showered and folded my laundry and dressed, I read it. Here is section 14:</p>
+<blockquote>
+<p>I was an unlikely person to invite to this party,and no one is talking to me. I believe the invitation was for someone else. ¶ All day the clock answers my questions about the time very well, and so, wondering what the title of that book was, I look at the face of the clock for an answer. ¶ I so nearly missed the bus, I still believe I am not on it now. ¶ Because it is almost the end of the day, I think it is almost the end of the week. ¶ That was such a peculiar thing to say to me, I do not believe it was said to me. ¶ Because that expert gave me helpful information about his subject, which is horticulture, I think I can ask his advice about another subject, which is family relations. ¶ I had such trouble finding this place, I believe I did not find it. I am talking to the person I came here to meet, but I believe he is still alone, waiting for me.</p>
+</blockquote>
+<p>After reading the Davis, I started <em>The Loop</em> again. It has been 10 years since I read the first branch (<em>The Great Fire of London</em>) of Roubaud's &quot;Project,&quot; and I was a little worried I'd forgotten too much of it to be able to immediately get into <em>The Loop</em>, but those fears were dispelled immediately after jumping to <em>The Loop</em>'s first interpolation, which starts on page 199. On the top of that page, I wrote: &quot;Read this page on 30 Oct 2012, but had trouble concentrating. Read it again the morning of 31 Oct 2012, but before doing so, read &quot;Examples of Confusion&quot; by Lydia Davis. Have then read this page as an extension of that story and/or this page led me to Davis' story, which in turn. . . .&quot;</p>
+<blockquote>
+<p>But can what I am writing now be considered an interpolation? and, if so, where should it be inserted? If it is indeed a proper interpolation, it should appear here, of course (and it would be an &quot;upward&quot; thread on the very large sheet of mural paper on which I once invited you to imagine <strong>&quot;the great fire of London&quot;</strong> written out in its totality (the <strong>insertions</strong> were indicated there by colored lines and arrows); but by virtue of its connection to this volume's predecessor, it should also appear in branch one itself (it would be a reversible insertion, a two-way arrow), which statement implies (and this implication will no doubt become more and more prevalent as this story progresses) that additions can indeed be made after the fact to branch one (and, later on, to the other branches as well), contrary to the (repeated) assertion that it was written entirely in the present (without preparation and without revisions), &amp; therefore that it is finished, since by now it's not only complete but published (and the same contradiction would be true of the other branches as well, at the moment of their completion and publication)).</p>
+</blockquote>
+<p>I wasn't only worried about not being able to immediately get into <em>The Loop</em>. Considering that <em>The Great Fire of London</em> is/was Roubaud's (initial) attempt to deal with the death of his young wife Alix, and that I am just now beginning to heal from my recent divorce (one of the ways I know this is that I have started feeling lonely, a sign, I think, that I would like to be with someone, a desire I have not had for a while), I was/am also worried that this book, an extension of (a branch of) the previous book, and therefore a continuation of Roubaud's attempt to deal with the loss of his wife, would reactivate or refresh my own sense of loss.</p>
+<p>Strangely, last night, after I put <em>The Loop</em> down in order to sleep, I was overcome with the urge to start writing about my divorce. I had the whole first paragraph all worked out in my brain when I did that thing I know better than to do: I thought, &quot;I don't want to get up and write this down. I need to sleep, and if I start writing, I might not be able to stop. And anyway, I've thought about it enough, I'll surely be able to remember all of this in the morning.&quot; I, of course, remember none of it. This is for the best. After reading the first bit of <em>The Loop</em>, and finding, among other things</p>
+<blockquote>
+<p>this memory knows it, and it does not lie. I do not mean that a memory is, or is not, sincere, but only that, like a dog, it cannot lie (no doubt a lie is only an act of saying, an act of speech, turned outward).1</p>
+</blockquote>
+<blockquote>
+<p>because in memories, in my memories (I am speaking only for myself), there is only seeing. Even touch is &quot;colorless,&quot; anesthetized.2</p>
+</blockquote>
+<blockquote>
+<p>But as soon as one breathes on any image, any memory, it too becomes covered with mist, and reveals itself to be thoroughly webbed with imprecision.3</p>
+</blockquote>
+<blockquote>
+<p>He who remembers is at once Argos, the giant with a hundred eyes, and an octopus, a creature with a hundred arms.4</p>
+</blockquote>
+<p>I question the sensibility of attempting my own Proustian/Roubaudian examination of memory, or rather, memories specific to my divorce (perhaps even my marriage), because, I mean, if I chronicle my reading of <em>The Loop</em>, the likelihood that I'll engage, probably often deeply, with my memory is almost guaranteed.</p>
+<p>This blog post looks very little like what I had envisioned when I started writing it this morning, before it was cut short by a dying battery, and bifurcated by the buying of a package of yerba maté, a new winter hat, a falafel sandwich, and the mailing of a letter.</p>
+<p>___</p>
+<ol>
+<li>I wish I had easy access to my copy of Harry Frankfurt's essay &quot;On Bullshit.&quot; He has really interesting things to say about the nature of lies. I also wish I could remember where I read that it has recently been discovered that every time we remember something, we don't remember the actual event, but rather the last time we remembered it, which of course means that memory is hugely unreliable. Of course, that still doesn't mean that memory lies. I think Roubaud is absolutely right.</li>
+<li>Thank goodness, otherwise every cut I'd ever gotten cut would still hurt (the memory of the time I nicked myself shaving before a &quot;date&quot; would then be awful on three levels: 1. the fear and despair of not looking good for her because I was bleeding/scabbed; 2. the later embarrassment about that initial and ultimately useless fear and despair; 3. the physical pain of the cut itself).</li>
+<li>Roubaud's rendering of &quot;It has recently been discovered that every time we remember something, we don't remember the actual event, but rather the last time we remembered it, which of course means that memory is hugely unreliable,&quot; is much more elegant than my own.</li>
+<li>I can't drink yerba maté without remembering people whose names begin with H: Horacio Oliveira, the main character of Julio Cortázar's novel <em>Hopscotch</em>, who drinks maté constantly, and spends his time trying to remember all of the utterly banal details of utterly banal situations long past; H and the dorms in Bremen; H and the orange tea tin. I think I'll brew myself another cup right now before I teach Written Communication 1.</li>
+</ol>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2012-09-29-twitter-weekly-updates-for-2012-09-29/">Twitter Weekly Updates for 2012-09-29</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2012-11-01-reading-the-loop-by-jacques-roubaud-part-2/">Reading The Loop by Jacques Roubaud, part 2</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2012-10-31-reading-the-loop-by-jacques-roubad-part-1/` was built on 2026-07-24T13:02:46.119Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

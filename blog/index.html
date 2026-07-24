@@ -1,0 +1,3424 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shawn Huelle</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+<h1 id="archive">Archive</h1>
+
+
+<ol reversed="" class="postlist" style="--postlist-index: 722">
+	<li class="postlist-item">
+		<a href="/blog/2025-01-08-books-read-in-2024/" class="postlist-link">Books Read in 2024</a>
+		<time class="postlist-date" datetime="2025-01-08">January 2025</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2024-01-04-books-read-in-2023/" class="postlist-link">Books read in 2023 (2+ years late)</a>
+		<time class="postlist-date" datetime="2024-01-04">January 2024</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-03-27-649/" class="postlist-link">20230327</a>
+		<time class="postlist-date" datetime="2023-03-27">March 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-03-09-637/" class="postlist-link">20230309</a>
+		<time class="postlist-date" datetime="2023-03-09">March 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-03-03-413/" class="postlist-link">20230303</a>
+		<time class="postlist-date" datetime="2023-03-03">March 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-02-11-658/" class="postlist-link">20230211</a>
+		<time class="postlist-date" datetime="2023-02-11">February 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-01-31-503/" class="postlist-link">20230131</a>
+		<time class="postlist-date" datetime="2023-01-31">January 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-01-09-a-playlist-for-2022/" class="postlist-link">a playlist for 2022</a>
+		<time class="postlist-date" datetime="2023-01-09">January 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2023-01-06-books-read-in-2022/" class="postlist-link">books read in 2022</a>
+		<time class="postlist-date" datetime="2023-01-06">January 2023</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-12-17-643/" class="postlist-link">20221217</a>
+		<time class="postlist-date" datetime="2022-12-17">December 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-12-01-655/" class="postlist-link">20221201</a>
+		<time class="postlist-date" datetime="2022-12-01">December 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-11-12-634/" class="postlist-link">20221112</a>
+		<time class="postlist-date" datetime="2022-11-12">November 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-10-25-479/" class="postlist-link">20221025</a>
+		<time class="postlist-date" datetime="2022-10-25">October 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-10-19-491/" class="postlist-link">20221019</a>
+		<time class="postlist-date" datetime="2022-10-19">October 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-10-03-510/" class="postlist-link">20221003</a>
+		<time class="postlist-date" datetime="2022-10-03">October 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-09-30-495/" class="postlist-link">20220930</a>
+		<time class="postlist-date" datetime="2022-09-30">September 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-09-27-476/" class="postlist-link">20220927</a>
+		<time class="postlist-date" datetime="2022-09-27">September 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-09-25-532/" class="postlist-link">untitled (cretinization)</a>
+		<time class="postlist-date" datetime="2022-09-25">September 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-07-18-507/" class="postlist-link">20220718</a>
+		<time class="postlist-date" datetime="2022-07-18">July 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-07-15-500/" class="postlist-link">20220715</a>
+		<time class="postlist-date" datetime="2022-07-15">July 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-07-12-untitled-restless/" class="postlist-link">untitled (restless)</a>
+		<time class="postlist-date" datetime="2022-07-12">July 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-05-05-untitled-indeterminate-cage-lecture/" class="postlist-link">indeterminate Cage lecture</a>
+		<time class="postlist-date" datetime="2022-05-05">May 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-30-untitled-bottomless-3/" class="postlist-link">untitled (bottomless 3)</a>
+		<time class="postlist-date" datetime="2022-04-30">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-27-488/" class="postlist-link">20220427</a>
+		<time class="postlist-date" datetime="2022-04-27">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-23-untitled-bottomless-2/" class="postlist-link">untitled (bottomless 2)</a>
+		<time class="postlist-date" datetime="2022-04-23">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-19-472/" class="postlist-link">20220419</a>
+		<time class="postlist-date" datetime="2022-04-19">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-15-untitled-bottomless-1/" class="postlist-link">untitled (bottomless 1)</a>
+		<time class="postlist-date" datetime="2022-04-15">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-13-440/" class="postlist-link">20220413</a>
+		<time class="postlist-date" datetime="2022-04-13">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-09-untitled-sea-foam/" class="postlist-link">untitled (sea foam)</a>
+		<time class="postlist-date" datetime="2022-04-09">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-05-441/" class="postlist-link">20220405</a>
+		<time class="postlist-date" datetime="2022-04-05">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-04-01-untitled-yet-another-list-of-phrases-without-context/" class="postlist-link">untitled (yet another list of phrases without context)</a>
+		<time class="postlist-date" datetime="2022-04-01">April 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-30-436/" class="postlist-link">20220130</a>
+		<time class="postlist-date" datetime="2022-01-30">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-27-untitled-ladies-and-gentlemen/" class="postlist-link">untitled (ladies and gentlemen)</a>
+		<time class="postlist-date" datetime="2022-01-27">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-24-427/" class="postlist-link">20220124</a>
+		<time class="postlist-date" datetime="2022-01-24">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-22-untitled-pronunciation/" class="postlist-link">untitled (pronunciation)</a>
+		<time class="postlist-date" datetime="2022-01-22">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-19-438/" class="postlist-link">20220119</a>
+		<time class="postlist-date" datetime="2022-01-19">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-16-424/" class="postlist-link">untitled (how to)</a>
+		<time class="postlist-date" datetime="2022-01-16">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-13-259/" class="postlist-link">20220113</a>
+		<time class="postlist-date" datetime="2022-01-13">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-11-books-with-which-i-spent-significant-time-in-2021-but-did-not-finish/" class="postlist-link">untitled (books with which I spent significant time in 2021, but did not &quot;finish&quot;)</a>
+		<time class="postlist-date" datetime="2022-01-11">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-08-untitled-two-quotations/" class="postlist-link">untitled (two quotations)</a>
+		<time class="postlist-date" datetime="2022-01-08">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-05-books-read-in-2021/" class="postlist-link">untitled (books read in 2021)</a>
+		<time class="postlist-date" datetime="2022-01-05">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-29-370/" class="postlist-link">20211129</a>
+		<time class="postlist-date" datetime="2021-11-29">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-25-367/" class="postlist-link">20211125</a>
+		<time class="postlist-date" datetime="2021-11-25">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-21-untitled-thats-the-way-the-cookie-crumbles/" class="postlist-link">untitled (that&#39;s the way the cookie crumbles)</a>
+		<time class="postlist-date" datetime="2021-11-21">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-17-untitled-and-of-knees/" class="postlist-link">untitled (and of knees)</a>
+		<time class="postlist-date" datetime="2021-11-17">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-13-364/" class="postlist-link">20211113</a>
+		<time class="postlist-date" datetime="2021-11-13">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-09-268/" class="postlist-link">20211109</a>
+		<time class="postlist-date" datetime="2021-11-09">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-05-untitled-digital-philosophy/" class="postlist-link">untitled (digital philosophy)</a>
+		<time class="postlist-date" datetime="2021-11-05">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-01-untitled-goallessness/" class="postlist-link">untitled (goallessness)</a>
+		<time class="postlist-date" datetime="2021-11-01">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-28-untitled-all-the-best-names/" class="postlist-link">untitled (all the best names)</a>
+		<time class="postlist-date" datetime="2021-09-28">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-23-155/" class="postlist-link">20210923</a>
+		<time class="postlist-date" datetime="2021-09-23">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-18-untitled-little-white-dogs-pee-cotton-candy-and-poop-tiny-chocolate-bars/" class="postlist-link">untitled (little white dogs pee cotton candy and poop tiny chocolate bars)</a>
+		<time class="postlist-date" datetime="2021-09-18">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-09-166/" class="postlist-link">20210909</a>
+		<time class="postlist-date" datetime="2021-09-09">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-05-untitled-nicknames/" class="postlist-link">untitled (nicknames)</a>
+		<time class="postlist-date" datetime="2021-09-05">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-08-30-250/" class="postlist-link">20210830</a>
+		<time class="postlist-date" datetime="2021-08-30">August 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-08-25-untitled-pieces-of-the-indoor-playground/" class="postlist-link">untitled (pieces of the indoor playground)</a>
+		<time class="postlist-date" datetime="2021-08-25">August 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-08-20-334/" class="postlist-link">20210820</a>
+		<time class="postlist-date" datetime="2021-08-20">August 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-30-untitled-not-given-to-kissing/" class="postlist-link">untitled (not given to kissing)</a>
+		<time class="postlist-date" datetime="2021-07-30">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-27-343/" class="postlist-link">20210727</a>
+		<time class="postlist-date" datetime="2021-07-27">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-25-untitled-another-list-of-phrases-without-context/" class="postlist-link">untitled (another list of phrases without context)</a>
+		<time class="postlist-date" datetime="2021-07-25">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-22-338/" class="postlist-link">20210722</a>
+		<time class="postlist-date" datetime="2021-07-22">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-19-untitled-he-punched-his-own-leg-again/" class="postlist-link">untitled (he punched his own leg again)</a>
+		<time class="postlist-date" datetime="2021-07-19">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-17-263/" class="postlist-link">20210717</a>
+		<time class="postlist-date" datetime="2021-07-17">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-14-untitled-linguistic-problems/" class="postlist-link">untitled (linguistic problems)</a>
+		<time class="postlist-date" datetime="2021-07-14">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-30-309/" class="postlist-link">20210630</a>
+		<time class="postlist-date" datetime="2021-06-30">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-26-untitled-life-and-death-and-toes/" class="postlist-link">untitled (life and death and toes)</a>
+		<time class="postlist-date" datetime="2021-06-26">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-24-untitled-disjointed-biography/" class="postlist-link">untitled (disjointed biography)</a>
+		<time class="postlist-date" datetime="2021-06-24">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-20-whats-going-on-here/" class="postlist-link">what’s going on here?</a>
+		<time class="postlist-date" datetime="2021-06-20">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-16-untitled-i-feel-like-ive-done-this-before/" class="postlist-link">untitled (I feel like I&#39;ve done this before)</a>
+		<time class="postlist-date" datetime="2021-06-16">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-11-255/" class="postlist-link">20210611</a>
+		<time class="postlist-date" datetime="2021-06-11">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-09-untitled-spacetime/" class="postlist-link">untitled (spacetime)</a>
+		<time class="postlist-date" datetime="2021-06-09">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-05-246/" class="postlist-link">20210605</a>
+		<time class="postlist-date" datetime="2021-06-05">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-04-untitled-a-list-of-phrases-without-context/" class="postlist-link">untitled (a list of phrases without context)</a>
+		<time class="postlist-date" datetime="2021-06-04">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-28-untitled-corn-2/" class="postlist-link">untitled (corn 2)</a>
+		<time class="postlist-date" datetime="2021-04-28">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-19-140/" class="postlist-link">20210419</a>
+		<time class="postlist-date" datetime="2021-04-19">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-15-untitled-socks/" class="postlist-link">untitled (socks)</a>
+		<time class="postlist-date" datetime="2021-04-15">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-11-152/" class="postlist-link">20210411</a>
+		<time class="postlist-date" datetime="2021-04-11">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-07-untitled-seed/" class="postlist-link">untitled (seed)</a>
+		<time class="postlist-date" datetime="2021-04-07">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-04-172/" class="postlist-link">20210404</a>
+		<time class="postlist-date" datetime="2021-04-04">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-31-resorting-to-the-internet/" class="postlist-link">resorting to the internet</a>
+		<time class="postlist-date" datetime="2021-03-31">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-27-draft-the-ethics-of-letting-technology-do-the-work-for-you/" class="postlist-link">the ethics of letting technology do the work for you</a>
+		<time class="postlist-date" datetime="2021-03-27">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-24-121/" class="postlist-link">20210324</a>
+		<time class="postlist-date" datetime="2021-03-24">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-19-untitled-transactional/" class="postlist-link">untitled (transactional)</a>
+		<time class="postlist-date" datetime="2021-03-19">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-15-159/" class="postlist-link">20210315</a>
+		<time class="postlist-date" datetime="2021-03-15">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-14-175/" class="postlist-link">20210314</a>
+		<time class="postlist-date" datetime="2021-03-14">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-11-untitled-ends-vs-means/" class="postlist-link">untitled (ends vs means)</a>
+		<time class="postlist-date" datetime="2021-03-11">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-08-untitled-an-attempt/" class="postlist-link">untitled (an attempt)</a>
+		<time class="postlist-date" datetime="2021-03-08">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-28-143/" class="postlist-link">20210228</a>
+		<time class="postlist-date" datetime="2021-02-28">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-25-untitled-answer/" class="postlist-link">untitled (answer)</a>
+		<time class="postlist-date" datetime="2021-02-25">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-21-137/" class="postlist-link">20210221</a>
+		<time class="postlist-date" datetime="2021-02-21">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-17-untitled-standing-at-the-window/" class="postlist-link">untitled (standing at the window)</a>
+		<time class="postlist-date" datetime="2021-02-17">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-12-112/" class="postlist-link">20210212</a>
+		<time class="postlist-date" datetime="2021-02-12">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-09-untitled-maze/" class="postlist-link">untitled (maze)</a>
+		<time class="postlist-date" datetime="2021-02-09">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-04-130/" class="postlist-link">20210204</a>
+		<time class="postlist-date" datetime="2021-02-04">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-31-untitled-corn-1/" class="postlist-link">untitled (corn 1)</a>
+		<time class="postlist-date" datetime="2021-01-31">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-28-125/" class="postlist-link">20210128</a>
+		<time class="postlist-date" datetime="2021-01-28">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-26-untitled-truisms/" class="postlist-link">untitled (truisms)</a>
+		<time class="postlist-date" datetime="2021-01-26">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-23-110/" class="postlist-link">20210123</a>
+		<time class="postlist-date" datetime="2021-01-23">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-21-untitled-apostrophe/" class="postlist-link">untitled (apostrophe)</a>
+		<time class="postlist-date" datetime="2021-01-21">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-18-115/" class="postlist-link">20210118</a>
+		<time class="postlist-date" datetime="2021-01-18">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-16-148/" class="postlist-link">20210116</a>
+		<time class="postlist-date" datetime="2021-01-16">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-15-untitled-dock/" class="postlist-link">untitled (dock)</a>
+		<time class="postlist-date" datetime="2021-01-15">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-13-133/" class="postlist-link">20210113</a>
+		<time class="postlist-date" datetime="2021-01-13">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-11-some-notes-on-some-books-read-in-2020/" class="postlist-link">some notes on some books read in 2020</a>
+		<time class="postlist-date" datetime="2021-01-11">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-08-books-read-in-2020/" class="postlist-link">books read in 2020</a>
+		<time class="postlist-date" datetime="2021-01-08">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-06-162/" class="postlist-link">20210106</a>
+		<time class="postlist-date" datetime="2021-01-06">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-04-a-playlist-for-2020/" class="postlist-link">a playlist for 2020</a>
+		<time class="postlist-date" datetime="2021-01-04">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-02-36/" class="postlist-link">20210102</a>
+		<time class="postlist-date" datetime="2021-01-02">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2020-12-31-hello-again/" class="postlist-link">hello again</a>
+		<time class="postlist-date" datetime="2020-12-31">December 2020</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-05-18-play-it-as-it-lays-by-joan-didion/" class="postlist-link">Play it as it Lays by Joan Didion</a>
+		<time class="postlist-date" datetime="2015-05-18">May 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-05-04-agape-agape-by-william-gaddis/" class="postlist-link">Agapé Agape by William Gaddis</a>
+		<time class="postlist-date" datetime="2015-05-04">May 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-28-the-white-album-by-joan-didion/" class="postlist-link">The White Album by Joan Didion</a>
+		<time class="postlist-date" datetime="2015-04-28">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-18-kill-my-mother-by-jules-feiffer/" class="postlist-link">Kill My Mother by Jules Feiffer</a>
+		<time class="postlist-date" datetime="2015-04-18">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-16-inherent-vice-by-thomas-pynchon/" class="postlist-link">Inherent Vice by Thomas Pynchon</a>
+		<time class="postlist-date" datetime="2015-04-16">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-14-leaving-the-atocha-station-by-ben-lerner/" class="postlist-link">Leaving the Atocha Station by Ben Lerner</a>
+		<time class="postlist-date" datetime="2015-04-14">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-12-retrospective-19-february-2014-a-miniature-film-festival/" class="postlist-link">Retrospective - 19 February 2014 - A Miniature Film Festival</a>
+		<time class="postlist-date" datetime="2015-04-12">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-10-retrospective-27-november-2013-what-i-hear-behind-siris-voices/" class="postlist-link">Retrospective - 27 November 2013 - What I Hear Behind Siri&#39;s Voice/s</a>
+		<time class="postlist-date" datetime="2015-04-10">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-08-retrospective-25-november-2012-reading-the-loop-by-jacques-roubaud-pt-7/" class="postlist-link">Retrospective - 25 November 2012 - Reading The Loop by Jacques Roubaud, pt. 7</a>
+		<time class="postlist-date" datetime="2015-04-08">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-06-retrospective-13-june-2011-dictionary-definitions/" class="postlist-link">Retrospective - 13 June 2011 - Dictionary Definitions</a>
+		<time class="postlist-date" datetime="2015-04-06">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-04-retrospective-24-november-2010-2-of-10-jess/" class="postlist-link">Retrospective - 25 November 2010 - 2 of 10 (Jess)</a>
+		<time class="postlist-date" datetime="2015-04-04">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-04-02-retrospective-24-march-2009-blood-from-the-shoulder-of-pallas/" class="postlist-link">Retrospective - 24 March 2009 - &quot;Blood From the Shoulder of Pallas&quot;</a>
+		<time class="postlist-date" datetime="2015-04-02">April 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-31-retrospective-01-september-2008-not-what-ill-be-reading/" class="postlist-link">Retrospective - 02 September 2008 - Not What I&#39;ll Be Reading</a>
+		<time class="postlist-date" datetime="2015-03-31">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-29-retrospective-19-june-2007-the-shortest-distance-between-two-points/" class="postlist-link">Retrospective - 19 June 2007 - The Shortest Distance Between Two Points</a>
+		<time class="postlist-date" datetime="2015-03-29">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-27-retrospective-26-february-2006-the-sum-of-the-remainders/" class="postlist-link">Retrospective - 27 February 2006 - The Sum of the Remainders</a>
+		<time class="postlist-date" datetime="2015-03-27">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-25-retrospective-24-march-2005-why-is-the-rocket-going-nowhere/" class="postlist-link">Retrospective - 24 March 2005 - Why is the Rocket Going Nowhere?</a>
+		<time class="postlist-date" datetime="2015-03-25">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-23-this-blogs-10th-anniversary/" class="postlist-link">This Blog&#39;s 10th Anniversary</a>
+		<time class="postlist-date" datetime="2015-03-23">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-03-02-you-cant-get-there-from-here-by-jason/" class="postlist-link">You Can&#39;t Get There From Here by Jason</a>
+		<time class="postlist-date" datetime="2015-03-02">March 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-02-22-my-struggle-vol-2-a-man-in-love-by-karl-ove-knausgaard/" class="postlist-link">My Struggle vol. 2 - A Man in Love by Karl Ove Knausgaard</a>
+		<time class="postlist-date" datetime="2015-02-22">February 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-30-black-hole-by-charles-burns/" class="postlist-link">Black Hole by Charles Burns</a>
+		<time class="postlist-date" datetime="2015-01-30">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-21-trees-issues-1-8-by-warren-ellis-jason-howard/" class="postlist-link">Trees (issues 1-8) by Warren Ellis &amp; Jason Howard</a>
+		<time class="postlist-date" datetime="2015-01-21">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-12-eleanor-park-by-rainbow-rowell/" class="postlist-link">Eleanor &amp; Park by Rainbow Rowell</a>
+		<time class="postlist-date" datetime="2015-01-12">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-12-cities-of-the-red-night-by-william-s-burroughs/" class="postlist-link">Cities of the Red Night by William S. Burroughs</a>
+		<time class="postlist-date" datetime="2015-01-12">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-03-thoughts-on-5-of-the-books-i-read-in-2014/" class="postlist-link">Thoughts on 5 of the books I read in 2014</a>
+		<time class="postlist-date" datetime="2015-01-03">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2015-01-02-things-i-read-in-2014-that-werent-books/" class="postlist-link">Things I read in 2014 that weren&#39;t books</a>
+		<time class="postlist-date" datetime="2015-01-02">January 2015</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-12-31-books-i-finished-in-2014/" class="postlist-link">Books I read in 2014</a>
+		<time class="postlist-date" datetime="2014-12-31">December 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-11-13-while-listening-to-henry-plotkin/" class="postlist-link">While Listening to Henry Plotkin</a>
+		<time class="postlist-date" datetime="2014-11-13">November 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-10-15-in-fact-there-is-nothing-at-all-to-say/" class="postlist-link">In fact, there is nothing at all to say.</a>
+		<time class="postlist-date" datetime="2014-10-15">October 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-07-29-17-14-31/" class="postlist-link">17 + 14 = 31</a>
+		<time class="postlist-date" datetime="2014-07-29">July 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-27-reading-the-loop-by-jacques-roubaud-part-12/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 12</a>
+		<time class="postlist-date" datetime="2014-05-27">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-24-reading-the-loop-by-jacques-roubaud-part-11/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 11</a>
+		<time class="postlist-date" datetime="2014-05-24">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-21-reading-the-loop-by-jacques-roubaud-part-10/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 10</a>
+		<time class="postlist-date" datetime="2014-05-21">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-18-reading-der-mensch-erscheint-im-holozan-section-9a/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 9a</a>
+		<time class="postlist-date" datetime="2014-05-18">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-14-reading-der-mensch-erscheint-im-holozan-section-9/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 9</a>
+		<time class="postlist-date" datetime="2014-05-14">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-12-reading-der-mensch-erscheint-im-holozan-section-8/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 8</a>
+		<time class="postlist-date" datetime="2014-05-12">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-08-reading-der-mensch-erscheint-im-holozan-section-7/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 7</a>
+		<time class="postlist-date" datetime="2014-05-08">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-05-reading-der-mensch-erscheint-im-holozan-section-6/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 6</a>
+		<time class="postlist-date" datetime="2014-05-05">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-05-02-reading-der-mensch-erscheint-im-holozan-section-5/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 5</a>
+		<time class="postlist-date" datetime="2014-05-02">May 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-29-reading-der-mensch-erscheint-im-holozan-section-4/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 4</a>
+		<time class="postlist-date" datetime="2014-04-29">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-26-reading-der-mensch-erscheint-im-holozan-section-3/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 3</a>
+		<time class="postlist-date" datetime="2014-04-26">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-23-reading-der-mensch-erscheint-im-holozan-section-2/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 2</a>
+		<time class="postlist-date" datetime="2014-04-23">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-20-reading-der-mensch-erscheint-im-holozan-section-1/" class="postlist-link">Reading Der Mensch Erscheint im Holozän, Section 1</a>
+		<time class="postlist-date" datetime="2014-04-20">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-20-reading-der-mensch-erscheint-im-holozan-by-max-frish/" class="postlist-link">Reading Der Mensch Erscheint im Holozän by Max Frish</a>
+		<time class="postlist-date" datetime="2014-04-20">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-04-07-her-what/" class="postlist-link">her (what?)</a>
+		<time class="postlist-date" datetime="2014-04-07">April 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-03-10-my-first-week-without-facebook/" class="postlist-link">my first week without facebook</a>
+		<time class="postlist-date" datetime="2014-03-10">March 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-02-19-a-miniature-film-festival/" class="postlist-link">a miniature film festival</a>
+		<time class="postlist-date" datetime="2014-02-19">February 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-01-01-books-i-finished-in-2013/" class="postlist-link">books I finished in 2013</a>
+		<time class="postlist-date" datetime="2014-01-01">January 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-11-29-a-pulmonary-post/" class="postlist-link">a pulmonary post</a>
+		<time class="postlist-date" datetime="2013-11-29">November 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-11-27-what-i-can-hear-behind-siris-voices/" class="postlist-link">what I hear behind Siri&#39;s voice/s</a>
+		<time class="postlist-date" datetime="2013-11-27">November 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-11-12-its-those-doggone-saucers-again/" class="postlist-link">It&#39;s Those Doggone Saucers Again</a>
+		<time class="postlist-date" datetime="2013-11-12">November 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-10-15-the-monster-at-the-end-of-this-post/" class="postlist-link">the monster at the end of this post</a>
+		<time class="postlist-date" datetime="2013-10-15">October 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-09-10-und-noch-eins/" class="postlist-link">und noch eins</a>
+		<time class="postlist-date" datetime="2013-09-10">September 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-08-23-waiter-the-backstroke/" class="postlist-link">waiter—the backstroke</a>
+		<time class="postlist-date" datetime="2013-08-23">August 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-08-20-i-have-over-the-last-three-days-bit-the-same-spot-in-my-lower-lip-seven-times/" class="postlist-link">I have, over the last three days, bitten the same spot in my lower lip seven times.</a>
+		<time class="postlist-date" datetime="2013-08-20">August 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-08-09-knock-klopf/" class="postlist-link">knock klopf</a>
+		<time class="postlist-date" datetime="2013-08-09">August 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-08-07-two-dreams/" class="postlist-link">two dreams</a>
+		<time class="postlist-date" datetime="2013-08-07">August 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-08-03-think-fireworks/" class="postlist-link">think fireworks</a>
+		<time class="postlist-date" datetime="2013-08-03">August 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-07-30-addendum-2/" class="postlist-link">Addendum number two</a>
+		<time class="postlist-date" datetime="2013-07-30">July 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-07-28-addendum-1/" class="postlist-link">Addendum number one</a>
+		<time class="postlist-date" datetime="2013-07-28">July 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-07-08-i-dont-know-what-the-hell-is-going-on/" class="postlist-link">i don&#39;t know what the hell is going on</a>
+		<time class="postlist-date" datetime="2013-07-08">July 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-23-this-road-dont-go-there/" class="postlist-link">this road don&#39;t go there</a>
+		<time class="postlist-date" datetime="2013-06-23">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-23-2228/" class="postlist-link">the secret accumulating</a>
+		<time class="postlist-date" datetime="2013-06-23">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-18-graffiti-from-around-town/" class="postlist-link">graffiti from around town</a>
+		<time class="postlist-date" datetime="2013-06-18">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-15-quotations-from-what-ive-been-reading-completely-removed-from-context/" class="postlist-link">quotations from what I&#39;ve been reading completely removed from context</a>
+		<time class="postlist-date" datetime="2013-06-15">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-13-witz/" class="postlist-link">witz</a>
+		<time class="postlist-date" datetime="2013-06-13">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-11-before-finishing-fitzcarraldo-then-some-days-later/" class="postlist-link">before finishing Fitzcarraldo then some days later</a>
+		<time class="postlist-date" datetime="2013-06-11">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-09-after-having-attended-a-poetry-reading-in-german/" class="postlist-link">after having attended a poetry reading in German</a>
+		<time class="postlist-date" datetime="2013-06-09">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-08-ever-out-of-place/" class="postlist-link">ever out of place</a>
+		<time class="postlist-date" datetime="2013-06-08">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-04-31-may-13/" class="postlist-link">31 May 13</a>
+		<time class="postlist-date" datetime="2013-06-04">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-06-01-these-are-all-within-four-meters-of-one-another/" class="postlist-link">these are all within four meters of one another</a>
+		<time class="postlist-date" datetime="2013-06-01">June 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-05-29-pakistan-ordered-its-civil-servants-to-go-sockless/" class="postlist-link">Pakistan ordered its civil servants to go sockless.</a>
+		<time class="postlist-date" datetime="2013-05-29">May 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-03-17-reading-the-loop-by-jacques-roubaud-part-9/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 9</a>
+		<time class="postlist-date" datetime="2013-03-17">March 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-03-01-things-i-misheard-zizek-say-in-between-other-things/" class="postlist-link">things I (mis)heard Žižek say in between other things</a>
+		<time class="postlist-date" datetime="2013-03-01">March 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-02-17-results-of-a-game-played-in-a-bar/" class="postlist-link">results of a game played in a bar</a>
+		<time class="postlist-date" datetime="2013-02-17">February 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-02-11-reading-the-loop-by-jacques-roubaud-part-8/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 8</a>
+		<time class="postlist-date" datetime="2013-02-11">February 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-25-reading-the-loop-by-jacques-roubaud-part-7/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 7</a>
+		<time class="postlist-date" datetime="2012-11-25">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-10-reading-the-loop-by-jacques-roubaud-part-6/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 6</a>
+		<time class="postlist-date" datetime="2012-11-10">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-05-reading-the-loop-by-jacques-roubaud-part-5/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 5</a>
+		<time class="postlist-date" datetime="2012-11-05">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-04-reading-the-loop-by-jacques-roubaud-part-4/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 4</a>
+		<time class="postlist-date" datetime="2012-11-04">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-02-reading-the-loop-by-jacques-roubaud-part-3/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 3</a>
+		<time class="postlist-date" datetime="2012-11-02">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-11-01-reading-the-loop-by-jacques-roubaud-part-2/" class="postlist-link">Reading The Loop by Jacques Roubaud, part 2</a>
+		<time class="postlist-date" datetime="2012-11-01">November 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-10-31-reading-the-loop-by-jacques-roubad-part-1/" class="postlist-link">Reading The Loop by Jacques Roubad, part 1</a>
+		<time class="postlist-date" datetime="2012-10-31">October 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-09-29-twitter-weekly-updates-for-2012-09-29/" class="postlist-link">Twitter Weekly Updates for 2012-09-29</a>
+		<time class="postlist-date" datetime="2012-09-29">September 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-09-24-fifty-shades-of-grey-a-review/" class="postlist-link">Fifty Shades of Grey (a review)</a>
+		<time class="postlist-date" datetime="2012-09-24">September 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-09-21-first-bell-then-saliva/" class="postlist-link">first bell, then saliva</a>
+		<time class="postlist-date" datetime="2012-09-21">September 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-09-08-proximity-to-the-forest-is-the-only-thing-i-miss-about-living-up-the-hill/" class="postlist-link">proximity to the forest is the only thing I miss about living up the hill</a>
+		<time class="postlist-date" datetime="2012-09-08">September 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-24-slaughterhouse-ubik/" class="postlist-link">Slaughterhouse Ubik</a>
+		<time class="postlist-date" datetime="2012-08-24">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-20-witchery-6/" class="postlist-link">witchery number six</a>
+		<time class="postlist-date" datetime="2012-08-20">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-18-witchery-4/" class="postlist-link">witchery number four</a>
+		<time class="postlist-date" datetime="2012-08-18">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-16-then-again-getting-somewhere-in-spite-of-this-david-markson/" class="postlist-link">Then again, getting somewhere in spite of this.</a>
+		<time class="postlist-date" datetime="2012-08-16">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-15-i-know-that-it-wasnt-so-much-a-burden-of-ability-as-it-was-general-apathy/" class="postlist-link">I know that it wasn&#39;t so much a burden of ability as it was general apathy.</a>
+		<time class="postlist-date" datetime="2012-08-15">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-15-a-reader-writes/" class="postlist-link">a reader writes</a>
+		<time class="postlist-date" datetime="2012-08-15">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-14-some-another-attempt/" class="postlist-link">some another attempt</a>
+		<time class="postlist-date" datetime="2012-08-14">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-13-some-kind-of-attempt/" class="postlist-link">some kind of attempt</a>
+		<time class="postlist-date" datetime="2012-08-13">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-08-10-pity-party/" class="postlist-link">pity party?</a>
+		<time class="postlist-date" datetime="2012-08-10">August 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-07-31-1-day-8-films-some-notes/" class="postlist-link">1 Day, 8 Films, Some Notes</a>
+		<time class="postlist-date" datetime="2012-07-31">July 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-30-twitter-weekly-updates-for-2012-06-30/" class="postlist-link">Twitter Weekly Updates for 2012-06-30</a>
+		<time class="postlist-date" datetime="2012-06-30">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-23-twitter-weekly-updates-for-2012-06-23/" class="postlist-link">Twitter Weekly Updates for 2012-06-23</a>
+		<time class="postlist-date" datetime="2012-06-23">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-16-twitter-weekly-updates-for-2012-06-16/" class="postlist-link">Twitter Weekly Updates for 2012-06-16</a>
+		<time class="postlist-date" datetime="2012-06-16">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-09-twitter-weekly-updates-for-2012-06-09/" class="postlist-link">Twitter Weekly Updates for 2012-06-09</a>
+		<time class="postlist-date" datetime="2012-06-09">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-02-twitter-weekly-updates-for-2012-06-02/" class="postlist-link">Twitter Weekly Updates for 2012-06-02</a>
+		<time class="postlist-date" datetime="2012-06-02">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-25-if-these-were-my-notes-what-did-i-learn/" class="postlist-link">If these were my notes, what did I learn?</a>
+		<time class="postlist-date" datetime="2012-05-25">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-23-not-worthy-of-lawrence-wechslet/" class="postlist-link">Not Worthy of Lawrence Wechsler</a>
+		<time class="postlist-date" datetime="2012-05-23">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-21-german-cereal-is-a-disappointment/" class="postlist-link">German Cereal is a Disappointment</a>
+		<time class="postlist-date" datetime="2012-05-21">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-20-things-i-saw-andor-heard-today/" class="postlist-link">Things I Saw and/or Heard Today</a>
+		<time class="postlist-date" datetime="2012-05-20">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-19-twitter-weekly-updates-for-2012-05-19/" class="postlist-link">Twitter Weekly Updates for 2012-05-19</a>
+		<time class="postlist-date" datetime="2012-05-19">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-18-graffiti-around-tu/" class="postlist-link">Graffiti Around Tü</a>
+		<time class="postlist-date" datetime="2012-05-18">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-12-twitter-weekly-updates-for-2012-05-12/" class="postlist-link">Twitter Weekly Updates for 2012-05-12</a>
+		<time class="postlist-date" datetime="2012-05-12">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-05-i-am-officially-ill-equipped-to-deal-with-this-world/" class="postlist-link">I am officially ill-equipped to deal with this world.</a>
+		<time class="postlist-date" datetime="2012-05-05">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-04-07-zizek-on-toilets/" class="postlist-link">Zizek on toilets</a>
+		<time class="postlist-date" datetime="2012-04-07">April 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-04-03-lawrence-welk-was-kind-of-a-jerk/" class="postlist-link">Lawrence Welk was kind of a jerk . . .</a>
+		<time class="postlist-date" datetime="2012-04-03">April 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-04-02-a-month-in-the-us/" class="postlist-link">a month in the US</a>
+		<time class="postlist-date" datetime="2012-04-02">April 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-02-02-man-aint-nothin-going-on-here/" class="postlist-link">man, ain&#39;t nothin&#39; going on here . . .</a>
+		<time class="postlist-date" datetime="2012-02-02">February 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-28-twitter-weekly-updates-for-2012-01-28/" class="postlist-link">Twitter Weekly Updates for 2012-01-28</a>
+		<time class="postlist-date" datetime="2012-01-28">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-21-twitter-weekly-updates-for-2012-01-21/" class="postlist-link">Twitter Weekly Updates for 2012-01-21</a>
+		<time class="postlist-date" datetime="2012-01-21">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-14-twitter-weekly-updates-for-2012-01-14/" class="postlist-link">Twitter Weekly Updates for 2012-01-14</a>
+		<time class="postlist-date" datetime="2012-01-14">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-07-twitter-weekly-updates-for-2012-01-07/" class="postlist-link">Twitter Weekly Updates for 2012-01-07</a>
+		<time class="postlist-date" datetime="2012-01-07">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-31-twitter-weekly-updates-for-2011-12-31/" class="postlist-link">Twitter Weekly Updates for 2011-12-31</a>
+		<time class="postlist-date" datetime="2011-12-31">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-24-twitter-weekly-updates-for-2011-12-24/" class="postlist-link">Twitter Weekly Updates for 2011-12-24</a>
+		<time class="postlist-date" datetime="2011-12-24">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-17-twitter-weekly-updates-for-2011-12-17/" class="postlist-link">Twitter Weekly Updates for 2011-12-17</a>
+		<time class="postlist-date" datetime="2011-12-17">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-10-twitter-weekly-updates-for-2011-12-10/" class="postlist-link">Twitter Weekly Updates for 2011-12-10</a>
+		<time class="postlist-date" datetime="2011-12-10">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-03-twitter-weekly-updates-for-2011-12-03/" class="postlist-link">Twitter Weekly Updates for 2011-12-03</a>
+		<time class="postlist-date" datetime="2011-12-03">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-26-twitter-weekly-updates-for-2011-11-26/" class="postlist-link">Twitter Weekly Updates for 2011-11-26</a>
+		<time class="postlist-date" datetime="2011-11-26">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-26-the-salesman-was-a-rather-racist-caricature/" class="postlist-link">The salesman was a rather racist caricature</a>
+		<time class="postlist-date" datetime="2011-11-26">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-26-not-andy-sewell/" class="postlist-link">Not Andy Sewell</a>
+		<time class="postlist-date" datetime="2011-11-26">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-26-i-place-no-stock-in-astrology-but/" class="postlist-link">I place no stock in astrology, but</a>
+		<time class="postlist-date" datetime="2011-11-26">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-21-three-ton-coworker-hot-teen-coworker/" class="postlist-link">Three Ton Coworker - Hot Teen Coworker</a>
+		<time class="postlist-date" datetime="2011-11-21">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-20-walk-20-nov-2011/" class="postlist-link">Walk - 20 Nov 2011</a>
+		<time class="postlist-date" datetime="2011-11-20">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-15-three-ton-coworker-true-everywhere/" class="postlist-link">Three Ton Coworker - True Everywhere</a>
+		<time class="postlist-date" datetime="2011-11-15">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-10-31-i-went-for-a-walk-on-26-october-2011-and-took-some-pictures-several-of-fungus/" class="postlist-link">I went for a walk on 26 October 2011 and took some pictures, several of fungus</a>
+		<time class="postlist-date" datetime="2011-10-31">October 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-10-13-three-ton-coworker-but-thats-another-kind-of-safety-maybe/" class="postlist-link">Three Ton Coworker - But That&#39;s Another Kind of Safety Maybe</a>
+		<time class="postlist-date" datetime="2011-10-13">October 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-10-12-three-ton-coworker-frank-you-need-to-look-up-there-above-your-head/" class="postlist-link">Three Ton Coworker - Frank, you need to look up, there, above your head.</a>
+		<time class="postlist-date" datetime="2011-10-12">October 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-29-three-ton-coworker-and-though-ive-never-been-dead-i-have-been-underwater/" class="postlist-link">Three Ton Coworker - And Though I&#39;ve Never Been Dead, I Have Been Underwater</a>
+		<time class="postlist-date" datetime="2011-09-29">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-17-twitter-weekly-updates-for-2011-09-17/" class="postlist-link">Twitter Weekly Updates for 2011-09-17</a>
+		<time class="postlist-date" datetime="2011-09-17">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-17-three-ton-coworker-sunshine/" class="postlist-link">Three Ton Coworker - Sunshine</a>
+		<time class="postlist-date" datetime="2011-09-17">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-14-three-ton-coworker-n/" class="postlist-link">Three Ton Coworker - N</a>
+		<time class="postlist-date" datetime="2011-09-14">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-01-three-ton-coworker-and-some-motor-somewhere-whines/" class="postlist-link">Three Ton Coworker - and some motor somewhere whines</a>
+		<time class="postlist-date" datetime="2011-09-01">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-31-three-ton-coworker-maelstrom-of-fruit-flies/" class="postlist-link">Three Ton Coworker - Maelstrom of Fruit Flies</a>
+		<time class="postlist-date" datetime="2011-08-31">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-23-three-ton-coworker-analgesic/" class="postlist-link">Three Ton Coworker - Analgesic</a>
+		<time class="postlist-date" datetime="2011-08-23">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-20-three-ton-coworker-the-light-switch/" class="postlist-link">Three Ton Coworker - The Light Switch</a>
+		<time class="postlist-date" datetime="2011-08-20">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-17-three-ton-coworker-smarter-or-stronger/" class="postlist-link">Three Ton Coworker - Smarter or Stronger</a>
+		<time class="postlist-date" datetime="2011-08-17">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-14-three-ton-coworker-pie/" class="postlist-link">Three Ton Coworker - Pie</a>
+		<time class="postlist-date" datetime="2011-08-14">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-13-three-ton-coworker-a-coagulate/" class="postlist-link">Three Ton Coworker - A Coagulate</a>
+		<time class="postlist-date" datetime="2011-08-13">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-12-an-experiment-pt-7/" class="postlist-link">An Experiment, pt. 7</a>
+		<time class="postlist-date" datetime="2011-08-12">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-11-an-experiment-pt-6/" class="postlist-link">An Experiment, pt. 6</a>
+		<time class="postlist-date" datetime="2011-08-11">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-10-an-experiment-pt-5/" class="postlist-link">An Experiment, pt. 5</a>
+		<time class="postlist-date" datetime="2011-08-10">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-09-an-experiment-pt-4/" class="postlist-link">An Experiment, pt. 4</a>
+		<time class="postlist-date" datetime="2011-08-09">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-08-an-experiment-pt-3/" class="postlist-link">An Experiment, pt. 3</a>
+		<time class="postlist-date" datetime="2011-08-08">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-07-an-experiment-pt-2/" class="postlist-link">An Experiment, pt. 2</a>
+		<time class="postlist-date" datetime="2011-08-07">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-08-06-an-experiment/" class="postlist-link">An Experiment</a>
+		<time class="postlist-date" datetime="2011-08-06">August 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-23-twitter-weekly-updates-for-2011-07-23/" class="postlist-link">Twitter Weekly Updates for 2011-07-23</a>
+		<time class="postlist-date" datetime="2011-07-23">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-16-the-kitchen/" class="postlist-link">the kitchen</a>
+		<time class="postlist-date" datetime="2011-07-16">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-15-almost-no-memory/" class="postlist-link">almost no memory</a>
+		<time class="postlist-date" datetime="2011-07-15">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-09-twitter-weekly-updates-for-2011-07-09/" class="postlist-link">Twitter Weekly Updates for 2011-07-09</a>
+		<time class="postlist-date" datetime="2011-07-09">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-05-schreibwarensuchtigkeit/" class="postlist-link">Schreibwarensucht?</a>
+		<time class="postlist-date" datetime="2011-07-05">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-02-twitter-weekly-updates-for-2011-07-02/" class="postlist-link">Twitter Weekly Updates for 2011-07-02</a>
+		<time class="postlist-date" datetime="2011-07-02">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-02-4-of-10-jess/" class="postlist-link">4 of 10 (Jess)</a>
+		<time class="postlist-date" datetime="2011-07-02">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-25-twitter-weekly-updates-for-2011-06-25/" class="postlist-link">Twitter Weekly Updates for 2011-06-25</a>
+		<time class="postlist-date" datetime="2011-06-25">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-25-blogging-is-awesome-im-so-thirsty/" class="postlist-link">blogging is awesome, I&#39;m so thirsty</a>
+		<time class="postlist-date" datetime="2011-06-25">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-23-hinzugefugte-notizen/" class="postlist-link">hinzugefügte Notizen</a>
+		<time class="postlist-date" datetime="2011-06-23">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-18-twitter-weekly-updates-for-2011-06-18/" class="postlist-link">Twitter Weekly Updates for 2011-06-18</a>
+		<time class="postlist-date" datetime="2011-06-18">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-13-dictionary-definitions/" class="postlist-link">dictionary definitions</a>
+		<time class="postlist-date" datetime="2011-06-13">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-11-twitter-weekly-updates-for-2011-06-11/" class="postlist-link">Twitter Weekly Updates for 2011-06-11</a>
+		<time class="postlist-date" datetime="2011-06-11">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-08-jess-reply-3/" class="postlist-link">Jess&#39; Reply (#3)</a>
+		<time class="postlist-date" datetime="2011-06-08">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-07-apposition/" class="postlist-link">apposition</a>
+		<time class="postlist-date" datetime="2011-06-07">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-05-1513/" class="postlist-link">a day at the zoo</a>
+		<time class="postlist-date" datetime="2011-06-05">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-04-as-opposed-to-one-of-those-false-american-traditions/" class="postlist-link">as opposed to one of those false American traditions</a>
+		<time class="postlist-date" datetime="2011-06-04">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/" class="postlist-link">What kind of idiot travels Europe and doesn&#39;t take photographs?</a>
+		<time class="postlist-date" datetime="2011-06-01">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-29-sometimes-a-little-tu-much/" class="postlist-link">sometimes a little Tü much . . .</a>
+		<time class="postlist-date" datetime="2011-05-29">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-28-twitter-weekly-updates-for-2011-05-28/" class="postlist-link">Twitter Weekly Updates for 2011-05-28</a>
+		<time class="postlist-date" datetime="2011-05-28">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-24-regionalverkehrsabenteuer-im-schwabischen-hinterland/" class="postlist-link">Regionalverkehrsabenteuer im schwäbischen Hinterland</a>
+		<time class="postlist-date" datetime="2011-05-24">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-22-spurred-by-a-discussion-of-the-word-erotics-in-class-i-went-to-robert-burtons-the-anatomy-of-melancholy-and-found-this/" class="postlist-link">spurred by a discussion of the word &quot;erotics&quot; in class, I went to Robert Burton&#39;s The Anatomy of Melancholy, and found this</a>
+		<time class="postlist-date" datetime="2011-05-22">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-21-twitter-weekly-updates-for-2011-05-21/" class="postlist-link">Twitter Weekly Updates for 2011-05-21</a>
+		<time class="postlist-date" datetime="2011-05-21">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-14-twitter-weekly-updates-for-2011-05-14/" class="postlist-link">Twitter Weekly Updates for 2011-05-14</a>
+		<time class="postlist-date" datetime="2011-05-14">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-30-twitter-weekly-updates-for-2011-04-30/" class="postlist-link">Twitter Weekly Updates for 2011-04-30</a>
+		<time class="postlist-date" datetime="2011-04-30">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-23-twitter-weekly-updates-for-2011-04-23/" class="postlist-link">Twitter Weekly Updates for 2011-04-23</a>
+		<time class="postlist-date" datetime="2011-04-23">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-20-as-above-so-below/" class="postlist-link">as above, so below</a>
+		<time class="postlist-date" datetime="2011-04-20">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-19-the-first-tu-weeks/" class="postlist-link">the first Tü weeks</a>
+		<time class="postlist-date" datetime="2011-04-19">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-16-twitter-weekly-updates-for-2011-04-16/" class="postlist-link">Twitter Weekly Updates for 2011-04-16</a>
+		<time class="postlist-date" datetime="2011-04-16">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-09-twitter-weekly-updates-for-2011-04-09/" class="postlist-link">Twitter Weekly Updates for 2011-04-09</a>
+		<time class="postlist-date" datetime="2011-04-09">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-02-twitter-weekly-updates-for-2011-04-02/" class="postlist-link">Twitter Weekly Updates for 2011-04-02</a>
+		<time class="postlist-date" datetime="2011-04-02">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-26-twitter-weekly-updates-for-2011-03-26/" class="postlist-link">Twitter Weekly Updates for 2011-03-26</a>
+		<time class="postlist-date" datetime="2011-03-26">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-25-10-of-10-andy/" class="postlist-link">10 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2011-03-25">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-19-twitter-weekly-updates-for-2011-03-19/" class="postlist-link">Twitter Weekly Updates for 2011-03-19</a>
+		<time class="postlist-date" datetime="2011-03-19">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-15-i-went-for-a-walk-today/" class="postlist-link">I went for a walk today</a>
+		<time class="postlist-date" datetime="2011-03-15">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-12-twitter-weekly-updates-for-2011-03-12/" class="postlist-link">Twitter Weekly Updates for 2011-03-12</a>
+		<time class="postlist-date" datetime="2011-03-12">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-05-twitter-weekly-updates-for-2011-03-05/" class="postlist-link">Twitter Weekly Updates for 2011-03-05</a>
+		<time class="postlist-date" datetime="2011-03-05">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-26-twitter-weekly-updates-for-2011-02-26/" class="postlist-link">Twitter Weekly Updates for 2011-02-26</a>
+		<time class="postlist-date" datetime="2011-02-26">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-19-twitter-weekly-updates-for-2011-02-19/" class="postlist-link">Twitter Weekly Updates for 2011-02-19</a>
+		<time class="postlist-date" datetime="2011-02-19">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-15-9-of-10-andy/" class="postlist-link">9 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2011-02-15">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-12-twitter-weekly-updates-for-2011-02-12/" class="postlist-link">Twitter Weekly Updates for 2011-02-12</a>
+		<time class="postlist-date" datetime="2011-02-12">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-05-twitter-weekly-updates-for-2011-02-05/" class="postlist-link">Twitter Weekly Updates for 2011-02-05</a>
+		<time class="postlist-date" datetime="2011-02-05">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-29-twitter-weekly-updates-for-2011-01-29/" class="postlist-link">Twitter Weekly Updates for 2011-01-29</a>
+		<time class="postlist-date" datetime="2011-01-29">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-22-twitter-weekly-updates-for-2011-01-22/" class="postlist-link">Twitter Weekly Updates for 2011-01-22</a>
+		<time class="postlist-date" datetime="2011-01-22">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-21-3-of-10-jess/" class="postlist-link">3 of 10 (Jess)</a>
+		<time class="postlist-date" datetime="2011-01-21">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-15-twitter-weekly-updates-for-2011-01-15/" class="postlist-link">Twitter Weekly Updates for 2011-01-15</a>
+		<time class="postlist-date" datetime="2011-01-15">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-12-book-covers/" class="postlist-link">book covers</a>
+		<time class="postlist-date" datetime="2011-01-12">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-11-8-of-10-andy/" class="postlist-link">8 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2011-01-11">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-09-jess-reply-2/" class="postlist-link">Jess&#39; Reply (#2)</a>
+		<time class="postlist-date" datetime="2011-01-09">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-08-twitter-weekly-updates-for-2011-01-08/" class="postlist-link">Twitter Weekly Updates for 2011-01-08</a>
+		<time class="postlist-date" datetime="2011-01-08">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-21-7-of-10-andy/" class="postlist-link">7 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2010-12-21">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-17-the-bavarian-dialect-drops-almost-all-word-endings/" class="postlist-link">the Bavarian dialect drops almost all word endings</a>
+		<time class="postlist-date" datetime="2010-12-17">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-14-near-jewish-national-hospital/" class="postlist-link">near National Jewish Hospital</a>
+		<time class="postlist-date" datetime="2010-12-14">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-04-twitter-weekly-updates-for-2010-12-04/" class="postlist-link">Twitter Weekly Updates for 2010-12-04</a>
+		<time class="postlist-date" datetime="2010-12-04">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-03-a-probably-incomplete-list-of-the-people-looking-out-from-my-bookshelves-at-me/" class="postlist-link">a probably incomplete list of the people looking out from my bookshelves at me</a>
+		<time class="postlist-date" datetime="2010-12-03">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-30-6-of-10-andy/" class="postlist-link">6 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2010-11-30">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-25-2-of-10-jess/" class="postlist-link">2 of 10 (Jess)</a>
+		<time class="postlist-date" datetime="2010-11-25">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-20-twitter-weekly-updates-for-2010-11-20/" class="postlist-link">Twitter Weekly Updates for 2010-11-20</a>
+		<time class="postlist-date" datetime="2010-11-20">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-17-5-of-10-andy/" class="postlist-link">5 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2010-11-17">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-13-twitter-weekly-updates-for-2010-11-13/" class="postlist-link">Twitter Weekly Updates for 2010-11-13</a>
+		<time class="postlist-date" datetime="2010-11-13">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-09-jess-reply-1/" class="postlist-link">Jess&#39; Reply (#1)</a>
+		<time class="postlist-date" datetime="2010-11-09">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-06-twitter-weekly-updates-for-2010-11-06/" class="postlist-link">Twitter Weekly Updates for 2010-11-06</a>
+		<time class="postlist-date" datetime="2010-11-06">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-03-4-of-10/" class="postlist-link">4 of 10 (Andy)</a>
+		<time class="postlist-date" datetime="2010-11-03">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-02-1-of-10-jess/" class="postlist-link">1 of 10 (Jess)</a>
+		<time class="postlist-date" datetime="2010-11-02">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-30-twitter-weekly-updates-for-2010-10-30/" class="postlist-link">Twitter Weekly Updates for 2010-10-30</a>
+		<time class="postlist-date" datetime="2010-10-30">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-23-twitter-weekly-updates-for-2010-10-23/" class="postlist-link">Twitter Weekly Updates for 2010-10-23</a>
+		<time class="postlist-date" datetime="2010-10-23">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-20-3-of-10/" class="postlist-link">3 of 10</a>
+		<time class="postlist-date" datetime="2010-10-20">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-16-twitter-weekly-updates-for-2010-10-16/" class="postlist-link">Twitter Weekly Updates for 2010-10-16</a>
+		<time class="postlist-date" datetime="2010-10-16">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-09-twitter-weekly-updates-for-2010-10-09/" class="postlist-link">Twitter Weekly Updates for 2010-10-09</a>
+		<time class="postlist-date" datetime="2010-10-09">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-08-gypsy-house-reading-recording/" class="postlist-link">gypsy house reading recording</a>
+		<time class="postlist-date" datetime="2010-10-08">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-08-2-of-10/" class="postlist-link">2 of 10</a>
+		<time class="postlist-date" datetime="2010-10-08">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-02-twitter-weekly-updates-for-2010-10-02/" class="postlist-link">Twitter Weekly Updates for 2010-10-02</a>
+		<time class="postlist-date" datetime="2010-10-02">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-01-impromptu-strange-and-highly-flawed-book-review/" class="postlist-link">impromptu, strange, and highly flawed book review</a>
+		<time class="postlist-date" datetime="2010-10-01">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-01-i-have-a-nephew/" class="postlist-link">I have a nephew!</a>
+		<time class="postlist-date" datetime="2010-10-01">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-25-twitter-weekly-updates-for-2010-09-25/" class="postlist-link">Twitter Weekly Updates for 2010-09-25</a>
+		<time class="postlist-date" datetime="2010-09-25">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-24-the-entertained-question/" class="postlist-link">the entertained question</a>
+		<time class="postlist-date" datetime="2010-09-24">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-21-1-of-10/" class="postlist-link">1 of 10&quot;</a>
+		<time class="postlist-date" datetime="2010-09-21">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-18-twitter-weekly-updates-for-2010-09-18/" class="postlist-link">Twitter Weekly Updates for 2010-09-18</a>
+		<time class="postlist-date" datetime="2010-09-18">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-15-the-fate-of-stub/" class="postlist-link">the fate of &quot;stub&quot;</a>
+		<time class="postlist-date" datetime="2010-09-15">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-13-and-the-winner-is/" class="postlist-link">and the winner is . . .</a>
+		<time class="postlist-date" datetime="2010-09-13">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-11-twitter-weekly-updates-for-2010-09-11/" class="postlist-link">Twitter Weekly Updates for 2010-09-11</a>
+		<time class="postlist-date" datetime="2010-09-11">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-10-1148/" class="postlist-link">props</a>
+		<time class="postlist-date" datetime="2010-09-10">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-08-we-dont-need-to-see-anything-out-of-the-ordinary-we-already-see-so-much/" class="postlist-link">We don&#39;t need to see anything out of the ordinary. We already see so much.</a>
+		<time class="postlist-date" datetime="2010-09-08">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-04-twitter-weekly-updates-for-2010-09-04/" class="postlist-link">Twitter Weekly Updates for 2010-09-04</a>
+		<time class="postlist-date" datetime="2010-09-04">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-02-redesign/" class="postlist-link">redesign!</a>
+		<time class="postlist-date" datetime="2010-09-02">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-02-last-one-i-swear/" class="postlist-link">last one I swear?</a>
+		<time class="postlist-date" datetime="2010-09-02">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-31-please-read-the-image-in-this-post-from-bottom-to-top/" class="postlist-link">please read the image in this post from bottom to top</a>
+		<time class="postlist-date" datetime="2010-08-31">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-31-pencils/" class="postlist-link">pencils!</a>
+		<time class="postlist-date" datetime="2010-08-31">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-28-twitter-weekly-updates-for-2010-08-28/" class="postlist-link">Twitter Weekly Updates for 2010-08-28</a>
+		<time class="postlist-date" datetime="2010-08-28">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-22-1078/" class="postlist-link">oh wait, this post needs a title</a>
+		<time class="postlist-date" datetime="2010-08-22">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-21-twitter-weekly-updates-for-2010-08-21/" class="postlist-link">Twitter Weekly Updates for 2010-08-21</a>
+		<time class="postlist-date" datetime="2010-08-21">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-14-twitter-weekly-updates-for-2010-08-14/" class="postlist-link">Twitter Weekly Updates for 2010-08-14</a>
+		<time class="postlist-date" datetime="2010-08-14">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-24-twitter-weekly-updates-for-2010-07-24/" class="postlist-link">Twitter Weekly Updates for 2010-07-24</a>
+		<time class="postlist-date" datetime="2010-07-24">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-17-twitter-weekly-updates-for-2010-07-17/" class="postlist-link">Twitter Weekly Updates for 2010-07-17</a>
+		<time class="postlist-date" datetime="2010-07-17">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-14-his-feet-fell-asleep-so-they-laid-him-down-and-kept-going/" class="postlist-link">his feet fell asleep, so they laid him down, and kept going</a>
+		<time class="postlist-date" datetime="2010-07-14">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-12-om-nom-nom-squared/" class="postlist-link">om nom nom squared</a>
+		<time class="postlist-date" datetime="2010-07-12">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-10-twitter-weekly-updates-for-2010-07-10/" class="postlist-link">Twitter Weekly Updates for 2010-07-10</a>
+		<time class="postlist-date" datetime="2010-07-10">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-03-twitter-weekly-updates-for-2010-07-03/" class="postlist-link">Twitter Weekly Updates for 2010-07-03</a>
+		<time class="postlist-date" datetime="2010-07-03">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-26-twitter-weekly-updates-for-2010-06-26/" class="postlist-link">Twitter Weekly Updates for 2010-06-26</a>
+		<time class="postlist-date" datetime="2010-06-26">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-26-cats-vs-helicopters/" class="postlist-link">cats vs. helicopters</a>
+		<time class="postlist-date" datetime="2010-06-26">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-19-twitter-weekly-updates-for-2010-06-19/" class="postlist-link">Twitter Weekly Updates for 2010-06-19</a>
+		<time class="postlist-date" datetime="2010-06-19">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-12-twitter-weekly-updates-for-2010-06-12/" class="postlist-link">Twitter Weekly Updates for 2010-06-12</a>
+		<time class="postlist-date" datetime="2010-06-12">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-05-twitter-weekly-updates-for-2010-06-05/" class="postlist-link">Twitter Weekly Updates for 2010-06-05</a>
+		<time class="postlist-date" datetime="2010-06-05">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-04-an-oblique-questioning-of-jane-austens-continued-cultural-cachet/" class="postlist-link">An oblique questioning of Jane Austen&#39;s continued cultural cachet</a>
+		<time class="postlist-date" datetime="2010-06-04">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-29-twitter-weekly-updates-for-2010-05-29/" class="postlist-link">Twitter Weekly Updates for 2010-05-29</a>
+		<time class="postlist-date" datetime="2010-05-29">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-22-twitter-weekly-updates-for-2010-05-22/" class="postlist-link">Twitter Weekly Updates for 2010-05-22</a>
+		<time class="postlist-date" datetime="2010-05-22">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-22-non-discursive-summation/" class="postlist-link">non-discursive summation?</a>
+		<time class="postlist-date" datetime="2010-05-22">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-15-twitter-weekly-updates-for-2010-05-15/" class="postlist-link">Twitter Weekly Updates for 2010-05-15</a>
+		<time class="postlist-date" datetime="2010-05-15">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-12-were-not-hungry-for-reality-were-hungry-for-realer-fiction/" class="postlist-link">we&#39;re not hungry for reality, we&#39;re hungry for realer fiction (?)</a>
+		<time class="postlist-date" datetime="2010-05-12">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-12-mobius-stripping/" class="postlist-link">möbius (s)tripping</a>
+		<time class="postlist-date" datetime="2010-05-12">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-08-twitter-weekly-updates-for-2010-05-08/" class="postlist-link">Twitter Weekly Updates for 2010-05-08</a>
+		<time class="postlist-date" datetime="2010-05-08">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-01-twitter-weekly-updates-for-2010-05-01/" class="postlist-link">Twitter Weekly Updates for 2010-05-01</a>
+		<time class="postlist-date" datetime="2010-05-01">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-29-wunderkammern-opening-is-closure/" class="postlist-link">Wunderkammern - Opening is Closure</a>
+		<time class="postlist-date" datetime="2010-04-29">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-24-twitter-weekly-updates-for-2010-04-24/" class="postlist-link">Twitter Weekly Updates for 2010-04-24</a>
+		<time class="postlist-date" datetime="2010-04-24">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-21-ontological-wild-goose-chases/" class="postlist-link">ontological wild goose chases</a>
+		<time class="postlist-date" datetime="2010-04-21">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-17-twitter-weekly-updates-for-2010-04-17/" class="postlist-link">Twitter Weekly Updates for 2010-04-17</a>
+		<time class="postlist-date" datetime="2010-04-17">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-12-my-thoughts-on-a-better-pencil-by-dennis-baron/" class="postlist-link">My thoughts on A Better Pencil by Dennis Baron</a>
+		<time class="postlist-date" datetime="2010-04-12">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-10-twitter-weekly-updates-for-2010-04-10/" class="postlist-link">Twitter Weekly Updates for 2010-04-10</a>
+		<time class="postlist-date" datetime="2010-04-10">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-07-readings-tonight-tomorrow/" class="postlist-link">Readings - Tonight &amp; Tomorrow!!!</a>
+		<time class="postlist-date" datetime="2010-04-07">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-03-twitter-weekly-updates-for-2010-04-03/" class="postlist-link">Twitter Weekly Updates for 2010-04-03</a>
+		<time class="postlist-date" datetime="2010-04-03">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-27-twitter-weekly-updates-for-2010-03-27/" class="postlist-link">Twitter Weekly Updates for 2010-03-27</a>
+		<time class="postlist-date" datetime="2010-03-27">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-25-new-pony-available-now/" class="postlist-link">New Pony Available Now!.</a>
+		<time class="postlist-date" datetime="2010-03-25">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-20-twitter-weekly-updates-for-2010-03-20/" class="postlist-link">Twitter Weekly Updates for 2010-03-20</a>
+		<time class="postlist-date" datetime="2010-03-20">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-18-parallel-lines/" class="postlist-link">Parallel Lines</a>
+		<time class="postlist-date" datetime="2010-03-18">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-16-coincidence-or-cosmic-somethingorother/" class="postlist-link">coincidence or cosmic somethingorother?</a>
+		<time class="postlist-date" datetime="2010-03-16">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-13-twitter-weekly-updates-for-2010-03-13/" class="postlist-link">Twitter Weekly Updates for 2010-03-13</a>
+		<time class="postlist-date" datetime="2010-03-13">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-10-three-things/" class="postlist-link">three things</a>
+		<time class="postlist-date" datetime="2010-03-10">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-06-twitter-weekly-updates-for-2010-03-06/" class="postlist-link">Twitter Weekly Updates for 2010-03-06</a>
+		<time class="postlist-date" datetime="2010-03-06">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-27-twitter-weekly-updates-for-2010-02-27/" class="postlist-link">Twitter Weekly Updates for 2010-02-27</a>
+		<time class="postlist-date" datetime="2010-02-27">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-25-how-to-spot-a-communist/" class="postlist-link">How to Spot a Communist</a>
+		<time class="postlist-date" datetime="2010-02-25">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-20-twitter-weekly-updates-for-2010-02-20/" class="postlist-link">Twitter Weekly Updates for 2010-02-20</a>
+		<time class="postlist-date" datetime="2010-02-20">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-13-twitter-weekly-updates-for-2010-02-13/" class="postlist-link">Twitter Weekly Updates for 2010-02-13</a>
+		<time class="postlist-date" datetime="2010-02-13">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-12-second-advanced-notice-reading/" class="postlist-link">Second Advanced Notice - Reading!</a>
+		<time class="postlist-date" datetime="2010-02-12">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-06-twitter-weekly-updates-for-2010-02-06/" class="postlist-link">Twitter Weekly Updates for 2010-02-06</a>
+		<time class="postlist-date" datetime="2010-02-06">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-30-twitter-weekly-updates-for-2010-01-30/" class="postlist-link">Twitter Weekly Updates for 2010-01-30</a>
+		<time class="postlist-date" datetime="2010-01-30">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-29-advanced-notice-reading/" class="postlist-link">Advanced Notice - Reading</a>
+		<time class="postlist-date" datetime="2010-01-29">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-23-twitter-weekly-updates-for-2010-01-23/" class="postlist-link">Twitter Weekly Updates for 2010-01-23</a>
+		<time class="postlist-date" datetime="2010-01-23">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-18-william-s-burroughs-stuff/" class="postlist-link">William S. Burroughs&#39; Stuff</a>
+		<time class="postlist-date" datetime="2010-01-18">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-16-twitter-weekly-updates-for-2010-01-16/" class="postlist-link">Twitter Weekly Updates for 2010-01-16</a>
+		<time class="postlist-date" datetime="2010-01-16">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-09-twitter-weekly-updates-for-2010-01-09/" class="postlist-link">Twitter Weekly Updates for 2010-01-09</a>
+		<time class="postlist-date" datetime="2010-01-09">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-02-twitter-weekly-updates-for-2010-01-02/" class="postlist-link">Twitter Weekly Updates for 2010-01-02</a>
+		<time class="postlist-date" datetime="2010-01-02">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-28-candy-bar-vs-miles-davis/" class="postlist-link">Candy Bar vs. Miles Davis</a>
+		<time class="postlist-date" datetime="2009-12-28">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-26-twitter-weekly-updates-for-2009-12-26/" class="postlist-link">Twitter Weekly Updates for 2009-12-26</a>
+		<time class="postlist-date" datetime="2009-12-26">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-26-landslide/" class="postlist-link">landslide</a>
+		<time class="postlist-date" datetime="2009-12-26">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-19-twitter-weekly-updates-for-2009-12-19/" class="postlist-link">Twitter Weekly Updates for 2009-12-19</a>
+		<time class="postlist-date" datetime="2009-12-19">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-17-one-drawing-for-every-page-of-moby-dick/" class="postlist-link">One Drawing for Every Page of Moby-Dick</a>
+		<time class="postlist-date" datetime="2009-12-17">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-17-i-would-like-to-be-able-to-write-like-richard-froude/" class="postlist-link">I would like to be able to write like Richard Froude</a>
+		<time class="postlist-date" datetime="2009-12-17">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-13-twitter-weekly-updates-for-2009-12-13/" class="postlist-link">Twitter Weekly Updates for 2009-12-13</a>
+		<time class="postlist-date" datetime="2009-12-13">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-10-remembered-maps-and-a-reading/" class="postlist-link">Remembered Maps and a Reading</a>
+		<time class="postlist-date" datetime="2009-12-10">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-10-happy-in-paraguay/" class="postlist-link">Happy in Paraguay</a>
+		<time class="postlist-date" datetime="2009-12-10">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-06-twitter-weekly-updates-for-2009-12-06/" class="postlist-link">Twitter Weekly Updates for 2009-12-06</a>
+		<time class="postlist-date" datetime="2009-12-06">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-03-rotating-kitchen-by-zeger-reyers/" class="postlist-link">rotating kitchen by Zeger Reyers</a>
+		<time class="postlist-date" datetime="2009-12-03">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-29-twitter-weekly-updates-for-2009-11-28/" class="postlist-link">Twitter Weekly Updates for 2009-11-28</a>
+		<time class="postlist-date" datetime="2009-11-29">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-22-twitter-weekly-updates-for-2009-11-22/" class="postlist-link">Twitter Weekly Updates for 2009-11-22</a>
+		<time class="postlist-date" datetime="2009-11-22">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-15-twitter-weekly-updates-for-2009-11-15/" class="postlist-link">Twitter Weekly Updates for 2009-11-15</a>
+		<time class="postlist-date" datetime="2009-11-15">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-08-twitter-weekly-updates-for-2009-11-08/" class="postlist-link">Twitter Weekly Updates for 2009-11-08</a>
+		<time class="postlist-date" datetime="2009-11-08">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-01-twitter-weekly-updates-for-2009-11-01/" class="postlist-link">Twitter Weekly Updates for 2009-11-01</a>
+		<time class="postlist-date" datetime="2009-11-01">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-25-twitter-weekly-updates-for-2009-10-25/" class="postlist-link">Twitter Weekly Updates for 2009-10-25</a>
+		<time class="postlist-date" datetime="2009-10-25">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-20-3-new-prose-bits/" class="postlist-link">3 new prose bits</a>
+		<time class="postlist-date" datetime="2009-10-20">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-18-twitter-weekly-updates-for-2009-10-18/" class="postlist-link">Twitter Weekly Updates for 2009-10-18</a>
+		<time class="postlist-date" datetime="2009-10-18">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-11-twitter-weekly-updates-for-2009-10-10/" class="postlist-link">Twitter Weekly Updates for 2009-10-10</a>
+		<time class="postlist-date" datetime="2009-10-11">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-04-twitter-weekly-updates-for-2009-10-03/" class="postlist-link">Twitter Weekly Updates for 2009-10-03</a>
+		<time class="postlist-date" datetime="2009-10-04">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-27-twitter-weekly-updates-for-2009-09-26/" class="postlist-link">Twitter Weekly Updates for 2009-09-26</a>
+		<time class="postlist-date" datetime="2009-09-27">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-23-why-we-should-start-paying-closer-attention-to-whats-on-the-end-of-our-forks/" class="postlist-link">Why we should start paying closer attention to what&#39;s on the end of our forks</a>
+		<time class="postlist-date" datetime="2009-09-23">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-20-twitter-weekly-updates-for-2009-09-19/" class="postlist-link">Twitter Weekly Updates for 2009-09-19</a>
+		<time class="postlist-date" datetime="2009-09-20">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-13-twitter-weekly-updates-for-2009-09-12/" class="postlist-link">Twitter Weekly Updates for 2009-09-12</a>
+		<time class="postlist-date" datetime="2009-09-13">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-06-twitter-weekly-updates-for-2009-09-05/" class="postlist-link">Twitter Weekly Updates for 2009-09-05</a>
+		<time class="postlist-date" datetime="2009-09-06">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-31-prose-and-why/" class="postlist-link">prose and why</a>
+		<time class="postlist-date" datetime="2009-08-31">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-30-twitter-weekly-updates-for-2009-08-29/" class="postlist-link">Twitter Weekly Updates for 2009-08-29</a>
+		<time class="postlist-date" datetime="2009-08-30">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-26-a-playing-card-from-days-ago/" class="postlist-link">a playing card from days ago . . .</a>
+		<time class="postlist-date" datetime="2009-08-26">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-23-twitter-weekly-updates-for-2009-08-22/" class="postlist-link">Twitter Weekly Updates for 2009-08-22</a>
+		<time class="postlist-date" datetime="2009-08-23">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-19-9-of-clubs/" class="postlist-link">9 of clubs</a>
+		<time class="postlist-date" datetime="2009-08-19">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-16-twitter-weekly-updates-for-2009-08-15/" class="postlist-link">Twitter Weekly Updates for 2009-08-15</a>
+		<time class="postlist-date" datetime="2009-08-16">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-09-twitter-weekly-updates-for-2009-08-08/" class="postlist-link">Twitter Weekly Updates for 2009-08-08</a>
+		<time class="postlist-date" datetime="2009-08-09">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-07-10-of-hearts-footnote-of-the-day-simply-for-the-last-two-words/" class="postlist-link">10 of hearts - footnote of the day (simply for the last two words)</a>
+		<time class="postlist-date" datetime="2009-08-07">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-02-twitter-weekly-updates-for-2009-08-01/" class="postlist-link">Twitter Weekly Updates for 2009-08-01</a>
+		<time class="postlist-date" datetime="2009-08-02">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-27-4-of-clubs/" class="postlist-link">4 of clubs</a>
+		<time class="postlist-date" datetime="2009-07-27">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-26-twitter-weekly-updates-for-2009-07-25/" class="postlist-link">Twitter Weekly Updates for 2009-07-25</a>
+		<time class="postlist-date" datetime="2009-07-26">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-20-king-of-spades/" class="postlist-link">king of spades</a>
+		<time class="postlist-date" datetime="2009-07-20">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-19-twitter-weekly-updates-for-2009-07-18/" class="postlist-link">Twitter Weekly Updates for 2009-07-18</a>
+		<time class="postlist-date" datetime="2009-07-19">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-17-3-of-hearts/" class="postlist-link">3 of hearts</a>
+		<time class="postlist-date" datetime="2009-07-17">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-14-chicago-tribune-1881/" class="postlist-link">Chicago Tribune, 1881</a>
+		<time class="postlist-date" datetime="2009-07-14">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-13-what-are-you-doing-here/" class="postlist-link">what are you doing here?</a>
+		<time class="postlist-date" datetime="2009-07-13">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-13-i-saw-a-teenager-wearing-an-unknown-pleasures-t-shirt-just-the-other-day/" class="postlist-link">I saw a teenager wearing an &quot;Unknown Pleasures&quot; t-shirt just the other day</a>
+		<time class="postlist-date" datetime="2009-07-13">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-13-2-of-spades/" class="postlist-link">2 of spades</a>
+		<time class="postlist-date" datetime="2009-07-13">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-12-twitter-weekly-updates-for-2009-07-11/" class="postlist-link">Twitter Weekly Updates for 2009-07-11</a>
+		<time class="postlist-date" datetime="2009-07-12">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-07-queen-of-diamonds/" class="postlist-link">queen of diamonds</a>
+		<time class="postlist-date" datetime="2009-07-07">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-05-twitter-weekly-updates-for-2009-07-04/" class="postlist-link">Twitter Weekly Updates for 2009-07-04</a>
+		<time class="postlist-date" datetime="2009-07-05">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-02-nine-of-diamonds/" class="postlist-link">nine of diamonds</a>
+		<time class="postlist-date" datetime="2009-07-02">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-01-5-of-diamonds/" class="postlist-link">5 of diamonds</a>
+		<time class="postlist-date" datetime="2009-07-01">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-30-8-of-spades/" class="postlist-link">8 of spades</a>
+		<time class="postlist-date" datetime="2009-06-30">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-28-twitter-weekly-updates-for-2009-06-27/" class="postlist-link">Twitter Weekly Updates for 2009-06-27</a>
+		<time class="postlist-date" datetime="2009-06-28">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-26-4-of-hearts/" class="postlist-link">4 of hearts</a>
+		<time class="postlist-date" datetime="2009-06-26">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-26-4-of-hearts-pt-2/" class="postlist-link">4 of hearts, pt. 2</a>
+		<time class="postlist-date" datetime="2009-06-26">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-25-6-of-clubs/" class="postlist-link">6 of clubs</a>
+		<time class="postlist-date" datetime="2009-06-25">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-25-6-of-clubs-pt-2/" class="postlist-link">6 of clubs, pt. 2</a>
+		<time class="postlist-date" datetime="2009-06-25">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-24-5-of-hearts/" class="postlist-link">5 of hearts</a>
+		<time class="postlist-date" datetime="2009-06-24">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-21-twitter-weekly-updates-for-2009-06-20/" class="postlist-link">Twitter Weekly Updates for 2009-06-20</a>
+		<time class="postlist-date" datetime="2009-06-21">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-18-7-of-diamonds/" class="postlist-link">7 of diamonds</a>
+		<time class="postlist-date" datetime="2009-06-18">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-17-ace-of-diamonds/" class="postlist-link">ace of diamonds</a>
+		<time class="postlist-date" datetime="2009-06-17">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-16-jack-of-clubs/" class="postlist-link">jack of clubs</a>
+		<time class="postlist-date" datetime="2009-06-16">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-14-what-my-summer-looks-like/" class="postlist-link">what my summer looks like</a>
+		<time class="postlist-date" datetime="2009-06-14">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-14-twitter-weekly-updates-for-2009-06-13/" class="postlist-link">Twitter Weekly Updates for 2009-06-13</a>
+		<time class="postlist-date" datetime="2009-06-14">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-07-twitter-weekly-updates-for-2009-06-06/" class="postlist-link">Twitter Weekly Updates for 2009-06-06</a>
+		<time class="postlist-date" datetime="2009-06-07">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-01-the-descent-of-alette-alice-notley/" class="postlist-link">The Descent of Alette - Alice Notley</a>
+		<time class="postlist-date" datetime="2009-06-01">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-31-twitter-weekly-updates-for-2009-05-30/" class="postlist-link">Twitter Weekly Updates for 2009-05-30</a>
+		<time class="postlist-date" datetime="2009-05-31">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-31-excerpts-from-a-family-medical-dictionary-rebecca-brown/" class="postlist-link">Excerpts from a Family Medical Dictionary - Rebecca Brown</a>
+		<time class="postlist-date" datetime="2009-05-31">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-24-twitter-weekly-updates-for-2009-05-23/" class="postlist-link">Twitter Weekly Updates for 2009-05-23</a>
+		<time class="postlist-date" datetime="2009-05-24">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-17-twitter-weekly-updates-for-2009-05-16/" class="postlist-link">Twitter Weekly Updates for 2009-05-16</a>
+		<time class="postlist-date" datetime="2009-05-17">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-10-twitter-weekly-updates-for-2009-05-09/" class="postlist-link">Twitter Weekly Updates for 2009-05-09</a>
+		<time class="postlist-date" datetime="2009-05-10">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-06-fremd-und-geheimnisvoll/" class="postlist-link">fremd und geheimnisvoll</a>
+		<time class="postlist-date" datetime="2009-05-06">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-03-twitter-weekly-updates-for-2009-05-02/" class="postlist-link">Twitter Weekly Updates for 2009-05-02</a>
+		<time class="postlist-date" datetime="2009-05-03">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-27-wonderwater—roni-hornjohn-waters/" class="postlist-link">Wonderwater—Roni Horn/John Waters</a>
+		<time class="postlist-date" datetime="2009-04-27">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-26-twitter-weekly-updates-for-2009-04-25/" class="postlist-link">Twitter Weekly Updates for 2009-04-25</a>
+		<time class="postlist-date" datetime="2009-04-26">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-22-how-do-we-construct-theory/" class="postlist-link">how do we construct theory?</a>
+		<time class="postlist-date" datetime="2009-04-22">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-21-wonderwater—roni-hornhelene-cixous/" class="postlist-link">Wonderwater—Roni Horn/Hélène Cixous</a>
+		<time class="postlist-date" datetime="2009-04-21">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-19-twitter-weekly-updates-for-2009-04-18/" class="postlist-link">Twitter Weekly Updates for 2009-04-18</a>
+		<time class="postlist-date" datetime="2009-04-19">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-13-wonderwater—roni-hornanne-carson/" class="postlist-link">Wonderwater—Roni Horn/Anne Carson</a>
+		<time class="postlist-date" datetime="2009-04-13">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-12-twitter-weekly-updates-for-2009-04-11-2/" class="postlist-link">Twitter Weekly Updates for 2009-04-11</a>
+		<time class="postlist-date" datetime="2009-04-12">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-10-the-lonely-tax-collector/" class="postlist-link">the lonely tax collector</a>
+		<time class="postlist-date" datetime="2009-04-10">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-05-twitter-weekly-updates-for-2009-04-05/" class="postlist-link">Twitter Weekly Updates for 2009-04-05</a>
+		<time class="postlist-date" datetime="2009-04-05">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-04-wonderwater—roni-hornlouis-bourgeois/" class="postlist-link">Wonderwater—Roni Horn/Louise Bourgeois</a>
+		<time class="postlist-date" datetime="2009-04-04">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-29-twitter-weekly-updates-for-2009-03-29/" class="postlist-link">Twitter Weekly Updates for 2009-03-29</a>
+		<time class="postlist-date" datetime="2009-03-29">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-29-reading-balzac/" class="postlist-link">reading Balzac</a>
+		<time class="postlist-date" datetime="2009-03-29">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-25-hillbilly-beatboxing/" class="postlist-link">hillbilly beatboxing</a>
+		<time class="postlist-date" datetime="2009-03-25">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-24-blood-from-the-shoulder-of-pallas/" class="postlist-link">Blood From the Shoulder of Pallas</a>
+		<time class="postlist-date" datetime="2009-03-24">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-22-twitter-weekly-updates-for-2009-03-22-2/" class="postlist-link">Twitter Weekly Updates for 2009-03-22</a>
+		<time class="postlist-date" datetime="2009-03-22">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-15-twitter-weekly-updates-for-2009-03-15/" class="postlist-link">Twitter Weekly Updates for 2009-03-15</a>
+		<time class="postlist-date" datetime="2009-03-15">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-11-thank-you-bernard-hap-kliban/" class="postlist-link">Thank you, Bernard &quot;Hap&quot; Kliban</a>
+		<time class="postlist-date" datetime="2009-03-11">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-08-twitter-weekly-updates-for-2009-03-07-2/" class="postlist-link">Twitter Weekly Updates for 2009-03-07</a>
+		<time class="postlist-date" datetime="2009-03-08">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-06-peacemakers_tattoojpg/" class="postlist-link">peacemakers_tattoo.jpg</a>
+		<time class="postlist-date" datetime="2009-03-06">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-01-twitter-weekly-updates-for-2009-02-28/" class="postlist-link">Twitter Weekly Updates for 2009-02-28</a>
+		<time class="postlist-date" datetime="2009-03-01">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-22-twitter-weekly-updates-for-2009-02-21/" class="postlist-link">Twitter Weekly Updates for 2009-02-21</a>
+		<time class="postlist-date" datetime="2009-02-22">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-15-twitter-updates-for-2009-02-14-2/" class="postlist-link">Twitter Updates for 2009-02-14</a>
+		<time class="postlist-date" datetime="2009-02-15">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-15-too-many-tweets/" class="postlist-link">too many tweets!</a>
+		<time class="postlist-date" datetime="2009-02-15">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-14-twitter-updates-for-2009-02-1/" class="postlist-link">Twitter Updates for 2009-02-13</a>
+		<time class="postlist-date" datetime="2009-02-14">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-13-twitter-updates-for-2009-02-12/" class="postlist-link">Twitter Updates for 2009-02-12</a>
+		<time class="postlist-date" datetime="2009-02-13">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-12-twitter-updates-for-2009-02-11/" class="postlist-link">Twitter Updates for 2009-02-11</a>
+		<time class="postlist-date" datetime="2009-02-12">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-12-litmixers-pharmanauts/" class="postlist-link">Litmixers &amp; pHarmanauts</a>
+		<time class="postlist-date" datetime="2009-02-12">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-11-twitter-updates-for-2009-02-10/" class="postlist-link">Twitter Updates for 2009-02-10</a>
+		<time class="postlist-date" datetime="2009-02-11">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-10-twitter-updates-for-2009-02-09/" class="postlist-link">Twitter Updates for 2009-02-09</a>
+		<time class="postlist-date" datetime="2009-02-10">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-09-twitter-updates-for-2009-02-08/" class="postlist-link">Twitter Updates for 2009-02-08</a>
+		<time class="postlist-date" datetime="2009-02-09">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-08-twitter-updates-for-2009-02-07/" class="postlist-link">Twitter Updates for 2009-02-07</a>
+		<time class="postlist-date" datetime="2009-02-08">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-07-twitter-updates-for-2009-02-06/" class="postlist-link">Twitter Updates for 2009-02-06</a>
+		<time class="postlist-date" datetime="2009-02-07">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-06-twitter-updates-for-2009-02-05/" class="postlist-link">Twitter Updates for 2009-02-05</a>
+		<time class="postlist-date" datetime="2009-02-06">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-05-twitter-updates-for-2009-02-04/" class="postlist-link">Twitter Updates for 2009-02-04</a>
+		<time class="postlist-date" datetime="2009-02-05">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-04-twitter-updates-for-2009-02-03/" class="postlist-link">Twitter Updates for 2009-02-03</a>
+		<time class="postlist-date" datetime="2009-02-04">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-03-twitter-updates-for-2009-02-02/" class="postlist-link">Twitter Updates for 2009-02-02</a>
+		<time class="postlist-date" datetime="2009-02-03">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-02-twitter-updates-for-2009-02-01/" class="postlist-link">Twitter Updates for 2009-02-01</a>
+		<time class="postlist-date" datetime="2009-02-02">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-01-twitter-updates-for-2009-01-31/" class="postlist-link">Twitter Updates for 2009-01-31</a>
+		<time class="postlist-date" datetime="2009-02-01">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-31-twitter-updates-for-2009-01-30/" class="postlist-link">Twitter Updates for 2009-01-30</a>
+		<time class="postlist-date" datetime="2009-01-31">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-30-twitter-updates-for-2009-01-29/" class="postlist-link">Twitter Updates for 2009-01-29</a>
+		<time class="postlist-date" datetime="2009-01-30">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-29-twitter-updates-for-2009-01-28/" class="postlist-link">Twitter Updates for 2009-01-28</a>
+		<time class="postlist-date" datetime="2009-01-29">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-29-twitter-updates-for-2009-01-28-2/" class="postlist-link">Twitter Updates for 2009-01-28</a>
+		<time class="postlist-date" datetime="2009-01-29">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-social-networking-from-home-in-our-pajamas-without-human-contact/" class="postlist-link">social networking from home in our pajamas without human contact</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-or-this-will-test-it/" class="postlist-link">or this will test it</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-andrewwickliffe-post-my-tweet/" class="postlist-link">andrewwickliffe post my tweet...</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-05-seeing-is-believing/" class="postlist-link">seeing is believing</a>
+		<time class="postlist-date" datetime="2009-01-05">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-12-22-felted/" class="postlist-link">felted</a>
+		<time class="postlist-date" datetime="2008-12-22">December 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-12-18-books-you-should-buy-by-people-i-know/" class="postlist-link">books (you should buy) by people I know</a>
+		<time class="postlist-date" datetime="2008-12-18">December 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-12-15-the-great-cemeteries-of-light-speed/" class="postlist-link">the great cemeteries of light speed</a>
+		<time class="postlist-date" datetime="2008-12-15">December 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-12-04-i-ah-yes/" class="postlist-link">I . . . ah . . . yes</a>
+		<time class="postlist-date" datetime="2008-12-04">December 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-11-21-the-drainage-grate-asbury-franklin-cont/" class="postlist-link">the sewer grate @ asbury &amp; franklin (cont.)</a>
+		<time class="postlist-date" datetime="2008-11-21">November 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-11-08-alice-notley-notes/" class="postlist-link">Alice Notley Notes</a>
+		<time class="postlist-date" datetime="2008-11-08">November 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-11-05-yes-we-can/" class="postlist-link">Yes We Can!!!</a>
+		<time class="postlist-date" datetime="2008-11-05">November 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-11-04-vote/" class="postlist-link">VOTE!!!</a>
+		<time class="postlist-date" datetime="2008-11-04">November 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-11-04-hope/" class="postlist-link">HOPE</a>
+		<time class="postlist-date" datetime="2008-11-04">November 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-10-16-more-grates/" class="postlist-link">more grates</a>
+		<time class="postlist-date" datetime="2008-10-16">October 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-10-14-published/" class="postlist-link">published!</a>
+		<time class="postlist-date" datetime="2008-10-14">October 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-10-10-grandma-mary-would-be-so-proud/" class="postlist-link">grandma Mary would be so proud!</a>
+		<time class="postlist-date" datetime="2008-10-10">October 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-10-01-modified/" class="postlist-link">modified</a>
+		<time class="postlist-date" datetime="2008-10-01">October 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-30-its-what-her-candidacy-says-about-america/" class="postlist-link">It&#39;s what her candidacy says about America</a>
+		<time class="postlist-date" datetime="2008-09-30">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-28-george-saunders-is-winning/" class="postlist-link">George Saunders is winning</a>
+		<time class="postlist-date" datetime="2008-09-28">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-23-i-love-harpers-weekly-review/" class="postlist-link">I love Harper&#39;s Weekly Review</a>
+		<time class="postlist-date" datetime="2008-09-23">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-18-please-play-along-and-link-back-if-you-do/" class="postlist-link">please play along (and link back if you do)</a>
+		<time class="postlist-date" datetime="2008-09-18">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-17-this-sums-up-how-i-feel-quite-nicely/" class="postlist-link">this sums up how I feel quite nicely</a>
+		<time class="postlist-date" datetime="2008-09-17">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-09-bat-friend/" class="postlist-link">bat friend</a>
+		<time class="postlist-date" datetime="2008-09-09">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-05-website-update/" class="postlist-link">website update</a>
+		<time class="postlist-date" datetime="2008-09-05">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-02-not-what-ill-be-reading/" class="postlist-link">not what I&#39;ll be reading</a>
+		<time class="postlist-date" datetime="2008-09-02">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-25-what-matters-most-this-week-in-denver/" class="postlist-link">what matters most this week in Denver</a>
+		<time class="postlist-date" datetime="2008-08-25">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-23-patton-misses-j-too/" class="postlist-link">Patton misses J too</a>
+		<time class="postlist-date" datetime="2008-08-23">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-23-does-your-soul-have-a-cold/" class="postlist-link">does your soul have a cold?</a>
+		<time class="postlist-date" datetime="2008-08-23">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-19-announcing-this-is-not-a-reading/" class="postlist-link">Announcing - This is Not a Reading!</a>
+		<time class="postlist-date" datetime="2008-08-19">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-07-30-lunch/" class="postlist-link">lunch</a>
+		<time class="postlist-date" datetime="2008-07-30">July 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-07-28-blogosphere/" class="postlist-link">blogosphere</a>
+		<time class="postlist-date" datetime="2008-07-28">July 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-07-25-thanks-andy/" class="postlist-link">thanks andy</a>
+		<time class="postlist-date" datetime="2008-07-25">July 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-07-24-is-it-the-heat/" class="postlist-link">is it the heat?</a>
+		<time class="postlist-date" datetime="2008-07-24">July 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-06-25-verbs-in-andrew-bushs-66-drives/" class="postlist-link">verbs in Andrew Bush&#39;s &quot;66 Drives&quot;</a>
+		<time class="postlist-date" datetime="2008-06-25">June 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-06-24-why-not-notes/" class="postlist-link">why not notes?</a>
+		<time class="postlist-date" datetime="2008-06-24">June 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-06-19-what/" class="postlist-link">what?</a>
+		<time class="postlist-date" datetime="2008-06-19">June 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-06-19-i-like-taking-pictures-of-grates/" class="postlist-link">I like taking pictures of grates</a>
+		<time class="postlist-date" datetime="2008-06-19">June 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-05-06-someones-google-alert-is-about-to-go-off/" class="postlist-link">someone&#39;s Google Alert is about to go off</a>
+		<time class="postlist-date" datetime="2008-05-06">May 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-04-08-take-a-moment-to-parse-this/" class="postlist-link">take a moment to parse this</a>
+		<time class="postlist-date" datetime="2008-04-08">April 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-03-09-listening-to-albums/" class="postlist-link">listening to albums</a>
+		<time class="postlist-date" datetime="2008-03-09">March 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-03-07-oh-delightful-procrastination/" class="postlist-link">oh delightful procrastination</a>
+		<time class="postlist-date" datetime="2008-03-07">March 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-03-05-niece/" class="postlist-link">niece</a>
+		<time class="postlist-date" datetime="2008-03-05">March 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-03-04-more-from-harpers-weekly-review/" class="postlist-link">more from Harper&#39;s Weekly Review</a>
+		<time class="postlist-date" datetime="2008-03-04">March 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-03-04-im-an-uncle/" class="postlist-link">I&#39;m an uncle!</a>
+		<time class="postlist-date" datetime="2008-03-04">March 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-02-27-new-old-watch/" class="postlist-link">new old watch</a>
+		<time class="postlist-date" datetime="2008-02-27">February 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-02-25-fun-weekend/" class="postlist-link">fun weekend!!!</a>
+		<time class="postlist-date" datetime="2008-02-25">February 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-01-18-misc/" class="postlist-link">misc.</a>
+		<time class="postlist-date" datetime="2008-01-18">January 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-12-19-vive-le-quotidien/" class="postlist-link">Vive Le Quotidien!</a>
+		<time class="postlist-date" datetime="2007-12-19">December 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-12-12-sense-and-no/" class="postlist-link">sense and no</a>
+		<time class="postlist-date" datetime="2007-12-12">December 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-11-28-bassett-lodge/" class="postlist-link">Bassett Lodge</a>
+		<time class="postlist-date" datetime="2007-11-28">November 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-11-24-one-quarter-down-eight-to-go/" class="postlist-link">one quarter down. eight to go.</a>
+		<time class="postlist-date" datetime="2007-11-24">November 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-10-21-where-the-blahg-is/" class="postlist-link">where the blahg is</a>
+		<time class="postlist-date" datetime="2007-10-21">October 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-10-06-i-currently-have-dial-up/" class="postlist-link">I currently have dial-up</a>
+		<time class="postlist-date" datetime="2007-10-06">October 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-09-16-first-fruits/" class="postlist-link">first fruits</a>
+		<time class="postlist-date" datetime="2007-09-16">September 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-08-31-successfully-relocated/" class="postlist-link">successfully relocated</a>
+		<time class="postlist-date" datetime="2007-08-31">August 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-08-06-collage-culture/" class="postlist-link">collage culture</a>
+		<time class="postlist-date" datetime="2007-08-06">August 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-07-26-is-there-now-any-point/" class="postlist-link">is there now any point</a>
+		<time class="postlist-date" datetime="2007-07-26">July 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-07-24-more-travel/" class="postlist-link">more travel</a>
+		<time class="postlist-date" datetime="2007-07-24">July 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-07-13-travel/" class="postlist-link">travel</a>
+		<time class="postlist-date" datetime="2007-07-13">July 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-06-21-chipmunk-drama/" class="postlist-link">chipmunk drama!</a>
+		<time class="postlist-date" datetime="2007-06-21">June 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-06-19-the-shortest-distance-between-two-points/" class="postlist-link">the shortest distance between two points</a>
+		<time class="postlist-date" datetime="2007-06-19">June 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-06-19-happy-belated-fathers-day/" class="postlist-link">Happy Belated Father&#39;s Day</a>
+		<time class="postlist-date" datetime="2007-06-19">June 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-06-05-nazi-raccoons/" class="postlist-link">Nazi raccoons?</a>
+		<time class="postlist-date" datetime="2007-06-05">June 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-28-home-again-home-again-jiggety-jog/" class="postlist-link">home again, home again, jiggety-jog</a>
+		<time class="postlist-date" datetime="2007-05-28">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-19-who-is-this-guy/" class="postlist-link">who is this guy?</a>
+		<time class="postlist-date" datetime="2007-05-19">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-11-152/" class="postlist-link">and the winner is . . .</a>
+		<time class="postlist-date" datetime="2007-05-11">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-10-the-end-of-the-beard/" class="postlist-link">the end of the beard</a>
+		<time class="postlist-date" datetime="2007-05-10">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-09-look-how-pretentious-my-stack-is/" class="postlist-link">look how pretentious my stack is!</a>
+		<time class="postlist-date" datetime="2007-05-09">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-04-a-book-review/" class="postlist-link">a book review</a>
+		<time class="postlist-date" datetime="2007-05-04">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-05-02-lists-and-letters/" class="postlist-link">lists and letters</a>
+		<time class="postlist-date" datetime="2007-05-02">May 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-04-18-and-offend-your-mother-in-strong-language/" class="postlist-link">and offend your mother in strong language</a>
+		<time class="postlist-date" datetime="2007-04-18">April 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-04-16-i-think-its-beautiful-and-sounds-good-too/" class="postlist-link">I think it&#39;s beautiful (and sounds good too)</a>
+		<time class="postlist-date" datetime="2007-04-16">April 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-04-02-beard-update/" class="postlist-link">beard update</a>
+		<time class="postlist-date" datetime="2007-04-02">April 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-31-sutures/" class="postlist-link">sutures</a>
+		<time class="postlist-date" datetime="2007-03-31">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-28-capitol/" class="postlist-link">capitOl</a>
+		<time class="postlist-date" datetime="2007-03-28">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-20-interkosmos-worksheet-etc/" class="postlist-link">Interkosmos worksheet etc.</a>
+		<time class="postlist-date" datetime="2007-03-20">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-14-poop-and-vomit/" class="postlist-link">poop and vomit</a>
+		<time class="postlist-date" datetime="2007-03-14">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-03-das-trainingzimmer/" class="postlist-link">das Trainingzimmer</a>
+		<time class="postlist-date" datetime="2007-03-03">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-02-26-updates/" class="postlist-link">updates</a>
+		<time class="postlist-date" datetime="2007-02-26">February 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-02-08-im-sorry-im-discontinuing-the-quiz/" class="postlist-link">I&#39;m sorry. I&#39;m discontinuing the quiz.</a>
+		<time class="postlist-date" datetime="2007-02-08">February 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-01-14-man-is-the-pie-that-bakes-and-eats-itself-and-the-recipe-is-separation/" class="postlist-link">Man is the pie that bakes and eats itself, and the recipe is separation.</a>
+		<time class="postlist-date" datetime="2007-01-14">January 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-01-10-yes-by-the-hair-of-my-chinny-chin-chin/" class="postlist-link">yes by the hair of my chinny-chin-chin</a>
+		<time class="postlist-date" datetime="2007-01-10">January 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-12-06-emerging-matters-of-mixture/" class="postlist-link">emerging matters of mixture</a>
+		<time class="postlist-date" datetime="2006-12-06">December 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-12-02-weekly-quiz-dec-1-2006/" class="postlist-link">weekly quiz Dec. 1, 2006</a>
+		<time class="postlist-date" datetime="2006-12-02">December 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-11-11-weekly-quiz-nov-10-2006/" class="postlist-link">weekly quiz Nov. 10, 2006</a>
+		<time class="postlist-date" datetime="2006-11-11">November 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-11-05-visiting-scott/" class="postlist-link">visiting scott</a>
+		<time class="postlist-date" datetime="2006-11-05">November 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-11-04-weekly-quiz-nov-3-2006/" class="postlist-link">weekly quiz Nov. 3, 2006</a>
+		<time class="postlist-date" datetime="2006-11-04">November 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-27-weekly-quiz-oct-27-2006/" class="postlist-link">weekly quiz Oct. 27, 2006</a>
+		<time class="postlist-date" datetime="2006-10-27">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-21-weekly-quiz-oct-20-2006/" class="postlist-link">weekly quiz Oct. 20, 2006</a>
+		<time class="postlist-date" datetime="2006-10-21">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-19-libraries-and-i-should-be-better-friends/" class="postlist-link">libraries and I should be better friends</a>
+		<time class="postlist-date" datetime="2006-10-19">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-18-a-drinking-glass-i-bought/" class="postlist-link">a drinking glass I bought</a>
+		<time class="postlist-date" datetime="2006-10-18">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-14-weekly-quiz-oct-13-2006/" class="postlist-link">weekly quiz Oct. 13, 2006</a>
+		<time class="postlist-date" datetime="2006-10-14">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-12-debauching-q-tangoing/" class="postlist-link">Debauching Q. Tangoing</a>
+		<time class="postlist-date" datetime="2006-10-12">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-11-new-additions/" class="postlist-link">new additions</a>
+		<time class="postlist-date" datetime="2006-10-11">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-09-17-three-oh-two-east-fifteenth/" class="postlist-link">three oh two east fifteenth</a>
+		<time class="postlist-date" datetime="2006-09-17">September 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-09-17-dear-mr-sansidea/" class="postlist-link">Dear Mr. SansIdea</a>
+		<time class="postlist-date" datetime="2006-09-17">September 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-09-05-wha/" class="postlist-link">wha?</a>
+		<time class="postlist-date" datetime="2006-09-05">September 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-08-11-am-i-doing-the-wrong-thing-to-get-to-the-right-thing/" class="postlist-link">am I doing the wrong thing to get to the right thing?</a>
+		<time class="postlist-date" datetime="2006-08-11">August 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-08-05-homecoming/" class="postlist-link">Homecoming</a>
+		<time class="postlist-date" datetime="2006-08-05">August 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-08-01-african-travel-journal-061006/" class="postlist-link">Tanzanian Travel Journal - 06.10.06</a>
+		<time class="postlist-date" datetime="2006-08-01">August 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-30-african-travel-journal-060906/" class="postlist-link">Tanzanian Travel Journal - 06.09.06</a>
+		<time class="postlist-date" datetime="2006-07-30">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-30-african-travel-journal-060806/" class="postlist-link">Tanzanian Travel Journal - 06.08.06&quot;</a>
+		<time class="postlist-date" datetime="2006-07-30">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-28-african-travel-journal-060706/" class="postlist-link">Tanzanian Travel Journal - 06.07.06</a>
+		<time class="postlist-date" datetime="2006-07-28">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-21-small-interruption/" class="postlist-link">small interruption</a>
+		<time class="postlist-date" datetime="2006-07-21">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-21-african-travel-journal-060606/" class="postlist-link">Tanzanian Travel Journal - 06.06.06</a>
+		<time class="postlist-date" datetime="2006-07-21">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-21-african-travel-journal-060506/" class="postlist-link">Tanzanian Travel Journal - 06.05.06</a>
+		<time class="postlist-date" datetime="2006-07-21">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-20-african-travel-journal-060406/" class="postlist-link">Tanzanian Travel Journal - 06.04.06</a>
+		<time class="postlist-date" datetime="2006-07-20">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-19-african-travel-journal-060306/" class="postlist-link">Tanzanian Travel Journal - 06.03.06</a>
+		<time class="postlist-date" datetime="2006-07-19">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-17-african-travel-journal-060206/" class="postlist-link">Tanzanian Travel Journal - 06.02.06</a>
+		<time class="postlist-date" datetime="2006-07-17">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-15-african-travel-journal-060106/" class="postlist-link">Tanzanian Travel Journal - 06.01.06</a>
+		<time class="postlist-date" datetime="2006-07-15">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-14-african-travel-journal-053106/" class="postlist-link">Tanzanian Travel Journal - 05.31.06</a>
+		<time class="postlist-date" datetime="2006-07-14">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-14-african-travel-journal-053006/" class="postlist-link">Tanzanian Travel Journal - 05.30.06</a>
+		<time class="postlist-date" datetime="2006-07-14">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-13-african-travel-journal-052906/" class="postlist-link">Tanzanian Travel Journal - 05.29.06</a>
+		<time class="postlist-date" datetime="2006-07-13">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-06-into-the-illuminating-darkness/" class="postlist-link">into the (illuminating?) darkness</a>
+		<time class="postlist-date" datetime="2006-07-06">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-06-26-technical-difficulties/" class="postlist-link">technical difficulties</a>
+		<time class="postlist-date" datetime="2006-06-26">June 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-06-22-coming-up-next/" class="postlist-link">coming up next . . .</a>
+		<time class="postlist-date" datetime="2006-06-22">June 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-05-22-them/" class="postlist-link">them</a>
+		<time class="postlist-date" datetime="2006-05-22">May 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-05-17-gene-folderfeld-vs-ole-worm/" class="postlist-link">Gene Folderfeld vs. Ole Worm</a>
+		<time class="postlist-date" datetime="2006-05-17">May 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-05-03-three-things-to-do/" class="postlist-link">three things to do</a>
+		<time class="postlist-date" datetime="2006-05-03">May 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-04-27-still-ah-developing-content/" class="postlist-link">Still, ah, developing content</a>
+		<time class="postlist-date" datetime="2006-04-27">April 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-04-17-the-previous-post-edited-by-deletion-of-words-and-addition-of-punctuation/" class="postlist-link">The previous post edited by deletion of words and addition of punctuation.</a>
+		<time class="postlist-date" datetime="2006-04-17">April 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-04-15-every-seventh-word-from-what-i-copied-out-of-mrs-dalloway-by-virginia-woolf/" class="postlist-link">Every seventh word from what I copied out of Mrs. Dalloway by Virginia Woolf</a>
+		<time class="postlist-date" datetime="2006-04-15">April 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-04-13-what-i-copied-out-of-mrs-dalloway-by-virginia-woolf/" class="postlist-link">What I copied out of _Mrs. Dalloway_ by Virginia Woolf</a>
+		<time class="postlist-date" datetime="2006-04-13">April 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-04-05-solving-for-x-part-2/" class="postlist-link">solving for x (part 2)</a>
+		<time class="postlist-date" datetime="2006-04-05">April 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-31-the-best-15-ive-spent-all-year/" class="postlist-link">the best $15 I&#39;ve spent all year</a>
+		<time class="postlist-date" datetime="2006-03-31">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-24-solving-for-x/" class="postlist-link">solving for x</a>
+		<time class="postlist-date" datetime="2006-03-24">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-23-kenny-g-needs-your-help/" class="postlist-link">Kenny G needs your help!</a>
+		<time class="postlist-date" datetime="2006-03-23">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-17-defined-by-a-lack/" class="postlist-link">defined by a lack?</a>
+		<time class="postlist-date" datetime="2006-03-17">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-11-the-mens-restroom-smells-like-toothpaste-theorize/" class="postlist-link">The men&#39;s restroom smells like toothpaste--theorize</a>
+		<time class="postlist-date" datetime="2006-03-11">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-08-conjecture-as-to-the-origin-of-the-ahp-ms/" class="postlist-link">Conjecture as to the origin of the AHP MS</a>
+		<time class="postlist-date" datetime="2006-03-08">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-01-the-lone-chanteuse-on-a-frazzled-stage/" class="postlist-link">the lone chanteuse on a frazzled stage</a>
+		<time class="postlist-date" datetime="2006-03-01">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-27-the-sum-of-the-remainders/" class="postlist-link">the sum of the remainders</a>
+		<time class="postlist-date" datetime="2006-02-27">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-24-the-rocket-continues-nowhere/" class="postlist-link">the rocket continues nowhere</a>
+		<time class="postlist-date" datetime="2006-02-24">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-18-left-of-center/" class="postlist-link">Left of Center</a>
+		<time class="postlist-date" datetime="2006-02-18">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-14-my-curious-appointment/" class="postlist-link">My Curious Appointment</a>
+		<time class="postlist-date" datetime="2006-02-14">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-06-adding-to-the-bottom-line/" class="postlist-link">adding to the bottom line</a>
+		<time class="postlist-date" datetime="2006-02-06">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-04-the-fall/" class="postlist-link">the fall</a>
+		<time class="postlist-date" datetime="2006-02-04">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-01-finding-needles-in-haystacks/" class="postlist-link">finding needles in haystacks</a>
+		<time class="postlist-date" datetime="2006-02-01">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-01-24-qualifying-irrelevant/" class="postlist-link">qualifying irrelevant</a>
+		<time class="postlist-date" datetime="2006-01-24">January 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-01-12-strung-together/" class="postlist-link">strung together</a>
+		<time class="postlist-date" datetime="2006-01-12">January 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-01-06-on-on-bullshit/" class="postlist-link">On On Bullshit</a>
+		<time class="postlist-date" datetime="2006-01-06">January 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-01-03-7-see-how-they-bounce-from-dune-to-dune/" class="postlist-link">7. see how they bounce from dune to dune</a>
+		<time class="postlist-date" datetime="2006-01-03">January 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-31-6-in-other-words/" class="postlist-link">6. in other words</a>
+		<time class="postlist-date" datetime="2005-12-31">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-28-5-that-ever-did-ride/" class="postlist-link">5. that ever did ride</a>
+		<time class="postlist-date" datetime="2005-12-28">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-21-4-it-dont-go-that-far/" class="postlist-link">4. it don&#39;t go that far</a>
+		<time class="postlist-date" datetime="2005-12-21">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-20-3-to-us-just-right-along/" class="postlist-link">3. to us just right along</a>
+		<time class="postlist-date" datetime="2005-12-20">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-17-2-them-craters-and-them-hills/" class="postlist-link">2. them craters and them hills</a>
+		<time class="postlist-date" datetime="2005-12-17">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-15-1-alotta-whirlin-doodads-in-the-sky/" class="postlist-link">1. alotta whirlin&#39; doodads in the sky</a>
+		<time class="postlist-date" datetime="2005-12-15">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-13-rocket-to-nowhere-the-gopoian-method/" class="postlist-link">rocket to nowhere - the Gopoian method</a>
+		<time class="postlist-date" datetime="2005-12-13">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-10-paper-towel-dispensary/" class="postlist-link">paper towel dispensary</a>
+		<time class="postlist-date" datetime="2005-12-10">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-09-entering-the-culture-wars-part-2/" class="postlist-link">entering the culture wars? (part 2)</a>
+		<time class="postlist-date" datetime="2005-12-09">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-06-entering-the-culture-wars/" class="postlist-link">entering the culture wars (?)</a>
+		<time class="postlist-date" datetime="2005-12-06">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-30-ear-infection/" class="postlist-link">ear infection</a>
+		<time class="postlist-date" datetime="2005-11-30">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-23-sentences-of-the-day/" class="postlist-link">sentences of the day</a>
+		<time class="postlist-date" datetime="2005-11-23">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-23-aaaand-were-back/" class="postlist-link">. . . aaaand we&#39;re back!</a>
+		<time class="postlist-date" datetime="2005-11-23">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-19-new-zodiac-the-mexican/" class="postlist-link">New Zodiac - The Mexican</a>
+		<time class="postlist-date" datetime="2005-11-19">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-16-new-zodiac-the-anthropomorphic-inanimate-object/" class="postlist-link">New Zodiac - The Anthropomorphic Inanimate Object</a>
+		<time class="postlist-date" datetime="2005-11-16">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-10-new-zodiac-the-tenacious-stubborn-scrappy-and-unbelievably-gorgeous-reporter/" class="postlist-link">New Zodiac - The Tenacious, Stubborn, Scrappy and Unbelievably Gorgeous Reporter</a>
+		<time class="postlist-date" datetime="2005-11-10">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-08-new-zodiac-the-calm-and-thoughtful-scientist-who-always-saves-the-day-by-remaining-calm-and-thoughtful/" class="postlist-link">New Zodiac - The Calm and Thoughtful Scientist Who Always Saves the Day by Remaining Calm and Thoughtful</a>
+		<time class="postlist-date" datetime="2005-11-08">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-04-new-zodiac-the-gibbering-horror-what-must-never-be-named/" class="postlist-link">New Zodiac - The Gibbering Horror What Must Never Be Named</a>
+		<time class="postlist-date" datetime="2005-11-04">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-02-new-zodiac-the-office-chair/" class="postlist-link">New Zodiac - The Office Chair</a>
+		<time class="postlist-date" datetime="2005-11-02">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-30-new-zodiac-the-gravy/" class="postlist-link">New Zodiac - The Gravy</a>
+		<time class="postlist-date" datetime="2005-10-30">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-27-new-zodiac-the-german/" class="postlist-link">New Zodiac - The German</a>
+		<time class="postlist-date" datetime="2005-10-27">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-23-new-zodiac-the-air-freshener/" class="postlist-link">New Zodiac - The Air-Freshener</a>
+		<time class="postlist-date" datetime="2005-10-23">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-21-new-zodiac-the-broccoli/" class="postlist-link">New Zodiac - The Broccoli</a>
+		<time class="postlist-date" datetime="2005-10-21">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-19-new-zodiac-the-velvet-dandy/" class="postlist-link">New Zodiac - The Velvet Dandy</a>
+		<time class="postlist-date" datetime="2005-10-19">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-18-new-zodiac-the-stone-god/" class="postlist-link">New Zodiac - The Stone God</a>
+		<time class="postlist-date" datetime="2005-10-18">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-10-18-a-new-zodiac/" class="postlist-link">A New Zodiac</a>
+		<time class="postlist-date" datetime="2005-10-18">October 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-09-25-from-a-dictionary-of-new-office-slang/" class="postlist-link">From a dictionary of new office slang</a>
+		<time class="postlist-date" datetime="2005-09-25">September 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-09-09-this-is-a-rocket-protest/" class="postlist-link">This is a Rocket Protest</a>
+		<time class="postlist-date" datetime="2005-09-09">September 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-09-07-guy-on-a-bike/" class="postlist-link">guy on a bike</a>
+		<time class="postlist-date" datetime="2005-09-07">September 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-25-image-in-a-furniture-store-window/" class="postlist-link">image in a furniture store window</a>
+		<time class="postlist-date" datetime="2005-08-25">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-22-my-sisters-hands/" class="postlist-link">my sister&#39;s hands</a>
+		<time class="postlist-date" datetime="2005-08-22">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-19-making-the-mundane-confusing-through-translation/" class="postlist-link">making the mundane confusing through translation</a>
+		<time class="postlist-date" datetime="2005-08-19">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-11-obtund-mess-vs-covertly-unreal-realistic/" class="postlist-link">Obtund Mess vs. covertly unreal realistic</a>
+		<time class="postlist-date" datetime="2005-08-11">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-04-part-n/" class="postlist-link">part n</a>
+		<time class="postlist-date" datetime="2005-08-04">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-07-26-toothsome-vs-casserole/" class="postlist-link">toothsome vs. casserole</a>
+		<time class="postlist-date" datetime="2005-07-26">July 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-07-22-help-vigilance-vs-temerity-toejam/" class="postlist-link">help &amp; vigilance vs. temerity &amp; toejam</a>
+		<time class="postlist-date" datetime="2005-07-22">July 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-07-11-lake-mcconaughy-vs-finger-banging-cindy-crawford/" class="postlist-link">Lake McConaughy vs. finger-banging Cindy Crawford</a>
+		<time class="postlist-date" datetime="2005-07-11">July 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-07-06-collectible-porcelain-vs-archimedean-disambiguation/" class="postlist-link">collectible porcelain vs. archimedean disambiguation</a>
+		<time class="postlist-date" datetime="2005-07-06">July 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-07-01-super-grover-underoos-vs-trebuchet/" class="postlist-link">Super Grover Underoos vs. trebuchet</a>
+		<time class="postlist-date" datetime="2005-07-01">July 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-30-haiku-vs-∞1/" class="postlist-link">haiku vs. ∞+1</a>
+		<time class="postlist-date" datetime="2005-06-30">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-24-airborne-vs-sullen/" class="postlist-link">airborne vs. sullen</a>
+		<time class="postlist-date" datetime="2005-06-24">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-20-cubicle-deathmatch/" class="postlist-link">cubicle deathmatch</a>
+		<time class="postlist-date" datetime="2005-06-20">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-16-if-i-am-a-hull-pt-2/" class="postlist-link">if I am a hull, pt. 2</a>
+		<time class="postlist-date" datetime="2005-06-16">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-16-if-i-am-a-hull/" class="postlist-link">if I am a hull</a>
+		<time class="postlist-date" datetime="2005-06-15">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-14-last-weeks-post/" class="postlist-link">last week&#39;s post</a>
+		<time class="postlist-date" datetime="2005-06-14">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-06-03-an-almost-completely-incomplete-description-of-what-i-spend-my-days-doing/" class="postlist-link">an almost completely incomplete description of what I spend my days doing</a>
+		<time class="postlist-date" datetime="2005-06-03">June 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-27-was-there-an-anti-autobiography-clause/" class="postlist-link">was there an anti-autobiography clause?</a>
+		<time class="postlist-date" datetime="2005-05-27">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-26-writing-writing-writing-what/" class="postlist-link">writing? writing? writing? what?</a>
+		<time class="postlist-date" datetime="2005-05-26">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-17-the-email-id-like-to-write-at-work/" class="postlist-link">the email I&#39;d like to write at work</a>
+		<time class="postlist-date" datetime="2005-05-17">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-11-apology-vs-apology-vs-what/" class="postlist-link">apology vs. apology vs. what</a>
+		<time class="postlist-date" datetime="2005-05-11">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-06-from-the-set-of-books-the-new-a-historical-personages-vol-iii-ka-ka-ka-ken-to-owlman-the/" class="postlist-link">From the set of books The New A Historical Personages, vol. III, Ka-Ka-Ka-Ken to Owlman, The</a>
+		<time class="postlist-date" datetime="2005-05-06">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-05-02-on-on-off-on-off/" class="postlist-link">on on off on off</a>
+		<time class="postlist-date" datetime="2005-05-02">May 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-25-flash-fiction-on-the-fly/" class="postlist-link">flash-fiction on the fly</a>
+		<time class="postlist-date" datetime="2005-04-25">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-20-the-ornery-ninja-elf-post/" class="postlist-link">the ornery ninja elf post</a>
+		<time class="postlist-date" datetime="2005-04-20">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-13-heres-a-haiku/" class="postlist-link">here&#39;s a haiku</a>
+		<time class="postlist-date" datetime="2005-04-13">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-13-exploring-congestion-control-using-event-driven-algorithms/" class="postlist-link">Exploring Congestion Control Using Event-Driven Algorithms</a>
+		<time class="postlist-date" datetime="2005-04-13">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-11-cherish-your-memorized-weakness-fashioned-from-a-manifesto-lady-i-am-no-futurist-and-my-only-critic-i-smalkmus/" class="postlist-link">Cherish your memorized weakness. Fashioned from a manifesto--lady, I am no futurist, and my only critic, I.</a>
+		<time class="postlist-date" datetime="2005-04-11">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-10-supraliminal/" class="postlist-link">Supraliminal</a>
+		<time class="postlist-date" datetime="2005-04-10">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-07-more-fun’n-a-barrel-of-vikings-its/" class="postlist-link">More fun&#39;n a barrel of Vikings, it&#39;s . . .</a>
+		<time class="postlist-date" datetime="2005-04-07">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-05-so-this-is-monday-already-right/" class="postlist-link">So, this is Monday already . . . right?</a>
+		<time class="postlist-date" datetime="2005-04-05">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-01-forgive-me-blogger-for-i-have-sinned/" class="postlist-link">forgive me blogger, for I have sinned</a>
+		<time class="postlist-date" datetime="2005-04-01">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-30-today-was-a-rough-day-but-this-aint-no-diary/" class="postlist-link">today was a rough day, but this ain&#39;t no diary</a>
+		<time class="postlist-date" datetime="2005-03-30">March 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-30-so-youre-ah-developing-content-rdh/" class="postlist-link">So you&#39;re--ah--developing content. -rdh</a>
+		<time class="postlist-date" datetime="2005-03-30">March 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-28-mix-cd/" class="postlist-link">mix cd</a>
+		<time class="postlist-date" datetime="2005-03-28">March 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-25-why-is-the-rocket-going-nowhere/" class="postlist-link">why is the rocket going nowhere?</a>
+		<time class="postlist-date" datetime="2005-03-25">March 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-23-inauguration/" class="postlist-link">inauguration</a>
+		<time class="postlist-date" datetime="2005-03-23">March 2005</time>
+	</li>
+</ol>
+
+
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/` was built on 2026-07-24T13:02:46.104Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>So you&#39;re--ah--developing content. -rdh</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="so-you-re-ah-developing-content-rdh">So you&#39;re--ah--developing content. -rdh</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2005-03-30">30 March 2005</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/list/" class="post-tag">list</a></li>
+</ul>
+
+<p>Here is a list of names of &quot;people&quot; who have sent me mail (read: spam):</p>
+<p>Gangrene Q. Surplice Currycombs K. Pursued Gearboxes S. Tasmania Freemason A. Implausible Miter L. Anesthetic Keyword D. Detonate Misogyny R. Urethrae Drunker U. Myopia Monoxide S. Prokofiev Grope E. Virgo Ostracism K. Matted Patriarchs D. Juvenile Respectables C. Modulates Discomfited G. Troyes Turfing T. Debauchery Esmerelda B. Slothing Luxurient P. Bent Milliner H. Maunder Audacity T. Hurl Generates I. Garrison Sprees M. Saturnalia Limpidity J. Vibrates Giraffes D. Possible Fruitfulness I. Kippers Woven C. Pleasurably Syndrome C. Disapproval Bellwether G. Cursed Rehabs U. Ostrich Hinged T. Rupture Apollo A. Homebodies Sugary P. Dunlap Volgograd R. Wigner Vulgarism F. Forty Decanting J. Niamey Wonderland D. Transitively Humiliation T. Environment Cohabit B. Bunkum Impinging I. Dismayed Ham G. Thoroughfares Umbilicus U. Greenback Danger Q. Carolina Taunted L. Forgers Loudest P. Braziers Duplicating T. Lacunae Pandora H. Sappings Destructiveness Q. Bite Cantankerous A. Rebroadcasting Marinading E. Sauntered Recessional O. Blockbuster Bursar T. Empathizes Periscope D. Mallory Squish H. Swallowtail Retake B. Apia Aspirant L. Sill Dyslexic C. Married Peridontal C. Mechanizes Requests J. Detached Necessarily B. Mannikin Ease Q. Pail Aileron M. Philologist Permafrost L. Coauthor Bankbook H. Writhed Wiener A. Peking Thunderbolt M. Emphatically Seductive U. Housecoat Leeching L. Pendulums Hip C. Briar Topmost O. Paleontologist Bricklayers D. Periwinkles Seminary I. Runniest Its H. Foghorns Stuffiness Q. Abrogation Latisha U. Crate Bonanza Q. Whinier Fibbing L. Mini Poultry L. Kangaroo Proceeds M. Rwanda Gruesome O. Quietude Dowel A. Sin Pills F. Staunchest Quantifies I. Epistle Partaker I. Hustled Pillow Q. Parties Estimated H. Prospector Treachery A. Cosy Oddball M. Booking Kngwarreye K. Quixotism Thirstiest C. Haircut Maximizer R. Choristers Recuperates K. Grasps Middleweight D. Congealing Tuskegee H. Motor Ugly O. Quasar Providence E. Doodad Orangutans F. Landward Honoring J. Whitefield Roentgen S. Mollified Deployed C. Kalamazoo Decay H. Phrases Hospitality T. Steamy Dweller P. Flatulent Clingy H. Whites Canaveral J. Activity Shrinkage T. Hatter They K. Fingering Phantasies G. Classical Thirtieths D. Vigilantes Liftoffs Q. Larboard Memorized D. Sybaritic Kublai A. Keeled Muddle M. Gestures Terraces S. Stunted Substratum R. Shuffling Duck V. Unfairness Luisa M. Centimeter Remoteness H. Twitters Influencing M. Betrays Washer H. Appliance Kidnapping J. Sawn Redeveloped S. Feared Boundary F. Dynamite Unbelievably J. Citrous Firebombs S. Salvatore Hinterland O. Lusciousness Buffaloed V. Almighty Befogged U. Cruel Mulch K. Cloistered Advisable J. Instead Vegetables H. Crawford Carousel F. Misdeed Capitulate E. Photosynthesis Dysfunctions T. Comanche Cranial B. Vilifies Gridlock F. Paradigmatic Tabernacles O. Football Hearse M. Rationality Smell B. Cruisers Summarizing H. Mosaic Intoxicants R. Corroborative Terpsichore H. Benelux Jalousie J. Coking Acrostic K. Milker Upsets C. Compendium Euphemisms P. Shotgun Secrecy R. Remanded Licentiate R. Lamaseries Preens I. Economists Cortisone P. Briefness Vastly P. Reacts Stampeded E. Reign Wrestling I. Undesirability Steamboat L. Shortcuts Grendel P. Windsors Individualist F. Idioms Included Q. Myles Arousing S. Damneder Thwarting A. Dogies Underpass K. Louse Fight H. Eiderdown Slavers T. Lily Rabelais F. Pledged Bluenoses K. Bret Caucasus P. Enormousness Partake Q. Bushed Expressiveness R. Umbel Sabotage P. Epsilon Beleaguering B. Abnormalities Vessel H. Demographic Jobber S. Deceasing Spotty A. Symbol Prude C. Serge Uncritical H. Fuss Patienter O. Savanna Stirrups L. Rejoin Inadvertent H. Guadalajara Shenanigan O. Judith Pippin H. Wasatch Shelby J. Modifier Sheraton H. Notoriety Chigger H. Valuable Autobiography I. Topological Naturally P. Specifications Aberrations U. Appointee Finding K. Limit Ayatollahs B. Molars Regenerative K. Essaying Surged H. Antigone Soprano V. Beholder Separating A. Rediscover Medias D. Menfolk Cameo H. Novel Interweaving H. Rood Misplace A. Loftiness Skiffs D. Flipped Subversives M. Amalgamates Tinderboxes J. Martiza Leaves U. Simulate Briny T. Preciosity Employ F. Blavatsky Premonition D. Slavic Jsen H. Paramount Kroger I. Trouser Deviltry P. Dustiness Tactician C. Viburnum Suspects I. Kindling Crematorium B. Brightest Col U. Sap Offends D. Sarcoma Aggravation C. Saladin Eye K. Sociologist Purifying L. Unhorsed Hiccupped M. Countryman Snickers H. Politicking Sighing P. Artifice Commonwealths K. Levitt Eyepiece H. Ruptures Calcine J. Mamma Faithful C. Awaiting Graphing C. Cutups Imposter U. Fierce Doonesbury B. Judging Pisses T. Araguaya Charioteered A. Mortise Star G. Abounding Entreaty C. Kitakyushu Seabed D. Interpretive Siamese O. Hosea Avalanche E. Hierarchy Courthouse L. Appallingly Parroting C. Murphy Webster J. Sassoon Channels F. Queuing Defames K. Arraignment Solaced V. Airiest Norton H. Girlhood Falsifies R. Harbinger Skylab Q. Teal Conformation M. Motorboats Americana Q. Scaramouch Promoting P. Memorizes Styx R. Excretion Calculator V. Memorably Violoncello B. Baser Pockmark I. Pretending Transfiguring H. Phenomenas Bed M. Cytoplasm Wisher J. Zeniths Bentley V. Caretaker Fecundity L. Appall Diamond F. Turnips Rescinded R. Triumvirates Quiches S. Gingivitis Campsite U. Indentures Roughage M. Pursuer Jinan I. Sagan Kneeing C. Secluded Inconsolable U. Pasteurize Caged H. Sapphire Typeface R. Gameness Laughably J. Guile Hangman M. Brownsville Abridged F. Hatcheries Lyceum H. Moist Ornithology T. Tenfold Stagflation Q. Indentures Dunks S. Microsoft Inscribe J. Scarecrows Probably V. Openings Gladdest B. Acrobatic Unsightliness O. Derogating Tiptoes H. Volvo Weaseled K. Lilian Pendulum B. Enveloping Palmolive G. Retracts Footnote I. Underexposed Hawking V. Saboteur Overlies Q. Lyre Gershwin K. Blotted Overjoys S. Disassociated Pillaging C. Libya Conservatively R. Thereto Vanguard O. Pendulums Resurrected C. Rivaled Defoliant H. Mallow Sharron A. Delawares Handing U. Exported Balusters B. Isinglass Linseed R. Bewilders Lander S. Fuck Victory C. Dormant Irrelevance H. Rend Smoothness G. Evasions Longhand P. Ameslan Licensee D. Tarragon Ecology S. Coked Wheelchairs F. Rightfully Rodes B. Procrastinators Nicaragua H. Bogged Processing D. Overages Duchamp C. Constant Transgress G. Periling Payoff E. Nasal Characterizations D. Lucite Knuckleheads A. Lampblack Raiments K. Womanize Disparity U. Acid Accusation H. Slipper Barnabas A. Hankerings Arty D. Botanical Moocher H. Sorceress Replenish U. Bivouac Cheapest D. Reinstate Cyclone P. Propound Prioritizes A. Deeming Disavow H. Surprisings Nightmarish K. Carlton Perceived S. Vulva Wooziness F. Inducing Figueroa A. Automatics Namibia A. Investigate Lassos M. Flynn Simpleton O. Promulgation Currencies I. Ganglia Myriad R. Discernment Consecrated K. Headphone Conquistador I. Fold Vaguely Q. Indirection Fanatacism K. Diaphragms Delve P. Nightingale Emeritus V. Joggles Milne A. Advertisers Kosygin R. Exercised Ferguson I. Lefter Iodized U. Exit Dizzily H. Ernie Savanna I. Blame Dematerialization B. Crookes Shitty C. Irritations Disheartening L. Spotlessly Roadbeds F. Enigma Sopwith J. Aver Oxyacetylene F. Santa Hazardous C. Overprint Fur I. Kali Kithed A. Diphtheria Dispel C. Blanketing Ochre M. Disputing Mantle S. Flatter Sinai S. Seismographic Sandmen Q. Finishes Eventide J. Trailing Braggers B. Doorbell Currycomb H. Fantasying Inelegant U. Keen Refreshing T. Allegiances Extensive I. Plenitude Diversities I. Ball Nightlife L. Rawalpindi Learns M. Antofagasta Puzzler T. Limo Misidentifying V. Wrongs Nerve V. Placarded Raul C. Ruminated Bravo F. Mobilized Mousier H. Dappled Defrosts O. Litmus Haman K. Acolyte Jidda F. Jeeps Muddied Q. Safflower Break K. Summoner Garage O. Primes Merriam V. Unendurable Creation S. Reapplying Nordic G. Pierce Trump F. Mice Pumpkin T. Flinching Bounder J. Traded Belmopan G. Archer Spasmodically F. Bloom Shrilly H. Canker Azalea T. Succession Pedicured D. Picnicker Pluckiness F. Intelligibility Garnishee Q. Brawler Courier H. Perk Casey E. Frenching Blahs R. Meyerbeer Bandanna H. Beards Sells H. Altercation Chumming V. Cloverleaf Gaggle H. Approval Costliness S. Angus Veldt G. Consequently Finland C. Puritanism Godly I. Maples Bloated I. Okinawa Bertha A. Abouts Milksops I. Turbot Engagingly H. Jazz Debauching Q. Tangoing</p>
+<hr>
+<p>Eventually, I will figure out what this (this blahg) is for. And when I say &quot;what for,&quot; I mean &quot;what I want to do with.&quot; Or do I? I suppose, no matter what, I'm--ah--developing content. <s>(I whited these words out because they no longer really applied to the blog as a whole, but since they're still applicable to the original post, I didn't delete them.)</s> [ed. I don't have any idea, here in 2025, to what the heck the now struck-through text was refering.]</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2005-03-28-mix-cd/">mix cd</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2005-03-30-today-was-a-rough-day-but-this-aint-no-diary/">today was a rough day, but this ain&#39;t no diary</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2005-03-30-so-youre-ah-developing-content-rdh/` was built on 2026-07-24T13:02:46.105Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

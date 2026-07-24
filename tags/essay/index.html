@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tagged &#39;essay&#39;</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+<h1 id="tagged-essay">Tagged “essay”</h1>
+
+
+<ol reversed="" class="postlist" style="--postlist-index: 55">
+	<li class="postlist-item">
+		<a href="/blog/2022-09-25-532/" class="postlist-link">untitled (cretinization)</a>
+		<time class="postlist-date" datetime="2022-09-25">September 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-07-12-untitled-restless/" class="postlist-link">untitled (restless)</a>
+		<time class="postlist-date" datetime="2022-07-12">July 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-05-05-untitled-indeterminate-cage-lecture/" class="postlist-link">indeterminate Cage lecture</a>
+		<time class="postlist-date" datetime="2022-05-05">May 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-16-424/" class="postlist-link">untitled (how to)</a>
+		<time class="postlist-date" datetime="2022-01-16">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2022-01-08-untitled-two-quotations/" class="postlist-link">untitled (two quotations)</a>
+		<time class="postlist-date" datetime="2022-01-08">January 2022</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-05-untitled-digital-philosophy/" class="postlist-link">untitled (digital philosophy)</a>
+		<time class="postlist-date" datetime="2021-11-05">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-11-01-untitled-goallessness/" class="postlist-link">untitled (goallessness)</a>
+		<time class="postlist-date" datetime="2021-11-01">November 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-28-untitled-all-the-best-names/" class="postlist-link">untitled (all the best names)</a>
+		<time class="postlist-date" datetime="2021-09-28">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-18-untitled-little-white-dogs-pee-cotton-candy-and-poop-tiny-chocolate-bars/" class="postlist-link">untitled (little white dogs pee cotton candy and poop tiny chocolate bars)</a>
+		<time class="postlist-date" datetime="2021-09-18">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-09-05-untitled-nicknames/" class="postlist-link">untitled (nicknames)</a>
+		<time class="postlist-date" datetime="2021-09-05">September 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-07-14-untitled-linguistic-problems/" class="postlist-link">untitled (linguistic problems)</a>
+		<time class="postlist-date" datetime="2021-07-14">July 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-26-untitled-life-and-death-and-toes/" class="postlist-link">untitled (life and death and toes)</a>
+		<time class="postlist-date" datetime="2021-06-26">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-20-whats-going-on-here/" class="postlist-link">what’s going on here?</a>
+		<time class="postlist-date" datetime="2021-06-20">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-06-09-untitled-spacetime/" class="postlist-link">untitled (spacetime)</a>
+		<time class="postlist-date" datetime="2021-06-09">June 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-04-28-untitled-corn-2/" class="postlist-link">untitled (corn 2)</a>
+		<time class="postlist-date" datetime="2021-04-28">April 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-31-resorting-to-the-internet/" class="postlist-link">resorting to the internet</a>
+		<time class="postlist-date" datetime="2021-03-31">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-27-draft-the-ethics-of-letting-technology-do-the-work-for-you/" class="postlist-link">the ethics of letting technology do the work for you</a>
+		<time class="postlist-date" datetime="2021-03-27">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-11-untitled-ends-vs-means/" class="postlist-link">untitled (ends vs means)</a>
+		<time class="postlist-date" datetime="2021-03-11">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-03-08-untitled-an-attempt/" class="postlist-link">untitled (an attempt)</a>
+		<time class="postlist-date" datetime="2021-03-08">March 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-02-25-untitled-answer/" class="postlist-link">untitled (answer)</a>
+		<time class="postlist-date" datetime="2021-02-25">February 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-31-untitled-corn-1/" class="postlist-link">untitled (corn 1)</a>
+		<time class="postlist-date" datetime="2021-01-31">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-26-untitled-truisms/" class="postlist-link">untitled (truisms)</a>
+		<time class="postlist-date" datetime="2021-01-26">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-21-untitled-apostrophe/" class="postlist-link">untitled (apostrophe)</a>
+		<time class="postlist-date" datetime="2021-01-21">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2021-01-11-some-notes-on-some-books-read-in-2020/" class="postlist-link">some notes on some books read in 2020</a>
+		<time class="postlist-date" datetime="2021-01-11">January 2021</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2020-12-31-hello-again/" class="postlist-link">hello again</a>
+		<time class="postlist-date" datetime="2020-12-31">December 2020</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-11-13-while-listening-to-henry-plotkin/" class="postlist-link">While Listening to Henry Plotkin</a>
+		<time class="postlist-date" datetime="2014-11-13">November 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2014-02-19-a-miniature-film-festival/" class="postlist-link">a miniature film festival</a>
+		<time class="postlist-date" datetime="2014-02-19">February 2014</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-11-29-a-pulmonary-post/" class="postlist-link">a pulmonary post</a>
+		<time class="postlist-date" datetime="2013-11-29">November 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-11-27-what-i-can-hear-behind-siris-voices/" class="postlist-link">what I hear behind Siri&#39;s voice/s</a>
+		<time class="postlist-date" datetime="2013-11-27">November 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2013-10-15-the-monster-at-the-end-of-this-post/" class="postlist-link">the monster at the end of this post</a>
+		<time class="postlist-date" datetime="2013-10-15">October 2013</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-17-the-bavarian-dialect-drops-almost-all-word-endings/" class="postlist-link">the Bavarian dialect drops almost all word endings</a>
+		<time class="postlist-date" datetime="2010-12-17">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-04-an-oblique-questioning-of-jane-austens-continued-cultural-cachet/" class="postlist-link">An oblique questioning of Jane Austen&#39;s continued cultural cachet</a>
+		<time class="postlist-date" datetime="2010-06-04">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-30-its-what-her-candidacy-says-about-america/" class="postlist-link">It&#39;s what her candidacy says about America</a>
+		<time class="postlist-date" datetime="2008-09-30">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-09-17-this-sums-up-how-i-feel-quite-nicely/" class="postlist-link">this sums up how I feel quite nicely</a>
+		<time class="postlist-date" datetime="2008-09-17">September 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-25-what-matters-most-this-week-in-denver/" class="postlist-link">what matters most this week in Denver</a>
+		<time class="postlist-date" datetime="2008-08-25">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2008-08-23-does-your-soul-have-a-cold/" class="postlist-link">does your soul have a cold?</a>
+		<time class="postlist-date" datetime="2008-08-23">August 2008</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-06-19-the-shortest-distance-between-two-points/" class="postlist-link">the shortest distance between two points</a>
+		<time class="postlist-date" datetime="2007-06-19">June 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-03-14-poop-and-vomit/" class="postlist-link">poop and vomit</a>
+		<time class="postlist-date" datetime="2007-03-14">March 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2007-01-14-man-is-the-pie-that-bakes-and-eats-itself-and-the-recipe-is-separation/" class="postlist-link">Man is the pie that bakes and eats itself, and the recipe is separation.</a>
+		<time class="postlist-date" datetime="2007-01-14">January 2007</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-10-19-libraries-and-i-should-be-better-friends/" class="postlist-link">libraries and I should be better friends</a>
+		<time class="postlist-date" datetime="2006-10-19">October 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-07-06-into-the-illuminating-darkness/" class="postlist-link">into the (illuminating?) darkness</a>
+		<time class="postlist-date" datetime="2006-07-06">July 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-06-22-coming-up-next/" class="postlist-link">coming up next . . .</a>
+		<time class="postlist-date" datetime="2006-06-22">June 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-03-17-defined-by-a-lack/" class="postlist-link">defined by a lack?</a>
+		<time class="postlist-date" datetime="2006-03-17">March 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-02-18-left-of-center/" class="postlist-link">Left of Center</a>
+		<time class="postlist-date" datetime="2006-02-18">February 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2006-01-06-on-on-bullshit/" class="postlist-link">On On Bullshit</a>
+		<time class="postlist-date" datetime="2006-01-06">January 2006</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-09-entering-the-culture-wars-part-2/" class="postlist-link">entering the culture wars? (part 2)</a>
+		<time class="postlist-date" datetime="2005-12-09">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-12-06-entering-the-culture-wars/" class="postlist-link">entering the culture wars (?)</a>
+		<time class="postlist-date" datetime="2005-12-06">December 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-30-ear-infection/" class="postlist-link">ear infection</a>
+		<time class="postlist-date" datetime="2005-11-30">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-11-23-aaaand-were-back/" class="postlist-link">. . . aaaand we&#39;re back!</a>
+		<time class="postlist-date" datetime="2005-11-23">November 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-22-my-sisters-hands/" class="postlist-link">my sister&#39;s hands</a>
+		<time class="postlist-date" datetime="2005-08-22">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-08-04-part-n/" class="postlist-link">part n</a>
+		<time class="postlist-date" datetime="2005-08-04">August 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-13-exploring-congestion-control-using-event-driven-algorithms/" class="postlist-link">Exploring Congestion Control Using Event-Driven Algorithms</a>
+		<time class="postlist-date" datetime="2005-04-13">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-04-01-forgive-me-blogger-for-i-have-sinned/" class="postlist-link">forgive me blogger, for I have sinned</a>
+		<time class="postlist-date" datetime="2005-04-01">April 2005</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2005-03-23-inauguration/" class="postlist-link">inauguration</a>
+		<time class="postlist-date" datetime="2005-03-23">March 2005</time>
+	</li>
+</ol>
+
+
+<p>See <a href="/tags/">all tags</a>.</p>
+
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/tags/essay/` was built on 2026-07-24T13:02:48.706Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tagged &#39;tweets&#39;</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+<h1 id="tagged-tweets">Tagged “tweets”</h1>
+
+
+<ol reversed="" class="postlist" style="--postlist-index: 160">
+	<li class="postlist-item">
+		<a href="/blog/2012-09-29-twitter-weekly-updates-for-2012-09-29/" class="postlist-link">Twitter Weekly Updates for 2012-09-29</a>
+		<time class="postlist-date" datetime="2012-09-29">September 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-30-twitter-weekly-updates-for-2012-06-30/" class="postlist-link">Twitter Weekly Updates for 2012-06-30</a>
+		<time class="postlist-date" datetime="2012-06-30">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-23-twitter-weekly-updates-for-2012-06-23/" class="postlist-link">Twitter Weekly Updates for 2012-06-23</a>
+		<time class="postlist-date" datetime="2012-06-23">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-16-twitter-weekly-updates-for-2012-06-16/" class="postlist-link">Twitter Weekly Updates for 2012-06-16</a>
+		<time class="postlist-date" datetime="2012-06-16">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-09-twitter-weekly-updates-for-2012-06-09/" class="postlist-link">Twitter Weekly Updates for 2012-06-09</a>
+		<time class="postlist-date" datetime="2012-06-09">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-06-02-twitter-weekly-updates-for-2012-06-02/" class="postlist-link">Twitter Weekly Updates for 2012-06-02</a>
+		<time class="postlist-date" datetime="2012-06-02">June 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-19-twitter-weekly-updates-for-2012-05-19/" class="postlist-link">Twitter Weekly Updates for 2012-05-19</a>
+		<time class="postlist-date" datetime="2012-05-19">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-05-12-twitter-weekly-updates-for-2012-05-12/" class="postlist-link">Twitter Weekly Updates for 2012-05-12</a>
+		<time class="postlist-date" datetime="2012-05-12">May 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-28-twitter-weekly-updates-for-2012-01-28/" class="postlist-link">Twitter Weekly Updates for 2012-01-28</a>
+		<time class="postlist-date" datetime="2012-01-28">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-21-twitter-weekly-updates-for-2012-01-21/" class="postlist-link">Twitter Weekly Updates for 2012-01-21</a>
+		<time class="postlist-date" datetime="2012-01-21">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-14-twitter-weekly-updates-for-2012-01-14/" class="postlist-link">Twitter Weekly Updates for 2012-01-14</a>
+		<time class="postlist-date" datetime="2012-01-14">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2012-01-07-twitter-weekly-updates-for-2012-01-07/" class="postlist-link">Twitter Weekly Updates for 2012-01-07</a>
+		<time class="postlist-date" datetime="2012-01-07">January 2012</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-31-twitter-weekly-updates-for-2011-12-31/" class="postlist-link">Twitter Weekly Updates for 2011-12-31</a>
+		<time class="postlist-date" datetime="2011-12-31">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-24-twitter-weekly-updates-for-2011-12-24/" class="postlist-link">Twitter Weekly Updates for 2011-12-24</a>
+		<time class="postlist-date" datetime="2011-12-24">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-17-twitter-weekly-updates-for-2011-12-17/" class="postlist-link">Twitter Weekly Updates for 2011-12-17</a>
+		<time class="postlist-date" datetime="2011-12-17">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-10-twitter-weekly-updates-for-2011-12-10/" class="postlist-link">Twitter Weekly Updates for 2011-12-10</a>
+		<time class="postlist-date" datetime="2011-12-10">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-12-03-twitter-weekly-updates-for-2011-12-03/" class="postlist-link">Twitter Weekly Updates for 2011-12-03</a>
+		<time class="postlist-date" datetime="2011-12-03">December 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-11-26-twitter-weekly-updates-for-2011-11-26/" class="postlist-link">Twitter Weekly Updates for 2011-11-26</a>
+		<time class="postlist-date" datetime="2011-11-26">November 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-09-17-twitter-weekly-updates-for-2011-09-17/" class="postlist-link">Twitter Weekly Updates for 2011-09-17</a>
+		<time class="postlist-date" datetime="2011-09-17">September 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-23-twitter-weekly-updates-for-2011-07-23/" class="postlist-link">Twitter Weekly Updates for 2011-07-23</a>
+		<time class="postlist-date" datetime="2011-07-23">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-09-twitter-weekly-updates-for-2011-07-09/" class="postlist-link">Twitter Weekly Updates for 2011-07-09</a>
+		<time class="postlist-date" datetime="2011-07-09">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-07-02-twitter-weekly-updates-for-2011-07-02/" class="postlist-link">Twitter Weekly Updates for 2011-07-02</a>
+		<time class="postlist-date" datetime="2011-07-02">July 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-25-twitter-weekly-updates-for-2011-06-25/" class="postlist-link">Twitter Weekly Updates for 2011-06-25</a>
+		<time class="postlist-date" datetime="2011-06-25">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-18-twitter-weekly-updates-for-2011-06-18/" class="postlist-link">Twitter Weekly Updates for 2011-06-18</a>
+		<time class="postlist-date" datetime="2011-06-18">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-06-11-twitter-weekly-updates-for-2011-06-11/" class="postlist-link">Twitter Weekly Updates for 2011-06-11</a>
+		<time class="postlist-date" datetime="2011-06-11">June 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-28-twitter-weekly-updates-for-2011-05-28/" class="postlist-link">Twitter Weekly Updates for 2011-05-28</a>
+		<time class="postlist-date" datetime="2011-05-28">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-21-twitter-weekly-updates-for-2011-05-21/" class="postlist-link">Twitter Weekly Updates for 2011-05-21</a>
+		<time class="postlist-date" datetime="2011-05-21">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-05-14-twitter-weekly-updates-for-2011-05-14/" class="postlist-link">Twitter Weekly Updates for 2011-05-14</a>
+		<time class="postlist-date" datetime="2011-05-14">May 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-30-twitter-weekly-updates-for-2011-04-30/" class="postlist-link">Twitter Weekly Updates for 2011-04-30</a>
+		<time class="postlist-date" datetime="2011-04-30">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-23-twitter-weekly-updates-for-2011-04-23/" class="postlist-link">Twitter Weekly Updates for 2011-04-23</a>
+		<time class="postlist-date" datetime="2011-04-23">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-16-twitter-weekly-updates-for-2011-04-16/" class="postlist-link">Twitter Weekly Updates for 2011-04-16</a>
+		<time class="postlist-date" datetime="2011-04-16">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-09-twitter-weekly-updates-for-2011-04-09/" class="postlist-link">Twitter Weekly Updates for 2011-04-09</a>
+		<time class="postlist-date" datetime="2011-04-09">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-04-02-twitter-weekly-updates-for-2011-04-02/" class="postlist-link">Twitter Weekly Updates for 2011-04-02</a>
+		<time class="postlist-date" datetime="2011-04-02">April 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-26-twitter-weekly-updates-for-2011-03-26/" class="postlist-link">Twitter Weekly Updates for 2011-03-26</a>
+		<time class="postlist-date" datetime="2011-03-26">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-19-twitter-weekly-updates-for-2011-03-19/" class="postlist-link">Twitter Weekly Updates for 2011-03-19</a>
+		<time class="postlist-date" datetime="2011-03-19">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-12-twitter-weekly-updates-for-2011-03-12/" class="postlist-link">Twitter Weekly Updates for 2011-03-12</a>
+		<time class="postlist-date" datetime="2011-03-12">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-03-05-twitter-weekly-updates-for-2011-03-05/" class="postlist-link">Twitter Weekly Updates for 2011-03-05</a>
+		<time class="postlist-date" datetime="2011-03-05">March 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-26-twitter-weekly-updates-for-2011-02-26/" class="postlist-link">Twitter Weekly Updates for 2011-02-26</a>
+		<time class="postlist-date" datetime="2011-02-26">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-19-twitter-weekly-updates-for-2011-02-19/" class="postlist-link">Twitter Weekly Updates for 2011-02-19</a>
+		<time class="postlist-date" datetime="2011-02-19">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-12-twitter-weekly-updates-for-2011-02-12/" class="postlist-link">Twitter Weekly Updates for 2011-02-12</a>
+		<time class="postlist-date" datetime="2011-02-12">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-02-05-twitter-weekly-updates-for-2011-02-05/" class="postlist-link">Twitter Weekly Updates for 2011-02-05</a>
+		<time class="postlist-date" datetime="2011-02-05">February 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-29-twitter-weekly-updates-for-2011-01-29/" class="postlist-link">Twitter Weekly Updates for 2011-01-29</a>
+		<time class="postlist-date" datetime="2011-01-29">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-22-twitter-weekly-updates-for-2011-01-22/" class="postlist-link">Twitter Weekly Updates for 2011-01-22</a>
+		<time class="postlist-date" datetime="2011-01-22">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-15-twitter-weekly-updates-for-2011-01-15/" class="postlist-link">Twitter Weekly Updates for 2011-01-15</a>
+		<time class="postlist-date" datetime="2011-01-15">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2011-01-08-twitter-weekly-updates-for-2011-01-08/" class="postlist-link">Twitter Weekly Updates for 2011-01-08</a>
+		<time class="postlist-date" datetime="2011-01-08">January 2011</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-12-04-twitter-weekly-updates-for-2010-12-04/" class="postlist-link">Twitter Weekly Updates for 2010-12-04</a>
+		<time class="postlist-date" datetime="2010-12-04">December 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-20-twitter-weekly-updates-for-2010-11-20/" class="postlist-link">Twitter Weekly Updates for 2010-11-20</a>
+		<time class="postlist-date" datetime="2010-11-20">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-13-twitter-weekly-updates-for-2010-11-13/" class="postlist-link">Twitter Weekly Updates for 2010-11-13</a>
+		<time class="postlist-date" datetime="2010-11-13">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-11-06-twitter-weekly-updates-for-2010-11-06/" class="postlist-link">Twitter Weekly Updates for 2010-11-06</a>
+		<time class="postlist-date" datetime="2010-11-06">November 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-30-twitter-weekly-updates-for-2010-10-30/" class="postlist-link">Twitter Weekly Updates for 2010-10-30</a>
+		<time class="postlist-date" datetime="2010-10-30">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-23-twitter-weekly-updates-for-2010-10-23/" class="postlist-link">Twitter Weekly Updates for 2010-10-23</a>
+		<time class="postlist-date" datetime="2010-10-23">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-16-twitter-weekly-updates-for-2010-10-16/" class="postlist-link">Twitter Weekly Updates for 2010-10-16</a>
+		<time class="postlist-date" datetime="2010-10-16">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-09-twitter-weekly-updates-for-2010-10-09/" class="postlist-link">Twitter Weekly Updates for 2010-10-09</a>
+		<time class="postlist-date" datetime="2010-10-09">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-10-02-twitter-weekly-updates-for-2010-10-02/" class="postlist-link">Twitter Weekly Updates for 2010-10-02</a>
+		<time class="postlist-date" datetime="2010-10-02">October 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-25-twitter-weekly-updates-for-2010-09-25/" class="postlist-link">Twitter Weekly Updates for 2010-09-25</a>
+		<time class="postlist-date" datetime="2010-09-25">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-18-twitter-weekly-updates-for-2010-09-18/" class="postlist-link">Twitter Weekly Updates for 2010-09-18</a>
+		<time class="postlist-date" datetime="2010-09-18">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-11-twitter-weekly-updates-for-2010-09-11/" class="postlist-link">Twitter Weekly Updates for 2010-09-11</a>
+		<time class="postlist-date" datetime="2010-09-11">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-09-04-twitter-weekly-updates-for-2010-09-04/" class="postlist-link">Twitter Weekly Updates for 2010-09-04</a>
+		<time class="postlist-date" datetime="2010-09-04">September 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-28-twitter-weekly-updates-for-2010-08-28/" class="postlist-link">Twitter Weekly Updates for 2010-08-28</a>
+		<time class="postlist-date" datetime="2010-08-28">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-21-twitter-weekly-updates-for-2010-08-21/" class="postlist-link">Twitter Weekly Updates for 2010-08-21</a>
+		<time class="postlist-date" datetime="2010-08-21">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-08-14-twitter-weekly-updates-for-2010-08-14/" class="postlist-link">Twitter Weekly Updates for 2010-08-14</a>
+		<time class="postlist-date" datetime="2010-08-14">August 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-24-twitter-weekly-updates-for-2010-07-24/" class="postlist-link">Twitter Weekly Updates for 2010-07-24</a>
+		<time class="postlist-date" datetime="2010-07-24">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-17-twitter-weekly-updates-for-2010-07-17/" class="postlist-link">Twitter Weekly Updates for 2010-07-17</a>
+		<time class="postlist-date" datetime="2010-07-17">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-10-twitter-weekly-updates-for-2010-07-10/" class="postlist-link">Twitter Weekly Updates for 2010-07-10</a>
+		<time class="postlist-date" datetime="2010-07-10">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-07-03-twitter-weekly-updates-for-2010-07-03/" class="postlist-link">Twitter Weekly Updates for 2010-07-03</a>
+		<time class="postlist-date" datetime="2010-07-03">July 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-26-twitter-weekly-updates-for-2010-06-26/" class="postlist-link">Twitter Weekly Updates for 2010-06-26</a>
+		<time class="postlist-date" datetime="2010-06-26">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-19-twitter-weekly-updates-for-2010-06-19/" class="postlist-link">Twitter Weekly Updates for 2010-06-19</a>
+		<time class="postlist-date" datetime="2010-06-19">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-12-twitter-weekly-updates-for-2010-06-12/" class="postlist-link">Twitter Weekly Updates for 2010-06-12</a>
+		<time class="postlist-date" datetime="2010-06-12">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-06-05-twitter-weekly-updates-for-2010-06-05/" class="postlist-link">Twitter Weekly Updates for 2010-06-05</a>
+		<time class="postlist-date" datetime="2010-06-05">June 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-29-twitter-weekly-updates-for-2010-05-29/" class="postlist-link">Twitter Weekly Updates for 2010-05-29</a>
+		<time class="postlist-date" datetime="2010-05-29">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-22-twitter-weekly-updates-for-2010-05-22/" class="postlist-link">Twitter Weekly Updates for 2010-05-22</a>
+		<time class="postlist-date" datetime="2010-05-22">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-15-twitter-weekly-updates-for-2010-05-15/" class="postlist-link">Twitter Weekly Updates for 2010-05-15</a>
+		<time class="postlist-date" datetime="2010-05-15">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-08-twitter-weekly-updates-for-2010-05-08/" class="postlist-link">Twitter Weekly Updates for 2010-05-08</a>
+		<time class="postlist-date" datetime="2010-05-08">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-05-01-twitter-weekly-updates-for-2010-05-01/" class="postlist-link">Twitter Weekly Updates for 2010-05-01</a>
+		<time class="postlist-date" datetime="2010-05-01">May 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-24-twitter-weekly-updates-for-2010-04-24/" class="postlist-link">Twitter Weekly Updates for 2010-04-24</a>
+		<time class="postlist-date" datetime="2010-04-24">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-17-twitter-weekly-updates-for-2010-04-17/" class="postlist-link">Twitter Weekly Updates for 2010-04-17</a>
+		<time class="postlist-date" datetime="2010-04-17">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-10-twitter-weekly-updates-for-2010-04-10/" class="postlist-link">Twitter Weekly Updates for 2010-04-10</a>
+		<time class="postlist-date" datetime="2010-04-10">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-04-03-twitter-weekly-updates-for-2010-04-03/" class="postlist-link">Twitter Weekly Updates for 2010-04-03</a>
+		<time class="postlist-date" datetime="2010-04-03">April 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-27-twitter-weekly-updates-for-2010-03-27/" class="postlist-link">Twitter Weekly Updates for 2010-03-27</a>
+		<time class="postlist-date" datetime="2010-03-27">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-20-twitter-weekly-updates-for-2010-03-20/" class="postlist-link">Twitter Weekly Updates for 2010-03-20</a>
+		<time class="postlist-date" datetime="2010-03-20">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-13-twitter-weekly-updates-for-2010-03-13/" class="postlist-link">Twitter Weekly Updates for 2010-03-13</a>
+		<time class="postlist-date" datetime="2010-03-13">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-03-06-twitter-weekly-updates-for-2010-03-06/" class="postlist-link">Twitter Weekly Updates for 2010-03-06</a>
+		<time class="postlist-date" datetime="2010-03-06">March 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-27-twitter-weekly-updates-for-2010-02-27/" class="postlist-link">Twitter Weekly Updates for 2010-02-27</a>
+		<time class="postlist-date" datetime="2010-02-27">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-20-twitter-weekly-updates-for-2010-02-20/" class="postlist-link">Twitter Weekly Updates for 2010-02-20</a>
+		<time class="postlist-date" datetime="2010-02-20">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-13-twitter-weekly-updates-for-2010-02-13/" class="postlist-link">Twitter Weekly Updates for 2010-02-13</a>
+		<time class="postlist-date" datetime="2010-02-13">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-02-06-twitter-weekly-updates-for-2010-02-06/" class="postlist-link">Twitter Weekly Updates for 2010-02-06</a>
+		<time class="postlist-date" datetime="2010-02-06">February 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-30-twitter-weekly-updates-for-2010-01-30/" class="postlist-link">Twitter Weekly Updates for 2010-01-30</a>
+		<time class="postlist-date" datetime="2010-01-30">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-23-twitter-weekly-updates-for-2010-01-23/" class="postlist-link">Twitter Weekly Updates for 2010-01-23</a>
+		<time class="postlist-date" datetime="2010-01-23">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-16-twitter-weekly-updates-for-2010-01-16/" class="postlist-link">Twitter Weekly Updates for 2010-01-16</a>
+		<time class="postlist-date" datetime="2010-01-16">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-09-twitter-weekly-updates-for-2010-01-09/" class="postlist-link">Twitter Weekly Updates for 2010-01-09</a>
+		<time class="postlist-date" datetime="2010-01-09">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2010-01-02-twitter-weekly-updates-for-2010-01-02/" class="postlist-link">Twitter Weekly Updates for 2010-01-02</a>
+		<time class="postlist-date" datetime="2010-01-02">January 2010</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-26-twitter-weekly-updates-for-2009-12-26/" class="postlist-link">Twitter Weekly Updates for 2009-12-26</a>
+		<time class="postlist-date" datetime="2009-12-26">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-19-twitter-weekly-updates-for-2009-12-19/" class="postlist-link">Twitter Weekly Updates for 2009-12-19</a>
+		<time class="postlist-date" datetime="2009-12-19">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-13-twitter-weekly-updates-for-2009-12-13/" class="postlist-link">Twitter Weekly Updates for 2009-12-13</a>
+		<time class="postlist-date" datetime="2009-12-13">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-12-06-twitter-weekly-updates-for-2009-12-06/" class="postlist-link">Twitter Weekly Updates for 2009-12-06</a>
+		<time class="postlist-date" datetime="2009-12-06">December 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-29-twitter-weekly-updates-for-2009-11-28/" class="postlist-link">Twitter Weekly Updates for 2009-11-28</a>
+		<time class="postlist-date" datetime="2009-11-29">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-22-twitter-weekly-updates-for-2009-11-22/" class="postlist-link">Twitter Weekly Updates for 2009-11-22</a>
+		<time class="postlist-date" datetime="2009-11-22">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-15-twitter-weekly-updates-for-2009-11-15/" class="postlist-link">Twitter Weekly Updates for 2009-11-15</a>
+		<time class="postlist-date" datetime="2009-11-15">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-08-twitter-weekly-updates-for-2009-11-08/" class="postlist-link">Twitter Weekly Updates for 2009-11-08</a>
+		<time class="postlist-date" datetime="2009-11-08">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-11-01-twitter-weekly-updates-for-2009-11-01/" class="postlist-link">Twitter Weekly Updates for 2009-11-01</a>
+		<time class="postlist-date" datetime="2009-11-01">November 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-25-twitter-weekly-updates-for-2009-10-25/" class="postlist-link">Twitter Weekly Updates for 2009-10-25</a>
+		<time class="postlist-date" datetime="2009-10-25">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-18-twitter-weekly-updates-for-2009-10-18/" class="postlist-link">Twitter Weekly Updates for 2009-10-18</a>
+		<time class="postlist-date" datetime="2009-10-18">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-11-twitter-weekly-updates-for-2009-10-10/" class="postlist-link">Twitter Weekly Updates for 2009-10-10</a>
+		<time class="postlist-date" datetime="2009-10-11">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-10-04-twitter-weekly-updates-for-2009-10-03/" class="postlist-link">Twitter Weekly Updates for 2009-10-03</a>
+		<time class="postlist-date" datetime="2009-10-04">October 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-27-twitter-weekly-updates-for-2009-09-26/" class="postlist-link">Twitter Weekly Updates for 2009-09-26</a>
+		<time class="postlist-date" datetime="2009-09-27">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-20-twitter-weekly-updates-for-2009-09-19/" class="postlist-link">Twitter Weekly Updates for 2009-09-19</a>
+		<time class="postlist-date" datetime="2009-09-20">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-13-twitter-weekly-updates-for-2009-09-12/" class="postlist-link">Twitter Weekly Updates for 2009-09-12</a>
+		<time class="postlist-date" datetime="2009-09-13">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-09-06-twitter-weekly-updates-for-2009-09-05/" class="postlist-link">Twitter Weekly Updates for 2009-09-05</a>
+		<time class="postlist-date" datetime="2009-09-06">September 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-30-twitter-weekly-updates-for-2009-08-29/" class="postlist-link">Twitter Weekly Updates for 2009-08-29</a>
+		<time class="postlist-date" datetime="2009-08-30">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-23-twitter-weekly-updates-for-2009-08-22/" class="postlist-link">Twitter Weekly Updates for 2009-08-22</a>
+		<time class="postlist-date" datetime="2009-08-23">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-16-twitter-weekly-updates-for-2009-08-15/" class="postlist-link">Twitter Weekly Updates for 2009-08-15</a>
+		<time class="postlist-date" datetime="2009-08-16">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-09-twitter-weekly-updates-for-2009-08-08/" class="postlist-link">Twitter Weekly Updates for 2009-08-08</a>
+		<time class="postlist-date" datetime="2009-08-09">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-08-02-twitter-weekly-updates-for-2009-08-01/" class="postlist-link">Twitter Weekly Updates for 2009-08-01</a>
+		<time class="postlist-date" datetime="2009-08-02">August 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-26-twitter-weekly-updates-for-2009-07-25/" class="postlist-link">Twitter Weekly Updates for 2009-07-25</a>
+		<time class="postlist-date" datetime="2009-07-26">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-19-twitter-weekly-updates-for-2009-07-18/" class="postlist-link">Twitter Weekly Updates for 2009-07-18</a>
+		<time class="postlist-date" datetime="2009-07-19">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-12-twitter-weekly-updates-for-2009-07-11/" class="postlist-link">Twitter Weekly Updates for 2009-07-11</a>
+		<time class="postlist-date" datetime="2009-07-12">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-07-05-twitter-weekly-updates-for-2009-07-04/" class="postlist-link">Twitter Weekly Updates for 2009-07-04</a>
+		<time class="postlist-date" datetime="2009-07-05">July 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-28-twitter-weekly-updates-for-2009-06-27/" class="postlist-link">Twitter Weekly Updates for 2009-06-27</a>
+		<time class="postlist-date" datetime="2009-06-28">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-21-twitter-weekly-updates-for-2009-06-20/" class="postlist-link">Twitter Weekly Updates for 2009-06-20</a>
+		<time class="postlist-date" datetime="2009-06-21">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-14-twitter-weekly-updates-for-2009-06-13/" class="postlist-link">Twitter Weekly Updates for 2009-06-13</a>
+		<time class="postlist-date" datetime="2009-06-14">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-06-07-twitter-weekly-updates-for-2009-06-06/" class="postlist-link">Twitter Weekly Updates for 2009-06-06</a>
+		<time class="postlist-date" datetime="2009-06-07">June 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-31-twitter-weekly-updates-for-2009-05-30/" class="postlist-link">Twitter Weekly Updates for 2009-05-30</a>
+		<time class="postlist-date" datetime="2009-05-31">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-24-twitter-weekly-updates-for-2009-05-23/" class="postlist-link">Twitter Weekly Updates for 2009-05-23</a>
+		<time class="postlist-date" datetime="2009-05-24">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-17-twitter-weekly-updates-for-2009-05-16/" class="postlist-link">Twitter Weekly Updates for 2009-05-16</a>
+		<time class="postlist-date" datetime="2009-05-17">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-10-twitter-weekly-updates-for-2009-05-09/" class="postlist-link">Twitter Weekly Updates for 2009-05-09</a>
+		<time class="postlist-date" datetime="2009-05-10">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-05-03-twitter-weekly-updates-for-2009-05-02/" class="postlist-link">Twitter Weekly Updates for 2009-05-02</a>
+		<time class="postlist-date" datetime="2009-05-03">May 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-26-twitter-weekly-updates-for-2009-04-25/" class="postlist-link">Twitter Weekly Updates for 2009-04-25</a>
+		<time class="postlist-date" datetime="2009-04-26">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-19-twitter-weekly-updates-for-2009-04-18/" class="postlist-link">Twitter Weekly Updates for 2009-04-18</a>
+		<time class="postlist-date" datetime="2009-04-19">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-12-twitter-weekly-updates-for-2009-04-11-2/" class="postlist-link">Twitter Weekly Updates for 2009-04-11</a>
+		<time class="postlist-date" datetime="2009-04-12">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-04-05-twitter-weekly-updates-for-2009-04-05/" class="postlist-link">Twitter Weekly Updates for 2009-04-05</a>
+		<time class="postlist-date" datetime="2009-04-05">April 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-29-twitter-weekly-updates-for-2009-03-29/" class="postlist-link">Twitter Weekly Updates for 2009-03-29</a>
+		<time class="postlist-date" datetime="2009-03-29">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-22-twitter-weekly-updates-for-2009-03-22-2/" class="postlist-link">Twitter Weekly Updates for 2009-03-22</a>
+		<time class="postlist-date" datetime="2009-03-22">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-15-twitter-weekly-updates-for-2009-03-15/" class="postlist-link">Twitter Weekly Updates for 2009-03-15</a>
+		<time class="postlist-date" datetime="2009-03-15">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-08-twitter-weekly-updates-for-2009-03-07-2/" class="postlist-link">Twitter Weekly Updates for 2009-03-07</a>
+		<time class="postlist-date" datetime="2009-03-08">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-03-01-twitter-weekly-updates-for-2009-02-28/" class="postlist-link">Twitter Weekly Updates for 2009-02-28</a>
+		<time class="postlist-date" datetime="2009-03-01">March 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-22-twitter-weekly-updates-for-2009-02-21/" class="postlist-link">Twitter Weekly Updates for 2009-02-21</a>
+		<time class="postlist-date" datetime="2009-02-22">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-15-twitter-updates-for-2009-02-14-2/" class="postlist-link">Twitter Updates for 2009-02-14</a>
+		<time class="postlist-date" datetime="2009-02-15">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-15-too-many-tweets/" class="postlist-link">too many tweets!</a>
+		<time class="postlist-date" datetime="2009-02-15">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-14-twitter-updates-for-2009-02-1/" class="postlist-link">Twitter Updates for 2009-02-13</a>
+		<time class="postlist-date" datetime="2009-02-14">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-13-twitter-updates-for-2009-02-12/" class="postlist-link">Twitter Updates for 2009-02-12</a>
+		<time class="postlist-date" datetime="2009-02-13">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-12-twitter-updates-for-2009-02-11/" class="postlist-link">Twitter Updates for 2009-02-11</a>
+		<time class="postlist-date" datetime="2009-02-12">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-11-twitter-updates-for-2009-02-10/" class="postlist-link">Twitter Updates for 2009-02-10</a>
+		<time class="postlist-date" datetime="2009-02-11">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-10-twitter-updates-for-2009-02-09/" class="postlist-link">Twitter Updates for 2009-02-09</a>
+		<time class="postlist-date" datetime="2009-02-10">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-09-twitter-updates-for-2009-02-08/" class="postlist-link">Twitter Updates for 2009-02-08</a>
+		<time class="postlist-date" datetime="2009-02-09">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-08-twitter-updates-for-2009-02-07/" class="postlist-link">Twitter Updates for 2009-02-07</a>
+		<time class="postlist-date" datetime="2009-02-08">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-07-twitter-updates-for-2009-02-06/" class="postlist-link">Twitter Updates for 2009-02-06</a>
+		<time class="postlist-date" datetime="2009-02-07">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-06-twitter-updates-for-2009-02-05/" class="postlist-link">Twitter Updates for 2009-02-05</a>
+		<time class="postlist-date" datetime="2009-02-06">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-05-twitter-updates-for-2009-02-04/" class="postlist-link">Twitter Updates for 2009-02-04</a>
+		<time class="postlist-date" datetime="2009-02-05">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-04-twitter-updates-for-2009-02-03/" class="postlist-link">Twitter Updates for 2009-02-03</a>
+		<time class="postlist-date" datetime="2009-02-04">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-03-twitter-updates-for-2009-02-02/" class="postlist-link">Twitter Updates for 2009-02-02</a>
+		<time class="postlist-date" datetime="2009-02-03">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-02-twitter-updates-for-2009-02-01/" class="postlist-link">Twitter Updates for 2009-02-01</a>
+		<time class="postlist-date" datetime="2009-02-02">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-02-01-twitter-updates-for-2009-01-31/" class="postlist-link">Twitter Updates for 2009-01-31</a>
+		<time class="postlist-date" datetime="2009-02-01">February 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-31-twitter-updates-for-2009-01-30/" class="postlist-link">Twitter Updates for 2009-01-30</a>
+		<time class="postlist-date" datetime="2009-01-31">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-30-twitter-updates-for-2009-01-29/" class="postlist-link">Twitter Updates for 2009-01-29</a>
+		<time class="postlist-date" datetime="2009-01-30">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-29-twitter-updates-for-2009-01-28/" class="postlist-link">Twitter Updates for 2009-01-28</a>
+		<time class="postlist-date" datetime="2009-01-29">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-29-twitter-updates-for-2009-01-28-2/" class="postlist-link">Twitter Updates for 2009-01-28</a>
+		<time class="postlist-date" datetime="2009-01-29">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-social-networking-from-home-in-our-pajamas-without-human-contact/" class="postlist-link">social networking from home in our pajamas without human contact</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-or-this-will-test-it/" class="postlist-link">or this will test it</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+	<li class="postlist-item">
+		<a href="/blog/2009-01-27-andrewwickliffe-post-my-tweet/" class="postlist-link">andrewwickliffe post my tweet...</a>
+		<time class="postlist-date" datetime="2009-01-27">January 2009</time>
+	</li>
+</ol>
+
+
+<p>See <a href="/tags/">all tags</a>.</p>
+
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/tags/tweets/` was built on 2026-07-24T13:05:53.779Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

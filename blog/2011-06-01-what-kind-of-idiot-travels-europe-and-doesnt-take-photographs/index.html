@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>What kind of idiot travels Europe and doesn&#39;t take photographs?</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="what-kind-of-idiot-travels-europe-and-doesnt-take-photographs">What kind of idiot travels Europe and doesn&#39;t take photographs?</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2011-06-01">01 June 2011</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/photography/" class="post-tag">photography</a>, </li>
+	<li><a href="/tags/wandering/" class="post-tag">wandering</a></li>
+</ul>
+
+<p>The answer to the above question is this: The kind of idiot whose father takes approximately 2000 photos during 16 days in Europe. Although, if you average that out, that's only 125 photos a day, which doesn't actually sound like all that much. Or does it?</p>
+<p>In any case, I didn't take very many pictures while visiting various places in Germany and France because I knew my father would. What that means though is that now, here, I don't have all that many photos to show those few people who read this blog, and who might also be interested in this proxy slide show (at least I don't have you trapped in a darkened living room, with a whirring slide projector, not enough alcohol, a dog trying to hump your leg, and my droning voice going on and on and on about Gothic arches).</p>
+<p>The above is not a description of my father, either. I don't know what he's going to do with his 2000 photos, but he's not going to turn them into slides and force guests to look at them after a heavy dinner, and he's probably not going to put them on the internet either, which is too bad, because if he just would, then I could point you to them. He captured a lot more awesome stuff than I did--and not simply via sheer numbers either. Here's an example:</p>
+<p>[ed. 20250915: I have no idea what the example was]</p>
+<p>The weekend before my parents arrived, I visited the Reißer family in Döhlau, which is a village outside of Hof, in northern Bavaria. The Reißers are the people who very kindly kept me for a year as a foreign exchange student in the early 90s. It was really wonderful to see them. I had a lovely time, but I didn't take very many pictures, and this is as close as I got to photographing a person while I was there (ridiculous!):</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626803010772/" title="Hof Easter 2011 - 26"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ml95b0TBWT-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ml95b0TBWT-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ml95b0TBWT-640.jpeg" alt="Hof Easter 2011 - 26" width="640" height="480"></picture></a></p>
+<p>That arm, by the way, belongs to Karlheinz, who is a really great guy. Anyway, you can see all of the very few photos I took while there by clicking on the picture.</p>
+<p>The above example actually suggests yet another answer to the question in the title: The idiot who writes this blog.</p>
+<p>So, after a lovely Easter weekend with Loni, Karlheinz, and Julia Reißer, mom and dad came to Germany, we went lots of awesome places, and I didn't take very many pictures. I certainly didn't take any pictures of Tübingen, because I live here, and I don't need to be a tourist in my own town (ridiculous!).</p>
+<p>We then went up to Hamburg, where we visited the the Cummerows (who were my neighbors in Döhlau in the early 90s), and where we also met a distant relative, who looks like me and my dad, and who showed us around the Emigration Museum. And guess what: I didn't take a single picture of any of it! Ridiculous! (But at least this time I can say that my dad did, right?) We had a lovely time with the Cummerows (and their respective families). We also really enjoyed meeting Jürgen.</p>
+<p>After that, we came back to Tübingen for a couple of days so that I could teach my class, and then we went to France, where we visited a woman who stayed with us as a foreign exchange student for a month in 1980. Christine lives in Angers with her two sons whose names I remember but cannot spell. Here's a picture I took in Angers:</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 007"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/AJDe7zn3ME-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/AJDe7zn3ME-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/AJDe7zn3ME-640.jpeg" alt="France May 2011 - 007" width="640" height="478"></picture></a></p>
+<p>This is the sort of thing I photograph instead of, you know, the people who took excellent care of us in Germany and France.</p>
+<p>Christine (who did, by the way, take exceptional care of us) showed us all around Angers, and then also took us (along with her parents) to see Mont St. Michel, where I took this picture:</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 024"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/IdGPZGTKnx-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/IdGPZGTKnx-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/IdGPZGTKnx-640.jpeg" alt="France May 2011 - 024" width="640" height="478"></picture></a></p>
+<p>At Mont St. Michel, we were met by Christine's friend Gilles (a high school librarian and HUGE sci-fi/fantasy fan who DOESN'T like Buffy, what?!?!?), who then acted as tour guide and interpreter. We all went back to his house in Dol-de-Bretagne, a beautiful medieval city in Brittany, where I took this picture:</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 040"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/Szt7gF29h4-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/Szt7gF29h4-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/Szt7gF29h4-640.jpeg" alt="France May 2011 - 040" width="640" height="478"></picture></a></p>
+<p>and this picture:</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 047"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ChA_X4W6PG-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ChA_X4W6PG-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/ChA_X4W6PG-640.jpeg" alt="France May 2011 - 047" width="640" height="478"></picture></a></p>
+<p>Those heirloom tomatoes, by the way, were the most delicious tomatoes I've ever eaten in my whole life.</p>
+<p>Christine, her sons, her parents, and her friends were all warm and generous and wonderful, and I didn't take a picture of one single one of them (my dad, on the other hand, took dozens of pictures of all of them, and if he would just put his photos online, you could look at them).</p>
+<p>Then we went to Paris for one day and two nights, which is not even really any time at all to see Paris, and I still managed to take more photos there than anywhere else on the whole trip. I do not know how these things work.</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 063"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/tdcmVFYASj-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/tdcmVFYASj-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/tdcmVFYASj-640.jpeg" alt="France May 2011 - 063" width="640" height="480"></picture></a></p>
+<p>At a huge flea market near Place Django Reinhardt.</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 071"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/m2IYrHRbIi-480.avif 480w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/m2IYrHRbIi-480.webp 480w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/m2IYrHRbIi-480.jpeg" alt="France May 2011 - 071" width="480" height="640"></picture></a></p>
+<p>This is me droning on and on and on about Gothic arches.</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 094"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/aaSncZ7Elf-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/aaSncZ7Elf-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/aaSncZ7Elf-640.jpeg" alt="France May 2011 - 094" width="640" height="480"></picture></a></p>
+<p>Part of Notre Dame du Paris being swallowed by the sky.</p>
+<p><a href="http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/" title="France May 2011 - 104"><picture><source type="image/avif" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/SdL88rapOU-640.avif 640w"><source type="image/webp" srcset="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/SdL88rapOU-640.webp 640w"><img loading="lazy" decoding="async" src="/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/SdL88rapOU-640.jpeg" alt="France May 2011 - 104" width="640" height="480"></picture></a></p>
+<p>The table at the cafe where a strange adventure started.</p>
+<p>So yeah. I'm a dummy.</p>
+<p>Thanks, Mom &amp; Dad &amp; Familie Reißer &amp; Familie Cummerow &amp; Famille Belanton &amp; Famille Toutain &amp; Gilles &amp; Nathalie &amp; Juliette, but especially Mom &amp; Dad. I had a lot of fun, even if you can't see photos of that fun.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2011-05-29-sometimes-a-little-tu-much/">sometimes a little Tü much . . .</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2011-06-04-as-opposed-to-one-of-those-false-american-traditions/">as opposed to one of those false American traditions</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2011-06-01-what-kind-of-idiot-travels-europe-and-doesnt-take-photographs/` was built on 2026-07-24T13:02:46.118Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

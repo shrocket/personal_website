@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Wunderkammern - Opening is Closure</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="wunderkammern-opening-is-closure">Wunderkammern - Opening is Closure</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2010-04-29">29 April 2010</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/compstud/" class="post-tag">compstud</a></li>
+</ul>
+
+<p>Last time, I responded to Gunther Kress' book <a href="http://www.amazon.com/Multimodality-Semiotic-Approach-Contemporary-Communication/dp/0415320607/ref=sr_1_3?ie=UTF8&amp;s=books&amp;qid=1271882508&amp;sr=8-3" title="I did not pay this much for my copy"><em>Multimodality: A social semiotic approach to contemporary communication</em></a>.</p>
+<p>Here's a quotation from p17 of that book:</p>
+<blockquote>
+<p>Theoretically, how do we now need to think about or define 'text'? How do we now think about imagination, when much of our thinking has been shaped and dominated by the possibilities offered in linguistic modes? What of creativity? And do we now have better means for paying attention to 'inner' representation and the 'inner' trade between different forms of representation, that is, to the entirely usual and hugely neglected process of synaesthesia? (Kress, 1997a). Is it not in that 'space' and those processes that much of what we regard as 'creativity' takes place?</p>
+</blockquote>
+<p>This time, I'm responding to the following three &quot;texts&quot;:</p>
+<ul>
+<li><a href="http://scottmccloud.com/2-print/1-uc/index.html"><em>Understanding Comics</em> by Scott McCloud</a></li>
+<li><a href="http://kairos.technorhetoric.net/14.1/inventio/delagrange/index.html">&quot;When Revision is Redesign: Key Questions for Digital Scholarship&quot; by Susan H. Delagrange</a></li>
+<li><a href="http://kairos.technorhetoric.net/13.2/topoi/delagrange/">&quot;Wunderkammer: Cornell, and the Visual Canon of Rearrangement&quot; by Susan H. Delagrange</a></li>
+</ul>
+<p>One of the key ideas in all three &quot;texts&quot; is that of closure -or- How does a viewer/reader transform several (possibly disparate) elements into a single idea (or single group of ideas)? McCloud says that closure happens (for the most part) in the gutter, or the space between two panels of comics. &quot;[In] the limbo of the gutter, human imagination takes two separate images and transforms them into a single idea&quot; (McCloud 66). In Wunderkammern, both digital and physical, there is no physical gutter the way there is in comics. There are, however, mental gutters created in the viewer by the apposition of images, objects, and/or texts. The space of closure is, I think, the very &quot;space&quot; Kress is talking about in the above quotation.</p>
+<p>As I &quot;read&quot; all three of the abovementioned &quot;texts,&quot; it occurred to me that I had already written a response to them -- a manifesto (?) for a new (?) kind of reading and interpreting, which would allow the reader to stretch the metaphoric gutters as wide as she might like in the service of interpreting a text. I now reproduce that &quot;response in anticipation&quot; here:</p>
+<!--more-->
+<p>On May 22nd, 2008, the <em>The Daily Telegraph</em>'s website published an article titled &quot;André Breton's Surrealist Manifesto sold at auction in France.&quot; The article, by Henry Samuel, states that &quot;Mr Breton . . . defined surrealism in the manifesto as 'psychic automatism in its pure state'. [Psychic automatism] is the 'transcription of thoughts without any form of control by reasoning and without any reference to aesthetic or moral considerations.'&quot;</p>
+<p>The online version of the Oxford English Dictionary (OED) defines <em>automatism</em> as</p>
+<blockquote>
+<p>1.The quality of being automatic, or of acting mechanically only; involuntary action. Hence, the doctrine attributing this quality to animals. 2.Mechanical, unthinking routine. 3.The faculty of independently originating action or motion. (From the original sense of automaton.) 4.Any psychic phenomenon that appears spontaneously in consciousness; any action performed subconsciously or unconsciously, undirected by the mind or will of the normal personality; also, the mental state in which these phenomena occur. 5.spec. A technique in surrealist painting. . . .</p>
+</blockquote>
+<p>Mr. Samuel's article also talks about the eight other documents sold with Breton's manifesto. They were &quot;a collection of 32 instant poems&quot; and &quot;exercise books containing scribbles and examples of the artist's 'automatic writing'.&quot; Considering these other items, it might be safe to modify the OED's fifth definition to &quot;a Surrealist technique.&quot;</p>
+<p>Another Surrealist technique, according to an article on Wikipedia, was &quot;irrational juxtaposition.&quot; (&quot;Psychic automatism&quot; could certainly be described as &quot;irrational.&quot;) This same article claims that said Surrealist technique was used regularly by Joseph Cornell, who was often referred to as a surrealist, but who was never an official member of that movement (Wikipedia &quot;Joseph Cornell&quot;).</p>
+<p>Joseph Cornell was a mid-20th century, American artist who made flat collages, experimental films, and -- most famously -- hundreds of (assemblage, perhaps surrealist, often kinetic) shadow boxes. Cornell's method of creation included rummaging through thrift and used book stores in New York City, and buying lots of odds and ends such as marbles, press photos, clay pipes, and maps. He would then carefully select objects from those odds and ends and place them together inside of a box of his own construction. Cornell's boxes do appear to make heavy use of irrational juxtaposition, but they also, because of his predominant use of 19th century objects as well as the technique of antiquing his boxes, make great use of nostalgia—another (according to the same Wikipedia article) surrealist technique. This sense of nostalgia in Cornell's work is compounded by his use of repetition and reproduction. &quot;In using a reproduction, Cornell wasn't trying to recapture the experience of seeing the original; rather, he was recognizing that reproductions have their own potent qualities. Like his boxes, reproductions are suffused with desire: they make us long for originals we can never possess or perhaps even see&quot; (Solomon 103). Desire can often lead to obsession (obsession often creates reproduction and repetition), and Cornell had several, not the least of which were Hollywood starlets and penny arcade machines.</p>
+<p>[caption id=&quot;attachment_970&quot; align=&quot;alignnone&quot; width=&quot;243&quot; caption=&quot;Joseph Cornell—Untitled (Penny Arcade Portrait of Lauren Bacall)—1945-6&quot;]<a href="http://www.rocket2nowhere.com/blahg/wp-content/uploads/2010/04/cornell_bacall.jpg"><img src="content/assets/cornell_bacall-243x300.jpg" alt="click for larger version" title="click for larger version"></a>[/caption]</p>
+<p>Penny arcades were places of amusement often found at fairs and midways in the first half of the 20th century. They featured small machines which would, usually for the price of a penny, allow the user to play a game such as pinball or billiards, tell the user's fortune (often via the machinations of an automaton), or show the user a short, silent film.</p>
+<p>The third definition of <em>automaton</em> (plural: <em>automata</em>) in the online OED is</p>
+<blockquote>
+<p>A piece of mechanism having its motive power so concealed that it appears to move spontaneously; 'a machine that has within itself the power of motion under conditions fixed for it, but not by it' (W. B. Carpenter). In 17-18th c. applied to clocks, watches, etc., and transf. to the Universe and World; now usually to figures which simulate the action of living beings, as clock-work mice, images which strike the hours on a clock, etc.</p>
+</blockquote>
+<p>A good example of an automaton would be the fortune telling machines found in penny arcades. such a machine is featured prominently in Penny Marshall's film <em>Big</em>, which is about a boy who wishes to be big and whose wish is granted.</p>
+<p>Joseph Cornell's work has been described by several critics as childlike (not child<em>ish</em>), and his work's use of nostalgia could easily be characterized as the manifestation of a wish to remain small forever.</p>
+<p>Brian Selznik's book <em>The Invention of Hugo Cabret</em> is, on its surface, about a young boy who is forced by circumstance to grow up against his will. His parents have died, and his drunken uncle has disappeared. Hugo, who lives in the walls of a Paris train station and who is, in his uncle's absence, attempting to keep the clocks there running, is also trying to finish a project he and his father started: the repair of a highly complicated automaton they saved from a burning museum. The book is a mixture of text and wordless images, and each page, whether it is a page of text or a page of graphics, is bordered in black. In these ways, the book resembles a silent film, which is an interesting marriage of form and content because even though the book purports to be about Hugo Cabret, it is really about Georges Méliès, who eventually befriends/saves Hugo.</p>
+<p>Georges Méliès (a real person) was a magician and filmmaker in fin de siècle Paris. He made over 500 films between 1896 and 1914, and is credited with accidentally discovering the &quot;stop trick&quot; or &quot;substitution&quot; (in which the film is stopped, something is added to or removed from the shot, the film is restarted, and that something either appears or disappears), and was &quot;one of the first filmmakers to use multiple exposures, time-lapse photography, dissolves, and hand-painted colour&quot; (Wikipedia &quot;Georges Méliès&quot;). Méliès was also a collector of automata.</p>
+<p>Just as silent films are a mixture of image and text, frame and transition, and time and space, so are comics. In fact, in his book <em>Understanding Comics</em>, Scott McCloud says that in comics, time and space are one and the same, and that one is defined by the other (100). The main unit of time and space in comics is the panel or frame, which &quot;acts as a sort of general indicator that time or space is being divided&quot; (McCloud 99). Time, according to McCloud can happen between panels or within them. Of course, the time between panels could be one second or one hundred million years (a kind of rational, in the one case, and irrational, in the other, juxtaposition). As the amount of time/space represented in the gutter between panels grows, the &quot;the degree of reader involvement to render these transitions <em>meaningful</em>&quot; grows as well (McCloud 70, emphasis mine). Time/space can also be represented within a panel. This is most frequently done by showing motion, which is, of course, time <em>through</em> space. The easiest way to represent motion in comics is with the action line.</p>
+<p><a href="http://www.rocket2nowhere.com/blahg/wp-content/uploads/2010/04/McCloudp112_1.jpg"><img src="content/assets/McCloudp112_1.jpg" alt="click for a larger version" title="click for a larger version"></a></p>
+<p>Within-panel time can also be shown by changing the shape or size of the panel or frame itself.</p>
+<p><a href="http://www.rocket2nowhere.com/blahg/wp-content/uploads/2010/04/McCloudp101_3.jpg"><img src="content/assets/McCloudp101_3-300x89.jpg" alt="click for a larger version" title="click for a larger version"></a></p>
+<p>Framing time and space was hardly invented by the comics, however. Whether visible or not, every picture, every painting is bounded by a frame. Every story told or written is framed by its beginning and end. Every play is framed first by the stage on which it is performed (and especially by that stage's proscenium, should there be one), and second by how it is broken into acts and scenes. Each scene may also contain its own, various framing devices.</p>
+<p>William Shakespeare is widely regarded as the finest playwright in the English language. Each of the scenes within each of the acts (usually five) in Shakespeare's plays is able to represent space and time in any number of ways. For example, the scenes wherein the ghost of Hamlet's father appears (1.1 and 1.5) are made up of relatively few lines of text (157 and 198 respectively), but are meant to represent, in both cases, the span of time from midnight to dawn -- which could be anywhere from four to seven hours, depending on the season.</p>
+<p>The beginning of act one, scene two of Shakespeare's play <em>The Tempest</em> also plays with the framing of time and space. In it, Prospero frames the entire play by providing his daughter Miranda (and the audience) with the back-story, thus catching everyone up to what's happening now and why. His relating of the back-story is further broken into frames (or panels) by his regularly interrupting himself to ask Miranda (and presumably the audience as well) if she's listening (1.2.77, 87 &amp; 106). The beginning of the scene is further broken into three major conversations: the conversation between Prospero and Miranda, the conversation between Prospero and Ariel, and the conversation between Prospero and Caliban. Each of these conversations occupies a different space (1. the familial/civil space; 2. the airy space; 3. the earthly space), and each represents a different time (Miranda is Prospero's link to his past; Ariel is very much concerned with the present; Caliban represents the island's past and its future).</p>
+<p>Caliban is, of course, a special case. In his introduction to the Oxford World's Classics edition of <em>The Tempest</em>, Stephen Orgel says that &quot;Caliban is not presented as a noble savage . . . [but rather] as a natural servant&quot; (24). If that is the case, if Caliban is a servant by nature, then one can ask the question: Does he have a will of his own, or is he simply &quot;a machine that has within itself the power of motion under conditions fixed for it, but not by it&quot;? If we accept the latter as true, does this make everything Caliban says a kind of &quot;psychic automatism&quot;? Is Caliban a Surrealist?</p>
+<p>* * *</p>
+<p>Apophenia, according to Wikipedia, &quot;is the experience of seeing patterns or connections in random or meaningless data,&quot; and is connected to mental illness through its coinage in 1958 by Klaus Conrad in his work <em>Die beginnende Schizophrenie. Versuch einer Gestaltanalyse des Wahns</em> (<em>Early Schizophrenia: An Essay on Gestalt Analysis of Delusion</em> [my translation]), who described it as &quot;'unmotivated seeing of connections' accompanied by a 'specific experience of an abnormal meaningfulness'&quot; (Wikipedia &quot;Apophenia&quot;).</p>
+<p>Both Wikipedia and Sandra L. Hubscher connect apophenia to Type 1 errors in statistics, also known as false positives. Hubscher writes, &quot;[apophenia] is . . . the propensity of the human mind to commit what the statisticians Neyman and Pearson (1933) termed Type I error. As a statistical error, it is the acceptance of a false positive, that is, believing to see a difference or meaning when the given result is attributable to chance.&quot;</p>
+<p>What if we, as readers and interpreters of literature, appropriate the word <em>apophenia</em> for ourselves? What if we strip it of its negative, mental illness and &quot;false positive&quot; connotations and simply define it as &quot;the finding or making of connections where none previously or necessarily existed&quot;?</p>
+<p>Let's say we've done so. Now we can use apophenia as a way to read, a way to interpret, and a way to make meaning. In a sense, this is how literature is often read: by placing a text next to another text (often theoretical in nature), and drawing lines of explanation between the two. But why should we limit ourselves to other texts to explain the texts we read? If we allow ourselves a liberal use of apophenia as redefined, then virtually anything can be used as an interpretive, and therefore meaning-making device. And why limit ourselves to single devices when entire constellations are at our disposal?</p>
+<p>The interpretation of literature has never been and never will be an exact (or hard) science. It is impossible to say just exactly what a work of art means. Even if one could ask the author what she meant, she herself may not know. Single words have multiple meanings, and when single words are placed next to other single words, their multiple meanings work together to create multiple multiple meanings. Because of this, a poem, or a story, or a novel contains constellations of meaning. Why not fight fire with fire by interpreting constellations of meaning with other constellations? For example, why not attempt to read Shakespeare's <em>The Tempest</em> through the lenses of silent film, comic books, the work of Joseph Cornell, and Surrealism? Such a reading may not give us the <em>right</em> answer, but doesn't the phrase &quot;constellations of meaning&quot; imply that there is no right answer, or that there might be several? The very least such a reading will do is give us a different way to think about The Tempest, and isn't that all an interpretation is?</p>
+<p>In some ways, what I am talking about has already been done by the essayist Michel de Montaigne, who attempted to get at (or even away from) his subject by following, in writing, his line of thought from one thing to the next. In other ways, it seems very similar to things attempted by certain post-modernist novels and films such as Thomas Pynchon's <em>The Crying of Lot 49</em>, and Ron Howard's <em>A Beautiful Mind</em>. However, these are examples of ways to make art, whereas what I am suggesting is a way to interpret it. Furthermore, I am suggesting that we name and codify this method of interpretation, even though doing so will never turn the art of interpretation into a science. It will, however, give us a way to talk about what we're doing, which in turn will give us another way to talk and think about what we're reading.</p>
+<p>Works Cited:</p>
+<ul>
+<li>&quot;Apophenia.&quot; Wikipedia. 10 May 2008. 24 May 2008 <a href="http://en.wikipedia.org/wiki/Apophenia">link</a>.</li>
+<li>&quot;Automatism.&quot; <em>Oxford English Dictionary</em>. 2nd ed. 1989. <em>OED Online</em>. University of Denver Penrose Library, Denver. 23 May 2008.__
+__- &quot;Automaton.&quot; _Oxford English Dictionary_. 2nd ed. 1989. <em>OED Online</em>. University of Denver Penrose Library, Denver. 23 May 2008.</li>
+<li>&quot;Georges Méliès.&quot; <em>Wikipedia</em>. 9 May 2008. 23 May 2008 [link](http://en.wikipedia.org/wiki/Georges_ Melies).</li>
+<li>Hubscher, Sandra L. &quot;Apophenia: Definition and Analysis.&quot; <em>Digital Bits Skeptic</em>. 4 Nov 2007. 24 May 2008 <a href="http://www.dbskeptic.com/2007/11/04/apophenia-definition-and-analysis/">link</a>.</li>
+<li>McCloud, Scott. <em>Understanding Comics: The Invisible Art</em>. New York: Harper Perennial, 1994.</li>
+<li>Samuel, Henry. &quot;André Breton's Surrealist Manifesto sold at auction in France.&quot; <em>The Daily Telegraph</em>. 22 May 2008. 23 May 2008 [broken link](http://www.telegraph.co.uk/news/worldnews/europe/france/ 2003659/Andr%C3%A9-Breton's-Surrealist-Manifesto-sold-at-auction-in-France.html).</li>
+<li>Shakespeare, William, and G. R. Hibbard. <em>Hamlet</em>. Oxford: Oxford Oxford University Press, 1998.</li>
+<li>Shakespeare, William, and Stephen Orgel. <em>The Tempest</em>. Oxford: Oxford University Press, 1998.</li>
+<li>Solomon, Deborah. <em>Utopia Parkway: The Life and Work of Joseph Cornell</em>. London: Pimlico, 1997.__</li>
+</ul>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2010-04-24-twitter-weekly-updates-for-2010-04-24/">Twitter Weekly Updates for 2010-04-24</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2010-05-01-twitter-weekly-updates-for-2010-05-01/">Twitter Weekly Updates for 2010-05-01</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2010-04-29-wunderkammern-opening-is-closure/` was built on 2026-07-24T13:02:46.113Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>

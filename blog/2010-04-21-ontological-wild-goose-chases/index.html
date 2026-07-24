@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ontological wild goose chases</title>
+		<meta name="description" content="The personal website and blog of Shawn Huelle.">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Shawn Huelle">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Gill Sans, -apple-system, system-ui, sans-serif;
+	--font-family-monospace:
+		Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+		Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+		Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-section: #e2e2e2;
+	--color-article: #ffff00;
+	--color-link: #ff68ff;
+	--color-visitactivelink: #ff7f00;
+	--color-hoverfocus: #ff7f00;
+
+	--font-size: 12px;
+
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+
+	--syntax-tab-size: 2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #c0c0c0;
+		--color-gray-90: #dad8d8;
+
+		--background-color: #15202b;
+	}
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	:root {
+		--font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size: 20px;
+	}
+}
+
+@media (min-width: 1400px) {
+	:root {
+		--font-size: 22px;
+	}
+}
+
+html,
+body {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 60em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1 {
+	font-size: 2em;
+	float: top;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	line-height: 2.25rem;
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+h4 {
+	font-size: 1em;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-size: var(--font-size);
+	padding: 1rem;
+	margin: 0;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--color-link);
+}
+a[href]:visited {
+	color: var(--color-visitactivelink);
+}
+a[href]:hover {
+	color: var(--color-hoverfocus);
+}
+a[href]:active {
+	color: var(--color-visitactivelink);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+	background-color: var(--color-section);
+	border-radius: 10px;
+}
+
+footer {
+	font-size: 0.75em;
+	padding: 1rem;
+}
+
+section {
+	background-color: var(--color-section);
+	border-radius: 10px;
+	margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+article {
+	border-radius: 10px;
+	padding: 0.1rem 1rem 1rem 0.5rem;
+	margin: 1rem;
+	background-color: var(--color-article);
+}
+
+blockquote {
+	border-left-style: solid;
+	border-left-width: 0.25rem;
+	border-left-color: var(--color-hoverfocus);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-logo {
+	width: 2em;
+	height: auto;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: 0.5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 1em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: 0.25em;
+	padding-right: 0.5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/*---- Personal website utility classes (ported from personal_website) ----*/
+
+.nav-list {
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+	flex-wrap: wrap;
+}
+
+.ul-cv {
+	list-style: none;
+}
+
+.cv-indent {
+	list-style: circle;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	gap: 3rem;
+}
+
+.contact-list img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+.pink-pipe {
+	color: var(--color-link);
+}
+
+.work-experience--more {
+	display: none;
+}
+
+.moreButton {
+	line-height: 1.5;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0;
+	border-color: var(--color-section);
+	color: var(--color-link);
+	background-color: var(--color-article);
+	border-radius: 10px;
+	padding: none;
+	gap: 3rem;
+	box-shadow: 0;
+	margin: 10px;
+}
+
+.moreButton:hover {
+	color: white;
+	background-color: var(--color-hoverfocus);
+}
+
+.teaching--more {
+	display: none;
+}
+
+.projH3 {
+	font-size: 1.5em;
+	padding: 5px;
+	margin-bottom: 1px;
+}
+
+.projH4 {
+	margin-top: 1px;
+}
+
+.projP {
+	margin-top: 1px;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link"><picture><source type="image/avif" srcset="/img/7ZkaiH92Ij-50.avif 50w"><source type="image/webp" srcset="/img/7ZkaiH92Ij-50.webp 50w"><img loading="lazy" decoding="async" src="/img/7ZkaiH92Ij-50.png" class="home-logo" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50"></picture>Shawn Huelle</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</a></li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+			<section>
+			<h1></h1>
+			<article>
+				
+
+
+<h1 id="ontological-wild-goose-chases">ontological wild goose chases</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2010-04-21">21 April 2010</time></li>
+	<li><a href="/tags/blahg/" class="post-tag">blahg</a>, </li>
+	<li><a href="/tags/compstud/" class="post-tag">compstud</a></li>
+</ul>
+
+<p>When I was active in the theatre, I got very upset when my fellow actors would simply deliver the essence of a line, and not the line as it was written. My thought process was that the playwright had spend a great deal of time and intellectual energy crafting that line just so, and it was the actor's job to be faithful to all that work. This is one of the reasons why I am now a writer. However, since I started writing, I have learned that there are different kinds of writing and different kinds of reading. That sounds too easy. It is. The point is this: I know that no reader is going to put the same amount of time and effort into my writing as I did. I cannot control the reader. So, dear Reader, please feel free to read this in any way you like, whether that's all the way from the beginning to the last word in order, or a couple of words or sentences here and there in whatever order you see fit.</p>
+<p>That being said, writers often talk about how a text teaches the reader how to read it in the first few pages, sometimes even sentences. Of course, knowing how something wants to be read isn't the same as reading or having read the whole thing. Oversimplified, this boils down to form vs. content, and that's not, so far as I know here at the beginning, what I want to talk about in this post.</p>
+<p>I did not read as much of Gunther Kress' book <a href="http://www.amazon.com/Multimodality-Semiotic-Approach-Contemporary-Communication/dp/0415320607/ref=sr_1_3?ie=UTF8&amp;s=books&amp;qid=1271882508&amp;sr=8-3" title="I did not pay this much for my copy"><em>Multimodality: A social semiotic approach to contemporary communication</em></a> as I would have liked. I read more than half of it, and I read the first chapter carefully. I may not know everything, content-wise, that Mr. Kress wanted me to know, but, thanks to the form, I think I have a good handle on where he was going.</p>
+<p>I am not going to attempt to draw a map. No, wait. I am not going to attempt to draw a map of the parts of the book I didn't read. Instead, I am going to make a map of the first chapter—an annotative map. However, there won't be a traditional key, and the water may or may not be blue. . . .</p>
+<!--more-->
+<p><strong><em>v</em>:</strong> &quot;Zwei Leben, gegen eine grausame Zeit&quot; <strong>3:</strong> &quot;But then, there are times—perhaps many times—when communicating isn't' really the issue, and power is.&quot; (cf. the following paragraph from my previous CompStud post: &quot;. . . . I used to work for Kinko’s. We would put up large signs directing customers this way or that, explaining how to use the computer stations, or the self-serve copiers. These were big signs. We put them in places where people would have to walk around them to get where they were going. And still, every day (please note the proper use of the temporal adjective and noun there) people would ask me how to do the things the signs told them, and then get huffy when I pointed them to the signs.&quot;) <strong>5:</strong> &quot;One difference is that whereas before these were the subject of interest in distinct areass of academic work, now there is an attempt to bring all means of making meaning together under one theoretical roof, as part of a single field in a unified account, a unifying theory.&quot; (Please see also Paul Collins' article &quot;The Strange and Epic and Tragic Trajectory of Solresol, the Universal Musical Language and of its Creator, Monsieur Sudre,&quot; in <em>McSweeney's</em> #5 (or his book <a href="http://www.amazon.com/Banvards-Folly-Thirteen-People-Change/dp/0312300336/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1271881719&amp;sr=8-1"><em>Banvard's Folly: Thirteen Tales of People Who Didn't Change the World</em></a>), or perhaps just visit <a href="http://en.wikipedia.org/wiki/Solresol">Solresol's Wikipedia Page</a>, or just read the following summary and call it good: Solresol is an artificial language based on the seven colors of the rainbow, the seven notes of the western scale, and the seven syllables used to identify those notes. In Solresol, absolutely everything can be &quot;read,&quot; from birdsong to a Van Gogh.) <strong>7:</strong> &quot;To conclude the issue, here, of necessary theoretical resources, I will briefly return to <em>grammar</em>. Here we have a tern known to nearly everyone in Western societies even though there is not much agreement as to waht it might mean. There is a certain feeling—held with differend degrees of conviction in different domains—that grammar is about rules, conventions, certainty: phenomena that are fixed, settled. When business leaders, politicians, media pundits, bemoan that the young leave school and are unemployable because they cannot 'write a (proper) sentence,' they look back some thirty or forty years and seem to discern, through a sepia-tinged haze, that in their day the teaching of grammar had produces just such ideal conditions, they note that the young do not use the rules which they are certain that they had followed way back then; and which they think they use still, in their present practice. Adherence to linguistic convention is equated with adherence to social convention and consequently with social 'stability.' Alas, the present is deeply unstable; no amount of nostalgia can change that. The need is for a labour force that can meet the semiotic demands of conditions now. But in this, 'grammar' in its older sense of 'a stable system of rules' is an obstacle to necessary action.&quot; <strong>13:</strong> &quot;By entire contrast, the study of <em>modes</em> in multimodal social semiotics focuses on the <em>material</em>, the <em>specific</em> the <em>making</em> of signs <em>now</em>, in this environment for this occasion. In its focus on the material it also focuses on the bodilyness of those who make and remake signs in constant semiotic (inter)action. It represents a move away from high abstraction to the specific, the material; from the mentalistic to the bodily.&quot; (Kress is presenting his argument as new an (perhaps) somewhat revolutionary (i.e. This is a thing we haven't talked about, a thing we <em>need</em> to talk about!), and yet what he is saying here has been talked about by practitioners and critics of performance art since the very beginning of said art as a practice. Allow me to point in several directions at once: <a href="http://www.dailymotion.com/video/xmx56_laurie-anderson-o-superman_music">Laurie Anderson's video for her song &quot;O Superman (for Massenett)&quot;</a>; <a href="http://www.amazon.com/Microlectures-Proximity-Performance-Matthew-Goulish/dp/0415213932/ref=tmm_pap_title_0">Matthew Goulish's book <em>39 Microlectures: In Proximity of Performance</em></a>; and to the <a href="http://www.neofuturists.org/">Neo-Futurists</a>.) <strong>17:</strong> &quot;Theoretically, how do we now need to things about or define 'text'? How do we now think about <em>imagination</em>, when much of our thinking has been shaped and dominated by the possibilities offered in linguistic modes? What of creativity? And do we now have better means for paying attention to 'inner' representation and the 'inner' trade between different forms of representation, that is, to the entirely usual and hugely neglected process of synaesthesia? (Kress, 1997a). Is it not in that 'space' and those processes that much of what we regard as 'creativity' takes place?&quot; (Here are the first several paragraphs of my dissertation prospectus: &quot;'The subject . . . is not the void exactly, but rather what there is round about or inside it. . . . To start with, then, there isn’t very much: nothingness, the impalpable, the virtually immaterial; extension, the external, what is external to us, what we move about in the midst of, our ambient milieu, the space around us.' —Georges Perec, Species of Spaces ¶ Zeno of Elea’s paradox of motion (sometimes called 'Zeno’s Arrow') says: 'The flight of an arrow . . . is an apparent example of motion. But at any given moment of its flight, the arrow is either where it is or where it is not. If it moves where it is, it must be standing still, and if it moves where it is not, then it can't be there; thus it can't move' (Jones 327). ¶ The Heisenberg Uncertainty Principle describes a problem in physics, whereby if one can pinpoint a particle’s location, one cannot name its velocity and vice-versa. ¶ To the chagrin of many physicists, the Heisenberg Uncertainty Principle is often conflated with the Observer Effect, which states that the act of observing changes the thing observed. ¶ The Observer Effect is an oblique definition of reading. ¶ Conflation is how meaning is made. ¶ In his essay 'Signature Event Context,' Jacques Derrida explores similar ideas, and especially the idea of absence, which 'is determined in the most classical fashion as a continuous modification, a progressive extenuation of presence' (313). ¶ 'The pages of a book are those sheets between which two minds enter one another to think the same thoughts. But every margin is Lethe, and to cross it is to begin to forget.' —Dan Beachy-Quick, A Whaler’s Dictionary ¶ Regardless the name by which one calls it—Uncertainty Principle, Observer Effect, Lethe, Gutter, Paradox—there is always a gap which the human mind must bracket or bridge. This gap is usually found between two things—words, stories, sentences—which are in apposition to one another.&quot;)</p>
+<p>I wish I could say what all of this means, but I don't know. I'm not sure I know how to read it yet.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/2010-04-17-twitter-weekly-updates-for-2010-04-17/">Twitter Weekly Updates for 2010-04-17</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/2010-04-24-twitter-weekly-updates-for-2010-04-24/">Twitter Weekly Updates for 2010-04-24</a></li>
+</ul>
+
+			</article>
+			</section>
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
+		</footer>
+
+		<!-- This page `/blog/2010-04-21-ontological-wild-goose-chases/` was built on 2026-07-24T13:02:46.113Z -->
+		
+		<script type="module" src="/dist/ta-13srOA-.js"></script>
+	</body>
+</html>
