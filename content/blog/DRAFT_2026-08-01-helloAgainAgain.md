@@ -33,7 +33,7 @@ In the [previous version of this post](../blog/2020-12-31-hello-again.md), I sta
 
 > It will not have a theme [in that it will not be single-theme]. It will not attempt to monetize itself or anything else. It will not be concerned with SEO or number of visitors.
 
-I would like to add one thing: It will not be coherent.
+I would like to add two things: It will not be coherent, and it will not be consistent.
 
 And while all of those things are and will hopefully remain true, they still don't really answer the question _What is_ this blog _going to be?_
 
