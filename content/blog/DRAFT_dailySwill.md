@@ -1,7 +1,7 @@
 ---
 title: I mean everything is a little "fickig," right?
 description: This is a post on my blog about three things that happened to me.
-date: 2026-08-03
+date: 2026-08-16
 tags:
   - essay
   - list
