@@ -49,5 +49,9 @@
 	"dependencies": {
 		"@zachleat/heading-anchors": "^1.0.3",
 		"markdown-it-footnote": "^4.0.0"
+	},
+	"allowScripts": {
+		"fsevents@2.3.3": true,
+		"sharp@0.33.5": true
 	}
 }
