@@ -1,29 +1,550 @@
----js
-const eleventyNavigation = {
-	key: "Home",
-	order: 1
-};
-
-const numberOfLatestPostsToShow = 3;
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+layout: layouts/base.njk
+rawMain: true
+title: Shawn Huelle
+---
+<!-- about me -->
+    <section>
+      <h2 id="about">About Me</h2>
+      <article>
+        <p>
+          This website is a place for me to showcase publications and projects both individual and collaborative, keep a digital copy of my CV, and slowly practice my quickly-rusting web-development skills. 
+        </p>
+      </article>
+    </section>
+    
+<!-- publications -->
+    <section>
+      <h2 id="pubs">Publications (highlights)</h2>
+      <p>
+        My writing has appeared in a number of publications. I have also
+        published two chapbooks with
+        <a href="https://shirtpocketpress.weebly.com/" target="new"
+          >Shirt Pocket Press</a
+        >. <br>Here is a list of works that can be found online:
+      </p>
+      <article>
+        <ul class="pub-list">
+          <li>
+            <a
+              href="https://www.3ammagazine.com/3am/peripateticism-in-the-work-of-robert-walser/"
+              target="new"
+              >"Peripateticism in Robert Walser"</a
+            >, <em>3:am Magazine</em>, 2014
+          </li>
+          <li>
+            <a
+              href="https://americanshortfiction.org/im-a-notebook-three/"
+              target="new"
+              >"An Issue of Blood"</a
+            >, <em>American Short Fiction</em> Camera Flash Contest, 2013
+          </li>
+          <li>
+            <a
+              href="http://necessaryfiction.com/writerinres/OnRobertWalsersPeripateticism/"
+              target="new"
+              >"On Robert Walser's Peripateticism"</a
+            >, <em>Necessary Fiction</em>, 2011
+          </li>
+          <li>
+            <a
+              href="https://secureservercdn.net/198.71.233.189/4kf.37a.myftpupload.com/wp-content/uploads/2019/12/Fact-Simile-Magazine-6pdf.pdf"
+              target="new"
+              >"The Children's Crud: Chapter 1"</a
+            >, <em>Fact-Simile Editions</em>, 2010
+          </li>
+          <li>
+            <a href="https://newworldwriting.net/backissues/2008/Vol14No4-Oct08/1404-100108-Huelle.html" target="new">"A Determination of Parts (Excerpts)</a>, <em>Mississippi Review Online / New World Writing / Blip Magazine</em>, 2008
+          </li>
+          <li>
+            <a href="https://www.the2ndhand.com/archive/memo1.html" target="new"
+              >"Three Memoranda"</a
+            >, 
+            <em>the 2nd hand</em>, 2005
+          </li>
+          <li>
+            <a
+              href="http://www.fb10.uni-bremen.de/newleaf/newleaf_press/newleaf_press.php"
+              target="new"
+              ><em>From the Bottommost Town Musician</em></a
+            >, New Leaf Press, 1998
+          </li>
+        </ul>
+      </article>
+    </section>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+    <!-- projects -->
+    <section>
+      <h2 id="projs">Projects</h2>
+      <article>
+      <h3 class="projH3">Blog</h3>
+      <p class="projP"><a href="/blog/"{% if page.url == "/blog/" %} aria-current="page"{% endif %}>This blog</a> (titled "Blog") is a collection and continuation of the two blogs I wrote between 2005 and ~2020. If you browse <a href="/tags">the tags</a>, you can filter for each of the previous blogs and/or also by subject. If subscribing is your thing, copy the URL from <a href="/feed/feed.xml">this link</a> and paste it into your favorite RSS reader (I use <a href="https://feedly.com/news-reader">feedly</a>).</p>
+      </article>
+      <article>
+        <h3 class="projH3">My Compost</h3>
+        <p class="projP">Between 01 AUG 2013 and 31 DEC 2014, I took a picture of my compost every day and posted it to a tumblr. <a href="https://mycompost.tumblr.com/" target="_blank" title="mycompost.tumblr.com"> Here's a link.</a></p>
+      </article>
+      <article>
+        <h3 class="projH3">The Memo</h3>
+        <h4 class="projH4">(coming sometime)</h4>
+      </article>
+    </section>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
+<!-- resume -->
+    <section>
+      <h2 id="cv">CV</h2>
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+<!-- skills -->
+      <article>
+        <h3>Skills</h3>
+        <ul class="ul-cv">
+          <li><b>Office Software:</b> Confluence <span class="pink-pipe">|</span> Jira
+            <span class="pink-pipe">|</span> Paligo
+            <span class="pink-pipe">|</span> KnowledgeOwl
+            <span class="pink-pipe">|</span> LaTeX
+            <span class="pink-pipe">|</span> MS Office
+            <span class="pink-pipe">|</span> Google Workspace
+          </li>
+          <li><b>Graphic Design:</b> Adobe Photoshop
+            <span class="pink-pipe">|</span> Adobe InDesign
+            <span class="pink-pipe">|</span> GIMP
+            <span class="pink-pipe">|</span> Scribus
+            <span class="pink-pipe">|</span> Excalidraw
+          </li>
+            <li><b>Web Development:</b> React <span class="pink-pipe">|</span> Next.js
+            <span class="pink-pipe">|</span> JavaScript
+            <span class="pink-pipe">|</span> HTML
+            <span class="pink-pipe">|</span> CSS
+            <span class="pink-pipe">|</span> MongoDB Atlas
+            <span class="pink-pipe">|</span> Shell
+            <span class="pink-pipe">|</span> VSCode
+            <span class="pink-pipe">|</span> Git
+            <span class="pink-pipe">|</span> Jira
+          </li>
+
+          <li><b>Languages:</b> <em>Native:</em> English
+            <span class="pink-pipe">|</span>
+            <em>Fluent:</em> German
+            <span class="pink-pipe">|</span>
+            <em>Beginner:</em> French
+          </li>
+        </ul>
+      </article>
+
+<!-- education -->
+      <article>
+        <h3 id="ed">Education</h3>
+        <ul class="ul-cv">
+          <li>
+            <b>Doctor of Philosophy in English with a focus in Creative Writing</b>
+            — 2012
+          </li>
+          <li>
+            <a
+              href="https://liberalarts.du.edu/academics-admissions/programs-gr/phd-english-and-literary-arts-creative-writing"
+              target="_blank"
+              title="link to the website of DU's creative writing program"
+              >The University of Denver</a
+            >: Denver, Colorado, USA
+          </li>
+          <ul class="cv-indent">
+            <li>Dissertation Title: <em>Cubicle Deathmatch</em></li>
+          </ul>
+        </ul>
+<!-- entry -->
+        <ul class="ul-cv">
+          <li><b>Master of Fine Arts in Writing</b> — 2002</li>
+          <li>
+            <a
+              href="https://www.saic.edu/writing"
+              target="_blank"
+              title="link to the website of SAIC's writing program"
+              >The School of the Art Institute of Chicago</a
+            >: Chicago, Illinois, USA
+          </li>
+          <ul class="cv-indent">
+            <li>Thesis Title: <em>A Determination of Parts</em></li>
+          </ul>
+        </ul>
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Bachelor of Arts in English and German</b> — 1996</li>
+        <li>
+          <a
+            href="https://www.doane.edu/"
+            target="_blank"
+            title="link to Doane University's website"
+            >Doane College</a
+          >: Crete, Nebraska, USA
+        </li>
+      </ul>
+    </article>
+
+<!-- work experience -->
+      <article>
+        <h3 id="work">Work Experience</h3>
+        
+<!-- entry -->
+        <ul class="ul-cv">
+          <li>
+            <strong>Technical Documentation Specialist</strong> — December 2024 - present
+          </li>
+          <li>
+            <a
+              href="https://www.wiferion.com/"
+              target="_blank"
+              title="link to Wiferion's website"
+              >Wiferion/PULS, GmbH</a
+            >
+          </li>
+          <ul class="cv-indent">
+            <li>
+              Create customer-facing documentation for Wiferion inductive charging systems.
+            </li>
+            <li>
+              Maintain and improve house style and branding guidelines for both online articles and PDFs.
+            </li>
+            <li>
+              Work closely with engineers to provide correct technical details.
+            </li>
+          </ul>
+        </ul>
+      
+      <span class="work-experience--more" data-js="moreWorkExperience">
+<!-- entry -->
+        <ul class="ul-cv">
+          <li>
+            <strong>Technical Writer</strong> — 15 January 2024 - 08 July 2024
+          </li>
+          <li>
+            <a
+              href="https://zontal.io/"
+              target="_blank"
+              title="link to ZONTAL's website"
+              >ZONTAL, GmbH</a
+            >
+          </li>
+          <ul class="cv-indent">
+            <li>
+              Created customer-facing and API documentation for the ZONTAL
+              platform using both Confluence and KnowledgeOwl.
+            </li>
+            <li>
+              Maintained and improved house style and branding guidelines for
+              both online articles and PDFs using HTML and CSS.
+            </li>
+            <li>
+              Gained valuable experience in creating qualification documentation
+              in a validated environment.
+            </li>
+          </ul>
+        </ul>
+        
+<!-- entry -->
+        <ul class="ul-cv">
+          <li><b>Trainee Web Development</b> — 24 July - 16 October 2023</li>
+          <li>
+            <a
+              href="https://www.neuefische.de/bootcamp/web-development"
+              target="new"
+              >Neue Fische - School and Pool for Digital Talent: Remote</a
+            >
+          </li>
+          <ul class="cv-indent">
+            <li>
+              540 hours of programming practice with four-week, team-based
+              development project as journeyman's piece.
+            </li>
+          </ul>
+        </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Senior Technical Writer</b> — 2022</li>
+        <li>
+          <a href="https://www.semantha.de/" target="_blank" title="link to thingsTHINKING's website"
+            >thingsTHINKING: Karlsruhe, Germany</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Created technical documentation and wrote release notes in English for <b>semantha</b> using the Component Content Management System Paligo.
+          </li>
+          <li>
+            Made linguistic and content revisions to existing content, including marketing documents.
+          </li>
+          <li>
+            Proposed and implemented improvements to the usability of the documentation and the <b>semantha</b> user interface.
+          </li>
+        </ul>
+      </ul>
+      
+<!-- entry -->
+      <ul class="ul-cv">
+        <li>
+          <b>Head of the Library and EducationUSA Studies Adviser</b>
+          — 2015-2022
+        </li>
+        <li>
+          <a href="https://www.carl-schurz-haus.de" target="_blank" title="link to the Carl-Schurz-Haus's website"
+            >Carl-Schurz-Haus/Deutsch-Amerikanisches Institue Freiburg eV:
+            Freiburg, Germany</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Oversaw library budgeting, purchasing, cataloging, marketing, and
+            led a team of employees and volunteers.
+          </li>
+          <li>
+            Advised one-on-one and in large groups for EducationUSA. Performed
+            outreach, wrote and designed marketing materials, and led a small
+            team of student employees.
+          </li>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      </ul>
+      <ul class="ul-cv">
+        <li>
+          <b>Head Projectionist and Assistant Bar Manager</b> —
+          2014-2015
+        </li>
+        <li>
+          <a
+            href="https://www.arsenalkinos.de/kino-atelier-cafe-haag"
+            target="_blank" title="link to the arsenalkinos' website"
+            >Kino Atelier/Café Haag: Arsenal Kinobetriebe, Tübingen, Germany</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Managed a small, independent cinema. Programmed the digital
+            projector and ticketing software on a weekly basis. Chose and hung
+            marketing materials. Ordered bar and restaurant supplies. Worked
+            with vendors. Ran the projector. Sold tickets. Served food and
+            drinks.
+          </li>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Image Editor/Fact-Checker</b> — 2004-2006</li>
+        <li>
+          <a href="https://pilbooks.com/" target="_blank" title="link to the Publications International website"
+            >Publications International, Ltd.: Morton Grove, Illinois, USA</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Acquired and processed images for the ConsumerGuide.com website.
+          </li>
+          <li>Checked ConsumerGuide.com reviews for factuality and accuracy.</li>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Office Manager/Editorial Assistant</b> — 2003-2004</li>
+        <li>
+          <a
+            href="https://www.chicagoreviewpress.com/academy-chicago-pages-526.php"
+            target="_blank" title="link to the Academy Chicago website"
+            >Academy Chicago Publishers: Chicago, Illinois, USA</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Processed orders, calculated author royalties, and kept a running
+            inventory of stock.
+          </li>
+        </ul>
+      </ul>
+</span>
+      <button type="button" class="moreButton" data-js="buttonWorkExperience">more</button>
+      </article>
+
+<!-- teaching experience -->
+      <article>
+        <h3 id="teach">Teaching Experience</h3>
+        <ul class="ul-cv">
+          <li><b>Adjunct Instructor</b> — 2016-2021 & 2024-present</li>
+          <li><a href="https://www.anglistik.uni-freiburg.de/sections/language-practice" target="_blank" title="link to the English Language Practice section of the uni-freiburg website">Albert-Ludwigs-Universität: Freiburg, Germany</a></li>
+          <ul class="cv-indent">
+            <li>
+              Teach Creative Writing in the English Department
+              and am in charge of the course from concept to grading.
+            </li>
+          </ul>
+        </ul>
+
+        <span class="teaching--more" data-js="expandTeaching">
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Instructor</b> — 2014-2015</li>
+        <li>
+          <a
+            href="https://www.vivat-lingua.de"
+            target="_blank"
+            title="link to the Vivat Lingua website"
+            >Vivat Lingua! Sprachtrainingsprogramm/Language Training, Tübingen,
+            Germany</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>Taught a variety of courses both one-on-one and in groups:</li>
+          <ul>
+            <li>Technical Writing</li>
+            <li>Advanced Writing and Editing</li>
+            <li>Letters of Motivation and Curriculum Vitae in English</li>
+            <li>Oral Presentation Skills</li>
+            <li>Scientific Writing</li>
+          </ul>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Instructor</b> — 2011-2014</li>
+        <li>
+          <a
+            href="https://uni-tuebingen.de/fakultaeten/philosophische-fakultaet/fachbereiche/neuphilologie/englisches-seminar/sections/academic-english/"
+            target="_blank"
+            title="link to the Academic English section of the uni-tuebingen English department's website"
+            >Eberhard Karls Universität: Tübingen, Germany</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Taught a variety of courses in the Sprachpraxis section of the
+            English Department:
+          </li>
+          <ul>
+            <li>Language & Use (introduction to academic writing)</li>
+            <li>Written Communication 1 (academic writing)</li>
+            <li>Written Communication 2 (creative writing)</li>
+            <li>
+              Oral Communication 2 (presentation and public speaking skills)
+            </li>
+            <li>Translation 1</li>
+          </ul>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Adjunct Faculty</b> — 2011</li>
+        <li>
+          <a
+            href="https://clas.ucdenver.edu/english/composition-program"
+            target="_blank"
+            title="link to the website of CU Denver's Composition Program"
+            >University of Colorado Denver: Denver, Colorado, USA</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Taught one section of Core Composition 1 as part of the CU Succeed
+            Program.
+          </li>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Adjunct Faculty</b> — 2011</li>
+        <li>
+          <a
+            href="https://academicaffairs.du.edu/writing/first-year-writing"
+            target="_blank"
+            title="link to the University of Denver's Undergraduate Writing Program"
+            >University of Denver: Denver, Colorado, USA</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Taught two sections of Rhetoric and Academic Writing within DU's
+            Writing Program.
+          </li>
+        </ul>
+      </ul>
+
+<!-- entry -->
+      <ul class="ul-cv">
+        <li><b>Teacher</b> — 2006-2007</li>
+        <li>
+          <a
+            href="https://www.sbps.net/"
+            target="_blank"
+            title="link to the Scottsbluff Public Schools' website"
+            >Scottsbluff Public Schools: Scottsbluff, Nebraska, USA</a
+          >
+        </li>
+        <ul class="cv-indent">
+          <li>
+            Taught German levels 1, 2 and 3 at both Scottsbluff and
+            <a
+              href="https://www.geringschools.net/"
+              target="_blank"
+              title="link to the Gering Public Schools' website"
+              >Gering High School</a
+            >s.
+          </li>
+        </ul>
+      </ul>
+      </span>
+      <button type="button" class="moreButton" data-js="buttonTeaching">more</button>
+      </article>
+
+<!-- further sections -->
+       <article>
+        <h3 id="further">Further Sections</h3>
+        <ul class="ul-cv">
+          <li><a class="more" href="/cv/awards"><b>Awards & Fellowships</b></a></li>
+          <li><a class="more" href="/cv/readings"><b>Readings, Performances & Interviews</b></a></li>
+          <li><a class="more" href="/cv/professional"><b>Judging, Professional Presentations & Conference Participation</b></a></li>
+        </ul>
+       </article>
+    </section>
+
+<!-- contact -->
+    <section>
+      <h2 id="contact">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:info@shawnhuelle.com"
+            ><img
+              src="./assets/email.svg"
+              alt="the at symbol"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+        <li>
+          <a href="https://bsky.app/profile/shuelle.bsky.social" target="_blank"><img src="./assets/Bluesky_butterfly-logo.png" alt="the bluesky logo" height="40px" width="40px"></a>
+        </li>
+        <li>
+          <a href="https://www.github.com/shrocket" target="_blank"
+            ><img
+              src="./assets/github.svg"
+              alt="the github logo"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/shawn-huelle-616560237/"
+            target="_blank"
+          >
+            <img
+              src="./assets/linkedin.svg"
+              alt="the linkedin logo"
+              height="40px"
+              width="40px"
+          /></a>
+        </li>
+      </ul>
+    </section>

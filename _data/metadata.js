@@ -1,8 +1,8 @@
 export default {
-	title: "malign benedictory",
-	url: "https://example.com/",
+	title: "Shawn Huelle",
+	url: "https://shawnhuelle.com/",
 	language: "en",
-	description: "I'll be damned if I know what this is.",
+	description: "The personal website and blog of Shawn Huelle.",
 	author: {
 		name: "Shawn Huelle",
 		email: "info@shawnhuelle.com",

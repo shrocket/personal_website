@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
@@ -43,37 +45,66 @@
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<a href="/" class="home-link"><img class="home-logo" src="/assets/r2n_angled.png" alt="a simple line drawing of a rocket with an exhaust plume and a single window" width="50" height="50">{{ metadata.title }}</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+					<li class="nav-item"><a href="/#about">About Me</a></li>
+					<li class="nav-item"><a href="/#pubs">Publications</li>
+					<li class="nav-item"><a href="/#projs">Projects</a></li>
+					<li class="nav-item"><a href="/#cv">CV</a></li>
+					<li class="nav-item"><a href="/#contact">Contact</a></li>
+					<li class="nav-item"><a href="/#blog">Blog</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="main">
 			<heading-anchors>
+			{%- if rawMain %}
+			{{ content | safe }}
+			{%- else %}
 			<section>
 			<h1>{{ pageTitle}}</h1>
 			<article>
 				{{ content | safe }}
 			</article>
 			</section>
+			{%- endif %}
 			</heading-anchors>
 		</main>
 
 		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
-			</p>
+			<div>
+				&#169; 2026 Shawn Huelle -
+				<span>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> are licensed by CC BY 4.0</span>
+			</div>
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+		<script>
+		(function () {
+			const buttonExperience = document.querySelector('[data-js="buttonWorkExperience"]');
+			const expandExperience = document.querySelector('[data-js="moreWorkExperience"]');
+			if (buttonExperience && expandExperience) {
+				buttonExperience.addEventListener("click", () => {
+					expandExperience.classList.toggle("work-experience--more");
+					buttonExperience.textContent = expandExperience.classList.contains("work-experience--more") ? "more" : "less";
+				});
+			}
+
+			const buttonTeaching = document.querySelector('[data-js="buttonTeaching"]');
+			const expandTeaching = document.querySelector('[data-js="expandTeaching"]');
+			if (buttonTeaching && expandTeaching) {
+				buttonTeaching.addEventListener("click", () => {
+					expandTeaching.classList.toggle("teaching--more");
+					buttonTeaching.textContent = expandTeaching.classList.contains("teaching--more") ? "more" : "less";
+				});
+			}
+		})();
+		</script>
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>
 </html>
