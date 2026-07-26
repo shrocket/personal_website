@@ -299,7 +299,7 @@ header {
 }
 .home-link {
 	flex-grow: 1;
-	font-size: 1em; /* 16px /16 */
+	font-size: 1.5em; /* 16px /16 */
 	font-weight: 700;
 	display: inline-flex;
 	align-items: center;
@@ -477,4 +477,17 @@ header {
 
 .projP {
 	margin-top: 1px;
+}
+
+.dark-mode-img {
+	display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.light-mode-img {
+		display: none;
+	}
+	.dark-mode-img {
+		display: block;
+	}
 }
