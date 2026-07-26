@@ -40,3 +40,7 @@ And while all of those things are and will hopefully remain true, they still don
 In terms of how it looks, this blog is already somewhere between _rocket to nowhere_'s aughty aesthetic and _Any Minor World_'s forced minimalism. In terms of content, this will hopefully be a continuation of what my blog has always been. Or, to make a gesture toward my personal (blogging) philosophy/aesthetic: This is going to be random. It's going to be stupid. It's going to be cheap. It's going to be shitty.
 
 Stick around anyway.
+
+## and by the way . . .
+
+If you browse [the tags](/tags), you can filter for each of the previous blogs and/or also by subject. If subscribing is your thing, copy the URL from [this link](/feed/feed.xml) and paste it into your favorite RSS reader (I use [feedly](https://feedly.com/news-reader)).
