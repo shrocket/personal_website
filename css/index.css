@@ -39,6 +39,18 @@
 	}
 }
 
+/* Default image for light mode */
+.rocket-logo {
+	background-image: url("/assets/r2n_angled_light.png");
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+	.rocket-logo {
+		background-image: url("/assets/r2n_angled_dark.png");
+	}
+}
+
 /* Global stylesheet */
 * {
 	box-sizing: border-box;
@@ -477,17 +489,4 @@ header {
 
 .projP {
 	margin-top: 1px;
-}
-
-.dark-mode-img {
-	display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-	.light-mode-img {
-		display: none;
-	}
-	.dark-mode-img {
-		display: block;
-	}
 }
