@@ -43,4 +43,4 @@ Stick around anyway.
 
 ## and by the way . . .
 
-If you browse [the tags](/tags), you can filter for each of the previous blogs and/or also by subject. If subscribing is your thing, copy the URL from [this link](/feed/feed.xml) and paste it into your favorite RSS reader (I use [feedly](https://feedly.com/news-reader)).
+If you would like to subscribe to this blog, copy the URL from [this link](/feed/feed.xml) and paste it into your favorite RSS reader (I use [feedly](https://feedly.com/news-reader)).
