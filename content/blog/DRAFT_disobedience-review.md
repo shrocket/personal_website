@@ -48,7 +48,15 @@ I have finished reading the book and should, to save face (?), completely scrap 
 
 At some point in all the years I spent on the receiving end of education, I learned how to read _in_ books instead of reading _entire_ books. This saved time and energy and "precious head space" (as though there were only a finite amount), and it was great for getting through a semester, and it was great for getting a feel for a book, and it was great for a minute, but of course I robbed myself of several experiences by not read the whole of X, Y, or Z.
 
-It was important to have read the whole of _Disobedience_, to have seen and experienced its entire arc, to have found the beauty in its language (even in lines like the one quoted above), to have received Notley's argument whole, which I will now attempt to sum up (badly--my reading is mine and not yours, after all) with two very short passages:
+It was important to have read the whole of _Disobedience_, to have seen and experienced its entire arc, to have found the beauty in its language (even in lines like the one quoted above), to have received Notley's argument whole, which I will now attempt to sum up (badly--my reading is mine and not yours, after all) with five very short passages:
+
+> my life as the shape of the ways I've been fucked / by prevailing thought & practice
+
+and
+
+> Stop don't always try to say. Leave it resistant / and scary, exact.
+
+and
 
 > The rifts in the world cannot be healed with language.
 
