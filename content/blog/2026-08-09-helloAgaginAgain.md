@@ -1,7 +1,7 @@
 ---
 title: hello again (again)
 description: This is a post reintroducing myself to a mostly non-existent, blog-reading public.
-date: 2026-07-24
+date: 2026-08-09
 tags:
   - essay
 draft:
