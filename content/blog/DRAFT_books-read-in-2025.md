@@ -5,7 +5,7 @@ date: 2026-08-11
 tags:
   - list
   - reading
-draft: true
+draft:
 ---
 
 1. _Absolution_ by Jeff VanderMeer
