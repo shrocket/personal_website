@@ -1,11 +1,11 @@
 ---
 title: I mean everything is a little "fickig," right?
-description: This is a post on my blog about three things that happened to me.
+description: This is a post about three things that happened to me.
 date: 2026-08-16
 tags:
   - essay
   - list
-draft: true
+draft:
 ---
 
 1. Here is something from my work notebook:  
