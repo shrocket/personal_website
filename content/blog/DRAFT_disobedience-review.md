@@ -5,7 +5,7 @@ date:
 tags:
   - essay
   - review
-draft: true
+draft:
 ---
 
 ## 1.
@@ -22,7 +22,7 @@ I wrote my friend:
 
 On p. 121 of _The Argonauts_, Maggie Nelson writes:
 
-> For the week after the man's visit to my work, campus security will assign an officer to stand outside the door of my classroom while I teach, in case he returns. On one of those days, I teach Alice Notley's grouchy epic poem _Disobedience_. A student complains, _Notley says she wants a dailiness that is free and beautiful, but she's fixated on all the things she hates and fears the most, and then smashes her face and ours in them for four hundred pages. Why bother?_
+> On one of those days, I teach Alice Notley's grouchy epic poem _Disobedience_. A student complains, _Notley says she wants a dailiness that is free and beautiful, but she's fixated on all the things she hates and fears the most, and then smashes her face and ours in them for four hundred pages. Why bother?_
 
 ## 3.
 
@@ -46,7 +46,7 @@ Wait-- Is hypocrisy a form of disobeying oneself?
 
 I have finished reading the book and should, to save face (?), completely scrap the above. And yet.
 
-At some point in all the years I spent on the receiving end of education, I learned how to read _in_ books instead of reading _entire_ books. This saved time and energy and "precious head space" (as though there were only a finite amount), and it was great for getting through a semester, and it was great for getting a feel for a book, and it was great for a minute, but of course I robbed myself of several experiences by not read the whole of X, Y, or Z.
+At some point in all the years I spent on the receiving end of education, I learned how to read _in_ books instead of reading _entire_ books. This saved time and energy and "precious head space" (as though there were only a finite amount), and it was great for getting through a semester, and it was great for getting a feel for a book, and it was great for a minute, but of course I robbed myself of several experiences by not reading the whole of X, Y, or Z.
 
 It was important to have read the whole of _Disobedience_, to have seen and experienced its entire arc, to have found the beauty in its language (even in lines like the one quoted above), to have received Notley's argument whole, which I will now attempt to sum up (badly--my reading is mine and not yours, after all) with five very short passages:
 
