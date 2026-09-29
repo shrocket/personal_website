@@ -5,7 +5,7 @@ date: 2026-09-29
 tags:
   - review
   - essay
-draft: true
+draft:
 ---
 
 McGuffins abound in this tour de force . . .
