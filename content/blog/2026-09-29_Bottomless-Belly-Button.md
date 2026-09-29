@@ -12,7 +12,7 @@ McGuffins abound in this tour de force . . .
 
 🤮
 
-\[So I think what I'm trying to do is review the books I've recently read, but in a way that isn't reviewing? Or at least said reviews aren't _shaped like_ reviews as we generally know them?]
+[So I think what I'm trying to do is review the books I've recently read, but in a way that isn't reviewing? Or at least said reviews aren't _shaped like_ reviews as we generally know them?]
 
 ## Sidebar
 
