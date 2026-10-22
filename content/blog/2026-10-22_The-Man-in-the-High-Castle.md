@@ -23,3 +23,13 @@ And on "page" 223, I marked this:
 > Like lethal astigmatism striking without warning.
 
 This sentence pretty much sums up PKD's oeuvre.
+
+Otherwise, I don't really know. I suppose I should write about my own use of the _I Ching_ and other divinatory devices, but I don't really know how Dick put the _I Ching_ to work for him, nor do I fully understand why the climax of this book is the titular man in the high castle being outed and shamed for having used the _I Ching_ to write his book.
+
+Or I suppose I could write about the idea in theoretical physics that multiverse is real.
+
+Or I could write about how I asked co-pilot (not because it was the one best suited to the task, but because it was the one within easiest reach) to think about the phrase "lethal astigmatism" and how it introduced me to the [SCP Foundation](https://scp-wiki.wikidot.com/), which is like the bastard love child of H.P. Lovecraft and Philip K. Dick . . .
+
+But
+
+I read the book, and it is a typical Dickian layering of realities extending past the boundaries of the physical book and into the mind/reality of the reader something something _paranoia_ something something _gnosis_
