@@ -32,13 +32,13 @@ Here is a complete list of characters from the book (in order of appearance):
 16. Sister Cize (nun at the Holy Savior rest home)
 17. Father Anders (priest at Santa Cruce church)
 18. Nino (dwarf of the Fuch Circus and Nina's husband)
-19. Nina (giantess of the Fuch Circus and Nino's wife)
+19. Nina (giantess and oracle of the Fuch Circus and Nino's wife)
 20. Cidie (Dora Atter's companion)
 21. Goppy (hunchback of the Fuch Circus)
 22. Gina Koll (cashier at the Grand Garage)
 23. Stive Lenz (cameraman)
 
-In 2003, before I had any knowledge of Marie Redonnet or _Nevermore_, I was in the process of writing an office memo every day, a project I worked on for a year. One day, late that year, a friend of mine sent me a list compiled by Paul Auster of the common names for various North American plants. I made a _memo_ with it. Here is a reproduction of that memo:
+In 2003, before I had any knowledge of Marie Redonnet or _Nevermore_, I was in the process of writing an office memo every day, a [project](./#the-memo) I worked on for a year. One day, late that year, a friend of mine sent me a list compiled by Paul Auster of the common names for various North American plants. I made a _memo_ with it. Here is a reproduction of that memo:
 
 <h2><center>memo</center></h2>
 
@@ -64,8 +64,8 @@ Re: _Another Notch on My Belt_, a play in five acts (with special thanks to Paul
 
 ### The Showgirls:
 
-**Plumeless Thistle**: The madame
-**Squarerose Knapweed**: The ugly one
+**Plumeless Thistle**: The madame  
+**Squarerose Knapweed**: The ugly one  
 **Tansy Ragwort**: The heart of gold  
 **Velvety Gaura**: The naughty one
 
@@ -88,5 +88,21 @@ Rattail Fescue, Dalmatian Toadflax, Bilobed Speedwell
 
 ---
 
-<br>
+---
+
 I thought about the above memo a lot while reading _Nevermore_.
+
+In his translator's introduction, Jordan Stump writes that 'the world of _Nevermore_ \[is] set in a place that closely resembles (but is not) the West Coast of the United States." That the world of _Nevermore_
+
+> is unmistakeably, and quite deliberately, an outsider's construction of the American West: a West where accounts are settled in francs, a West marked by both volcanoes and disused concentration camps, a West in which one finds such quintessentially French conveniences as the _buvette_ (a small, modest, but not inelegant sort of café, common at French tourist sites) and the _pissotière_ (a rather rudimentary public urinal, now vanished[^1] from the streets of Paris).
+
+[^1]: Considering that I know where at least one is, I don't think they've quite _vanished_.
+
+And I wondered as I read (and thought about the above memo):
+
+- If I were to now write about the West in which I grew up, would it be an "outsider's construction"?
+- When I took Auster's list and modified it, was I doing so from an outsider's perspective (I was living in Chicago at the time)?
+- Was Auster an outsider to the West? I would say yes.
+- Does it matter?
+
+Leaving aside, for the moment, the thought that The West could even be located, or that, if it could, I completely disagree with Stump as to its location (the West **Coast** is _decidedly not_ part of it): The West has only ever been an idea: first Wild, then Ranged, then Settled, then Fenced, now all of those things, a veritable _bonanza_ . . . in other words, _can_ The West be an "outsider's construction"? Heck, what is The West at all if not an outsider's construction?
