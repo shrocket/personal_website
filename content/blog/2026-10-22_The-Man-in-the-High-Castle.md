@@ -1,7 +1,7 @@
 ---
 title: The Man in the High Castle by Philip K. Dick
 description: A "review" of the novel The Man in the High Castle by Philip K. Dick
-date: 2026-10-
+date: 2026-10-22
 tags:
   - review
   - essay
