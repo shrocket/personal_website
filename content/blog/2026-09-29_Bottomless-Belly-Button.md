@@ -5,6 +5,7 @@ date: 2026-09-29
 tags:
   - review
   - essay
+  - reading
 draft:
 ---
 
@@ -16,7 +17,7 @@ McGuffins abound in this tour de force . . .
 
 ## Sidebar
 
-On the penultimate page of Alice Notley's epic poem _Disobedience_, she writes, 
+On the penultimate page of Alice Notley's epic poem _Disobedience_, she writes,
 
 > "Engaging" is an asshole word, / not quite as obnoxious a cliché as "ground-breaking."
 
@@ -28,9 +29,10 @@ I think I hate the word "abound."
 
 ## Continuation
 
-The phrase "tour de force" appears on the back of Dash Shaw's 2008 book _Bottomless Belly Button_, and maybe it is that. I know what the French means, but I don't really know what any words in blurbs actually mean; blurbs are a kind of purely superficial language: they make the sounds we expect them to make, but mean nothing. Nobody buys a book based on the blurb? 
+The phrase "tour de force" appears on the back of Dash Shaw's 2008 book _Bottomless Belly Button_, and maybe it is that. I know what the French means, but I don't really know what any words in blurbs actually mean; blurbs are a kind of purely superficial language: they make the sounds we expect them to make, but mean nothing. Nobody buys a book based on the blurb?
 
 The word "McGuffin" appears nowhere either in or on the book, but the story is full of them:
+
 - the three keys (unless the fourth key gives the first three meaning)
 - the drawing of the stairs
 - the secret passageways

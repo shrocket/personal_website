@@ -5,6 +5,7 @@ date: 2026-10-29
 tags:
   - review
   - essay
+  - reading
 draft: true
 ---
 
