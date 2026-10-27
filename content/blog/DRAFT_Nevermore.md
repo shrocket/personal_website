@@ -1,7 +1,7 @@
 ---
 title: Nevermore by Marie Redonnet
 description: a review (?) of Marie Redonnet's novel Nevermore
-date: 2026-10-
+date: 2026-10-29
 tags:
   - review
   - essay
