@@ -10,7 +10,7 @@ Thanks, [boingboing](http://boingboing.net "gniobgniob"), for pointing me to And
 
 [Andrew Bush](http://andrewbush.net/index.html "Andrew Bush's website") is an artist (mostly photography) who has taken many pictures of people while they are driving.
 
-[![rolling along (and whistling audibly)](../assets/085a.100..jpg)](http://andrewbush.net/vectors%202-10-08/pages/085a.100..htm "rolling along (and whistling audibly)")
+[![rolling along (and whistling audibly)](../../assets/085a.100..jpg)](http://andrewbush.net/vectors%202-10-08/pages/085a.100..htm "rolling along (and whistling audibly)")
 
 On his website, there are two sections where one can look at these images—both can be found in the "[Vector Portrait](http://andrewbush.net/vector%20A.html "Vector Portraits")" section. Once there, if you click on "99," you will see 99 unlabeled portraits. If you click on "Enter," however, you will be taken to a page called "66 Drives." These portraits (most of them) _are_ labeled. All of the labels adhere, for the most part, to the following convention:
 

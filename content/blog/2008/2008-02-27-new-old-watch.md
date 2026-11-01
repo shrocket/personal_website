@@ -5,7 +5,7 @@ tags:
   - blahg
 ---
 
-[![the author's left arm with a wristwatch on it](../assets/2296754988_09519da954.jpg)](http://www.flickr.com/photos/shrocket/2296754988/ "new old watch")
+[![the author's left arm with a wristwatch on it](../../assets/2296754988_09519da954.jpg)](http://www.flickr.com/photos/shrocket/2296754988/ "new old watch")
 
 Since I started biking to school and taking classes in rooms without clocks, I have thought maybe I'd like to go back to wearing a wristwatch. I haven't worn a wristwatch in, what, 12 years?
 

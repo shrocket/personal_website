@@ -6,7 +6,7 @@ tags:
   - essay
 ---
 
-[![](../assets/utsu.jpg "utsu")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2008/08/utsu.jpg) (This still was taken from the clip linked at the bottom of this post.)
+[![](../../assets/utsu.jpg "utsu")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2008/08/utsu.jpg) (This still was taken from the clip linked at the bottom of this post.)
 
 Yesterday's "excellent documentary on depression and anti-depressants in Japan" was Mike Mills' (not _[that](http://en.wikipedia.org/wiki/Mike_Mills)_ Mike Mills) 2007 release _Does Your Soul Have a Cold?_ I saw it on the [Independent Film Channel](http://www.ifc.com), and unfortunately it doesn't look as though they're going to replay it (it's not on DVD yet either, so no [Netflix](http://www.netflix.com)).
 
