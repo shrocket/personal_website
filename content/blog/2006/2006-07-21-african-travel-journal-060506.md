@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![zebras in Ngorongoro](../assets/165957310_a6ff009591.jpg)](http://www.flickr.com/photos/shrocket/165957310/ "Zebras in Ngorongoro")
+[![zebras in Ngorongoro](../../assets/165957310_a6ff009591.jpg)](http://www.flickr.com/photos/shrocket/165957310/ "Zebras in Ngorongoro")
 
 Tomorrow's date is the number of the beast. I'm told there are a lot of elephants here in Tarangire National Park.
 
@@ -24,4 +24,4 @@ We are staying in tents. Those tents are sheltered by wooden huts with thatched 
 
 If J and I ever come to Africa together, I will bring her here. She would love it.
 
-[![Tarangire Safari Lodge](../assets/165971598_a56030b2e0.jpg)](http://www.flickr.com/photos/shrocket/165971598/ "Tarangire Safari Lodge")
+[![Tarangire Safari Lodge](../../assets/165971598_a56030b2e0.jpg)](http://www.flickr.com/photos/shrocket/165971598/ "Tarangire Safari Lodge")

@@ -6,7 +6,7 @@ tags:
   - essay
 ---
 
-![a selfie taken by a bald man in a cubicle](../assets/99346638_1bf5cc36ec_m.jpg)
+![a selfie taken by a bald man in a cubicle](../../assets/99346638_1bf5cc36ec_m.jpg)
 
 When my mother saw the above photo, she said, "What a shiny head you have!"
 
@@ -16,4 +16,4 @@ I have been (re)reading (and thoroughly enjoying) [_39 Microlectures: In Proximi
 
 Which, if I understand it correctly, is just a fancy way of saying my head isn't shiny, it's either looking for something to say or it's looking for something not to say. Right?
 
-![the same selfie as above but with a badly photoshopped hairdo](../assets/113535503_a066bb4333_m.jpg)
+![the same selfie as above but with a badly photoshopped hairdo](../../assets/113535503_a066bb4333_m.jpg)

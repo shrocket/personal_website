@@ -6,7 +6,7 @@ tags:
   - photography
 ---
 
-![the sky reflected in water in a gutter; a smashed plastic bottle can be seen all the way to the left](../assets/104995317_9a32998cf2.jpg)
+![the sky reflected in water in a gutter; a smashed plastic bottle can be seen all the way to the left](../../assets/104995317_9a32998cf2.jpg)
 
 “What is interesting, as always, is the aftermath.” —Ben Marcus, The Age of Wire and String
 

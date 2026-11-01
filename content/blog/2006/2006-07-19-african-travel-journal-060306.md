@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![in focus, one can see a Sprite, two glasses, and a red and white checked tablecloth; in the blurry background are two women, one of whom is wearing a skirt printed with a pattern of mobile phones](../assets/165939557_44e55aed3e.jpg)](http://www.flickr.com/photos/shrocket/165939557/ "mobile phone fabric")
+[![in focus, one can see a Sprite, two glasses, and a red and white checked tablecloth; in the blurry background are two women, one of whom is wearing a skirt printed with a pattern of mobile phones](../../assets/165939557_44e55aed3e.jpg)](http://www.flickr.com/photos/shrocket/165939557/ "mobile phone fabric")
 
 What did we do today? We had a late-ish breakfast, during which I scratched a kitty’s head. I found out that dogs and cats are generally not petted in Tanzania—they’re kept for pest and security purposes, but are not, generally, regarded as members of the family as they are in the U.S. Then we went into town (Moshi) to shop a little. I bought some postcards. Around noon, Mom and Dad left Micah and me at the Coffee Shop (Sara was out at Shaeli and Humphrey’s most of the day). He and I had lunch, and I wrote his postcard to Peter. I bought half a kilo of coffee beans at the Coffee Shop, and if they’re the same as what we drank, then they’re really good \[they were and they are\]. Micah and I then walked back to Umoja Lutheran Hostel, and were not approached by street vendors or beggars once. Earlier, while we were shopping, we talked to a guy about American hip-hop artists, and when we left (after Mom had to tell one very persistent young man to go away), he told us to “Keep it jiggy!”
 

@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![two slugs](../assets/166002339_2f6a18831f.jpg)](http://www.flickr.com/photos/shrocket/166002339/ "two slugs")
+[![two slugs](../../assets/166002339_2f6a18831f.jpg)](http://www.flickr.com/photos/shrocket/166002339/ "two slugs")
 
 Today has been a pretty lazy day. We got up and went to breakfast at the Arusha Hotel. It was very European and much like Litfass (without the method of ordering). \[Funny, isn't it, how a European-style home dècor shop is "frightening," but a European-style breakfast isn't?\] I stopped in the hotel shop just to look, and found some of those cute, Maasai, troll-like doll things with the beaded necks. I had also just given Sara and Micah the rest of my shillings. So I had to use my bank card. They were $5.00 a piece, so I asked for 2, but I had to spend $20.00 if I was going to use my card. The guy gave me five for $20.00. That was nice of him. Then we came back here (Mwangaza), and I showered and packed. We've just been sitting around since.
 
@@ -18,4 +18,4 @@ Our flight from KIA to Schiphol was long and uneventful. Dad and I separated in 
 
 I was very glad to be home when I got here.\]
 
-[![the plane back to Amsterdam](../assets/166003753_8ee3d1aeca.jpg)](http://www.flickr.com/photos/shrocket/166003753/ "the plane back to Amsterdam")
+[![the plane back to Amsterdam](../../assets/166003753_8ee3d1aeca.jpg)](http://www.flickr.com/photos/shrocket/166003753/ "the plane back to Amsterdam")

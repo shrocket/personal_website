@@ -9,4 +9,4 @@ Of course that's the idea. Do you expect me to create in a vacuum (cave)? I'm ce
 
 Here's a picture. I didn't make this wig, but I certainly used it and changed it and made it my own.
 
-[![the author wearing a bad wig in an American high school classroom](../assets/245585192_8a0d6843bb.jpg)](http://www.flickr.com/photos/shrocket/245585192/ "teaching?")
+[![the author wearing a bad wig in an American high school classroom](../../assets/245585192_8a0d6843bb.jpg)](http://www.flickr.com/photos/shrocket/245585192/ "teaching?")

@@ -6,7 +6,7 @@ tags:
   - the-memo
 ---
 
-![a very blurry image of a small, plastic figurine of a reading buddha](../assets/103676807_f200de7581.jpg)
+![a very blurry image of a small, plastic figurine of a reading buddha](../../assets/103676807_f200de7581.jpg)
 
 My website, [rocket2nowhere.com](http://www.rocket2nowhere.com) (not to be confused with this, my blog) recently underwent a major upgrade. Here are the particulars:
 
@@ -20,4 +20,4 @@ So please visit my website and read some stuff and then let me know what you thi
 
 Coming up next: A return to form.
 
-![things on a desk: printed images, a nokia cell phone, an iPod](../assets/103676806_d40a4bbcff.jpg)
+![things on a desk: printed images, a nokia cell phone, an iPod](../../assets/103676806_d40a4bbcff.jpg)

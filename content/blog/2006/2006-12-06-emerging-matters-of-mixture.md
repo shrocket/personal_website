@@ -6,7 +6,7 @@ tags:
   - empeethreemusic
 ---
 
-[![a Maxell, 60-minute cassette tape](../assets/312434926_335cdc6da8_m.jpg)](http://www.flickr.com/photos/shrocket/312434926/ "antique")
+[![a Maxell, 60-minute cassette tape](../../assets/312434926_335cdc6da8_m.jpg)](http://www.flickr.com/photos/shrocket/312434926/ "antique")
 
 My friend Radioredcontroldeck has started updating his podcast "[Emergency Podcast Networx](itpc://homepage.mac.com/mkudlacz/podcasting/recent.xml "subscribe!")" again after an extended absence wherein he moved from Chicago to NYC.
 

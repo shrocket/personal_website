@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![a fingertip with the pattern of a butterfly wing on it](../assets/165983319_b183e2b94d.jpg)](http://www.flickr.com/photos/shrocket/165983319/ "butterfly dust")
+[![a fingertip with the pattern of a butterfly wing on it](../../assets/165983319_b183e2b94d.jpg)](http://www.flickr.com/photos/shrocket/165983319/ "butterfly dust")
 
 I woke up with the birds and the sun this morning and then watched Vervet monkeys run by my tent and watch me watch them.
 
@@ -22,4 +22,4 @@ As it was getting dark, Dad and Micah returned from their afternoon/evening with
 
 \[That, of course, is a blatant, but also accidental misrepresentation of the truth. I had to deal with the leavings of several beasts: When we returned from our morning Safari, I went to my hut/tent to find that some Vervet monkeys (very likely the same Vervet monkeys with whom I had made eye contact at sunrise) had come to my tent/hut while I was out and used the bathroom and front porch. Thank goodness monkeys aren't quite agile or strong or smart (or they just haven't yet figured out) enough to unzip tents, or there could have been real trouble. Anyway, they left a present of poop and pee on my porch, and they left two presents of poop in my bathroom. They also tried to eat my soap. I went to the front desk and told the man there what had happened. He was extremely apologetic and I told him that was unnecessary as he had no control over the monkeys. He laughed and suggested that perhaps I should just think of it simply as my wild experience present from Tarangire Safari Lodge to me. I agreed that was a good idea.\]
 
-[![monkey poo on a bathmat](../assets/165985380_d799519e3c.jpg)](http://www.flickr.com/photos/shrocket/165985380/ "monkey poo")
+[![monkey poo on a bathmat](../../assets/165985380_d799519e3c.jpg)](http://www.flickr.com/photos/shrocket/165985380/ "monkey poo")

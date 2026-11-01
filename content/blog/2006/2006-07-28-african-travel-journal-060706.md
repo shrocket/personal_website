@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![sunrise at Tarangire](../assets/165988026_bdbd479258.jpg)](http://www.flickr.com/photos/shrocket/165988026/ "sunrise at Tarangire")
+[![sunrise at Tarangire](../../assets/165988026_bdbd479258.jpg)](http://www.flickr.com/photos/shrocket/165988026/ "sunrise at Tarangire")
 
 I was awakened by the man who brought coffee to my tent this morning. I jumped up, got dressed, went outside, watched the sun rise, and drank coffee. I was eventually joined by the rest of my family. \[I can think of very few things more relaxing and envigorating at the same time.\]
 
@@ -20,4 +20,4 @@ I am ready to go home. This is awesome, and I hope to go out shopping with Fred 
 
 Also, will I ever be able to describe Ilborou Road?
 
-[![a hair salon on Ilborou road](../assets/166000330_19ad33cbaf.jpg)](http://www.flickr.com/photos/shrocket/166000330/ "a hair salon on Ilborou road")
+[![a hair salon on Ilborou road](../../assets/166000330_19ad33cbaf.jpg)](http://www.flickr.com/photos/shrocket/166000330/ "a hair salon on Ilborou road")

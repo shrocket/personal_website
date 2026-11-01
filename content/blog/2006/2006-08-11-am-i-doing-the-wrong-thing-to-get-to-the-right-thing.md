@@ -13,4 +13,4 @@ I really would like this to be a more dynamic place--a sort of collaborative act
 
 Here's a picture of (part of) my bathroom:
 
-[![the tiled wall of a bathtub: some paint is peeling, some tiles are missing, the soap in the holder is pink](../assets/209453756_5840fa0d6b.jpg)](http://www.flickr.com/photos/shrocket/209453756/ "bathroom 4")
+[![the tiled wall of a bathtub: some paint is peeling, some tiles are missing, the soap in the holder is pink](../../assets/209453756_5840fa0d6b.jpg)](http://www.flickr.com/photos/shrocket/209453756/ "bathroom 4")

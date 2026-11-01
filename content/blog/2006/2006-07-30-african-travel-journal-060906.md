@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![my room at Mwangaza](../assets/166000601_4fb05197ab.jpg)](http://www.flickr.com/photos/shrocket/166000601/ "my room at Mwangaza")
+[![my room at Mwangaza](../../assets/166000601_4fb05197ab.jpg)](http://www.flickr.com/photos/shrocket/166000601/ "my room at Mwangaza")
 
 Slept in. Got up. Took Imodium. I'm not feeling so hot. My nose is also dry and bloody. Pretty yucky. I'm feeling so yucky, in fact, that I'm resorting to writing sentence fragments. Something. Sara, Micah, and I had breakfast outside. Dad joined us for a bit, and then the four of us joined Mom and Shoonie and Alan, and we all went into town. The first place we went was this strange European place with lots of candles and decorative things. They had some western, plastic toys there too: an action figure that was built around the idea of really buff computer nerds who hack into the bad guys' systems and then have to fight their way out (because access to the bad guys' computer network can only be had locally?). I think it was called CyberMan or Ultra Cyber Corps. or something. I remember the tagline: Information is Everything! Anyway, the shop was frightening, and I didn't like it.
 

@@ -9,6 +9,6 @@ This coming April, I'll be teaching a creative writing workshop at Chicago's [Mu
 
 Information on the MCA's wesite can be found by following [this link](http://www.mcachicago.org/MCA/Education/Lectures06.html#learning) (which will lead you to the online registration link). Here's the same information (minus the registration link) in blahgarific form:
 
-![](../assets/99346638_1bf5cc36ec_m.jpg)
+![](../../assets/99346638_1bf5cc36ec_m.jpg)
 
 Writing in a Visual World Saturday, April 8, 1 - 4 pm and Sunday, April 9, 1 - 3 pm Members: $60, Nonmembers: $70 Instructor: Shawn Huelle Join writer Shawn Huelle to discuss and explore how visual arts and media images can shape our ideas and creative process. Create your own piece(s) of creative writing based on images and art that are relevant to you.

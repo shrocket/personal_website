@@ -6,7 +6,7 @@ tags:
   - photography
 ---
 
-[![@ Carhenge](../assets/203682765_f888a1b975.jpg)](http://www.flickr.com/photos/shrocket/203682765/ "@ Carhenge")
+[![@ Carhenge](../../assets/203682765_f888a1b975.jpg)](http://www.flickr.com/photos/shrocket/203682765/ "@ Carhenge")
 
 I like this picture. I took it last week when Dad, J, and I visited Carhenge. I think it would be too easy and exceptionally trite to attempt to talk about this image in terms of how I feel about my return here.
 

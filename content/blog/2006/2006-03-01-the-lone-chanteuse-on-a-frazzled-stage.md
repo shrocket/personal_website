@@ -3,7 +3,7 @@ title: "the lone chanteuse on a frazzled stage"
 date: 2006-03-01
 ---
 
-![](../assets/106513571_f84f363569.jpg)
+![](../../assets/106513571_f84f363569.jpg)
 
 A friend of mine, Megan, has just had three very short (may god forgive us for the terms micro- and flash-fiction (?)) published on the [Conjunctions](http://www.conjunctions.com/) website. They are tight, controlled, funny, and just weird enough to make you scratch your head with befuddled pleasure. I like them very much. Here's an excerpt from "The Cyclops and His Eyeball, Starring Myself," which has a certain fractured-fairy-tale-ness about it:
 

@@ -24,4 +24,4 @@ tags:
     Sunday, May 7 @ 5:00 p.m. & Thursday, May 11 @ 8:15 p.m.  
     My voice is in it.
 
-![a still from the film _Interkosmos_ showing two men strapped into a rocket](../assets/139913035_2e983fa526.jpg)[](http://www.interkosmosmovie.com/)
+![a still from the film _Interkosmos_ showing two men strapped into a rocket](../../assets/139913035_2e983fa526.jpg)[](http://www.interkosmosmovie.com/)

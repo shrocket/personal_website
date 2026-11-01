@@ -6,7 +6,7 @@ tags:
   - Tanzania
 ---
 
-[![six people in a classroom and many several seed caps](../assets/165932275_767230d638.jpg)](http://www.flickr.com/photos/shrocket/165932275/ "hats!")
+[![six people in a classroom and many several seed caps](../../assets/165932275_767230d638.jpg)](http://www.flickr.com/photos/shrocket/165932275/ "hats!")
 
 I slept better and am doing a better job of quieting my busy mind. I was awakened by a dream wherein Micah and I went to a lecture by Gertrude Stein. I got up, got dressed, had breakfast (one piece of white bread w/peanut butter, one small banana, and a cup of weak coffee). We went to Bishop Moshi and gave seed caps to the faculty and staff, then drove back to Umoja Hostel in Moshi.
 
