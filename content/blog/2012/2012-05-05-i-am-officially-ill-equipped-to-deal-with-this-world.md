@@ -8,4 +8,4 @@ tags:
 
 This post is in direct response to [this post at The Mereological Report](http://mereologicalreport.com/2012/04/30/sexiest-fantasies/).
 
-![Popcorn & Ponykegs In Germany](../assets/PopcornPonykegsInGermany.jpg)
+![Popcorn & Ponykegs In Germany](../../assets/PopcornPonykegsInGermany.jpg)

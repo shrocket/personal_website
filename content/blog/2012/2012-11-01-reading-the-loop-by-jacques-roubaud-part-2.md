@@ -37,4 +37,4 @@ I would describe both of those images as being burned into my memory like photog
 
 Here is a photograph I took today of some graffiti on a cigarette machine:
 
-![spray paint](../assets/IMG_1061.jpg "CigaretteMachineGraffiti")
+![spray paint](../../assets/IMG_1061.jpg "CigaretteMachineGraffiti")

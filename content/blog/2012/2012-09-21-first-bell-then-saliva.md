@@ -21,5 +21,5 @@ I wasn't underestimating by much, this blog only got 11 hits last week, but I am
 
 Here is one of my favorite cartoons ever:
 
-![a legion of dogs marching left and arrying a sign which reads "Dr. Pavlov is ailve!"](../assets/pavlov_alive_crop.jpg "pavlov_alive_crop")  
+![a legion of dogs marching left and arrying a sign which reads "Dr. Pavlov is ailve!"](../../assets/pavlov_alive_crop.jpg "pavlov_alive_crop")  
 Steinberg, Saul. Cartoon. _The New Yorker_ \[New York\] 16 Nov. 1968: 59.

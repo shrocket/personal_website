@@ -36,7 +36,7 @@ In the forest:
 
 - This:
 
-![the forest](../assets/IMG_0692-1.jpg "IMG_0692")
+![the forest](../../assets/IMG_0692-1.jpg "IMG_0692")
 
 Back in town:
 
