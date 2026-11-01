@@ -6,7 +6,7 @@ tags:
   - reading
 ---
 
-[![](../assets/NewPonyCoverSmall-211x300.jpg "New Pony Cover")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2010/03/NewPonyCoverSmall.jpg)
+[![](../../assets/NewPonyCoverSmall-211x300.jpg "New Pony Cover")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2010/03/NewPonyCoverSmall.jpg)
 
 _New Pony: A Horse Less Anthology_ is now [available for purchase](http://www.lulu.com/content/paperback-book/new-pony-a-horse-less-anthology/8463162) from Horse Less Press!
 
