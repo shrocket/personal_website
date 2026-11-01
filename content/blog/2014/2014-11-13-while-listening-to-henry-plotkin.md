@@ -14,4 +14,4 @@ tags:
 
 3. My writing feels stalled in the same way my life feels stalled. Trying to make something new and interesting from something that's been done and overdone. Writing about writing for Christ's sake. I mean look at this! Or maybe always on the cusp of something and never pushing or working hard enough. Not having a practice. What is a practice? Going into private practice.
 
-4. ![AnlageBaum](../assets/AnlageBaum.jpg)
+4. ![AnlageBaum](../../assets/AnlageBaum.jpg)
