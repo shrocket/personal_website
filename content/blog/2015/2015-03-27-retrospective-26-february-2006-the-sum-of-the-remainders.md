@@ -8,7 +8,7 @@ tags:
 
 \[To view the post in its original context, click [here](2006-02-27-the-sum-of-the-remainders.md).\]
 
-![the cloudy sky reflected in water in the gutter; a smooshed plastic bottle can be seen all the way to the left](../assets/104995317_9a32998cf2.jpg)
+![the cloudy sky reflected in water in the gutter; a smooshed plastic bottle can be seen all the way to the left](../../assets/104995317_9a32998cf2.jpg)
 
 "What is interesting, as always, is the aftermath." —Ben Marcus, The Age of Wire and String
 
