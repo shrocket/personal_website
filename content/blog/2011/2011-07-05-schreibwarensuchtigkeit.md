@@ -9,7 +9,7 @@ tags:
 
 \[The title of this post was originally "Schreibwarensüchtigkeit?" but, after talking to a native speaker, I decided to change it to what you now see above. Whether more correct or not, the word that's up there now both looks and sounds better. Both words mean "stationery addiction."\]
 
-This is what's in my pencil case: ![a pencil case and its contents](../assets/IMG_1364.jpg "What's in my pencil case")
+This is what's in my pencil case: ![a pencil case and its contents](../../assets/IMG_1364.jpg "What's in my pencil case")
 
 - Lamy Safari fountain pen
 - Sharpie permanent marker

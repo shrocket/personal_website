@@ -17,7 +17,7 @@ The above is not a description of my father, either. I don't know what he's goin
 
 The weekend before my parents arrived, I visited the Reißer family in Döhlau, which is a village outside of Hof, in northern Bavaria. The Reißers are the people who very kindly kept me for a year as a foreign exchange student in the early 90s. It was really wonderful to see them. I had a lovely time, but I didn't take very many pictures, and this is as close as I got to photographing a person while I was there (ridiculous!):
 
-[![Hof Easter 2011 - 26](../assets/5757991073_5c791f02f5_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626803010772/ "Hof Easter 2011 - 26")
+[![Hof Easter 2011 - 26](../../assets/5757991073_5c791f02f5_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626803010772/ "Hof Easter 2011 - 26")
 
 That arm, by the way, belongs to Karlheinz, who is a really great guy. Anyway, you can see all of the very few photos I took while there by clicking on the picture.
 
@@ -29,21 +29,21 @@ We then went up to Hamburg, where we visited the the Cummerows (who were my neig
 
 After that, we came back to Tübingen for a couple of days so that I could teach my class, and then we went to France, where we visited a woman who stayed with us as a foreign exchange student for a month in 1980. Christine lives in Angers with her two sons whose names I remember but cannot spell. Here's a picture I took in Angers:
 
-[![France May 2011 - 007](../assets/5758571898_3073789178_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 007")
+[![France May 2011 - 007](../../assets/5758571898_3073789178_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 007")
 
 This is the sort of thing I photograph instead of, you know, the people who took excellent care of us in Germany and France.
 
 Christine (who did, by the way, take exceptional care of us) showed us all around Angers, and then also took us (along with her parents) to see Mont St. Michel, where I took this picture:
 
-[![France May 2011 - 024](../assets/5758029935_122d7d24a7_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 024")
+[![France May 2011 - 024](../../assets/5758029935_122d7d24a7_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 024")
 
 At Mont St. Michel, we were met by Christine's friend Gilles (a high school librarian and HUGE sci-fi/fantasy fan who DOESN'T like Buffy, what?!?!?), who then acted as tour guide and interpreter. We all went back to his house in Dol-de-Bretagne, a beautiful medieval city in Brittany, where I took this picture:
 
-[![France May 2011 - 040](../assets/5758575172_5b3824dd82_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 040")
+[![France May 2011 - 040](../../assets/5758575172_5b3824dd82_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 040")
 
 and this picture:
 
-[![France May 2011 - 047](../assets/5758031883_b2b3df3384_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 047")
+[![France May 2011 - 047](../../assets/5758031883_b2b3df3384_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 047")
 
 Those heirloom tomatoes, by the way, were the most delicious tomatoes I've ever eaten in my whole life.
 
@@ -51,19 +51,19 @@ Christine, her sons, her parents, and her friends were all warm and generous and
 
 Then we went to Paris for one day and two nights, which is not even really any time at all to see Paris, and I still managed to take more photos there than anywhere else on the whole trip. I do not know how these things work.
 
-[![France May 2011 - 063](../assets/5758033993_7fc46fdc96_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 063")
+[![France May 2011 - 063](../../assets/5758033993_7fc46fdc96_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 063")
 
 At a huge flea market near Place Django Reinhardt.
 
-[![France May 2011 - 071](../assets/5758036159_5e8d99fd1f_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 071")
+[![France May 2011 - 071](../../assets/5758036159_5e8d99fd1f_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 071")
 
 This is me droning on and on and on about Gothic arches.
 
-[![France May 2011 - 094](../assets/5758583294_1553ed16f1_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 094")
+[![France May 2011 - 094](../../assets/5758583294_1553ed16f1_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 094")
 
 Part of Notre Dame du Paris being swallowed by the sky.
 
-[![France May 2011 - 104](../assets/5758584266_9d36d9f2a9_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 104")
+[![France May 2011 - 104](../../assets/5758584266_9d36d9f2a9_z.jpg)](http://www.flickr.com/photos/shrocket/sets/72157626678430347/with/5758571898/ "France May 2011 - 104")
 
 The table at the cafe where a strange adventure started.
 

@@ -15,6 +15,6 @@ Something.
 
 I don't know.
 
-![a sign on yello paper taped to a red and white traffic sign in front of grass, a fence, and a half timber house; the sign reads "Vorsicht! überall Hundecacke"](../assets/IMG_0982.jpg "Überall Hundekacke")
+![a sign on yello paper taped to a red and white traffic sign in front of grass, a fence, and a half timber house; the sign reads "Vorsicht! überall Hundecacke"](../../assets/IMG_0982.jpg "Überall Hundekacke")
 
-![a package of müsli with Warner Bros' Tazmanian Devil and the name "Schoko Balls"](../assets/IMG_0981.jpg "Schoko Balls")
+![a package of müsli with Warner Bros' Tazmanian Devil and the name "Schoko Balls"](../../assets/IMG_0981.jpg "Schoko Balls")

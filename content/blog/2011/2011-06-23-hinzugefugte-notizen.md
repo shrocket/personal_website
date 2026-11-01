@@ -6,7 +6,7 @@ tags:
   - notes
 ---
 
-![pages of a notebook](../assets/IMG_1318.jpg)
+![pages of a notebook](../../assets/IMG_1318.jpg)
 
 A sudden uptick in my usage of a Moleskine notebook I've been trying to fill since late November 2008, and likely due to the fact that I started reading (for realz) a library copy (which means no marginalia) of _Infinite Jest_, has led me here to share some of the uptick's notes. So, with very little commentary:
 
@@ -46,4 +46,4 @@ A sudden uptick in my usage of a Moleskine notebook I've been trying to fill sin
 - ". . . with its own eye-cup of apothecary-blue plastic that's downright gorgeous when held up to a window's light." \[DFW, _IJ_, footnote 30, p994\]
 - bra-eating dog
 
-![pages of a notebook](../assets/IMG_1319.jpg "IMG_1319")
+![pages of a notebook](../../assets/IMG_1319.jpg "IMG_1319")

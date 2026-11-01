@@ -7,4 +7,4 @@ tags:
   - tu
 ---
 
-![a package of Rocky Mountain marshmallows](../assets/RockyMtnMarshmallows.jpg "RockyMtnMarshmallows")
+![a package of Rocky Mountain marshmallows](../../assets/RockyMtnMarshmallows.jpg "RockyMtnMarshmallows")
