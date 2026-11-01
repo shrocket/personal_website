@@ -8,7 +8,7 @@ tags:
 
 don't hit him
 
-![an intersection at dusk and the blur of a bicycle and its rider](../assets/41000495_a226bb39f2.jpg)
+![an intersection at dusk and the blur of a bicycle and its rider](../../assets/41000495_a226bb39f2.jpg)
 
 This photo was taken in Minneapolis, MN while my sister and I were driving to the grocery store.
 

@@ -24,7 +24,7 @@ Sometime in late 1971, each band member (under the supposed influence of his fav
 
 vs.
 
-![a halftone image of my maternal grandmother's eye](../assets/33206382_6a0147ec7d_m.jpg)
+![a halftone image of my maternal grandmother's eye](../../assets/33206382_6a0147ec7d_m.jpg)
 
 \[this is not\]
 

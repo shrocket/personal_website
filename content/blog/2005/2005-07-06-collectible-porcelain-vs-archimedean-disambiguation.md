@@ -7,7 +7,7 @@ tags:
   - narrative
 ---
 
-![a teacup and saucer designed to look like a lotus leaf and flower](../assets/24087119_33bf503248_m.jpg)
+![a teacup and saucer designed to look like a lotus leaf and flower](../../assets/24087119_33bf503248_m.jpg)
 
 Pottery is generally made around the Chinese. Demand for unknown objects of all descriptions also includes a lead-based overcoat and today exclusively depicts scenes such as boats.
 
@@ -17,7 +17,7 @@ Delftware, or Delft pottery, is blue and white pottery generally made in the Net
 
 vs.
 
-![a piece of pie and a scoop of vanilla ice cream on a blue plate](../assets/24087118_4e7c540dfc_m.jpg)
+![a piece of pie and a scoop of vanilla ice cream on a blue plate](../../assets/24087118_4e7c540dfc_m.jpg)
 
 Archimedes became a popular figure as a result of his involvement in the defense of Syracuse against the Roman siege in the First and Second Punic Wars. He is reputed to have held the Romans at bay with war machines of his own design; to have been able to move a full-size ship complete with crew and cargo by pulling a single rope; to have discovered the principles of density and buoyancy, also known as Archimedes' principle, while taking a bath (thereupon taking to the streets naked calling "eureka" - "I have found it!"); and to have invented the irrigation device known as Archimedes' screw. Archimedes was killed by a Roman soldier in the sack of Syracuse during the Second Punic War, despite orders from the Roman general, Marcellus, that he was not to be harmed. The Greeks said that he was killed while drawing an equation in the sand, and told this story to contrast their high-mindedness with Roman ham-handedness; however, it should be noted that Archimedes designed the siege engines that devastated a substantial Roman invasion force, so his death may have been out of retribution.
 

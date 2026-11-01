@@ -6,5 +6,5 @@ tags:
   - photography
 ---
 
-![it looks as though the marble shark is going to bite the very large penis of the legless marble torso](../assets/36962317_162da73f72.jpg)  
+![it looks as though the marble shark is going to bite the very large penis of the legless marble torso](../../assets/36962317_162da73f72.jpg)  
 look closely

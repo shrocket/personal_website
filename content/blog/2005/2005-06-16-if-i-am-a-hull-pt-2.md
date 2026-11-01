@@ -13,5 +13,5 @@ tags:
 
 —W.G. Sebald
 
-![](../assets/19774770_4af544a9b0.jpg)  
+![](../../assets/19774770_4af544a9b0.jpg)  
 This photo was taken on Monday, May 30, 2004 at 2:50 p.m. It was taken on the only long walk of the day, and in the same park as yesterday's photo of the water from February fifth. This was the walk of the wild mushroom; the church party blaring Xtian music; hacky-sacking hippies; fat-assed bicyclists; ugly read-headed children; "Look! It's a fruit store!"; another store that smelled of farts; "I don't care where we go, I don't care what we do. I don't care, pretty baby, just take me with you."; flowers on trees that smelled like inner tubes; sitting in the grass and looking up at the trees; a small twist cone, a chocolate-dipped cone, and a small Coca-Cola.

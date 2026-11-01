@@ -6,4 +6,4 @@ tags:
   - photography
 ---
 
-![raindrops on a car window and the blurry image of a woman on the other side](../assets/9151903_6a7e2a7bee.jpg)
+![raindrops on a car window and the blurry image of a woman on the other side](../../assets/9151903_6a7e2a7bee.jpg)

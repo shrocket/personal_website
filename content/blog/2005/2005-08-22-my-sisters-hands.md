@@ -7,9 +7,9 @@ tags:
   - essay
 ---
 
-![sidewalk cracked in such a way that there are many many thin cracks around a large, blank, oval spot in the middle](../assets/36046495_968e406d71.jpg)
+![sidewalk cracked in such a way that there are many many thin cracks around a large, blank, oval spot in the middle](../../assets/36046495_968e406d71.jpg)
 
-![the palm of my sister's right hand](../assets/36046494_9767659ec8.jpg)
+![the palm of my sister's right hand](../../assets/36046494_9767659ec8.jpg)
 
 The photograph of my sister's hand (on a bench in the recent addition to Minneapolis' Walker Art Center) didn't turn out as well as I would have liked. The tracing-paper-thinness of her skin, the myriad lines and cracks, the spots that look like cuts but aren't—none of these things is as obvious in the photograph as in real life. Blame the light. Blame the photographer.
 
