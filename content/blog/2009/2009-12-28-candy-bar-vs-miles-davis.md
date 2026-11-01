@@ -6,13 +6,13 @@ tags:
   - vs
 ---
 
-[![candybar](../assets/candybar.jpg "candybar")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2009/12/candybar.jpg)
+[![candybar](../../assets/candybar.jpg "candybar")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2009/12/candybar.jpg)
 
 The first thing I saw, the first thing I really saw, after I had had a moment to adjust my looking to everything I was seeing, was the udder of the great Holstein and the thin arc of milk expelling itself from one of her teats. Only then did I see her dangling head, the void surrounding her spine, and the blood draining from that void. Beyond that, there were men with knives doing a job, doing their jobs, and another man with an innocuous-seeming device which he used in a manner not dissimilar from the way a police detective uses arrest—as a formality at the end of a longer, secretive process carried out in doorways and on small slips of paper.
 
 vs.
 
-[![MilesDavis](../assets/MilesDavis.jpg "MilesDavis")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2009/12/MilesDavis.jpg)
+[![MilesDavis](../../assets/MilesDavis.jpg "MilesDavis")](http://www.rocket2nowhere.com/blahg/wp-content/uploads/2009/12/MilesDavis.jpg)
 
 But there is a burden which will need to be shed, and that burden is named Robert. And Robert, though immensely small (small and still, a perfectly spherical zero) is also immensely heavy.
 

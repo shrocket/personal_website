@@ -5,9 +5,9 @@ tags:
   - blahg
 ---
 
-[![](../assets/bkboredom.gif)](http://www.coldbacon.com/kliban2.html "more here")  
+[![](../../assets/bkboredom.gif)](http://www.coldbacon.com/kliban2.html "more here")  
 \*\*\*  
-[![](../assets/bkoldage.gif)](http://www.coldbacon.com/kliban2.html "more here")  
+[![](../../assets/bkoldage.gif)](http://www.coldbacon.com/kliban2.html "more here")  
 \*\*\*  
 I'm not sure, but the best thing about these drawings might be the fact that the products are drawn in more detail than the men and their surroundings. Now, let's talk about Warhol.  
 \*\*\*  
