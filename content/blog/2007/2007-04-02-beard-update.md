@@ -10,6 +10,6 @@ Please click [here](http://www.rocket2nowhere.com/blahg/category/facial-hair/ "t
 
 Here's what I looked like as of March 29th:
 
-[![beard!!!](../assets/442960224_73a08770cd_m.jpg)](http://www.flickr.com/photos/shrocket/442960224/ "beard!!!")
+[![beard!!!](../../assets/442960224_73a08770cd_m.jpg)](http://www.flickr.com/photos/shrocket/442960224/ "beard!!!")
 
 More to come as it grows . . .

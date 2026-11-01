@@ -8,7 +8,7 @@ tags:
 
 I saw this sign while taking a walk with J and her parents at Lake Katherine in Palos Heights, IL this weekend:
 
-[![northern water snakes](../assets/420477726_2bb4abf825.jpg)](http://www.flickr.com/photos/shrocket/420477726/ "northern water snakes")
+[![northern water snakes](../../assets/420477726_2bb4abf825.jpg)](http://www.flickr.com/photos/shrocket/420477726/ "northern water snakes")
 
 I had never heard of Northern Water snakes before, and my first thought was "is this real or just a ruse to keep people off the island?" I did some quick research, and found [this](http://en.wikipedia.org/wiki/Northern_Water_Snake "link to full article") on Wikipedia (which means it could be a complete and total lie, right?):
 

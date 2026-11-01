@@ -6,7 +6,7 @@ tags:
   - photography
 ---
 
-[![the author at 12k feet](../assets/1287765064_d97733a6d7.jpg)](http://www.flickr.com/photos/shrocket/1287765064/ "sh at 12k feet")
+[![the author at 12k feet](../../assets/1287765064_d97733a6d7.jpg)](http://www.flickr.com/photos/shrocket/1287765064/ "sh at 12k feet")
 
 I am now safely ensconced in Denver. I have my little basement apartment. I have an awesome housemate. I have my books, my notebooks, my pens, my computer, my music, my bike, and my car. For the time being, I have my love, but she'll be leaving on Monday. Two days after that, I'll start orientation at DU.
 

@@ -5,7 +5,7 @@ tags:
   - blahg
 ---
 
-[![](../assets/507231044_391754ee33_m.jpg)](http://www.flickr.com/photos/noelcornell/507231044/ "Marina City at night close-up")  
+[![](../../assets/507231044_391754ee33_m.jpg)](http://www.flickr.com/photos/noelcornell/507231044/ "Marina City at night close-up")  
 [Marina City at night close-up](http://www.flickr.com/photos/noelcornell/507231044/)  
 Originally uploaded by [Noel Cornell](http://www.flickr.com/people/noelcornell/)
 
