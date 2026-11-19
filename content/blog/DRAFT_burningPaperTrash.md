@@ -1,5 +1,5 @@
 ---
-title: ejected and burning
+title: Ejected and Burning
 description: a photograph of a pile of burning paper trash on the street
 date: 2026-11-19
 tags:
