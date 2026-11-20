@@ -1,6 +1,6 @@
 ---
 title: The White Stones by J.H. Prynne
-description: paltry and unformed thoughts on Prynne's 1969 book
+description: mostly unformed thoughts on Prynne's 1969 book
 date: 2026-11-23
 tags:
   - essay
@@ -19,7 +19,29 @@ I have only administered this book to myself once. "Thoughts on the Esterházy C
 
 But maybe I'm just trying to restate (hyperbolically) something Charles Olson said better: "I keep thinking, it comes to this: culture displacing the state."
 
-From "In the Long Run, to be Stranded"
+You can read elsewhere about Olson's influence on Prynne.
+
+I marked several things in the book: several poems I'd like to go back to, several lines or clusters of lines and half-lines I found interesting or beautiful or intriguing or frustrating or all of the above (and all at once).
+
+One of the bits I liked enough to pass onto a friend came from "Questions for the Time Being"
+
+```
+                        3. What goes on in a
+language is the corporate & prolonged action
+of worked self-transcendence--other minor verbal
+delays have their uses but the scheme of such
+motives is at best ambiguous;
+```
+
+which means that--the first part, before the m-dash--what we're reading in this book (in any book) is "worked self-transcendence," and so is it any wonder that Robin Purves wrote what I have quoted above?
+
+This brings my thinking back to the Olson quotation: If society would or could work the way Prynne suggests language does-- Look, listen, read: I cannot, in good faith, use the word "transcend" one more time without making reference to either Emerson or Thoreau, and, quite honestly, I've not read enough of either to--
+
+And here we have the meaning of Purves' use of the word "homoeopathic": (it's becoming all colons, parentheses, and m-dashes, friends): You administer Prynne's language to yourself; it affects you seriously and deeply; you cannot explain how, and you most certainly cannot "explain what you think you understand of the poem[s]," because even though you have apprehended them, you have not comprehended them, comprehension (with its focus on totality) being its own kind of transcendence (and there the word is again without recourse to our 19th Century friends from Cambridge, MA); what you are left with is a changed self in a thicket of punctuation, a hundredth part of a hundredth part, which is, I guess, what all the colons, parentheses, and m-dashes are doing: dividing.
+
+Over and over, while reading these 58 poems, I got the feeling that Prynne was attempting to describe the Mystery of Love. More than many other poems I've read recently, these felt like incantations: actual magic using a language I could not possibly understand but which worked on me and in me and made me feel as though both Love and Hope were and are real and possible. But not Love and Hope-- I mean, to where does one transcend if not into Love? And, I mean, are not Hope and Love the same thing? And, I mean, where there is transcendence, is there not also destruction? How does something move above itself without--?
+
+The other day, after having spent 39 years drawing it, I realized that for the rocket to nowhere to have exhaust (see the upper-left-hand corner of this browser window), it must be _in an atmosphere_, causing a great deal of destruction in its wake.
 
 ```
         The stirring is so
@@ -32,6 +54,10 @@ it's called is age and the merest impulse,
 
 ```
 
+--from "In the Long Run, to be Stranded"
+
+---
+
 From "Quality in that Case as Pressure"
 
 ```
@@ -39,14 +65,4 @@ From "Quality in that Case as Pressure"
 mild weather is violent; I am moved
 by the _condition_ of knowledge, as the
 dispersion of form.
-```
-
-From "Questions for the Time Being"
-
-```
-                        3. What goes on in a
-language is the corporate & prolonged action
-of worked self-transcendence--other minor verbal
-delays have their uses but the scheme of such
-motives is at best ambiguous;
 ```
