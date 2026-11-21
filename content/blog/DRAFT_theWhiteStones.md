@@ -9,11 +9,11 @@ tags:
 draft: true
 ---
 
-I was lucky enough, after reading "Thoughts on the Esterházy Court Uniform," to find an essay by Robin Purves entitled [_A Commentary on J.H. Prynne's "Thoughts on the Esterházy Court Uniform."_](https://knowledge.lancashire.ac.uk/id/eprint/3992/2/Purves%2C%20Article%2C%20Commentary%20on%20Prynne.pdf)
-
-In the essay, Purves writes:
+In his essay [_A Commentary on J.H. Prynne's "Thoughts on the Esterházy Court Uniform."_](https://knowledge.lancashire.ac.uk/id/eprint/3992/2/Purves%2C%20Article%2C%20Commentary%20on%20Prynne.pdf) (a poem which appears in _The White Stones_), Robin Purves writes:
 
 > Comprehension of the text is a more arduous process to undergo than administering it to yourself as a kind of homoeopathic remedy and attaining the state where you are able to explain what you think you understand of the poem is more difficult yet. . . .
+
+The quotation applies not just to the one poem, but the book in its entirety.
 
 I have only administered this book to myself once. "Thoughts on the Esterházy Court Uniform" wasn't even one of the poems I think I would like to administer to myself again. That being said, I cannot think of a reason not to: Nearly every single poem in this book made me feel as though, perhaps, if we could just find a way, as a culture, as a species to--
 
@@ -23,7 +23,7 @@ You can read elsewhere about Olson's influence on Prynne.
 
 I marked several things in the book: several poems I'd like to go back to, several lines or clusters of lines and half-lines I found interesting or beautiful or intriguing or frustrating or all of the above (and all at once).
 
-One of the bits I liked enough to pass onto a friend came from "Questions for the Time Being"
+One of those bits came from "Questions for the Time Being"
 
 ```
                         3. What goes on in a
@@ -35,9 +35,11 @@ motives is at best ambiguous;
 
 which means that--the first part, before the m-dash--what we're reading in this book (in any book) is "worked self-transcendence," and so is it any wonder that Robin Purves wrote what I have quoted above?
 
-This brings my thinking back to the Olson quotation: If society would or could work the way Prynne suggests language does-- Look, listen, read: I cannot, in good faith, use the word "transcend" one more time without making reference to either Emerson or Thoreau, and, quite honestly, I've not read enough of either to--
+This brings my thinking back to the Olson quotation: If society would or could work the way Prynne suggests language does--
 
-And here we have the meaning of Purves' use of the word "homoeopathic": (it's becoming all colons, parentheses, and m-dashes, friends): You administer Prynne's language to yourself; it affects you seriously and deeply; you cannot explain how, and you most certainly cannot "explain what you think you understand of the poem[s]," because even though you have apprehended them, you have not comprehended them, comprehension (with its focus on totality) being its own kind of transcendence (and there the word is again without recourse to our 19th Century friends from Cambridge, MA); what you are left with is a changed self in a thicket of punctuation, a hundredth part of a hundredth part, which is, I guess, what all the colons, parentheses, and m-dashes are doing: dividing.
+I cannot, in good faith, use the word "transcend" one more time without making reference to either Emerson or Thoreau, and, quite honestly, I've not read enough of either to--
+
+And here we have the meaning of Purves' use of the word "homoeopathic": (it's becoming all colons, parentheses, and m-dashes): You administer Prynne's language to yourself; it affects you seriously and deeply; you cannot explain how, and you most certainly cannot "explain what you think you understand of the poem[s]," because even though you have apprehended them, you have not comprehended them, comprehension (with its focus on totality) being its own kind of transcendence (and there the word is again without recourse to our 19th Century friends from Cambridge, MA); what you are left with is a changed self in a thicket of punctuation, a hundredth part of a hundredth part, which is, I guess, what all the colons, parentheses, and m-dashes are doing: dividing.
 
 Over and over, while reading these 58 poems, I got the feeling that Prynne was attempting to describe the Mystery of Love. More than many other poems I've read recently, these felt like incantations: actual magic using a language I could not possibly understand but which worked on me and in me and made me feel as though both Love and Hope were and are real and possible. But not Love and Hope-- I mean, to where does one transcend if not into Love? And, I mean, are not Hope and Love the same thing? And, I mean, where there is transcendence, is there not also destruction? How does something move above itself without--?
 
