@@ -54,17 +54,26 @@ it's called is age and the merest impulse,
     called the city and the deep
     blunting damage of hope.
 
+- from "In the Long Run, to be Stranded"
 ```
 
---from "In the Long Run, to be Stranded"
+And so, I think, we have landed back at a linguistic inability where hope and love damage bluntly, transcendence exists, but only circuitously, circularly, I mean, the way up and the way down _are_ the same, aren't they? And what is happening all of the time if not nothing? The only way we can go nowhere is if we go together, collectively, corporately, and prolongedly.
 
----
+We must keep pushing.
 
-From "Quality in that Case as Pressure"
+Understanding is not the answer.
+
+Explanations don't help.
+
+It must be felt to be known.
+
+It must be experienced.
 
 ```
     My own satisfaction in this
 mild weather is violent; I am moved
 by the _condition_ of knowledge, as the
 dispersion of form.
+
+- from "Quality in that Case as Pressure"
 ```
