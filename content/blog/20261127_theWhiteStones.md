@@ -6,7 +6,7 @@ tags:
   - essay
   - reading
   - review
-draft: true
+draft:
 ---
 
 In his essay [_A Commentary on J.H. Prynne's "Thoughts on the Esterházy Court Uniform."_](https://knowledge.lancashire.ac.uk/id/eprint/3992/2/Purves%2C%20Article%2C%20Commentary%20on%20Prynne.pdf) (a poem which appears in _The White Stones_), Robin Purves writes:
